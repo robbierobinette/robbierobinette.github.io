@@ -91,6 +91,14 @@ class PopulationGroup {
         this.skew = skew;
         this.change_callback = null;
         this.mouseup_callback = null;
+        this.dem_bonus = {'dem': .1, 'ind': .05, 'rep': 0};
+        this.rep_bonus = {'dem': 0, 'ind': .05, 'rep': .1};
+        this.ind_bonus = {'dem': 0, 'ind': .05, 'rep': 0};
+        this.bonuses = {
+            'dem': this.dem_bonus,
+            'rep': this.rep_bonus,
+            'ind': this.ind_bonus,
+        };
     }
 
     configure() {
@@ -130,14 +138,7 @@ class PopulationGroup {
         this.sliders.appendChild(this.weight_slider.div());
         return this.pop_group
     }
-    dem_bonus = {'dem': .1, 'ind': .05, 'rep': 0};
-    rep_bonus = {'dem': 0, 'ind': .05, 'rep': .1};
-    ind_bonus = {'dem': 0, 'ind': .05, 'rep': 0};
-    bonuses = {
-        'dem': this.dem_bonus,
-        'rep': this.rep_bonus,
-        'ind': this.ind_bonus,
-    };
+
 
     party_bonus(that) {
        return this.bonuses[this.tag][that.tag];
