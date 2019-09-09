@@ -107,7 +107,7 @@ class PopulationGroup {
         this.pop_group.style.display = "flex";
         this.pop_group.style.clear = "both";
         this.pop_group.style['flex-wrap'] = 'wrap';
-        this.pop_group.style.width = "50%";
+        this.pop_group.style.width = "25%";
         this.plotDiv = document.createElement("div");
         this.plotDiv.id = this.name + "_plotdiv";
         this.plotDiv.style.width = "100%";
@@ -134,8 +134,8 @@ class PopulationGroup {
 
         this.sliders.appendChild(this.mean_slider.div());
         this.sliders.appendChild(this.stddev_slider.div());
-        this.sliders.appendChild(this.skew_slider.div());
-        this.sliders.appendChild(this.weight_slider.div());
+        // this.sliders.appendChild(this.skew_slider.div());
+        // this.sliders.appendChild(this.weight_slider.div());
         return this.pop_group
     }
 
@@ -355,7 +355,7 @@ class PopulationArea {
     configure_combined_pop() {
         const combined_pop = document.createElement("div");
         combined_pop.id = 'combined_population';
-        combined_pop.style.width = '50%';
+        combined_pop.style.width = '25%';
         const plotDiv = document.createElement("div");
         plotDiv.id = "combined_plotdiv";
         plotDiv.style.width = "100%";
