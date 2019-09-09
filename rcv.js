@@ -16,6 +16,7 @@ class Slider {
     constructor(id, label, min, max, step, value, callback_obj, change_callback, mouseup_callback) {
         const sliderbox = document.createElement("div");
         sliderbox.id = id + "_box";
+        sliderbox.style.display = 'flex';
 
         if (label !== '') {
             const slider_label = document.createElement(`label`);
