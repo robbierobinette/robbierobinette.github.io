@@ -401,6 +401,9 @@ class Selector {
 
         const select = document.createElement("select");
         select.label = name;
+        select.style['background-color'] = '#333';
+        select.style.color = '#AAA';
+        select.style.border = 'none';
         for (let i = 0; i < this.values.length; ++i) {
             const option = document.createElement("option");
             option.innerHTML = this.labels[i];
@@ -434,9 +437,11 @@ class Checkbox {
         this.change_callback = change_callback;
         this.value = value;
 
-        const checkBox = document.createElement("checkbox");
+        const checkBox = document.createElement("input");
         checkBox.name = name;
+        checkBox.type = 'checkbox';
         checkBox.value = this.value;
+        checkBox.innerHTML = 'Incumbent';
 
         const obj = this;
         checkBox.onchange = function () {
@@ -465,7 +470,7 @@ class Button {
         const button = document.createElement("button");
         button.name = name;
         button.innerHTML = this.text;
-        button.style['background-color'] = '#444';
+        button.style['background-color'] = '#333';
         button.style.color = 'red';
         button.style.border = 'none';
 
@@ -562,7 +567,6 @@ class Candidate {
     configure() {
         const candidate_area = document.createElement("div");
         candidate_area.id = "candidate_" + this.name;
-        candidate_area.style.display = "flex";
         candidate_area.style.width = "100%";
         candidate_area.style.display = "flex";
         candidate_area.style['justify-content'] = 'space-around';
@@ -589,7 +593,7 @@ class Candidate {
         candidate_area.appendChild(this.ideology_slider.div());
         candidate_area.appendChild(this.quality_slider.div());
         candidate_area.appendChild(this.party_selector.div());
-        candidate_area.appendChild(this.incumbent_box.div());
+        // candidate_area.appendChild(this.incumbent_box.div());
         candidate_area.appendChild(this.remove_button.div());
         this.div = candidate_area
     }
@@ -706,7 +710,6 @@ class CandidateArea {
     add_headers(candidate_area) {
         const headings = document.createElement("div");
         headings.id = "candidate_" + this.name;
-        headings.style.display = "flex";
         headings.style.width = "100%";
         headings.style.display = "flex";
         headings.style['justify-content'] = 'space-around';
@@ -718,7 +721,7 @@ class CandidateArea {
         titles.forEach(header => {
             const heading_block = document.createElement("label");
             heading_block.innerHTML = header;
-            heading_block.style.width = '10%';
+            heading_block.style.width = '20%';
             headings.appendChild(heading_block);
         });
         candidate_area.appendChild(headings)
