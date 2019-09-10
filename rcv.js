@@ -142,7 +142,7 @@ class PopulationGroup {
 
 
     party_bonus(that) {
-       return this.bonuses[this.tag][that.tag];
+        return this.bonuses[this.tag][that.tag];
     }
 
 
@@ -164,7 +164,7 @@ class PopulationGroup {
         this.render();
     }
 
-   update_stddev(slider) {
+    update_stddev(slider) {
         console.log("update_mean:  ", this, slider);
         this.stddev = Number(slider.value);
         if (this.change_callback != null)
@@ -253,6 +253,14 @@ class PopulationGroup {
                 l: 10, r: 10, b: 20, t: 20, pad: 4,
                 color: '#444'
             },
+            title: {
+                text: this.name,
+                x: .05,
+                y: .90,
+                font: {
+                    color: '#7f7f7f'
+                }
+            },
             plot_bgcolor: '#222',
             paper_bgcolor: '#222'
         };
@@ -323,7 +331,15 @@ class PopulationArea {
                 color: '#444'
             },
             plot_bgcolor: '#222',
-            paper_bgcolor: '#222'
+            paper_bgcolor: '#222',
+            title: {
+                text: "Combined Ideology",
+                x: .05,
+                y: .90,
+                font: {
+                    color: '#7f7f7f'
+                }
+            },
         };
     }
 
@@ -385,7 +401,7 @@ class Selector {
 
         const select = document.createElement("select");
         select.label = name;
-        for (let i = 0 ; i < this.values.length; ++i) {
+        for (let i = 0; i < this.values.length; ++i) {
             const option = document.createElement("option");
             option.innerHTML = this.labels[i];
             option.value = this.values[i];
@@ -436,6 +452,37 @@ class Checkbox {
     onchange(selector) {
         this.value = selector.value;
         this.change_callback.call(this.change_obj, this)
+    }
+}
+
+class Button {
+    constructor(name, text, click_obj, click_callback) {
+        this.name = name;
+        this.click_obj = click_obj;
+        this.click_callback = click_callback;
+        this.text = text;
+
+        const button = document.createElement("button");
+        button.name = name;
+        button.innerHTML = this.text;
+        button.style['background-color'] = '#444';
+        button.style.color = 'red';
+        button.style.border = 'none';
+
+        const obj = this;
+        button.onclick = function () {
+            obj.onclick(this);
+        };
+        this.button = button;
+    }
+
+    div() {
+        return this.button;
+    }
+
+    onclick(selector) {
+        this.value = selector.value;
+        this.click_callback.call(this.click_obj, this)
     }
 }
 
@@ -500,7 +547,7 @@ class ConfigurationArea {
 }
 
 class Candidate {
-    constructor(name, ideology_score, quality, population, population_area) {
+    constructor(name, ideology_score, quality, population, population_area, candidate_area) {
         this.name = name;
         this.population = population;
         this.ideology_score = ideology_score;
@@ -508,6 +555,7 @@ class Candidate {
         this.configure();
         this.change_callback = null;
         this.population_area = population_area;
+        this.candidate_area = candidate_area;
         this.incumbent = false;
     }
 
@@ -536,10 +584,13 @@ class Candidate {
             this.population.tag, this, this.update_population, this.onmouseup);
 
         this.incumbent_box = new Checkbox(this.name, this, this.update_incumbent);
+        this.remove_button = new Button(`remove-${this.name}`, 'remove', this, this.onremove);
+
         candidate_area.appendChild(this.ideology_slider.div());
         candidate_area.appendChild(this.quality_slider.div());
         candidate_area.appendChild(this.party_selector.div());
         candidate_area.appendChild(this.incumbent_box.div());
+        candidate_area.appendChild(this.remove_button.div());
         this.div = candidate_area
     }
 
@@ -570,9 +621,15 @@ class Candidate {
         this.onchange();
     }
 
+    onremove(checkbox) {
+        this.candidate_area.remove_candidate(this.name);
+        this.onchange();
+    }
+
     onmouseup(slider) {
         this.onchange();
     }
+
     onchange() {
         if (this.change_callback != null)
             this.change_callback.call(this.change_obj, this);
@@ -582,6 +639,7 @@ class Candidate {
 
 class CandidateArea {
     constructor(n_candidates, population_area) {
+        this.population_area = population_area;
         this.n_candidates = n_candidates;
         this.candidates = {};
         for (let i = 0; i < this.n_candidates; ++i) {
@@ -589,11 +647,18 @@ class CandidateArea {
             const is = Number(-.5 + i / (this.n_candidates - 1)).toFixed(2);
             if (is < -.15) population = population_area.populations['dem'];
             if (is > .15) population = population_area.populations['rep'];
-            const candidate = new Candidate(`candidate-${i}`, is, 0, population, population_area);
-            candidate.set_change_callback(this, this.onchange);
-            this.candidates[candidate.name] = candidate;
+            this.add_candidate(is, population);
         }
-        this.population_area = population_area;
+        this.configure();
+    }
+
+    remove_candidate(candiate_name) {
+        delete this.candidates[candiate_name];
+        this.configure();
+        this.onchange();
+    }
+
+    configure() {
         this.div = document.createElement("div");
         this.div.style.display = "float";
         this.div.style.contain = "both";
@@ -602,10 +667,61 @@ class CandidateArea {
         h.innerHTML = "Candidate Definition";
         h.style.width = "100%";
         this.div.appendChild(h);
+        this.add_headers(this.div);
 
         Object.values(this.candidates).forEach(c => {
-            this.div.appendChild(c.div)
+            this.div.appendChild(c.div);
         });
+
+
+        const add_button = document.createElement("button");
+        add_button.innerHTML = "Add Candidate";
+        const obj = this;
+        add_button.onclick = function () {
+            obj.add_candidate(0, obj.population_area.populations['ind']);
+            obj.configure();
+            obj.onchange()
+        };
+        this.div.appendChild(add_button);
+
+        const candidate_area = document.getElementById("candidates_div");
+        while (candidate_area.firstChild) {
+            candidate_area.removeChild(candidate_area.firstChild);
+        }
+        candidate_area.appendChild(this.div)
+    }
+
+    add_candidate(ideology_score, population) {
+        let i = Object.values(this.candidates).length;
+        let c_name = `candidate-${i}`;
+        while (c_name in this.candidates) {
+            i += 1;
+            c_name = `candidate-${i}`;
+        }
+        const candidate = new Candidate(c_name, ideology_score, 0, population, this.population_area, this);
+        candidate.set_change_callback(this, this.onchange);
+        this.candidates[candidate.name] = candidate;
+    }
+
+    add_headers(candidate_area) {
+        const headings = document.createElement("div");
+        headings.id = "candidate_" + this.name;
+        headings.style.display = "flex";
+        headings.style.width = "100%";
+        headings.style.display = "flex";
+        headings.style['justify-content'] = 'space-around';
+        headings.style['background-color'] = '#444';
+        headings.style.color = '#FFF';
+
+        const titles = ["Name", "Ideology", "Quality", "Party"];
+
+        titles.forEach(header => {
+            const heading_block = document.createElement("label");
+            heading_block.innerHTML = header;
+            heading_block.style.width = '10%';
+            headings.appendChild(heading_block);
+        });
+        candidate_area.appendChild(headings)
     }
 
     set_change_callback(change_obj, change_callback) {
@@ -613,14 +729,12 @@ class CandidateArea {
         this.change_callback = change_callback;
     }
 
-    onchange(candidate) {
+    onchange() {
         if (this.change_callback !== null)
             this.change_callback.call(this.change_obj, this);
     }
 
     render() {
-        const candidate_area = document.getElementById("candidates_div");
-        candidate_area.appendChild(this.div)
     }
 }
 
@@ -630,6 +744,7 @@ class Voter {
         this.population = population;
         this.ideology_score = population.draw_sample()
     };
+
     party_bonus(candidate) {
         return this.population.party_bonus(candidate.population)
     }
@@ -663,6 +778,7 @@ class RCVElection {
     get_random_voter() {
         return this.population.random_voter();
     }
+
     uncertainty() {
         return rand_bm(0, this.configuration.uncertainty, 1)
     }
@@ -699,6 +815,7 @@ class RCVElection {
         let done = false;
         let cc = this.candidates.candidates;
         this.clear_rounds();
+        let round = 1;
         while (!done) {
             console.log(`running rcv round with ${Object.keys(cc).length} candidates.`);
             const votes = this.rankedChoiceRound(cc);
@@ -718,7 +835,8 @@ class RCVElection {
                     max_votes = votes[c]
                 }
             });
-            this.draw_rcv_round(votes, cc);
+            this.draw_rcv_round(votes, cc, round);
+            round += 1;
             // console.log(`rcv: max_candidate: ${max_candidate} ${max_votes} ${max_votes / vote_count}`);
             console.log(`rcv: eliminating: ${min_candidate} ${min_votes}`);
             if (max_votes / vote_count > .5) {
@@ -736,16 +854,16 @@ class RCVElection {
         }
     }
 
-    draw_rcv_round(votes, candidates) {
+    draw_rcv_round(votes, candidates, round_number) {
         const starting_candidates = this.candidates.candidates;
         const rounds_div = document.getElementById("rounds");
         rounds_div.style.display = 'flex';
         rounds_div.style['flex-wrap'] = 'wrap';
-        const round = document.createElement("div");
-        round.id = `round-with-${candidates.length}`;
-        round.style.width = '20%';
-        round.style.height = '150px';
-        rounds_div.appendChild(round);
+        const round_div = document.createElement("div");
+        round_div.id = `round-with-${candidates.length}`;
+        round_div.style.width = '20%';
+        round_div.style.height = '150px';
+        rounds_div.appendChild(round_div);
 
         const c_names = [];
         const c_colors = [];
@@ -770,15 +888,23 @@ class RCVElection {
         }];
         const layout = {
             margin: {
-                t: 20, b: 20, l: 20, r: 20
+                t: 10, b: 25, l: 10, r: 10
             },
             yaxis: {
-                range: [0,6000],
+                range: [0, 6000],
             },
             plot_bgcolor: '#444',
             paper_bgcolor: '#444',
+            title: {
+                text: `RCV Round ${round_number}`,
+                x: .05,
+                y: .90,
+                font: {
+                    color: '#AfAfAf'
+                },
+            },
         };
-        Plotly.react(round, data, layout);
+        Plotly.react(round_div, data, layout);
     }
 }
 
