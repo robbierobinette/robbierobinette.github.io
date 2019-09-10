@@ -772,6 +772,9 @@ class RCVElection {
             margin: {
                 t: 20, b: 20, l: 20, r: 20
             },
+            yaxis: {
+                range: [0,6000],
+            },
             plot_bgcolor: '#444',
             paper_bgcolor: '#444',
         };
@@ -787,8 +790,8 @@ function setup() {
     const independent_color = 'gray';
 
     const populations = {};
-    populations['dem'] = new PopulationGroup("Democrats", 'dem', "blue", -.15, .1, 0);
-    populations['rep'] = new PopulationGroup("Republicans", 'rep', "red", .15, .1, 0);
+    populations['dem'] = new PopulationGroup("Democrats", 'dem', "blue", -.15, .2, 0);
+    populations['rep'] = new PopulationGroup("Republicans", 'rep', "red", .15, .2, 0);
     populations['ind'] = new PopulationGroup("Independents", 'ind', "gray", .0, .2, 0);
 
 
