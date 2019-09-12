@@ -20,7 +20,7 @@ class RCVElection {
     }
 
     clear_rounds() {
-        while (this.RCVArea.firstChild) {
+        while (this.RCVArea.firstChild !== null) {
             this.RCVArea.removeChild(this.RCVArea.firstChild);
         }
         const h = document.createElement("h2");
