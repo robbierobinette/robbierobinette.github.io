@@ -8,6 +8,16 @@ class PopulationArea {
 
         this.change_callback = null;
         this.mouseup_callback = null;
+
+        this.voters =  document.createElement('div');
+        this.voters.id = "voters_inner";
+        this.voters.style.display = "flex";
+        this.voters.style['flex-wrap'] = 'wrap';
+        Object.values(this.populations).forEach(p => {
+            this.voters.appendChild(p.configure());
+        });
+        this.configure_combined_pop();
+        this.voters.appendChild(this.combined_pop);
     }
 
     random_population() {
@@ -74,22 +84,8 @@ class PopulationArea {
         Plotly.react(container, traces, layout);
     }
 
-    configure() {
-        const voters = document.getElementById("voters");
-
-        const h = document.createElement("h2");
-        h.innerHTML = "Voting Population Ideology";
-        h.style.width = "100%";
-        voters.appendChild(h);
-
-        voters.style.display = "flex";
-        voters.style['flex-wrap'] = 'wrap';
-        Object.values(this.populations).forEach(p => {
-            voters.appendChild(p.configure());
-        });
-        this.configure_combined_pop();
-        voters.appendChild(this.combined_pop);
-        return voters
+    div() {
+        return this.voters;
     }
 
     configure_combined_pop() {

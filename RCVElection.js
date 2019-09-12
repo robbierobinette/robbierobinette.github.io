@@ -1,8 +1,15 @@
 class RCVElection {
     constructor(population, candidates, configuration) {
+        this.tag = 'rcv';
+        this.label = "Ranked Choice Election";
         this.population = population;
         this.candidates = candidates;
         this.configuration = configuration;
+        this.RCVArea = document.createElement('div');
+    }
+
+    div() {
+        return this.RCVArea;
     }
 
     configure() {
@@ -13,14 +20,13 @@ class RCVElection {
     }
 
     clear_rounds() {
-        const rounds_div = document.getElementById("rounds");
-        while (rounds_div.firstChild) {
-            rounds_div.removeChild(rounds_div.firstChild);
+        while (this.RCVArea.firstChild) {
+            this.RCVArea.removeChild(this.RCVArea.firstChild);
         }
         const h = document.createElement("h2");
         h.innerHTML = "Ranked Choice Rounds";
         h.style.width = "100%";
-        rounds_div.appendChild(h);
+        this.RCVArea.appendChild(h);
     }
 
     get_random_voter() {
@@ -104,13 +110,13 @@ class RCVElection {
 
     draw_rcv_round(votes, candidates, round_number) {
         const starting_candidates = this.candidates.candidates;
-        const rounds_div = document.getElementById("rounds");
+        const rounds_div = this.RCVArea;
         rounds_div.style.display = 'flex';
         rounds_div.style['flex-wrap'] = 'wrap';
         const round_div = document.createElement("div");
         round_div.id = `round-with-${candidates.length}`;
-        round_div.style.width = '20%';
-        round_div.style.height = '150px';
+        round_div.style.width = '11%';
+        round_div.style.height = '300px';
         rounds_div.appendChild(round_div);
 
         const c_names = [];
@@ -144,7 +150,7 @@ class RCVElection {
             plot_bgcolor: '#444',
             paper_bgcolor: '#444',
             title: {
-                text: `RCV Round ${round_number}`,
+                text: `${round_number}`,
                 x: .05,
                 y: .90,
                 font: {

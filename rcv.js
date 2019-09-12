@@ -16,7 +16,6 @@ function rand_bm(mean, stddev, skew) {
 
 
 function setup() {
-
     const democratic_color = 'blue';
     const republican_color = 'red';
     const independent_color = 'gray';
@@ -28,22 +27,27 @@ function setup() {
 
 
     const configuration = new ConfigurationArea(10, .1, 1, 1);
+    const configurationSlide = new SlideToggle(configuration.div(), "Configuration");
+    document.getElementById("configuration").appendChild(configurationSlide.div());
+
     const populationArea = new PopulationArea(populations);
-    const candidateArea = new CandidateArea(10, populationArea);
-    const RCVArea = new RCVElection(populationArea, candidateArea, configuration);
-
-    populationArea.set_mouseup_callback(RCVArea, RCVArea.run_rcv_election);
-    configuration.set_change_callback(RCVArea, RCVArea.run_rcv_election);
-    candidateArea.set_change_callback(RCVArea, RCVArea.run_rcv_election);
-
-    configuration.configure();
-    configuration.render();
-    populationArea.configure();
+    const populationSlide = new SlideToggle(populationArea.div(), "Voting Population Ideology");
+    document.getElementById("voters").appendChild(populationSlide.div());
     populationArea.render();
-    candidateArea.render();
 
-    RCVArea.render();
-    RCVArea.run_rcv_election();
+    const candidateArea = new CandidateArea(10, populationArea);
+    const candidateSlide = new SlideToggle(candidateArea.div(), "Candidate Definition");
+    document.getElementById("candidates_div").appendChild(candidateSlide.div());
+
+    const rcvArea = new RCVElection(populationArea, candidateArea, configuration);
+    const primaryArea = new PrimaryElection();
+    const electionArea = new ElectionArea([rcvArea, primaryArea]);
+
+    populationArea.set_mouseup_callback(rcvArea, rcvArea.run_rcv_election);
+    configuration.set_change_callback(rcvArea, rcvArea.run_rcv_election);
+    candidateArea.set_change_callback(rcvArea, rcvArea.run_rcv_election);
+
+    rcvArea.run_rcv_election();
 }
 
 setup();

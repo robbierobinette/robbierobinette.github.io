@@ -10,30 +10,30 @@ class CandidateArea {
             if (is > .15) population = population_area.populations['rep'];
             this.add_candidate(is, population);
         }
-        this.configure();
+        this.candidates_div = document.createElement("div");
+        this.candidates_div.style.display = "float";
+        this.candidates_div.style.contain = "both";
+        this.add_candidates();
+    }
+    div() {
+        return this.candidates_div;
     }
 
     remove_candidate(candiate_name) {
         delete this.candidates[candiate_name];
-        this.configure();
+        this.add_candidates();
         this.onchange();
     }
 
-    configure() {
-        this.div = document.createElement("div");
-        this.div.style.display = "float";
-        this.div.style.contain = "both";
+    add_candidates() {
+        while (this.candidates_div.firstChild) {
+            this.candidates_div.removeChild(this.candidates_div.firstChild);
+        }
 
-        const h = document.createElement("h2");
-        h.innerHTML = "Candidate Definition";
-        h.style.width = "100%";
-        this.div.appendChild(h);
-        this.add_headers(this.div);
-
+        this.add_headers(this.candidates_div);
         Object.values(this.candidates).forEach(c => {
-            this.div.appendChild(c.div);
+            this.candidates_div.appendChild(c.div);
         });
-
 
         const add_button = document.createElement("button");
         add_button.innerHTML = "Add Candidate";
@@ -43,13 +43,7 @@ class CandidateArea {
             obj.configure();
             obj.onchange()
         };
-        this.div.appendChild(add_button);
-
-        const candidate_area = document.getElementById("candidates_div");
-        while (candidate_area.firstChild) {
-            candidate_area.removeChild(candidate_area.firstChild);
-        }
-        candidate_area.appendChild(this.div)
+        this.candidates_div.appendChild(add_button);
     }
 
     add_candidate(ideology_score, population) {
