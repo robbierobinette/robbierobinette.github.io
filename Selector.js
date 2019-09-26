@@ -7,7 +7,6 @@ class Selector {
         this.change_obj = change_obj;
         this.value = selected;
 
-
         const select = document.createElement("select");
         select.label = name;
         select.style['background-color'] = '#333';

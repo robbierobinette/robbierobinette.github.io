@@ -23,7 +23,7 @@ class RCVElection {
         while (this.RCVArea.firstChild !== null) {
             this.RCVArea.removeChild(this.RCVArea.firstChild);
         }
-        const h = document.createElement("h2");
+        const h = document.createElement("h4");
         h.innerHTML = "Ranked Choice Rounds";
         h.style.width = "100%";
         this.RCVArea.appendChild(h);

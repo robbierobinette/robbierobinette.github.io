@@ -10,7 +10,7 @@ class CandidateArea {
             if (is > .15) population = population_area.populations['rep'];
             this.add_candidate(is, population);
         }
-        this.candidates_div = document.createElement("div");
+        this.candidates_div = document.createElement("div")a
         this.candidates_div.style.display = "float";
         this.candidates_div.style.contain = "both";
         this.add_candidates();
