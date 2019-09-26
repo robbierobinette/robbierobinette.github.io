@@ -1,74 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Ranked Choice Voting Simulation</title>
-    <script src="https://unpkg.com/mathjs/dist/math.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous">
-
-    </script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-            integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
-            crossorigin="anonymous">
-    </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #333;
-            color: #aaa;
-        }
-
-        /* Style the header */
-        header {
-            background-color: #666;
-            text-align: center;
-            font-size: 35px;
-            color: #FFF;
-        }
-
-        footer {
-            background-color: #777;
-            height: 20px;
-            padding: 10px;
-            text-align: center;
-            color: white;
-            opacity: .6;
-        }
-
-    </style>
+    <meta charset="UTF-8">
+    <title>The Scala.js Tutorial</title>
 </head>
-<body>
+<body font="helvetica">
+<style>
+    * {
+      font-family: sans-serif;
+    }
+</style>
+<div id="rcv">
 
-<header>
-    <h2>Ranked Choice Simulator</h2>
-</header>
-
-<div id="rcv_sim">
-    <div id="configuration">
-    </div>
-    <div id="voters">
-    </div>
-    <div id="candidates_div">
-    </div>
-    <div id="election_area">
-    </div>
 </div>
-
-<footer>
-    <p>Footer</p>
-</footer>
-
-
+<!-- Include Scala.js compiled code -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="rcvsimulationpage-fastopt.js"></script>
+<script type="text/javascript" src="rcvsimulationpage-jsdeps.js"></script>
 </body>
-<script src="rcvsimulationpage-fastopt.js"></script>
-<script src="rcvsimulationpage-jsdeps.js"></script>
 </html>
 
