@@ -1,4 +1,4 @@
-Dist,Incumbent,PVI,Clinton %,Trump %,Obama %,Romney %
+district,incumbent,lean,dPct1,rPct1,dPct2,rPct2
 AL-01,Bradley Byrne (R),R+15,33.8,63,37.3,61.7
 AL-02,Martha Roby (R),R+16,32.8,64.5,36.4,62.8
 AL-03,Mike Rogers (R),R+16,31.9,64.8,36.7,62.2
@@ -6,7 +6,7 @@ AL-04,Robert Aderholt (R),R+30,17.3,79.8,23.9,74.7
 AL-05,Mo Brooks (R),R+18,30.9,63.7,34.8,63.7
 AL-06,Gary Palmer (R),R+26,25.8,69.6,24.6,74.3
 AL-07,Terri Sewell (D),D+20,69.5,28.3,72.5,27
-AK-AL,Don Young (R),R+9,36.6,51.3,40.8,54.8
+AK-01,Don Young (R),R+9,36.6,51.3,40.8,54.8
 AZ-01,Tom O'Halleran (D),R+2,46,47,47.9,50.4
 AZ-02,Ann Kirkpatrick (D),R+1,48.7,43.9,48.4,49.9
 AZ-03,Raul Grijalva (D),D+13,61.6,32.1,61.4,36.9
@@ -85,7 +85,7 @@ CT-02,Joe Courtney (D),D+3,48.6,45.7,55.9,42.6
 CT-03,Rosa DeLauro (D),D+9,55.8,40.3,62.6,36.3
 CT-04,Jim Himes (D),D+7,59.5,36.5,55.1,44
 CT-05,Jahana Hayes (D),D+2,49.9,45.8,53.5,45.3
-DE-AL,Lisa Blunt Rochester (D),D+6,53.2,41.8,58.6,40
+DE-01,Lisa Blunt Rochester (D),D+6,53.2,41.8,58.6,40
 FL-01,Matt Gaetz (R),R+22,28.2,67.5,null,null
 FL-02,Neal Dunn (R),R+18,30.6,66.2,null,null
 FL-03,Ted Yoho (R),R+9,40.2,56.2,null,null
@@ -231,7 +231,7 @@ MO-05,Emanuel Cleaver (D),D+7,54.6,39.8,58.9,39.4
 MO-06,Sam Graves (R),R+16,31.1,63.4,38,59.9
 MO-07,Billy Long (R),R+23,24.6,70.1,30.4,67.6
 MO-08,Jason Smith (R),R+24,21.1,75.3,32,65.9
-MT-AL,Greg Gianforte (R),R+11,35.7,56.2,41.7,55.4
+MT-01,Greg Gianforte (R),R+11,35.7,56.2,41.7,55.4
 NE-01,Jeff Fortenberry (R),R+11,35.5,56.2,40.7,57.2
 NE-02,Don Bacon (R),R+4,44.9,47.2,45.5,52.6
 NE-03,Adrian Smith (R),R+27,19.7,73.9,27.7,70
@@ -296,7 +296,7 @@ NC-10,Patrick McHenry (R),R+12,35.7,60.5,null,null
 NC-11,Mark Meadows (R),R+14,33.7,62,null,null
 NC-12,Alma Adams (D),D+18,67.2,28.2,null,null
 NC-13,Ted Budd (R),R+6,43.5,52.7,null,null
-ND-AL,Kelly Armstrong (R),R+16,27.2,63,38.7,58.3
+ND-01,Kelly Armstrong (R),R+16,27.2,63,38.7,58.3
 OH-01,Steve Chabot (R),R+5,44.5,51.1,46.3,52.4
 OH-02,Brad Wenstrup (R),R+9,39.5,55.6,43.7,54.8
 OH-03,Joyce Beatty (D),D+19,67.2,28.3,69.8,29
@@ -350,7 +350,7 @@ SC-04,William Timmons (R),R+15,34.2,60,36.2,62.2
 SC-05,Ralph Norman (R),R+9,38.8,57.3,43.4,55.3
 SC-06,Jim Clyburn (D),D+19,67.1,29.7,73,26
 SC-07,Tom Rice (R),R+9,39.2,57.9,44.5,54.5
-SD-AL,Dusty Johnson (R),R+14,31.7,61.5,39.9,57.9
+SD-01,Dusty Johnson (R),R+14,31.7,61.5,39.9,57.9
 TN-01,Phil Roe (R),R+28,19.6,76.4,25.7,72.7
 TN-02,Tim Burchett (R),R+20,29.5,64.7,30.9,67.3
 TN-03,Chuck Fleischmann (R),R+18,30,65.1,35,63.4
@@ -400,7 +400,7 @@ UT-01,Rob Bishop (R),R+26,22.4,49.7,20.4,77.5
 UT-02,Chris Stewart (R),R+16,32,46,29.4,68.4
 UT-03,John Curtis (R),R+25,23.3,47.2,19.6,78.6
 UT-04,Ben McAdams (D),R+13,32.4,39.1,30.4,67.6
-VT-AL,Peter Welch (D),D+15,56.7,30.3,66.6,31
+VT-01,Peter Welch (D),D+15,56.7,30.3,66.6,31
 VA-01,Rob Wittman (R),R+8,40.9,53.1,null,null
 VA-02,Elaine Luria (D),R+3,45,48.4,null,null
 VA-03,Bobby Scott (D),D+16,63.2,31.7,null,null
@@ -433,4 +433,4 @@ WI-05,Jim Sensenbrenner (R),R+13,36.7,56.5,37.7,61.2
 WI-06,Glenn Grothman (R),R+8,38.2,54.8,45.7,53
 WI-07,Sean Duffy (R),R+8,36.9,57.2,47.7,50.8
 WI-08,Mike Gallagher (R),R+7,38.3,55.7,47.5,51.2
-WY-AL,Liz Cheney (R),R+25,21.9,68.2,27.8,68.6
+WY-01,Liz Cheney (R),R+25,21.9,68.2,27.8,68.6
