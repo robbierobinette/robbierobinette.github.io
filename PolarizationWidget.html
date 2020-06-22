@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulated United States House of Representatives Election</title>
+
+</head>
+<body>
+<style>
+    #outerDiv {
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        padding: 0px;
+    }
+
+</style>
+<!-- Include Scala.js compiled code -->
+<div id="outerDiv">
+
+    <div id="overlayDiv" width="100%" height="100%" x="0" y="0" style="position: relative;">
+
+    </div>
+
+    <svg id="visDiv" width="100%" height="100%" x="0" y="0" style="position: relative;">
+
+    </svg>
+</div>
+<script type="text/javascript" src="datastories/target/scala-2.12/scalajs-bundler/main/datastories-fastopt-library.js"></script>
+<script type="text/javascript" src="datastories/target/scala-2.12/scalajs-bundler/main/datastories-fastopt-loader.js"></script>
+<script type="text/javascript" src="datastories/target/scala-2.12/scalajs-bundler/main/datastories-fastopt.js"></script>
+<script>
+        HousePolarizationWidget.display("visDiv", "overlayDiv")
+</script>
+
+</body>
+</html>
+</body>
+</html>
