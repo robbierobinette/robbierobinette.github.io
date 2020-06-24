@@ -27929,7 +27929,7 @@ const $p_LdataStories_HousePolarizationWidget__construct__V = (function($thiz) {
           this$2$1.LdataStories_HousePolarizationWidget__f_house = new $c_LdataStories_MemberController(this$2$1.LdataStories_HousePolarizationWidget__f_svgArea, html, cdd, this$2$1.LdataStories_HousePolarizationWidget__f_configData);
           this$2$1.onResize__V();
           this$2$1.LdataStories_HousePolarizationWidget__f_house.layoutNomHistogram__D__D__D__Z__V(this$2$1.LdataStories_HousePolarizationWidget__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y1Pct, 3.0, this$2$1.LdataStories_HousePolarizationWidget__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_opacity1, false);
-          this$2$1.LdataStories_HousePolarizationWidget__f_house.renderTimeAxis__I__V(1787);
+          this$2$1.LdataStories_HousePolarizationWidget__f_house.renderTimeAxis__I__V(1789);
           const $$x8 = $i_d3.select($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window());
           const this$27 = $m_Lio_whitemice_d3v5_all_package$();
           const fun = new $c_sjsr_AnonFunction0(((this$26) => (() => {
