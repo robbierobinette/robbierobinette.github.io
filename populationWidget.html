@@ -6,16 +6,20 @@
 
 </head>
 <body>
-<!-- Include Scala.js compiled code -->
-<link rel="stylesheet" type="text/css" href="help-tips.css">
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<div id="populationWidget">
+    <!-- Include Scala.js compiled code -->
+    <link rel="stylesheet" type="text/css" href="help-tips.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <div id="populationWidget">
 
 
-</div>
-</script>
-<script type="text/javascript" src="populationWidget/target/scala-2.12/populationwidget-fastopt.js"></script>
-<script type="text/javascript" src="populationWidget/target/scala-2.12/populationwidget-jsdeps.js"></script>
+    </div>
+    <script type="text/javascript"
+            src="populationWidget/target/scala-2.12/scalajs-bundler/main/populationwidget-fastopt.js">
+    </script>
+    <script>
+        PopulationWidget.main()
+    </script>
+
 </body>
 </html>
 </body>
