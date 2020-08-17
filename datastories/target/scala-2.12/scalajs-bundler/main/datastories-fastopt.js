@@ -45183,6 +45183,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     const $$x1 = this.LdataStories_PolarizationDataStory__f_graphicArea;
     const this$4 = $m_Lio_whitemice_d3v5_all_package$();
     $$x1.attr("transform", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$4, transformString));
+    this.LdataStories_PolarizationDataStory__f_vizRect = this.LdataStories_PolarizationDataStory__f_vizArea.node().getBoundingClientRect();
     const $$x8 = this.LdataStories_PolarizationDataStory__f_voterCanvas;
     const this$5 = $m_Lio_whitemice_d3v5_all_package$();
     const d = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.width) * this.LdataStories_PolarizationDataStory__f_dpr);
