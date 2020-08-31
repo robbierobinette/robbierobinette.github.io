@@ -5313,6 +5313,31 @@ function $m_Lcom_typesafe_config_ConfigFactory$() {
   };
   return $n_Lcom_typesafe_config_ConfigFactory$
 }
+const $f_LdataStories_BoxObject__clear__s_Option__V = (function($thiz, svgAreaOpt) {
+  if ((!svgAreaOpt.isEmpty__Z())) {
+    const arg1 = svgAreaOpt.get__O();
+    $f_LdataStories_BoxObject__clear__Lio_whitemice_d3v5_selection_Selection__V($thiz, arg1)
+  }
+});
+const $f_LdataStories_BoxObject__clear__Lio_whitemice_d3v5_selection_Selection__V = (function($thiz, svgArea) {
+  const x = ("removing object " + $thiz.id__T());
+  const this$2 = $m_s_Console$();
+  const this$3 = $as_Ljava_io_PrintStream(this$2.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+  this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
+  svgArea.selectAll(("#" + $thiz.id__T())).remove()
+});
+function $is_LdataStories_BoxObject(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.LdataStories_BoxObject)))
+}
+function $as_LdataStories_BoxObject(obj) {
+  return (($is_LdataStories_BoxObject(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.BoxObject"))
+}
+function $isArrayOf_LdataStories_BoxObject(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_BoxObject)))
+}
+function $asArrayOf_LdataStories_BoxObject(obj, depth) {
+  return (($isArrayOf_LdataStories_BoxObject(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.BoxObject;", depth))
+}
 const $ct_LdataStories_Bubble__ = (function($thiz) {
   $thiz.LdataStories_Bubble__f_x = 0.0;
   $thiz.LdataStories_Bubble__f_y = 0.0;
@@ -5754,6 +5779,105 @@ function $isArrayOf_LdataStories_LayoutManager(obj, depth) {
 function $asArrayOf_LdataStories_LayoutManager(obj, depth) {
   return (($isArrayOf_LdataStories_LayoutManager(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.LayoutManager;", depth))
 }
+class $c_LdataStories_PDSLinks$ extends $c_O {
+  constructor() {
+    super();
+    this.LdataStories_PDSLinks$__f_links = null;
+    this.LdataStories_PDSLinks$__f_linkMap = null;
+    $n_LdataStories_PDSLinks$ = this;
+    const $$x12 = $m_sc_Seq$();
+    const $$x11 = $m_sc_Seq$();
+    const array = [new $c_LdataStories_LinkSpecification("house-where", 0.05, 0.3, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/polarization"), new $c_LdataStories_LinkSpecification("house-why", 0.95, 0.3, "end", "Why does this matter?", "https://blog.betterchoices.vote/polarization-why")];
+    const $$x10 = new $c_LdataStories_PageLinks(0, $as_sc_Seq($$x11.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))));
+    const $$x9 = $m_sc_Seq$();
+    const array$1 = [new $c_LdataStories_LinkSpecification("voters-where", 0.05, 0.3, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/voters-where"), new $c_LdataStories_LinkSpecification("voters-why", 0.95, 0.3, "end", "Why does this matter?", "https://blog.betterchoices.vote/voters-why")];
+    const $$x8 = new $c_LdataStories_PageLinks(100, $as_sc_Seq($$x9.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$1))));
+    const $$x7 = $m_sc_Seq$();
+    const array$2 = [new $c_LdataStories_LinkSpecification("simulation-where", 0.05, 0.3, "beginning", "How does simulation work?", "https://blog.betterchoices.vote/simulation-how"), new $c_LdataStories_LinkSpecification("simulation-why", 0.95, 0.3, "end", "Why does this matter?", "https://blog.betterchoices.vote/simulation-why")];
+    const $$x6 = new $c_LdataStories_PageLinks(125, $as_sc_Seq($$x7.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$2))));
+    const $$x5 = $m_sc_Seq$();
+    const array$3 = [new $c_LdataStories_LinkSpecification("representation-where", 0.05, 0.3, "beginning", "How is representation calculated?", "https://blog.betterchoices.vote/representation-how"), new $c_LdataStories_LinkSpecification("representation-why", 0.95, 0.3, "end", "Why does this matter?", "https://blog.betterchoices.vote/representation-why")];
+    const $$x4 = new $c_LdataStories_PageLinks(150, $as_sc_Seq($$x5.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$3))));
+    const $$x3 = $m_sc_Seq$();
+    const array$4 = [new $c_LdataStories_LinkSpecification("actual-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/actual-representation-how"), new $c_LdataStories_LinkSpecification("actual-map-why", 0.95, 0.25, "end", "Why does this matter?", "https://blog.betterchoices.vote/actual-representation-why")];
+    const $$x2 = new $c_LdataStories_PageLinks(200, $as_sc_Seq($$x3.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$4))));
+    const $$x1 = $m_sc_Seq$();
+    const array$5 = [new $c_LdataStories_LinkSpecification("expected-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/expected-map-how"), new $c_LdataStories_LinkSpecification("expected-map-why", 0.95, 0.25, "end", "Why does this matter?", "https://blog.betterchoices.vote/expected-map-why")];
+    const array$6 = [$$x10, $$x8, $$x6, $$x4, $$x2, new $c_LdataStories_PageLinks(201, $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$5))))];
+    this.LdataStories_PDSLinks$__f_links = $as_sc_Seq($$x12.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$6)));
+    const $$x15 = $m_s_Predef$().s_Predef$__f_Map;
+    const $$x14 = this.LdataStories_PDSLinks$__f_links;
+    const $$x13 = new $c_sjsr_AnonFunction1(((this$15) => ((l$2) => {
+      const l = $as_LdataStories_PageLinks(l$2);
+      return $ct_T2__O__O__(new $c_T2(), l.LdataStories_PageLinks__f_section, l)
+    }))(this));
+    const this$16 = $m_sc_Seq$();
+    this.LdataStories_PDSLinks$__f_linkMap = $as_sci_Map($$x15.apply__sc_Seq__sc_GenMap($as_sc_Seq($$x14.map__F1__scg_CanBuildFrom__O($$x13, this$16.scg_GenTraversableFactory__f_ReusableCBFInstance))))
+  };
+  displayLinks__I__sc_Seq(section) {
+    const xo = this.LdataStories_PDSLinks$__f_linkMap.get__O__s_Option(section);
+    const this$2 = xo.toList__sci_List();
+    const f = ((this$3) => ((pl$2) => {
+      const pl = $as_LdataStories_PageLinks(pl$2);
+      return pl.LdataStories_PageLinks__f_links
+    }))(this);
+    const this$4 = $m_sc_Seq$();
+    const bf = this$4.scg_GenTraversableFactory__f_ReusableCBFInstance;
+    let $$x1;
+    if ((bf === $m_sci_List$().scg_GenTraversableFactory__f_ReusableCBFInstance)) {
+      if ((this$2 === $m_sci_Nil$())) {
+        $$x1 = $m_sci_Nil$()
+      } else {
+        let rest = this$2;
+        const found = new $c_sr_BooleanRef(false);
+        const h = new $c_sr_ObjectRef(null);
+        const t = new $c_sr_ObjectRef(null);
+        while ((rest !== $m_sci_Nil$())) {
+          const arg1 = rest.head__O();
+          $as_sc_GenTraversableOnce(f(arg1)).seq__sc_TraversableOnce().foreach__F1__V(new $c_sjsr_AnonFunction1(((this$8, found$1, h$1, t$1) => ((b$2) => {
+            if ((!found$1.sr_BooleanRef__f_elem)) {
+              h$1.sr_ObjectRef__f_elem = new $c_sci_$colon$colon(b$2, $m_sci_Nil$());
+              t$1.sr_ObjectRef__f_elem = $as_sci_$colon$colon(h$1.sr_ObjectRef__f_elem);
+              found$1.sr_BooleanRef__f_elem = true
+            } else {
+              const nx = new $c_sci_$colon$colon(b$2, $m_sci_Nil$());
+              $as_sci_$colon$colon(t$1.sr_ObjectRef__f_elem).sci_$colon$colon__f_tl = nx;
+              t$1.sr_ObjectRef__f_elem = nx
+            }
+          }))(this$2, found, h, t)));
+          rest = $as_sci_List(rest.tail__O())
+        };
+        $$x1 = ((!found.sr_BooleanRef__f_elem) ? $m_sci_Nil$() : $as_sci_$colon$colon(h.sr_ObjectRef__f_elem))
+      }
+    } else {
+      $m_sci_List$();
+      const b = new $c_scm_ListBuffer();
+      let these = this$2;
+      while ((!these.isEmpty__Z())) {
+        const arg1$1 = these.head__O();
+        const xs = $as_sc_GenTraversableOnce(f(arg1$1)).seq__sc_TraversableOnce();
+        b.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(xs);
+        these = $as_sci_List(these.tail__O())
+      };
+      $$x1 = b.toList__sci_List()
+    };
+    return $as_sc_Seq($$x1)
+  };
+}
+const $d_LdataStories_PDSLinks$ = new $TypeData().initClass({
+  LdataStories_PDSLinks$: 0
+}, false, "dataStories.PDSLinks$", {
+  LdataStories_PDSLinks$: 1,
+  O: 1
+});
+$c_LdataStories_PDSLinks$.prototype.$classData = $d_LdataStories_PDSLinks$;
+let $n_LdataStories_PDSLinks$ = (void 0);
+function $m_LdataStories_PDSLinks$() {
+  if ((!$n_LdataStories_PDSLinks$)) {
+    $n_LdataStories_PDSLinks$ = new $c_LdataStories_PDSLinks$()
+  };
+  return $n_LdataStories_PDSLinks$
+}
 class $c_LdataStories_RandomHelpers$ extends $c_O {
   randRange__D__D__D(min, max) {
     const this$1 = $m_s_util_Random$();
@@ -6049,18 +6173,6 @@ const $f_LdataStories_ResizeHandler__$init$__V = (function($thiz) {
   $thiz.scaledWidth_$eq__D__V($thiz.desiredWidth__D());
   $thiz.scaledHeight_$eq__D__V((($thiz.screenHeight__D() * $thiz.desiredWidth__D()) / $thiz.screenWidth__D()))
 });
-function $is_LdataStories_ScaledBox$BoxObject(obj) {
-  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.LdataStories_ScaledBox$BoxObject)))
-}
-function $as_LdataStories_ScaledBox$BoxObject(obj) {
-  return (($is_LdataStories_ScaledBox$BoxObject(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.ScaledBox$BoxObject"))
-}
-function $isArrayOf_LdataStories_ScaledBox$BoxObject(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_ScaledBox$BoxObject)))
-}
-function $asArrayOf_LdataStories_ScaledBox$BoxObject(obj, depth) {
-  return (($isArrayOf_LdataStories_ScaledBox$BoxObject(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.ScaledBox$BoxObject;", depth))
-}
 class $c_LdataStories_ScrollDrivenContent extends $c_O {
 }
 class $c_Lio_whitemice_d3v5_all_d3$ extends $c_O {
@@ -7725,6 +7837,17 @@ class $c_Lrcvcore_PopulationTag$ extends $c_O {
       default: {
         return new $c_Lrcvcore_CustomParty(partyId, $as_T(partyMap.apply__O__O(partyId)), $as_T(colors.apply__I__O($intMod(partyId, colors.length__I()))))
       }
+    }
+  };
+  apply__T__Lrcvcore_PopulationTag(shortName) {
+    if ((shortName === "Rep")) {
+      return $m_Lrcvcore_Republicans$()
+    } else if ((shortName === "Dem")) {
+      return $m_Lrcvcore_Democrats$()
+    } else if ((shortName === "Ind")) {
+      return $m_Lrcvcore_Independents$()
+    } else {
+      throw new $c_s_MatchError(shortName)
     }
   };
 }
@@ -11315,6 +11438,147 @@ function $m_LscalajsUtils_PopulationColorPicker$() {
     $n_LscalajsUtils_PopulationColorPicker$ = new $c_LscalajsUtils_PopulationColorPicker$()
   };
   return $n_LscalajsUtils_PopulationColorPicker$
+}
+const $f_LscalajsUtils_SVGButton__updateColor__V = (function($thiz) {
+  const f = ($thiz.isActive__Z() ? $thiz.activeColor__T() : $thiz.inactiveColor__T());
+  const arg$macro$1 = $thiz.textLabel__T();
+  const this$3 = new $c_sci_StringOps("setting color for %30s to %10s");
+  const array = [arg$macro$1, f];
+  const this$ = this$3.sci_StringOps__f_repr;
+  $m_sc_Seq$();
+  $m_sjs_js_WrappedArray$();
+  const array$1 = [];
+  $uI(array.length);
+  let i = 0;
+  const len = $uI(array.length);
+  while ((i < len)) {
+    const index = i;
+    const arg1 = array[index];
+    const elem = $p_sci_StringLike__unwrapArg__O__O(this$3, arg1);
+    array$1.push(elem);
+    i = ((1 + i) | 0)
+  };
+  $m_s_reflect_ManifestFactory$ObjectManifest$();
+  const len$1 = $uI(array$1.length);
+  const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
+  const len$2 = result.u.length;
+  let i$1 = 0;
+  let j = 0;
+  const x = $uI(array$1.length);
+  const x$1 = ((x < len$2) ? x : len$2);
+  const that = result.u.length;
+  const end = ((x$1 < that) ? x$1 : that);
+  while ((i$1 < end)) {
+    const $$x1 = j;
+    const index$1 = i$1;
+    result.set($$x1, array$1[index$1]);
+    i$1 = ((1 + i$1) | 0);
+    j = ((1 + j) | 0)
+  };
+  const x$2 = $m_jl_String$().format__T__AO__T(this$, result);
+  const this$18 = $m_s_Console$();
+  const this$19 = $as_Ljava_io_PrintStream(this$18.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+  this$19.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$2 + "\n"));
+  const $$x2 = $thiz.text__Lio_whitemice_d3v5_selection_Selection();
+  const this$20 = $m_Lio_whitemice_d3v5_all_package$();
+  $$x2.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$20, f));
+  const $$x3 = $thiz.rect__Lio_whitemice_d3v5_selection_Selection();
+  const this$21 = $m_Lio_whitemice_d3v5_all_package$();
+  $$x3.style("stroke", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$21, f))
+});
+const $f_LscalajsUtils_SVGButton__activate__V = (function($thiz) {
+  const this$1 = $thiz.clickCB__F0();
+  this$1.apply__O();
+  $thiz.isActive_$eq__Z__V(true);
+  $f_LscalajsUtils_SVGButton__updateColor__V($thiz)
+});
+const $f_LscalajsUtils_SVGButton__deActivate__V = (function($thiz) {
+  $thiz.isActive_$eq__Z__V(false);
+  $f_LscalajsUtils_SVGButton__updateColor__V($thiz)
+});
+const $f_LscalajsUtils_SVGButton__clear__V = (function($thiz) {
+  $thiz.rect__Lio_whitemice_d3v5_selection_Selection().remove();
+  $thiz.text__Lio_whitemice_d3v5_selection_Selection().remove()
+});
+const $f_LscalajsUtils_SVGButton__$init$__V = (function($thiz) {
+  const $$x13 = $thiz.parentSVG__Lio_whitemice_d3v5_selection_Selection().append("rect");
+  const this$1 = $m_Lio_whitemice_d3v5_all_package$();
+  const s = $thiz.id__T();
+  const $$x12 = $$x13.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$1, s));
+  const this$2 = $m_Lio_whitemice_d3v5_all_package$();
+  const d = $thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_x;
+  const $$x11 = $$x12.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$2, d));
+  const this$3 = $m_Lio_whitemice_d3v5_all_package$();
+  const d$1 = $thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_y;
+  const $$x10 = $$x11.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$3, d$1));
+  const this$4 = $m_Lio_whitemice_d3v5_all_package$();
+  const d$2 = ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_height / 2.0);
+  const $$x9 = $$x10.attr("rx", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$4, d$2));
+  const this$5 = $m_Lio_whitemice_d3v5_all_package$();
+  const d$3 = ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_height / 2.0);
+  const $$x8 = $$x9.attr("ry", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, d$3));
+  const this$6 = $m_Lio_whitemice_d3v5_all_package$();
+  const d$4 = $thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_width;
+  const $$x7 = $$x8.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$6, d$4));
+  const this$7 = $m_Lio_whitemice_d3v5_all_package$();
+  const d$5 = $thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_height;
+  const $$x6 = $$x7.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$7, d$5));
+  const this$8 = $m_Lio_whitemice_d3v5_all_package$();
+  const s$1 = $thiz.inactiveColor__T();
+  const $$x5 = $$x6.style("stroke", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$8, s$1));
+  const this$9 = $m_Lio_whitemice_d3v5_all_package$();
+  const $$x4 = $$x5.style("strike-width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$9, "2"));
+  const this$10 = $m_Lio_whitemice_d3v5_all_package$();
+  const $$x3 = $$x4.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$10, "white"));
+  const this$11 = $m_Lio_whitemice_d3v5_all_package$();
+  const $$x2 = $$x3.style("cursor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$11, "default"));
+  const this$13 = $m_Lio_whitemice_d3v5_all_package$();
+  const fun = new $c_sjsr_AnonFunction0(((this$12) => (() => {
+    this$12.onClick__V()
+  }))($thiz));
+  const $$x1 = $$x2.on("click", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$13, fun));
+  $thiz.scalajsUtils$SVGButton$_setter_$rect_$eq__Lio_whitemice_d3v5_selection_Selection__V($$x1);
+  const $$x24 = $thiz.parentSVG__Lio_whitemice_d3v5_selection_Selection().append("text");
+  const this$14 = $m_Lio_whitemice_d3v5_all_package$();
+  const s$2 = ($thiz.id__T() + "-text");
+  const $$x23 = $$x24.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$14, s$2));
+  const this$15 = $m_Lio_whitemice_d3v5_all_package$();
+  const d$6 = ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_x + ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_width / 2.0));
+  const $$x22 = $$x23.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$15, d$6));
+  const this$16 = $m_Lio_whitemice_d3v5_all_package$();
+  const d$7 = ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_y + ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_height / 2.0));
+  const $$x21 = $$x22.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$16, d$7));
+  const this$17 = $m_Lio_whitemice_d3v5_all_package$();
+  const $$x20 = $$x21.attr("dy", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$17, ".3em"));
+  const this$18 = $m_Lio_whitemice_d3v5_all_package$();
+  const $$x19 = $$x20.style("font-size", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$18, "10pt"));
+  const this$19 = $m_Lio_whitemice_d3v5_all_package$();
+  const $$x18 = $$x19.style("text-anchor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$19, "middle"));
+  const this$20 = $m_Lio_whitemice_d3v5_all_package$();
+  const s$3 = $thiz.inactiveColor__T();
+  const $$x17 = $$x18.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$20, s$3));
+  const this$21 = $m_Lio_whitemice_d3v5_all_package$();
+  const $$x16 = $$x17.style("cursor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$21, "default"));
+  const $$x15 = $$x16.text($thiz.textLabel__T());
+  const this$22 = $m_Lio_whitemice_d3v5_all_package$();
+  const fun$1 = new $c_sjsr_AnonFunction0(((this$2$1) => (() => {
+    this$2$1.onClick__V()
+  }))($thiz));
+  const $$x14 = $$x15.on("click", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$22, fun$1));
+  $thiz.scalajsUtils$SVGButton$_setter_$text_$eq__Lio_whitemice_d3v5_selection_Selection__V($$x14);
+  $thiz.isActive_$eq__Z__V(false)
+});
+function $is_LscalajsUtils_SVGButton(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.LscalajsUtils_SVGButton)))
+}
+function $as_LscalajsUtils_SVGButton(obj) {
+  return (($is_LscalajsUtils_SVGButton(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "scalajsUtils.SVGButton"))
+}
+function $isArrayOf_LscalajsUtils_SVGButton(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LscalajsUtils_SVGButton)))
+}
+function $asArrayOf_LscalajsUtils_SVGButton(obj, depth) {
+  return (($isArrayOf_LscalajsUtils_SVGButton(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LscalajsUtils.SVGButton;", depth))
 }
 class $c_Lscalatags_Escaping$ extends $c_O {
   constructor() {
@@ -18759,9 +19023,9 @@ const $d_Lnet_scalapro_sortable_SortableOptionsBuilder = new $TypeData().initCla
 $c_Lnet_scalapro_sortable_SortableOptionsBuilder.prototype.$classData = $d_Lnet_scalapro_sortable_SortableOptionsBuilder;
 class $c_Lrcvcore_CongressionalSimulationConfig$ extends $c_O {
   defaultConfig__I__Lrcvcore_CongressionalSimulationConfig(nPartyCandidates) {
-    const electionConfig = new $c_Lrcvcore_ElectionConfig(3.0, 20.0, 1.0, 1.0, 20.0);
+    const electionConfig = new $c_Lrcvcore_ElectionConfig(15.0, 30.0, 1.0, 1.0, 3.0);
     const populationConfig = new $c_Lrcvcore_PopulationConfiguration(30.0, 30.0, 0.5);
-    return new $c_Lrcvcore_CongressionalSimulationConfig("base", electionConfig, populationConfig, nPartyCandidates, nPartyCandidates, 0, 1, 20.0, 15.0, 8.0, 0.0, 3.0)
+    return new $c_Lrcvcore_CongressionalSimulationConfig("base", electionConfig, populationConfig, nPartyCandidates, nPartyCandidates, 0, 1, 0.22, 0.14, 0.08, 10.0, 0.0, 3.0)
   };
 }
 const $d_Lrcvcore_CongressionalSimulationConfig$ = new $TypeData().initClass({
@@ -18823,41 +19087,120 @@ function $isArrayOf_Lrcvcore_PopulationTag(obj, depth) {
 function $asArrayOf_Lrcvcore_PopulationTag(obj, depth) {
   return (($isArrayOf_Lrcvcore_PopulationTag(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lrcvcore.PopulationTag;", depth))
 }
+class $c_Lrcvcore_ProcessResult$ extends $c_O {
+  apply__sc_Seq__Lrcvcore_ProcessResult(rr) {
+    const party = this.partyFor__I__I__Lrcvcore_PopulationTag(rr.count__F1__I(new $c_sjsr_AnonFunction1(((this$1) => ((r$2) => {
+      const r = $as_Lrcvcore_ProcessResult(r$2);
+      const x = r.Lrcvcore_ProcessResult__f_party;
+      const x$2 = $m_Lrcvcore_Democrats$();
+      return ((x !== null) && x.equals__O__Z(x$2))
+    }))(this))), rr.length__I());
+    const p = new $c_sjsr_AnonFunction1(((this$2, party$1) => ((x$1$2) => {
+      const x$1 = $as_Lrcvcore_ProcessResult(x$1$2);
+      const x$3 = x$1.Lrcvcore_ProcessResult__f_party;
+      return ((x$3 === null) ? (party$1 === null) : x$3.equals__O__Z(party$1))
+    }))(this, party));
+    const filteredResults = $as_sc_Seq(rr.filterImpl__F1__Z__O(p, false));
+    const $$x3 = new $c_sjsr_AnonFunction1(((this$3) => ((x$2$2) => {
+      const x$2$1 = $as_Lrcvcore_ProcessResult(x$2$2);
+      return x$2$1.Lrcvcore_ProcessResult__f_ideology
+    }))(this));
+    const this$4 = $m_sc_Seq$();
+    const $$x2 = this.avg__sc_Seq__D($as_sc_Seq(filteredResults.map__F1__scg_CanBuildFrom__O($$x3, this$4.scg_GenTraversableFactory__f_ReusableCBFInstance)));
+    const $$x1 = new $c_sjsr_AnonFunction1(((this$4$1) => ((x$3$2) => {
+      const x$3$1 = $as_Lrcvcore_ProcessResult(x$3$2);
+      return x$3$1.Lrcvcore_ProcessResult__f_voterSatisfaction
+    }))(this));
+    const this$5 = $m_sc_Seq$();
+    return new $c_Lrcvcore_ProcessResult($$x2, party, this.avg__sc_Seq__D($as_sc_Seq(filteredResults.map__F1__scg_CanBuildFrom__O($$x1, this$5.scg_GenTraversableFactory__f_ReusableCBFInstance))))
+  };
+  avg__sc_Seq__D(data) {
+    return ($uD(data.sum__s_math_Numeric__O($m_s_math_Numeric$DoubleIsFractional$())) / data.length__I())
+  };
+  randomParty__Lrcvcore_PopulationTag() {
+    const this$1 = $m_s_util_Random$();
+    if (this$1.s_util_Random__f_self.nextBoolean__Z()) {
+      return $m_Lrcvcore_Republicans$()
+    } else {
+      return $m_Lrcvcore_Democrats$()
+    }
+  };
+  partyFor__I__I__Lrcvcore_PopulationTag(nDem, nResults) {
+    return ((nDem > ((nResults / 2) | 0)) ? $m_Lrcvcore_Democrats$() : ((nDem < ((nResults / 2) | 0)) ? $m_Lrcvcore_Republicans$() : this.randomParty__Lrcvcore_PopulationTag()))
+  };
+}
+const $d_Lrcvcore_ProcessResult$ = new $TypeData().initClass({
+  Lrcvcore_ProcessResult$: 0
+}, false, "rcvcore.ProcessResult$", {
+  Lrcvcore_ProcessResult$: 1,
+  O: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lrcvcore_ProcessResult$.prototype.$classData = $d_Lrcvcore_ProcessResult$;
+let $n_Lrcvcore_ProcessResult$ = (void 0);
+function $m_Lrcvcore_ProcessResult$() {
+  if ((!$n_Lrcvcore_ProcessResult$)) {
+    $n_Lrcvcore_ProcessResult$ = new $c_Lrcvcore_ProcessResult$()
+  };
+  return $n_Lrcvcore_ProcessResult$
+}
 class $c_Lrcvcore_SimulationResultInstance$ extends $c_O {
   apply__Lrcvcore_SimulationResultCSV__Lrcvcore_SimulationResultInstance(simulationCSV) {
-    const $$x8 = $as_T(simulationCSV.district);
+    const $$x17 = $as_T(simulationCSV.district);
     const x = $as_T(simulationCSV.medianVoterIdeologyStr);
     const this$2 = new $c_sci_StringOps(x);
     const this$ = this$2.sci_StringOps__f_repr;
-    const $$x7 = $m_jl_Double$().parseDouble__T__D(this$);
+    const $$x16 = $m_jl_Double$().parseDouble__T__D(this$);
     const x$1 = $as_T(simulationCSV.actualVoterSatisfactionStr);
     const this$5 = new $c_sci_StringOps(x$1);
     const this$$1 = this$5.sci_StringOps__f_repr;
-    const $$x6 = $m_jl_Double$().parseDouble__T__D(this$$1);
+    const $$x15 = $m_jl_Double$().parseDouble__T__D(this$$1);
     const x$2 = $as_T(simulationCSV.primaryIdeologyStr);
     const this$8 = new $c_sci_StringOps(x$2);
     const this$$2 = this$8.sci_StringOps__f_repr;
-    const $$x5 = $m_jl_Double$().parseDouble__T__D(this$$2);
+    const $$x14 = $m_jl_Double$().parseDouble__T__D(this$$2);
+    const $$x13 = $m_Lrcvcore_PopulationTag$().apply__T__Lrcvcore_PopulationTag($as_T(simulationCSV.primaryPartyStr));
     const x$3 = $as_T(simulationCSV.primarySatisfactionStr);
     const this$11 = new $c_sci_StringOps(x$3);
     const this$$3 = this$11.sci_StringOps__f_repr;
-    const $$x4 = $m_jl_Double$().parseDouble__T__D(this$$3);
-    const x$4 = $as_T(simulationCSV.instantRunoffIdeologyStr);
+    const $$x12 = new $c_Lrcvcore_ProcessResult($$x14, $$x13, $m_jl_Double$().parseDouble__T__D(this$$3));
+    const x$4 = $as_T(simulationCSV.irPrimaryIdeologyStr);
     const this$14 = new $c_sci_StringOps(x$4);
     const this$$4 = this$14.sci_StringOps__f_repr;
-    const $$x3 = $m_jl_Double$().parseDouble__T__D(this$$4);
-    const x$5 = $as_T(simulationCSV.instantRunoffSatisfactionStr);
+    const $$x11 = $m_jl_Double$().parseDouble__T__D(this$$4);
+    const $$x10 = $m_Lrcvcore_PopulationTag$().apply__T__Lrcvcore_PopulationTag($as_T(simulationCSV.irPrimaryPartyStr));
+    const x$5 = $as_T(simulationCSV.irPrimarySatisfactionStr);
     const this$17 = new $c_sci_StringOps(x$5);
     const this$$5 = this$17.sci_StringOps__f_repr;
-    const $$x2 = $m_jl_Double$().parseDouble__T__D(this$$5);
-    const x$6 = $as_T(simulationCSV.headToHeadIdeologyStr);
+    const $$x9 = new $c_Lrcvcore_ProcessResult($$x11, $$x10, $m_jl_Double$().parseDouble__T__D(this$$5));
+    const x$6 = $as_T(simulationCSV.primaryIdeologyStr);
     const this$20 = new $c_sci_StringOps(x$6);
     const this$$6 = this$20.sci_StringOps__f_repr;
-    const $$x1 = $m_jl_Double$().parseDouble__T__D(this$$6);
-    const x$7 = $as_T(simulationCSV.headToHeadSatisfactionStr);
+    const $$x8 = $m_jl_Double$().parseDouble__T__D(this$$6);
+    const $$x7 = $m_Lrcvcore_PopulationTag$().apply__T__Lrcvcore_PopulationTag($as_T(simulationCSV.primaryPartyStr));
+    const x$7 = $as_T(simulationCSV.primarySatisfactionStr);
     const this$23 = new $c_sci_StringOps(x$7);
     const this$$7 = this$23.sci_StringOps__f_repr;
-    return new $c_Lrcvcore_SimulationResultInstance($$x8, $$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, $m_jl_Double$().parseDouble__T__D(this$$7))
+    const $$x6 = new $c_Lrcvcore_ProcessResult($$x8, $$x7, $m_jl_Double$().parseDouble__T__D(this$$7));
+    const x$8 = $as_T(simulationCSV.instantRunoffIdeologyStr);
+    const this$26 = new $c_sci_StringOps(x$8);
+    const this$$8 = this$26.sci_StringOps__f_repr;
+    const $$x5 = $m_jl_Double$().parseDouble__T__D(this$$8);
+    const $$x4 = $m_Lrcvcore_PopulationTag$().apply__T__Lrcvcore_PopulationTag($as_T(simulationCSV.instantRunoffPartyStr));
+    const x$9 = $as_T(simulationCSV.instantRunoffSatisfactionStr);
+    const this$29 = new $c_sci_StringOps(x$9);
+    const this$$9 = this$29.sci_StringOps__f_repr;
+    const $$x3 = new $c_Lrcvcore_ProcessResult($$x5, $$x4, $m_jl_Double$().parseDouble__T__D(this$$9));
+    const x$10 = $as_T(simulationCSV.headToHeadIdeologyStr);
+    const this$32 = new $c_sci_StringOps(x$10);
+    const this$$10 = this$32.sci_StringOps__f_repr;
+    const $$x2 = $m_jl_Double$().parseDouble__T__D(this$$10);
+    const $$x1 = $m_Lrcvcore_PopulationTag$().apply__T__Lrcvcore_PopulationTag($as_T(simulationCSV.headToHeadPartyStr));
+    const x$11 = $as_T(simulationCSV.headToHeadSatisfactionStr);
+    const this$35 = new $c_sci_StringOps(x$11);
+    const this$$11 = this$35.sci_StringOps__f_repr;
+    return new $c_Lrcvcore_SimulationResultInstance($$x17, $$x16, $$x15, $$x12, $$x9, $$x6, $$x3, new $c_Lrcvcore_ProcessResult($$x2, $$x1, $m_jl_Double$().parseDouble__T__D(this$$11)))
   };
 }
 const $d_Lrcvcore_SimulationResultInstance$ = new $TypeData().initClass({
@@ -21340,6 +21683,9 @@ class $c_Lakka_util_Collections$PartialImmutableValuesIterable$$anon$1 extends $
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
   };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
+  };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
     const cbf = this$1.scg_GenTraversableFactory__f_ReusableCBFInstance;
@@ -21783,6 +22129,18 @@ const $f_T__split__T__I__AT = (function($thiz, regex, limit) {
 });
 const $f_T__subSequence__I__I__jl_CharSequence = (function($thiz, beginIndex, endIndex) {
   return $as_T($thiz.substring(beginIndex, endIndex))
+});
+const $f_T__toCharArray__AC = (function($thiz) {
+  const len = $uI($thiz.length);
+  const result = $newArrayObject($d_C.getArrayOf(), [len]);
+  let i = 0;
+  while ((i < len)) {
+    const $$x1 = i;
+    const index = i;
+    result.set($$x1, (65535 & $uI($thiz.charCodeAt(index))));
+    i = ((1 + i) | 0)
+  };
+  return result
 });
 const $f_T__toString__T = (function($thiz) {
   return $thiz
@@ -22883,6 +23241,9 @@ class $c_Lorg_scalajs_dom_ext_EasySeq$$anon$1 extends $c_O {
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
   };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
+  };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
     const cbf = this$1.scg_GenTraversableFactory__f_ReusableCBFInstance;
@@ -23223,6 +23584,9 @@ class $c_sc_AbstractIterator extends $c_O {
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
   };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
+  };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
     const cbf = this$1.scg_GenTraversableFactory__f_ReusableCBFInstance;
@@ -23357,6 +23721,9 @@ class $c_sc_Iterator$ConcatIterator extends $c_O {
   };
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
+  };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
@@ -23697,6 +24064,9 @@ class $c_sci_RedBlackTree$TreeIterator extends $c_O {
   };
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
+  };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
@@ -28450,6 +28820,137 @@ const $d_LdataStories_LayoutSpec = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_LdataStories_LayoutSpec.prototype.$classData = $d_LdataStories_LayoutSpec;
+class $c_LdataStories_LinkSpecification extends $c_O {
+  constructor(id, xPct, yPct, textAnchor, text, url) {
+    super();
+    this.LdataStories_LinkSpecification__f_id = null;
+    this.LdataStories_LinkSpecification__f_xPct = 0.0;
+    this.LdataStories_LinkSpecification__f_yPct = 0.0;
+    this.LdataStories_LinkSpecification__f_textAnchor = null;
+    this.LdataStories_LinkSpecification__f_text = null;
+    this.LdataStories_LinkSpecification__f_url = null;
+    this.LdataStories_LinkSpecification__f_id = id;
+    this.LdataStories_LinkSpecification__f_xPct = xPct;
+    this.LdataStories_LinkSpecification__f_yPct = yPct;
+    this.LdataStories_LinkSpecification__f_textAnchor = textAnchor;
+    this.LdataStories_LinkSpecification__f_text = text;
+    this.LdataStories_LinkSpecification__f_url = url
+  };
+  textItem__F1__LdataStories_TextItem(callback) {
+    const $$x6 = this.LdataStories_LinkSpecification__f_text;
+    const $$x5 = this.LdataStories_LinkSpecification__f_id;
+    const $$x4 = this.LdataStories_LinkSpecification__f_xPct;
+    const $$x3 = this.LdataStories_LinkSpecification__f_yPct;
+    const $$x2 = this.LdataStories_LinkSpecification__f_textAnchor;
+    const $$x1 = $m_sc_Seq$();
+    const array = [new $c_LdataStories_StyleModifier("text-decoration", "underline"), new $c_LdataStories_StyleModifier("cursor", "default")];
+    return new $c_LdataStories_TextItem($$x6, $$x5, "link", $$x4, $$x3, "14pt", $$x2, "black", $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))), new $c_sjsr_AnonFunction0(((this$3, callback$1) => (() => {
+      callback$1.apply__O__O(this$3.LdataStories_LinkSpecification__f_url)
+    }))(this, callback)))
+  };
+  productPrefix__T() {
+    return "LinkSpecification"
+  };
+  productArity__I() {
+    return 6
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LdataStories_LinkSpecification__f_id;
+        break
+      }
+      case 1: {
+        return this.LdataStories_LinkSpecification__f_xPct;
+        break
+      }
+      case 2: {
+        return this.LdataStories_LinkSpecification__f_yPct;
+        break
+      }
+      case 3: {
+        return this.LdataStories_LinkSpecification__f_textAnchor;
+        break
+      }
+      case 4: {
+        return this.LdataStories_LinkSpecification__f_text;
+        break
+      }
+      case 5: {
+        return this.LdataStories_LinkSpecification__f_url;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const x = this.LdataStories_LinkSpecification__f_id;
+    const data = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const dv = this.LdataStories_LinkSpecification__f_xPct;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const dv$1 = this.LdataStories_LinkSpecification__f_yPct;
+    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const x$1 = this.LdataStories_LinkSpecification__f_textAnchor;
+    const data$3 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const x$2 = this.LdataStories_LinkSpecification__f_text;
+    const data$4 = $m_sr_Statics$().anyHash__O__I(x$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    const x$3 = this.LdataStories_LinkSpecification__f_url;
+    const data$5 = $m_sr_Statics$().anyHash__O__I(x$3);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
+    const hash$6 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$6, 6)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_LdataStories_LinkSpecification)) {
+      const LinkSpecification$1 = $as_LdataStories_LinkSpecification(x$1);
+      return ((((((this.LdataStories_LinkSpecification__f_id === LinkSpecification$1.LdataStories_LinkSpecification__f_id) && (this.LdataStories_LinkSpecification__f_xPct === LinkSpecification$1.LdataStories_LinkSpecification__f_xPct)) && (this.LdataStories_LinkSpecification__f_yPct === LinkSpecification$1.LdataStories_LinkSpecification__f_yPct)) && (this.LdataStories_LinkSpecification__f_textAnchor === LinkSpecification$1.LdataStories_LinkSpecification__f_textAnchor)) && (this.LdataStories_LinkSpecification__f_text === LinkSpecification$1.LdataStories_LinkSpecification__f_text)) && (this.LdataStories_LinkSpecification__f_url === LinkSpecification$1.LdataStories_LinkSpecification__f_url))
+    } else {
+      return false
+    }
+  };
+}
+function $as_LdataStories_LinkSpecification(obj) {
+  return (((obj instanceof $c_LdataStories_LinkSpecification) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.LinkSpecification"))
+}
+function $isArrayOf_LdataStories_LinkSpecification(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_LinkSpecification)))
+}
+function $asArrayOf_LdataStories_LinkSpecification(obj, depth) {
+  return (($isArrayOf_LdataStories_LinkSpecification(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.LinkSpecification;", depth))
+}
+const $d_LdataStories_LinkSpecification = new $TypeData().initClass({
+  LdataStories_LinkSpecification: 0
+}, false, "dataStories.LinkSpecification", {
+  LdataStories_LinkSpecification: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LdataStories_LinkSpecification.prototype.$classData = $d_LdataStories_LinkSpecification;
 class $c_LdataStories_MapConfig extends $c_O {
   constructor(fullScreen, candidateSelect, general, thumbnail) {
     super();
@@ -28678,6 +29179,195 @@ const $d_LdataStories_Margins = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_LdataStories_Margins.prototype.$classData = $d_LdataStories_Margins;
+class $c_LdataStories_PageLinks extends $c_O {
+  constructor(section, links) {
+    super();
+    this.LdataStories_PageLinks__f_section = 0;
+    this.LdataStories_PageLinks__f_links = null;
+    this.LdataStories_PageLinks__f_section = section;
+    this.LdataStories_PageLinks__f_links = links
+  };
+  productPrefix__T() {
+    return "PageLinks"
+  };
+  productArity__I() {
+    return 2
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LdataStories_PageLinks__f_section;
+        break
+      }
+      case 1: {
+        return this.LdataStories_PageLinks__f_links;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const data = this.LdataStories_PageLinks__f_section;
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const x = this.LdataStories_PageLinks__f_links;
+    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$2, 2)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_LdataStories_PageLinks)) {
+      const PageLinks$1 = $as_LdataStories_PageLinks(x$1);
+      if ((this.LdataStories_PageLinks__f_section === PageLinks$1.LdataStories_PageLinks__f_section)) {
+        const x = this.LdataStories_PageLinks__f_links;
+        const x$2 = PageLinks$1.LdataStories_PageLinks__f_links;
+        return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_LdataStories_PageLinks(obj) {
+  return (((obj instanceof $c_LdataStories_PageLinks) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.PageLinks"))
+}
+function $isArrayOf_LdataStories_PageLinks(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_PageLinks)))
+}
+function $asArrayOf_LdataStories_PageLinks(obj, depth) {
+  return (($isArrayOf_LdataStories_PageLinks(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.PageLinks;", depth))
+}
+const $d_LdataStories_PageLinks = new $TypeData().initClass({
+  LdataStories_PageLinks: 0
+}, false, "dataStories.PageLinks", {
+  LdataStories_PageLinks: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LdataStories_PageLinks.prototype.$classData = $d_LdataStories_PageLinks;
+class $c_LdataStories_PolarizationDataStory$SizeAttrs extends $c_O {
+  constructor(outer, width, height, scale, hShift) {
+    super();
+    this.LdataStories_PolarizationDataStory$SizeAttrs__f_width = 0.0;
+    this.LdataStories_PolarizationDataStory$SizeAttrs__f_height = 0.0;
+    this.LdataStories_PolarizationDataStory$SizeAttrs__f_scale = 0.0;
+    this.LdataStories_PolarizationDataStory$SizeAttrs__f_hShift = 0.0;
+    this.LdataStories_PolarizationDataStory$SizeAttrs__f_$outer = null;
+    this.LdataStories_PolarizationDataStory$SizeAttrs__f_width = width;
+    this.LdataStories_PolarizationDataStory$SizeAttrs__f_height = height;
+    this.LdataStories_PolarizationDataStory$SizeAttrs__f_scale = scale;
+    this.LdataStories_PolarizationDataStory$SizeAttrs__f_hShift = hShift;
+    if ((outer === null)) {
+      throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+    } else {
+      this.LdataStories_PolarizationDataStory$SizeAttrs__f_$outer = outer
+    }
+  };
+  productPrefix__T() {
+    return "SizeAttrs"
+  };
+  productArity__I() {
+    return 4
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LdataStories_PolarizationDataStory$SizeAttrs__f_width;
+        break
+      }
+      case 1: {
+        return this.LdataStories_PolarizationDataStory$SizeAttrs__f_height;
+        break
+      }
+      case 2: {
+        return this.LdataStories_PolarizationDataStory$SizeAttrs__f_scale;
+        break
+      }
+      case 3: {
+        return this.LdataStories_PolarizationDataStory$SizeAttrs__f_hShift;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const dv = this.LdataStories_PolarizationDataStory$SizeAttrs__f_width;
+    const data = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const dv$1 = this.LdataStories_PolarizationDataStory$SizeAttrs__f_height;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const dv$2 = this.LdataStories_PolarizationDataStory$SizeAttrs__f_scale;
+    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const dv$3 = this.LdataStories_PolarizationDataStory$SizeAttrs__f_hShift;
+    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv$3);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$4, 4)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if (((x$1 instanceof $c_LdataStories_PolarizationDataStory$SizeAttrs) && ($as_LdataStories_PolarizationDataStory$SizeAttrs(x$1).LdataStories_PolarizationDataStory$SizeAttrs__f_$outer === this.LdataStories_PolarizationDataStory$SizeAttrs__f_$outer))) {
+      const SizeAttrs$1 = $as_LdataStories_PolarizationDataStory$SizeAttrs(x$1);
+      return ((((this.LdataStories_PolarizationDataStory$SizeAttrs__f_width === SizeAttrs$1.LdataStories_PolarizationDataStory$SizeAttrs__f_width) && (this.LdataStories_PolarizationDataStory$SizeAttrs__f_height === SizeAttrs$1.LdataStories_PolarizationDataStory$SizeAttrs__f_height)) && (this.LdataStories_PolarizationDataStory$SizeAttrs__f_scale === SizeAttrs$1.LdataStories_PolarizationDataStory$SizeAttrs__f_scale)) && (this.LdataStories_PolarizationDataStory$SizeAttrs__f_hShift === SizeAttrs$1.LdataStories_PolarizationDataStory$SizeAttrs__f_hShift))
+    } else {
+      return false
+    }
+  };
+}
+function $as_LdataStories_PolarizationDataStory$SizeAttrs(obj) {
+  return (((obj instanceof $c_LdataStories_PolarizationDataStory$SizeAttrs) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.PolarizationDataStory$SizeAttrs"))
+}
+function $isArrayOf_LdataStories_PolarizationDataStory$SizeAttrs(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_PolarizationDataStory$SizeAttrs)))
+}
+function $asArrayOf_LdataStories_PolarizationDataStory$SizeAttrs(obj, depth) {
+  return (($isArrayOf_LdataStories_PolarizationDataStory$SizeAttrs(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.PolarizationDataStory$SizeAttrs;", depth))
+}
+const $d_LdataStories_PolarizationDataStory$SizeAttrs = new $TypeData().initClass({
+  LdataStories_PolarizationDataStory$SizeAttrs: 0
+}, false, "dataStories.PolarizationDataStory$SizeAttrs", {
+  LdataStories_PolarizationDataStory$SizeAttrs: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LdataStories_PolarizationDataStory$SizeAttrs.prototype.$classData = $d_LdataStories_PolarizationDataStory$SizeAttrs;
 const $p_LdataStories_PolarizationDataStoryBuilder__construct__V = (function($thiz) {
   const $$x1 = $m_sjs_js_Thenable$ThenableOps$();
   const p = $i_d3$002dfetch.csv("data-5vPn3.csv");
@@ -28692,25 +29382,25 @@ const $p_LdataStories_PolarizationDataStoryBuilder__construct__V = (function($th
   const $$x4 = $m_sjs_js_Thenable$ThenableOps$();
   const p$3 = $i_d3$002dfetch.csv("sampleCongress.csv");
   const sampleFut = $$x4.toFuture$extension__sjs_js_Thenable__s_concurrent_Future(p$3);
-  const f$4 = new $c_sjsr_AnonFunction1(((this$10, topoFut$1, nokkFut$1, simFut$1, sampleFut$1) => ((dr$2) => {
-    const f$3 = new $c_sjsr_AnonFunction1(((this$11, nokkFut$1$1, simFut$1$1, sampleFut$1$1, dr) => ((tr$2) => {
-      const f$2 = new $c_sjsr_AnonFunction1(((this$12, simFut$1$2, sampleFut$1$2, dr$1, tr) => ((nr$2) => {
-        const f$1 = new $c_sjsr_AnonFunction1(((this$13, sampleFut$1$3, dr$1$1, tr$1, nr) => ((sr$2) => {
-          const f = new $c_sjsr_AnonFunction1(((this$14, dr$1$2, tr$1$1, nr$1, sr) => ((sc$2) => new $c_T5(dr$1$2, tr$1$1, nr$1, sr, sc$2)))(this$13, dr$1$1, tr$1, nr, sr$2));
+  const f$4 = new $c_sjsr_AnonFunction1(((this$10, dvrFut$1, topoFut$1, nokkFut$1, simFut$1) => ((sc$2) => {
+    const f$3 = new $c_sjsr_AnonFunction1(((this$11, topoFut$1$1, nokkFut$1$1, simFut$1$1, sc) => ((dr$2) => {
+      const f$2 = new $c_sjsr_AnonFunction1(((this$12, nokkFut$1$2, simFut$1$2, sc$1, dr) => ((tr$2) => {
+        const f$1 = new $c_sjsr_AnonFunction1(((this$13, simFut$1$3, sc$1$1, dr$1, tr) => ((nr$2) => {
+          const f = new $c_sjsr_AnonFunction1(((this$14, sc$1$2, dr$1$1, tr$1, nr) => ((sr$2) => new $c_T5(sc$1$2, dr$1$1, tr$1, nr, sr$2)))(this$13, sc$1$1, dr$1, tr, nr$2));
           const executor = $m_sjs_concurrent_JSExecutionContext$Implicits$().sjs_concurrent_JSExecutionContext$Implicits$__f_queue;
-          return $f_s_concurrent_Future__map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(sampleFut$1$3, f, executor)
-        }))(this$12, sampleFut$1$2, dr$1, tr, nr$2));
+          return $f_s_concurrent_Future__map__F1__s_concurrent_ExecutionContext__s_concurrent_Future(simFut$1$3, f, executor)
+        }))(this$12, simFut$1$2, sc$1, dr, tr$2));
         const executor$1 = $m_sjs_concurrent_JSExecutionContext$Implicits$().sjs_concurrent_JSExecutionContext$Implicits$__f_queue;
-        return $f_s_concurrent_Future__flatMap__F1__s_concurrent_ExecutionContext__s_concurrent_Future(simFut$1$2, f$1, executor$1)
-      }))(this$11, simFut$1$1, sampleFut$1$1, dr, tr$2));
+        return $f_s_concurrent_Future__flatMap__F1__s_concurrent_ExecutionContext__s_concurrent_Future(nokkFut$1$2, f$1, executor$1)
+      }))(this$11, nokkFut$1$1, simFut$1$1, sc, dr$2));
       const executor$2 = $m_sjs_concurrent_JSExecutionContext$Implicits$().sjs_concurrent_JSExecutionContext$Implicits$__f_queue;
-      return $f_s_concurrent_Future__flatMap__F1__s_concurrent_ExecutionContext__s_concurrent_Future(nokkFut$1$1, f$2, executor$2)
-    }))(this$10, nokkFut$1, simFut$1, sampleFut$1, dr$2));
+      return $f_s_concurrent_Future__flatMap__F1__s_concurrent_ExecutionContext__s_concurrent_Future(topoFut$1$1, f$2, executor$2)
+    }))(this$10, topoFut$1, nokkFut$1, simFut$1, sc$2));
     const executor$3 = $m_sjs_concurrent_JSExecutionContext$Implicits$().sjs_concurrent_JSExecutionContext$Implicits$__f_queue;
-    return $f_s_concurrent_Future__flatMap__F1__s_concurrent_ExecutionContext__s_concurrent_Future(topoFut$1, f$3, executor$3)
-  }))($thiz, topoFut, nokkFut, simFut, sampleFut));
+    return $f_s_concurrent_Future__flatMap__F1__s_concurrent_ExecutionContext__s_concurrent_Future(dvrFut$1, f$3, executor$3)
+  }))($thiz, dvrFut, topoFut, nokkFut, simFut));
   const executor$4 = $m_sjs_concurrent_JSExecutionContext$Implicits$().sjs_concurrent_JSExecutionContext$Implicits$__f_queue;
-  const aggFut = $f_s_concurrent_Future__flatMap__F1__s_concurrent_ExecutionContext__s_concurrent_Future(dvrFut, f$4, executor$4);
+  const aggFut = $f_s_concurrent_Future__flatMap__F1__s_concurrent_ExecutionContext__s_concurrent_Future(sampleFut, f$4, executor$4);
   aggFut.onComplete__F1__s_concurrent_ExecutionContext__V(new $c_sjsr_AnonFunction1(((this$2$1) => ((x0$1$2) => {
     const x0$1 = $as_s_util_Try(x0$1$2);
     matchEnd6: {
@@ -28723,11 +29413,11 @@ const $p_LdataStories_PolarizationDataStoryBuilder__construct__V = (function($th
         const x3 = $as_s_util_Success(x0$1);
         const p4 = $as_T5(x3.s_util_Success__f_value);
         if ((p4 !== null)) {
-          const dvr = p4.T5__f__1;
-          const topo = p4.T5__f__2;
-          const nokk = p4.T5__f__3;
-          const simR = p4.T5__f__4;
-          const sampleC = p4.T5__f__5;
+          const sampleC = p4.T5__f__1;
+          const dvr = p4.T5__f__2;
+          const topo = p4.T5__f__3;
+          const nokk = p4.T5__f__4;
+          const simR = p4.T5__f__5;
           const array = [];
           $uI(sampleC.length);
           let i = 0;
@@ -29363,92 +30053,223 @@ class $c_LdataStories_PrimaryElectionSection extends $c_O {
     const value = (1000000.0 * $uD((0, $m_jl_System$NanoTime$().jl_System$NanoTime$__f_getHighPrecisionTime)()));
     const lo = this$3.org$scalajs$linker$runtime$RuntimeLong$$fromDoubleImpl__D__I(value);
     const hi = this$3.RTLong$__f_org$scalajs$linker$runtime$RuntimeLong$$hiReturn;
-    const this$5 = this.LdataStories_PrimaryElectionSection__f_cc.LdataStories_CandidateController__f_candidates;
-    const p = new $c_sjsr_AnonFunction1(((this$4, tag$4) => ((x$7$2) => {
+    this.LdataStories_PrimaryElectionSection__f_cc.debugPrintCandidates__T__V("setPreferredCandidates");
+    this.LdataStories_PrimaryElectionSection__f_cc.LdataStories_CandidateController__f_candidates.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$4) => ((c$2) => {
+      const c = $as_LdataStories_CandidateBubble(c$2);
+      const arg$macro$1 = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_name;
+      const arg$macro$2 = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_ideology;
+      const this$7 = new $c_sci_StringOps("c.name %5s %.2f");
+      const array = [arg$macro$1, arg$macro$2];
+      const this$ = this$7.sci_StringOps__f_repr;
+      $m_sc_Seq$();
+      $m_sjs_js_WrappedArray$();
+      const array$1 = [];
+      $uI(array.length);
+      let i = 0;
+      const len = $uI(array.length);
+      while ((i < len)) {
+        const index = i;
+        const arg1 = array[index];
+        const elem = $p_sci_StringLike__unwrapArg__O__O(this$7, arg1);
+        array$1.push(elem);
+        i = ((1 + i) | 0)
+      };
+      $m_s_reflect_ManifestFactory$ObjectManifest$();
+      const len$1 = $uI(array$1.length);
+      const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
+      const len$2 = result.u.length;
+      let i$1 = 0;
+      let j = 0;
+      const x = $uI(array$1.length);
+      const x$1 = ((x < len$2) ? x : len$2);
+      const that = result.u.length;
+      const end = ((x$1 < that) ? x$1 : that);
+      while ((i$1 < end)) {
+        const $$x1 = j;
+        const index$1 = i$1;
+        result.set($$x1, array$1[index$1]);
+        i$1 = ((1 + i$1) | 0);
+        j = ((1 + j) | 0)
+      };
+      const x$2 = $m_jl_String$().format__T__AO__T(this$, result);
+      const this$22 = $m_s_Console$();
+      const this$23 = $as_Ljava_io_PrintStream(this$22.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+      this$23.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$2 + "\n"))
+    }))(this)));
+    const this$24 = this.LdataStories_PrimaryElectionSection__f_cc.LdataStories_CandidateController__f_candidates;
+    const p = new $c_sjsr_AnonFunction1(((this$2$1, tag$4) => ((x$7$2) => {
       const x$7 = $as_LdataStories_CandidateBubble(x$7$2);
-      const x = x$7.tag__Lrcvcore_PopulationTag();
-      return ((x === null) ? (tag$4 === null) : x.equals__O__Z(tag$4))
+      const x$3 = x$7.tag__Lrcvcore_PopulationTag();
+      return ((x$3 === null) ? (tag$4 === null) : x$3.equals__O__Z(tag$4))
     }))(this, tag));
-    const bubblesForTag = $as_sc_IndexedSeq($f_sc_TraversableLike__filterImpl__F1__Z__O(this$5, p, false));
-    const f = new $c_sjsr_AnonFunction1(((this$2$1) => ((x$8$2) => {
+    const bubblesForTag = $as_sc_IndexedSeq($f_sc_TraversableLike__filterImpl__F1__Z__O(this$24, p, false));
+    const f = new $c_sjsr_AnonFunction1(((this$3$1) => ((x$8$2) => {
       const x$8 = $as_LdataStories_CandidateBubble(x$8$2);
       return $as_Lrcvcore_Candidate(x$8.LdataStories_CandidateBubble__f_candidateOpt.get__O())
     }))(this));
-    const this$6 = $m_sc_IndexedSeq$();
-    const bf = this$6.sc_IndexedSeq$__f_ReusableCBF;
-    const candidates = $as_sc_IndexedSeq($f_sc_TraversableLike__map__F1__scg_CanBuildFrom__O(bubblesForTag, f, bf));
-    const this$7 = $m_Lrcvcore_GaussianGenerator$();
-    const this$8 = this$7.Lrcvcore_GaussianGenerator$__f_generator;
-    const this$9 = this$8.Lrcvcore_GaussianGenerator__f_rand;
-    this$9.s_util_Random__f_self.setSeed__J__V($L0);
-    const this$10 = this.LdataStories_PrimaryElectionSection__f_vc.LdataStories_VoterController__f_voters;
-    const p$1 = new $c_sjsr_AnonFunction1(((this$3$1, tag$4$1) => ((v$2) => {
+    const this$25 = $m_sc_IndexedSeq$();
+    const bf$1 = this$25.sc_IndexedSeq$__f_ReusableCBF;
+    const candidates = $as_sc_IndexedSeq($f_sc_TraversableLike__map__F1__scg_CanBuildFrom__O(bubblesForTag, f, bf$1));
+    const f$1 = new $c_sjsr_AnonFunction1(((this$4$1) => ((x$9$2) => {
+      const x$9 = $as_Lrcvcore_Candidate(x$9$2);
+      return x$9.Lrcvcore_Candidate__f_name
+    }))(this));
+    const this$26 = $m_sc_IndexedSeq$();
+    const bf$2 = this$26.sc_IndexedSeq$__f_ReusableCBF;
+    const x$4 = ("candidates:  " + $as_sc_TraversableOnce($f_sc_TraversableLike__map__F1__scg_CanBuildFrom__O(candidates, f$1, bf$2)).mkString__T__T(", "));
+    const this$28 = $m_s_Console$();
+    const this$29 = $as_Ljava_io_PrintStream(this$28.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+    this$29.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$4 + "\n"));
+    const this$30 = $m_Lrcvcore_GaussianGenerator$();
+    const this$31 = this$30.Lrcvcore_GaussianGenerator$__f_generator;
+    const this$32 = this$31.Lrcvcore_GaussianGenerator__f_rand;
+    this$32.s_util_Random__f_self.setSeed__J__V($L0);
+    const this$33 = this.LdataStories_PrimaryElectionSection__f_vc.LdataStories_VoterController__f_voters;
+    const p$1 = new $c_sjsr_AnonFunction1(((this$5$1, tag$4$1) => ((v$2) => {
       const v = $as_LdataStories_VoterBubble(v$2);
       if (v.LdataStories_VoterBubble__f_primaryVoter) {
-        const x$1 = v.tag__Lrcvcore_PopulationTag();
-        return ((x$1 === null) ? (tag$4$1 === null) : x$1.equals__O__Z(tag$4$1))
+        const x$5 = v.tag__Lrcvcore_PopulationTag();
+        return ((x$5 === null) ? (tag$4$1 === null) : x$5.equals__O__Z(tag$4$1))
       } else {
         return false
       }
     }))(this, tag));
-    $as_sc_IterableLike($f_sc_TraversableLike__filterImpl__F1__Z__O(this$10, p$1, false)).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$4$1, candidates$1) => ((v$3$2) => {
+    $as_sc_IterableLike($f_sc_TraversableLike__filterImpl__F1__Z__O(this$33, p$1, false)).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$6$1, candidates$1) => ((v$3$2) => {
       const v$3 = $as_LdataStories_VoterBubble(v$3$2);
       v$3.setPrimaryCandidateIndex__sc_Seq__V(candidates$1)
     }))(this, candidates)));
     const n = candidates.length__I();
     let elems = null;
     elems = [];
-    let i = 0;
-    while ((i < n)) {
+    let i$2 = 0;
+    while ((i$2 < n)) {
       elems.push(0);
-      i = ((1 + i) | 0)
+      i$2 = ((1 + i$2) | 0)
     };
     const counts = $makeNativeArrayWrapper($d_I.getArrayOf(), elems);
-    const this$16 = this.LdataStories_PrimaryElectionSection__f_vc.LdataStories_VoterController__f_voters;
-    const p$2 = new $c_sjsr_AnonFunction1(((this$6$1, tag$4$2) => ((v$4$2) => {
+    const this$39 = this.LdataStories_PrimaryElectionSection__f_vc.LdataStories_VoterController__f_voters;
+    const p$2 = new $c_sjsr_AnonFunction1(((this$8$1, tag$4$2) => ((v$4$2) => {
       const v$4 = $as_LdataStories_VoterBubble(v$4$2);
       if (v$4.LdataStories_VoterBubble__f_primaryVoter) {
-        const x$2 = v$4.tag__Lrcvcore_PopulationTag();
-        return ((x$2 === null) ? (tag$4$2 === null) : x$2.equals__O__Z(tag$4$2))
+        const x$6 = v$4.tag__Lrcvcore_PopulationTag();
+        return ((x$6 === null) ? (tag$4$2 === null) : x$6.equals__O__Z(tag$4$2))
       } else {
         return false
       }
     }))(this, tag));
-    $as_sc_IterableLike($f_sc_TraversableLike__filterImpl__F1__Z__O(this$16, p$2, false)).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$7$1, counts$1) => ((v$5$2) => {
+    $as_sc_IterableLike($f_sc_TraversableLike__filterImpl__F1__Z__O(this$39, p$2, false)).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$9$1, counts$1) => ((v$5$2) => {
       const v$5 = $as_LdataStories_VoterBubble(v$5$2);
-      counts$1.set(v$5.LdataStories_VoterBubble__f_primaryCandidateIndex, ((1 + counts$1.get(v$5.LdataStories_VoterBubble__f_primaryCandidateIndex)) | 0))
+      const ev$1 = v$5.LdataStories_VoterBubble__f_primaryCandidateIndex;
+      counts$1.set(ev$1, ((1 + counts$1.get(ev$1)) | 0))
     }))(this, counts)));
-    const this$19 = new $c_scm_ArrayOps$ofInt(counts);
-    const cmp = $m_s_math_Ordering$Int$();
-    const elem = $f_sc_TraversableOnce__max__s_math_Ordering__O(this$19, cmp);
-    const len = counts.u.length;
-    let i$1 = 0;
-    while (true) {
-      let $$x1;
-      if ((i$1 < len)) {
-        const idx = i$1;
-        const arg1 = counts.get(idx);
-        $$x1 = (!$m_sr_BoxesRunTime$().equals__O__O__Z(elem, arg1))
+    let elems$1 = null;
+    elems$1 = [];
+    let i$3 = 0;
+    const len$3 = counts.u.length;
+    while ((i$3 < len$3)) {
+      const idx = i$3;
+      const arg1$1 = counts.get(idx);
+      const this$50 = new $c_sci_StringOps("%d");
+      const array$2 = [arg1$1];
+      const args = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$2);
+      const elem$1 = $f_sci_StringLike__format__sc_Seq__T(this$50, args);
+      const unboxedElem = ((elem$1 === null) ? null : elem$1);
+      elems$1.push(unboxedElem);
+      i$3 = ((1 + i$3) | 0)
+    };
+    const xs = $makeNativeArrayWrapper($d_T.getArrayOf(), elems$1);
+    const b = $ct_scm_StringBuilder__(new $c_scm_StringBuilder());
+    let elem$2 = false;
+    elem$2 = true;
+    b.append__T__scm_StringBuilder("");
+    let i$4 = 0;
+    const len$4 = xs.u.length;
+    while ((i$4 < len$4)) {
+      const index$2 = i$4;
+      const arg1$2 = xs.get(index$2);
+      if (elem$2) {
+        b.append__O__scm_StringBuilder(arg1$2);
+        elem$2 = false
       } else {
-        $$x1 = false
+        b.append__T__scm_StringBuilder(", ");
+        b.append__O__scm_StringBuilder(arg1$2)
       };
-      if ($$x1) {
-        i$1 = ((1 + i$1) | 0)
+      i$4 = ((1 + i$4) | 0)
+    };
+    b.append__T__scm_StringBuilder("");
+    const arg$macro$4 = b.scm_StringBuilder__f_underlying.jl_StringBuilder__f_java$lang$StringBuilder$$content;
+    const this$57 = new $c_sci_StringOps("counts:  %s");
+    const array$3 = [arg$macro$4];
+    const this$$1 = this$57.sci_StringOps__f_repr;
+    $m_sc_Seq$();
+    $m_sjs_js_WrappedArray$();
+    const array$4 = [];
+    $uI(array$3.length);
+    let i$5 = 0;
+    const len$5 = $uI(array$3.length);
+    while ((i$5 < len$5)) {
+      const index$3 = i$5;
+      const arg1$3 = array$3[index$3];
+      const elem$3 = $p_sci_StringLike__unwrapArg__O__O(this$57, arg1$3);
+      array$4.push(elem$3);
+      i$5 = ((1 + i$5) | 0)
+    };
+    $m_s_reflect_ManifestFactory$ObjectManifest$();
+    const len$6 = $uI(array$4.length);
+    const result$1 = $newArrayObject($d_O.getArrayOf(), [len$6]);
+    const len$7 = result$1.u.length;
+    let i$6 = 0;
+    let j$1 = 0;
+    const x$10 = $uI(array$4.length);
+    const x$11 = ((x$10 < len$7) ? x$10 : len$7);
+    const that$1 = result$1.u.length;
+    const end$1 = ((x$11 < that$1) ? x$11 : that$1);
+    while ((i$6 < end$1)) {
+      const $$x2 = j$1;
+      const index$4 = i$6;
+      result$1.set($$x2, array$4[index$4]);
+      i$6 = ((1 + i$6) | 0);
+      j$1 = ((1 + j$1) | 0)
+    };
+    const x$12 = $m_jl_String$().format__T__AO__T(this$$1, result$1);
+    const this$72 = $m_s_Console$();
+    const this$73 = $as_Ljava_io_PrintStream(this$72.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+    this$73.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$12 + "\n"));
+    const this$76 = new $c_scm_ArrayOps$ofInt(counts);
+    const cmp = $m_s_math_Ordering$Int$();
+    const elem$4 = $f_sc_TraversableOnce__max__s_math_Ordering__O(this$76, cmp);
+    const len$8 = counts.u.length;
+    let i$7 = 0;
+    while (true) {
+      let $$x3;
+      if ((i$7 < len$8)) {
+        const idx$1 = i$7;
+        const arg1$4 = counts.get(idx$1);
+        $$x3 = (!$m_sr_BoxesRunTime$().equals__O__O__Z(elem$4, arg1$4))
+      } else {
+        $$x3 = false
+      };
+      if ($$x3) {
+        i$7 = ((1 + i$7) | 0)
       } else {
         break
       }
     };
-    const n$1 = i$1;
+    const n$1 = i$7;
     const winner = $as_LdataStories_CandidateBubble(bubblesForTag.apply__I__O(((n$1 >= counts.u.length) ? (-1) : n$1)));
-    bubblesForTag.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$8$1) => ((x$9$2) => {
-      const x$9 = $as_LdataStories_CandidateBubble(x$9$2);
-      x$9.LdataStories_CandidateBubble__f_primaryWinner = false
+    const x$13 = ("winner: " + winner);
+    const this$83 = $m_s_Console$();
+    const this$84 = $as_Ljava_io_PrintStream(this$83.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+    this$84.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$13 + "\n"));
+    bubblesForTag.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$11$1) => ((x$10$2) => {
+      const x$10$1 = $as_LdataStories_CandidateBubble(x$10$2);
+      x$10$1.LdataStories_CandidateBubble__f_primaryWinner = false
     }))(this)));
     winner.LdataStories_CandidateBubble__f_primaryWinner = true;
-    const this$26 = $m_RTLong$();
+    const this$86 = $m_RTLong$();
     const value$1 = (1000000.0 * $uD((0, $m_jl_System$NanoTime$().jl_System$NanoTime$__f_getHighPrecisionTime)()));
-    const lo$1 = this$26.org$scalajs$linker$runtime$RuntimeLong$$fromDoubleImpl__D__I(value$1);
-    const hi$1 = this$26.RTLong$__f_org$scalajs$linker$runtime$RuntimeLong$$hiReturn;
+    const lo$1 = this$86.org$scalajs$linker$runtime$RuntimeLong$$fromDoubleImpl__D__I(value$1);
+    const hi$1 = this$86.RTLong$__f_org$scalajs$linker$runtime$RuntimeLong$$hiReturn;
     const lo$2 = ((lo$1 - lo) | 0);
     const hi$2 = ((((-2147483648) ^ lo$2) > ((-2147483648) ^ lo$1)) ? (((-1) + ((hi$1 - hi) | 0)) | 0) : ((hi$1 - hi) | 0));
     this$1.update__T__J__V("setPreferredCandidates", new $c_RTLong(lo$2, hi$2))
@@ -29465,18 +30286,18 @@ class $c_LdataStories_PrimaryElectionSection extends $c_O {
     this.LdataStories_PrimaryElectionSection__f_resultTimer = $m_s_None$();
     const $$x3 = $m_Lrcvcore_Republicans$();
     const this$2 = this.LdataStories_PrimaryElectionSection__f_cc.LdataStories_CandidateController__f_candidates;
-    const p = new $c_sjsr_AnonFunction1(((this$1) => ((x$10$2) => {
-      const x$10 = $as_LdataStories_CandidateBubble(x$10$2);
-      const x = x$10.tag__Lrcvcore_PopulationTag();
+    const p = new $c_sjsr_AnonFunction1(((this$1) => ((x$11$2) => {
+      const x$11 = $as_LdataStories_CandidateBubble(x$11$2);
+      const x = x$11.tag__Lrcvcore_PopulationTag();
       const x$2 = $m_Lrcvcore_Republicans$();
       return ((x !== null) && x.equals__O__Z(x$2))
     }))(this));
     const $$x2 = $ct_T2__O__O__(new $c_T2(), $$x3, $f_sc_TraversableLike__filterImpl__F1__Z__O(this$2, p, false));
     const $$x1 = $m_Lrcvcore_Democrats$();
     const this$3 = this.LdataStories_PrimaryElectionSection__f_cc.LdataStories_CandidateController__f_candidates;
-    const p$1 = new $c_sjsr_AnonFunction1(((this$2$1) => ((x$11$2) => {
-      const x$11 = $as_LdataStories_CandidateBubble(x$11$2);
-      const x$1 = x$11.tag__Lrcvcore_PopulationTag();
+    const p$1 = new $c_sjsr_AnonFunction1(((this$2$1) => ((x$12$2) => {
+      const x$12 = $as_LdataStories_CandidateBubble(x$12$2);
+      const x$1 = x$12.tag__Lrcvcore_PopulationTag();
       const x$2$1 = $m_Lrcvcore_Democrats$();
       return ((x$1 !== null) && x$1.equals__O__Z(x$2$1))
     }))(this));
@@ -29492,9 +30313,9 @@ class $c_LdataStories_PrimaryElectionSection extends $c_O {
     };
     $as_sci_Map(this$7.scm_MapBuilder__f_elems);
     const this$8 = this.LdataStories_PrimaryElectionSection__f_cc.LdataStories_CandidateController__f_candidates;
-    const p$2 = new $c_sjsr_AnonFunction1(((this$3$1) => ((x$12$2) => {
-      const x$12 = $as_LdataStories_CandidateBubble(x$12$2);
-      return x$12.LdataStories_CandidateBubble__f_primaryWinner
+    const p$2 = new $c_sjsr_AnonFunction1(((this$3$1) => ((x$13$2) => {
+      const x$13 = $as_LdataStories_CandidateBubble(x$13$2);
+      return x$13.LdataStories_CandidateBubble__f_primaryWinner
     }))(this));
     $as_sc_IterableLike($f_sc_TraversableLike__filterImpl__F1__Z__O(this$8, p$2, false)).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$4$1) => ((c$2) => {
       const c = $as_LdataStories_CandidateBubble(c$2);
@@ -30234,8 +31055,6 @@ $c_LdataStories_RouteUpdater.prototype.$classData = $d_LdataStories_RouteUpdater
 class $c_LdataStories_ScaledBox extends $c_O {
   constructor(svgParent, id, style, xDomain, yDomain, xCategories) {
     super();
-    this.LdataStories_ScaledBox__f_RectItem$module = null;
-    this.LdataStories_ScaledBox__f_TextItem$module = null;
     this.LdataStories_ScaledBox__f_svgParent = null;
     this.LdataStories_ScaledBox__f_id = null;
     this.LdataStories_ScaledBox__f_style = null;
@@ -30284,7 +31103,7 @@ class $c_LdataStories_ScaledBox extends $c_O {
     let these = this$2;
     while ((!these.isEmpty__Z())) {
       const arg1 = these.head__O();
-      const o = $as_LdataStories_ScaledBox$BoxObject(arg1);
+      const o = $as_LdataStories_BoxObject(arg1);
       this.clearObject__T__V(o.id__T());
       these = $as_sci_List(these.tail__O())
     }
@@ -30295,10 +31114,10 @@ class $c_LdataStories_ScaledBox extends $c_O {
   };
   addRect__T__T__D__D__D__D__sc_Seq__V(id, shape, xPct, yPct, width, height, attrs) {
     const this$3 = this.LdataStories_ScaledBox__f_boxObjects;
-    const array = [new $c_LdataStories_ScaledBox$RectItem(this, id, shape, xPct, yPct, width, height, attrs)];
+    const array = [new $c_LdataStories_RectItem(id, shape, xPct, yPct, width, height, attrs)];
     const elems = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array);
     this$3.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(elems);
-    $as_LdataStories_ScaledBox$BoxObject(this.LdataStories_ScaledBox__f_boxObjects.last__O()).render__V()
+    $as_LdataStories_BoxObject(this.LdataStories_ScaledBox__f_boxObjects.last__O()).render__s_Option__LdataStories_SvgDefinition__V(this.LdataStories_ScaledBox__f_svgAreaOpt, this.LdataStories_ScaledBox__f_svgDefinition)
   };
   updateElementLocation__V() {
     if (((this.LdataStories_ScaledBox__f_elementDimensions !== null) && (this.LdataStories_ScaledBox__f_svgDefinition !== null))) {
@@ -30421,8 +31240,8 @@ class $c_LdataStories_ScaledBox extends $c_O {
     let these = this$7;
     while ((!these.isEmpty__Z())) {
       const arg1$1 = these.head__O();
-      const x$4$2 = $as_LdataStories_ScaledBox$BoxObject(arg1$1);
-      x$4$2.render__V();
+      const x$4$2 = $as_LdataStories_BoxObject(arg1$1);
+      x$4$2.render__s_Option__LdataStories_SvgDefinition__V(this.LdataStories_ScaledBox__f_svgAreaOpt, this.LdataStories_ScaledBox__f_svgDefinition);
       these = $as_sci_List(these.tail__O())
     }
   };
@@ -30438,7 +31257,7 @@ class $c_LdataStories_ScaledBox extends $c_O {
   clearObject__T__V(id) {
     const this$2 = this.LdataStories_ScaledBox__f_boxObjects;
     const f = ((this$1, id$1) => ((x$5$2) => {
-      const x$5 = $as_LdataStories_ScaledBox$BoxObject(x$5$2);
+      const x$5 = $as_LdataStories_BoxObject(x$5$2);
       return (x$5.id__T() === id$1)
     }))(this, id);
     let $$x1;
@@ -30527,8 +31346,9 @@ class $c_LdataStories_ScaledBox extends $c_O {
     let these$1 = this$6;
     while ((!these$1.isEmpty__Z())) {
       const arg1$1 = these$1.head__O();
-      const item = $as_LdataStories_ScaledBox$BoxObject(arg1$1);
-      item.clear__V();
+      const item = $as_LdataStories_BoxObject(arg1$1);
+      const svgAreaOpt = this.LdataStories_ScaledBox__f_svgAreaOpt;
+      $f_LdataStories_BoxObject__clear__s_Option__V(item, svgAreaOpt);
       this.LdataStories_ScaledBox__f_boxObjects.$minus$eq__O__scm_ListBuffer(item);
       these$1 = $as_sci_List(these$1.tail__O())
     }
@@ -30539,8 +31359,8 @@ class $c_LdataStories_ScaledBox extends $c_O {
   clearTextItems__V() {
     const this$2 = this.LdataStories_ScaledBox__f_boxObjects;
     const f = ((this$1) => ((x$6$2) => {
-      const x$6 = $as_LdataStories_ScaledBox$BoxObject(x$6$2);
-      return (x$6 instanceof $c_LdataStories_ScaledBox$TextItem)
+      const x$6 = $as_LdataStories_BoxObject(x$6$2);
+      return (x$6 instanceof $c_LdataStories_TextItem)
     }))(this);
     let $$x1;
     if ((this$2 instanceof $c_sci_List)) {
@@ -30628,14 +31448,14 @@ class $c_LdataStories_ScaledBox extends $c_O {
     let these$1 = this$6;
     while ((!these$1.isEmpty__Z())) {
       const arg1$1 = these$1.head__O();
-      const o = $as_LdataStories_ScaledBox$BoxObject(arg1$1);
+      const o = $as_LdataStories_BoxObject(arg1$1);
       this.clearObject__T__V(o.id__T());
       these$1 = $as_sci_List(these$1.tail__O())
     }
   };
   updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V(text, id, cls, x, y, size, anchor, fill, modifiers, onClick) {
-    const item = new $c_LdataStories_ScaledBox$TextItem(this, text, id, cls, x, y, size, anchor, fill, modifiers, onClick);
-    item.render__V();
+    const item = new $c_LdataStories_TextItem(text, id, cls, x, y, size, anchor, fill, modifiers, onClick);
+    item.render__s_Option__LdataStories_SvgDefinition__V(this.LdataStories_ScaledBox__f_svgAreaOpt, this.LdataStories_ScaledBox__f_svgDefinition);
     const this$3 = this.LdataStories_ScaledBox__f_boxObjects;
     const array = [item];
     const elems = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array);
@@ -32320,7 +33140,7 @@ const $d_Lrcvcore_Candidate = new $TypeData().initClass({
 $c_Lrcvcore_Candidate.prototype.$classData = $d_Lrcvcore_Candidate;
 const $p_Lrcvcore_CombinedPopulation__samplePopulation$lzycompute__sc_Seq = (function($thiz) {
   if (((((1 & $thiz.Lrcvcore_CombinedPopulation__f_bitmap$0) << 24) >> 24) === 0)) {
-    const this$2 = $thiz.populationSample__I__Lrcvcore_ElectionConfig__sc_IndexedSeq($thiz.Lrcvcore_CombinedPopulation__f_nSamples, new $c_Lrcvcore_ElectionConfig(10.0, 30.0, 1.0, 20.0, 0.0));
+    const this$2 = $thiz.populationSample__I__Lrcvcore_ElectionConfig__sc_IndexedSeq($thiz.Lrcvcore_CombinedPopulation__f_desiredSamples, new $c_Lrcvcore_ElectionConfig(10.0, 30.0, 1.0, 20.0, 0.0));
     const lt = new $c_sjsr_AnonFunction2(((this$1) => ((x0$1$2, x1$1$2) => {
       const x0$1 = $as_Lrcvcore_Voter(x0$1$2);
       const x1$1 = $as_Lrcvcore_Voter(x1$1$2);
@@ -32333,7 +33153,7 @@ const $p_Lrcvcore_CombinedPopulation__samplePopulation$lzycompute__sc_Seq = (fun
 });
 const $p_Lrcvcore_CombinedPopulation__medianVoter$lzycompute__D = (function($thiz) {
   if (((((2 & $thiz.Lrcvcore_CombinedPopulation__f_bitmap$0) << 24) >> 24) === 0)) {
-    $thiz.Lrcvcore_CombinedPopulation__f_medianVoter = $as_Lrcvcore_Voter($thiz.samplePopulation__sc_Seq().apply__I__O((($thiz.Lrcvcore_CombinedPopulation__f_nSamples / 2) | 0))).Lrcvcore_Voter__f_ideology;
+    $thiz.Lrcvcore_CombinedPopulation__f_medianVoter = $as_Lrcvcore_Voter($thiz.samplePopulation__sc_Seq().apply__I__O((($thiz.samplePopulation__sc_Seq().length__I() / 2) | 0))).Lrcvcore_Voter__f_ideology;
     $thiz.Lrcvcore_CombinedPopulation__f_bitmap$0 = (((2 | $thiz.Lrcvcore_CombinedPopulation__f_bitmap$0) << 24) >> 24)
   };
   return $thiz.Lrcvcore_CombinedPopulation__f_medianVoter
@@ -32348,7 +33168,7 @@ class $c_Lrcvcore_CombinedPopulation extends $c_O {
     this.Lrcvcore_CombinedPopulation__f_populations = null;
     this.Lrcvcore_CombinedPopulation__f_partyMap = null;
     this.Lrcvcore_CombinedPopulation__f_summedWeight = 0.0;
-    this.Lrcvcore_CombinedPopulation__f_nSamples = 0;
+    this.Lrcvcore_CombinedPopulation__f_desiredSamples = 0;
     this.Lrcvcore_CombinedPopulation__f_bitmap$0 = 0;
     this.Lrcvcore_CombinedPopulation__f_populations = populations;
     const $$x2 = $m_s_Predef$().s_Predef$__f_Map;
@@ -32364,7 +33184,7 @@ class $c_Lrcvcore_CombinedPopulation extends $c_O {
     }))(this));
     const this$3 = $m_sc_Seq$();
     this.Lrcvcore_CombinedPopulation__f_summedWeight = $uD($as_sc_TraversableOnce(populations.map__F1__scg_CanBuildFrom__O($$x3, this$3.scg_GenTraversableFactory__f_ReusableCBFInstance)).sum__s_math_Numeric__O($m_s_math_Numeric$DoubleIsFractional$()));
-    this.Lrcvcore_CombinedPopulation__f_nSamples = 1000
+    this.Lrcvcore_CombinedPopulation__f_desiredSamples = 1000
   };
   percentWeight__Lrcvcore_PopulationTag__D(tag) {
     return ($as_Lrcvcore_PopulationGroup(this.Lrcvcore_CombinedPopulation__f_partyMap.apply__O__O(tag)).Lrcvcore_PopulationGroup__f_weight / this.Lrcvcore_CombinedPopulation__f_summedWeight)
@@ -32374,6 +33194,13 @@ class $c_Lrcvcore_CombinedPopulation extends $c_O {
   };
   medianVoter__D() {
     return (((((2 & this.Lrcvcore_CombinedPopulation__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lrcvcore_CombinedPopulation__medianVoter$lzycompute__D(this) : this.Lrcvcore_CombinedPopulation__f_medianVoter)
+  };
+  ideologyForPercentile__D__D(percentile) {
+    const x = (((-1) + this.samplePopulation__sc_Seq().length__I()) | 0);
+    const y = $doubleToInt((0.5 + (percentile * this.samplePopulation__sc_Seq().length__I())));
+    const y$1 = ((x < y) ? x : y);
+    const idx = ((y$1 < 0) ? 0 : y$1);
+    return $as_Lrcvcore_Voter(this.samplePopulation__sc_Seq().apply__I__O(idx)).Lrcvcore_Voter__f_ideology
   };
   populationSample__I__Lrcvcore_ElectionConfig__sc_IndexedSeq(nSamples, config) {
     const this$3 = this.Lrcvcore_CombinedPopulation__f_populations.toIndexedSeq__sci_IndexedSeq();
@@ -32442,7 +33269,7 @@ const $d_Lrcvcore_CombinedPopulation = new $TypeData().initClass({
 });
 $c_Lrcvcore_CombinedPopulation.prototype.$classData = $d_Lrcvcore_CombinedPopulation;
 class $c_Lrcvcore_CongressionalSimulationConfig extends $c_O {
-  constructor(label, config, popConfig, nRepublicanCandidates, nDemocraticCandidates, nIndependentCandidates, nMedianVoterCandidates, ideologySpread, ideologyNoise, primarySkew, moneyNoise, qualityNoise) {
+  constructor(label, config, popConfig, nRepublicanCandidates, nDemocraticCandidates, nIndependentCandidates, nMedianVoterCandidates, candidateOffset, candidateSpread, candidateVariance, primarySkew, moneyNoise, qualityNoise) {
     super();
     this.Lrcvcore_CongressionalSimulationConfig__f_label = null;
     this.Lrcvcore_CongressionalSimulationConfig__f_config = null;
@@ -32451,8 +33278,9 @@ class $c_Lrcvcore_CongressionalSimulationConfig extends $c_O {
     this.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates = 0;
     this.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates = 0;
     this.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates = 0;
-    this.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread = 0.0;
-    this.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise = 0.0;
+    this.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset = 0.0;
+    this.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread = 0.0;
+    this.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance = 0.0;
     this.Lrcvcore_CongressionalSimulationConfig__f_primarySkew = 0.0;
     this.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise = 0.0;
     this.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise = 0.0;
@@ -32463,8 +33291,9 @@ class $c_Lrcvcore_CongressionalSimulationConfig extends $c_O {
     this.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates = nDemocraticCandidates;
     this.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates = nIndependentCandidates;
     this.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates = nMedianVoterCandidates;
-    this.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread = ideologySpread;
-    this.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise = ideologyNoise;
+    this.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset = candidateOffset;
+    this.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread = candidateSpread;
+    this.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance = candidateVariance;
     this.Lrcvcore_CongressionalSimulationConfig__f_primarySkew = primarySkew;
     this.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise = moneyNoise;
     this.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise = qualityNoise
@@ -32479,8 +33308,8 @@ class $c_Lrcvcore_CongressionalSimulationConfig extends $c_O {
     const d = $as_Lrcvcore_PopulationGroup(districtPop.Lrcvcore_CombinedPopulation__f_partyMap.apply__O__O(tag$1));
     const tag$2 = $m_Lrcvcore_Independents$();
     const i = $as_Lrcvcore_PopulationGroup(districtPop.Lrcvcore_CombinedPopulation__f_partyMap.apply__O__O(tag$2));
-    const repCandidates = this.getCandidatesRand__Lrcvcore_PopulationGroup__D__I__sc_Seq(r, (r.Lrcvcore_PopulationGroup__f_mean + (0.5 * this.Lrcvcore_CongressionalSimulationConfig__f_primarySkew)), this.Lrcvcore_CongressionalSimulationConfig__f_nRepublicanCandidates);
-    const demCandidates = this.getCandidatesRand__Lrcvcore_PopulationGroup__D__I__sc_Seq(d, (d.Lrcvcore_PopulationGroup__f_mean - (0.5 * this.Lrcvcore_CongressionalSimulationConfig__f_primarySkew)), this.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates);
+    const repCandidates = this.getCandidatesRank__Lrcvcore_PopulationGroup__Lrcvcore_CombinedPopulation__sc_Seq(r, districtPop);
+    const demCandidates = this.getCandidatesRank__Lrcvcore_PopulationGroup__Lrcvcore_CombinedPopulation__sc_Seq(d, districtPop);
     const indCandidates = this.getCandidatesRand__Lrcvcore_PopulationGroup__D__I__sc_Seq(i, i.Lrcvcore_PopulationGroup__f_mean, this.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates);
     const mvTag = (($f_Lrcvcore_DistrictVotingRecord__lean__D(dvr) > 0.0) ? $m_Lrcvcore_Republicans$() : $m_Lrcvcore_Democrats$());
     $m_sci_IndexedSeq$();
@@ -32498,7 +33327,7 @@ class $c_Lrcvcore_CongressionalSimulationConfig extends $c_O {
       const $$x2 = this$9.s_util_Random__f_self.nextGaussian__D();
       const $$x1 = this.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
       const this$10 = $m_s_util_Random$();
-      const elem = new $c_Lrcvcore_Candidate("V", $$x5, ($$x4 + $$x3), ($$x2 * $$x1), (this$10.s_util_Random__f_self.nextGaussian__D() * this.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise), false);
+      const elem = new $c_Lrcvcore_Candidate("V", $$x5, ($$x4 + (0.1 * $$x3)), ($$x2 * $$x1), (this$10.s_util_Random__f_self.nextGaussian__D() * this.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise), false);
       b.$plus$eq__O__sci_VectorBuilder(elem);
       if ((i$1 === 0)) {
         break
@@ -32523,6 +33352,102 @@ class $c_Lrcvcore_CongressionalSimulationConfig extends $c_O {
     const lo = t.RTLong__f_lo;
     const hi = t.RTLong__f_hi;
     return new $c_Lrcvcore_ElectionDefinition(candidates, districtPop, this.Lrcvcore_CongressionalSimulationConfig__f_config, new $c_RTLong(lo, hi))
+  };
+  computeRanks__Lrcvcore_PopulationTag__D__D__D__I__sc_Seq(tag, offset, spread, noise, nCandidates) {
+    $m_s_Predef$().require__Z__V((nCandidates > 1));
+    const step = (spread / (((-1) + nCandidates) | 0));
+    const isEmpty = (nCandidates <= 0);
+    let scala$collection$immutable$Range$$numRangeElements;
+    if (isEmpty) {
+      scala$collection$immutable$Range$$numRangeElements = 0
+    } else {
+      const hi = (nCandidates >> 31);
+      scala$collection$immutable$Range$$numRangeElements = (((hi === 0) ? (((-2147483648) ^ nCandidates) > (-1)) : (hi > 0)) ? (-1) : nCandidates)
+    };
+    const scala$collection$immutable$Range$$lastElement = (((-1) + nCandidates) | 0);
+    $m_sci_IndexedSeq$();
+    $m_sc_IndexedSeq$();
+    $m_sci_IndexedSeq$();
+    $m_sci_Vector$();
+    const b = new $c_sci_VectorBuilder();
+    if ((scala$collection$immutable$Range$$numRangeElements < 0)) {
+      $m_sci_Range$().scala$collection$immutable$Range$$fail__I__I__I__Z__E(0, nCandidates, 1, false)
+    };
+    if ((!isEmpty)) {
+      let i = 0;
+      while (true) {
+        const arg1 = i;
+        const this$9 = $m_s_util_Random$();
+        const elem = (((arg1 * step) - (spread / 2.0)) + (this$9.s_util_Random__f_self.nextGaussian__D() * noise));
+        b.$plus$eq__O__sci_VectorBuilder(elem);
+        if ((i === scala$collection$immutable$Range$$lastElement)) {
+          break
+        };
+        i = ((1 + i) | 0)
+      }
+    };
+    const ranks = b.result__sci_Vector();
+    const x = $m_Lrcvcore_Republicans$();
+    if ((x === tag)) {
+      $m_sci_IndexedSeq$();
+      const bf$1 = $m_sc_IndexedSeq$().sc_IndexedSeq$__f_ReusableCBF;
+      const b$1 = $p_sc_TraversableLike__builder$1__scg_CanBuildFrom__scm_Builder(ranks, bf$1);
+      const this$11 = ranks.iterator__sci_VectorIterator();
+      while (this$11.sci_VectorIterator__f__hasNext) {
+        const arg1$1 = this$11.next__O();
+        const r = $uD(arg1$1);
+        b$1.$plus$eq__O__scm_Builder((0.5 + (r + offset)))
+      };
+      return $as_sc_Seq(b$1.result__O())
+    } else {
+      const x$3 = $m_Lrcvcore_Democrats$();
+      if ((x$3 === tag)) {
+        $m_sci_IndexedSeq$();
+        const bf$2 = $m_sc_IndexedSeq$().sc_IndexedSeq$__f_ReusableCBF;
+        const b$2 = $p_sc_TraversableLike__builder$1__scg_CanBuildFrom__scm_Builder(ranks, bf$2);
+        const this$13 = ranks.iterator__sci_VectorIterator();
+        while (this$13.sci_VectorIterator__f__hasNext) {
+          const arg1$2 = this$13.next__O();
+          const r$3 = $uD(arg1$2);
+          b$2.$plus$eq__O__scm_Builder(((0.5 - offset) - r$3))
+        };
+        return $as_sc_Seq(b$2.result__O())
+      } else {
+        const x$5 = $m_Lrcvcore_Independents$();
+        if ((x$5 === tag)) {
+          return ranks
+        } else {
+          throw new $c_s_MatchError(tag)
+        }
+      }
+    }
+  };
+  getCandidatesRank__Lrcvcore_PopulationGroup__Lrcvcore_CombinedPopulation__sc_Seq(party, population) {
+    const ranks = this.computeRanks__Lrcvcore_PopulationTag__D__D__D__I__sc_Seq(party.Lrcvcore_PopulationGroup__f_tag, this.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset, this.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread, this.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance, this.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates);
+    const this$2 = ranks.indices__sci_Range();
+    $m_sci_IndexedSeq$();
+    const bf = $m_sc_IndexedSeq$().sc_IndexedSeq$__f_ReusableCBF;
+    const b = $p_sc_TraversableLike__builder$1__scg_CanBuildFrom__scm_Builder(this$2, bf);
+    if ((!this$2.sci_Range__f_isEmpty)) {
+      let i = this$2.sci_Range__f_start;
+      while (true) {
+        const arg1 = i;
+        const r = $uD(ranks.apply__I__O(arg1));
+        const ideology = population.ideologyForPercentile__D__D(r);
+        const this$3 = party.Lrcvcore_PopulationGroup__f_tag.shortName__T();
+        const name = (($as_T(this$3.substring(0, 1)) + "-") + ((1 + arg1) | 0));
+        const this$4 = $m_s_util_Random$();
+        const $$x2 = this$4.s_util_Random__f_self.nextGaussian__D();
+        const $$x1 = this.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
+        const this$5 = $m_s_util_Random$();
+        b.$plus$eq__O__scm_Builder(new $c_Lrcvcore_Candidate(name, party, ideology, ($$x2 * $$x1), (this$5.s_util_Random__f_self.nextGaussian__D() * this.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise), false));
+        if ((i === this$2.sci_Range__f_scala$collection$immutable$Range$$lastElement)) {
+          break
+        };
+        i = ((i + this$2.sci_Range__f_step) | 0)
+      }
+    };
+    return $as_sc_Seq(b.result__O())
   };
   getCandidatesRand__Lrcvcore_PopulationGroup__D__I__sc_Seq(party, ideology, nCandidates) {
     const isEmpty = (nCandidates <= 0);
@@ -32550,7 +33475,7 @@ class $c_Lrcvcore_CongressionalSimulationConfig extends $c_O {
         const name = (($as_T(this$9.substring(0, 1)) + "-") + ((1 + arg1) | 0));
         const this$10 = $m_s_util_Random$();
         const $$x4 = this$10.s_util_Random__f_self.nextGaussian__D();
-        const $$x3 = this.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise;
+        const $$x3 = this.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance;
         const this$11 = $m_s_util_Random$();
         const $$x2 = this$11.s_util_Random__f_self.nextGaussian__D();
         const $$x1 = this.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
@@ -32563,13 +33488,19 @@ class $c_Lrcvcore_CongressionalSimulationConfig extends $c_O {
         i = ((1 + i) | 0)
       }
     };
-    return b.result__sci_Vector()
+    const this$13 = b.result__sci_Vector();
+    const lt = new $c_sjsr_AnonFunction2(((this$2$1) => ((a$2, b$2) => {
+      const a = $as_Lrcvcore_Candidate(a$2);
+      const b$1 = $as_Lrcvcore_Candidate(b$2);
+      return (a.Lrcvcore_Candidate__f_ideology < b$1.Lrcvcore_Candidate__f_ideology)
+    }))(this));
+    return $as_sc_Seq($f_sc_SeqLike__sortWith__F2__O(this$13, lt))
   };
   productPrefix__T() {
     return "CongressionalSimulationConfig"
   };
   productArity__I() {
-    return 12
+    return 13
   };
   productElement__I__O(x$1) {
     switch (x$1) {
@@ -32602,22 +33533,26 @@ class $c_Lrcvcore_CongressionalSimulationConfig extends $c_O {
         break
       }
       case 7: {
-        return this.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread;
+        return this.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset;
         break
       }
       case 8: {
-        return this.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise;
+        return this.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread;
         break
       }
       case 9: {
-        return this.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
+        return this.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance;
         break
       }
       case 10: {
-        return this.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
+        return this.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
         break
       }
       case 11: {
+        return this.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
+        break
+      }
+      case 12: {
         return this.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
         break
       }
@@ -32656,27 +33591,31 @@ class $c_Lrcvcore_CongressionalSimulationConfig extends $c_O {
     const data$6 = this.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates;
     acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
     const hash$7 = acc;
-    const dv = this.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread;
+    const dv = this.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset;
     const data$7 = $m_sr_Statics$().doubleHash__D__I(dv);
     acc = $m_sr_Statics$().mix__I__I__I(hash$7, data$7);
     const hash$8 = acc;
-    const dv$1 = this.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise;
+    const dv$1 = this.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread;
     const data$8 = $m_sr_Statics$().doubleHash__D__I(dv$1);
     acc = $m_sr_Statics$().mix__I__I__I(hash$8, data$8);
     const hash$9 = acc;
-    const dv$2 = this.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
+    const dv$2 = this.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance;
     const data$9 = $m_sr_Statics$().doubleHash__D__I(dv$2);
     acc = $m_sr_Statics$().mix__I__I__I(hash$9, data$9);
     const hash$10 = acc;
-    const dv$3 = this.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
+    const dv$3 = this.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
     const data$10 = $m_sr_Statics$().doubleHash__D__I(dv$3);
     acc = $m_sr_Statics$().mix__I__I__I(hash$10, data$10);
     const hash$11 = acc;
-    const dv$4 = this.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
+    const dv$4 = this.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
     const data$11 = $m_sr_Statics$().doubleHash__D__I(dv$4);
     acc = $m_sr_Statics$().mix__I__I__I(hash$11, data$11);
     const hash$12 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$12, 12)
+    const dv$5 = this.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
+    const data$12 = $m_sr_Statics$().doubleHash__D__I(dv$5);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$12, data$12);
+    const hash$13 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$13, 13)
   };
   toString__T() {
     return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
@@ -32702,7 +33641,7 @@ class $c_Lrcvcore_CongressionalSimulationConfig extends $c_O {
       } else {
         $$x1 = false
       };
-      if ((((((((($$x1 && (this.Lrcvcore_CongressionalSimulationConfig__f_nRepublicanCandidates === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_nRepublicanCandidates)) && (this.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates)) && (this.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates)) && (this.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates)) && (this.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread)) && (this.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise)) && (this.Lrcvcore_CongressionalSimulationConfig__f_primarySkew === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_primarySkew)) && (this.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise))) {
+      if (((((((((($$x1 && (this.Lrcvcore_CongressionalSimulationConfig__f_nRepublicanCandidates === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_nRepublicanCandidates)) && (this.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates)) && (this.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates)) && (this.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates)) && (this.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset)) && (this.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread)) && (this.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance)) && (this.Lrcvcore_CongressionalSimulationConfig__f_primarySkew === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_primarySkew)) && (this.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise))) {
         return (this.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise === CongressionalSimulationConfig$1.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise)
       } else {
         return false
@@ -33431,6 +34370,143 @@ const $d_Lrcvcore_PopulationGroup = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Lrcvcore_PopulationGroup.prototype.$classData = $d_Lrcvcore_PopulationGroup;
+class $c_Lrcvcore_ProcessResult extends $c_O {
+  constructor(ideology, party, voterSatisfaction) {
+    super();
+    this.Lrcvcore_ProcessResult__f_ideology = 0.0;
+    this.Lrcvcore_ProcessResult__f_party = null;
+    this.Lrcvcore_ProcessResult__f_voterSatisfaction = 0.0;
+    this.Lrcvcore_ProcessResult__f_ideology = ideology;
+    this.Lrcvcore_ProcessResult__f_party = party;
+    this.Lrcvcore_ProcessResult__f_voterSatisfaction = voterSatisfaction
+  };
+  toString__T() {
+    const arg$macro$1 = this.Lrcvcore_ProcessResult__f_ideology;
+    const arg$macro$2 = this.Lrcvcore_ProcessResult__f_party.shortName__T();
+    const arg$macro$3 = (100.0 * this.Lrcvcore_ProcessResult__f_voterSatisfaction);
+    const this$3 = new $c_sci_StringOps("[ % 6.2f %s %6.2f ]");
+    const array = [arg$macro$1, arg$macro$2, arg$macro$3];
+    const this$ = this$3.sci_StringOps__f_repr;
+    $m_sc_Seq$();
+    $m_sjs_js_WrappedArray$();
+    const array$1 = [];
+    $uI(array.length);
+    let i = 0;
+    const len = $uI(array.length);
+    while ((i < len)) {
+      const index = i;
+      const arg1 = array[index];
+      const elem = $p_sci_StringLike__unwrapArg__O__O(this$3, arg1);
+      array$1.push(elem);
+      i = ((1 + i) | 0)
+    };
+    $m_s_reflect_ManifestFactory$ObjectManifest$();
+    const len$1 = $uI(array$1.length);
+    const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
+    const len$2 = result.u.length;
+    let i$1 = 0;
+    let j = 0;
+    const x = $uI(array$1.length);
+    const x$1 = ((x < len$2) ? x : len$2);
+    const that = result.u.length;
+    const end = ((x$1 < that) ? x$1 : that);
+    while ((i$1 < end)) {
+      const $$x1 = j;
+      const index$1 = i$1;
+      result.set($$x1, array$1[index$1]);
+      i$1 = ((1 + i$1) | 0);
+      j = ((1 + j) | 0)
+    };
+    return $m_jl_String$().format__T__AO__T(this$, result)
+  };
+  productPrefix__T() {
+    return "ProcessResult"
+  };
+  productArity__I() {
+    return 3
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lrcvcore_ProcessResult__f_ideology;
+        break
+      }
+      case 1: {
+        return this.Lrcvcore_ProcessResult__f_party;
+        break
+      }
+      case 2: {
+        return this.Lrcvcore_ProcessResult__f_voterSatisfaction;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const dv = this.Lrcvcore_ProcessResult__f_ideology;
+    const data = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const x = this.Lrcvcore_ProcessResult__f_party;
+    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const dv$1 = this.Lrcvcore_ProcessResult__f_voterSatisfaction;
+    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$3, 3)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lrcvcore_ProcessResult)) {
+      const ProcessResult$1 = $as_Lrcvcore_ProcessResult(x$1);
+      let $$x1;
+      if ((this.Lrcvcore_ProcessResult__f_ideology === ProcessResult$1.Lrcvcore_ProcessResult__f_ideology)) {
+        const x = this.Lrcvcore_ProcessResult__f_party;
+        const x$2 = ProcessResult$1.Lrcvcore_ProcessResult__f_party;
+        $$x1 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        return (this.Lrcvcore_ProcessResult__f_voterSatisfaction === ProcessResult$1.Lrcvcore_ProcessResult__f_voterSatisfaction)
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lrcvcore_ProcessResult(obj) {
+  return (((obj instanceof $c_Lrcvcore_ProcessResult) || (obj === null)) ? obj : $throwClassCastException(obj, "rcvcore.ProcessResult"))
+}
+function $isArrayOf_Lrcvcore_ProcessResult(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lrcvcore_ProcessResult)))
+}
+function $asArrayOf_Lrcvcore_ProcessResult(obj, depth) {
+  return (($isArrayOf_Lrcvcore_ProcessResult(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lrcvcore.ProcessResult;", depth))
+}
+const $d_Lrcvcore_ProcessResult = new $TypeData().initClass({
+  Lrcvcore_ProcessResult: 0
+}, false, "rcvcore.ProcessResult", {
+  Lrcvcore_ProcessResult: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lrcvcore_ProcessResult.prototype.$classData = $d_Lrcvcore_ProcessResult;
 class $c_Lrcvcore_RCVBallot extends $c_O {
   constructor(unsortedCandidates) {
     super();
@@ -36466,210 +37542,6 @@ const $d_LscalajsUtils_PixRectangle = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_LscalajsUtils_PixRectangle.prototype.$classData = $d_LscalajsUtils_PixRectangle;
-class $c_LscalajsUtils_PlayButton extends $c_O {
-  constructor(id, parentSVG, location, textLabel, fill1, fill2, clickCB) {
-    super();
-    this.LscalajsUtils_PlayButton__f_id = null;
-    this.LscalajsUtils_PlayButton__f_parentSVG = null;
-    this.LscalajsUtils_PlayButton__f_location = null;
-    this.LscalajsUtils_PlayButton__f_textLabel = null;
-    this.LscalajsUtils_PlayButton__f_fill1 = null;
-    this.LscalajsUtils_PlayButton__f_fill2 = null;
-    this.LscalajsUtils_PlayButton__f_clickCB = null;
-    this.LscalajsUtils_PlayButton__f_rect = null;
-    this.LscalajsUtils_PlayButton__f_text = null;
-    this.LscalajsUtils_PlayButton__f_count = 0;
-    this.LscalajsUtils_PlayButton__f_id = id;
-    this.LscalajsUtils_PlayButton__f_parentSVG = parentSVG;
-    this.LscalajsUtils_PlayButton__f_location = location;
-    this.LscalajsUtils_PlayButton__f_textLabel = textLabel;
-    this.LscalajsUtils_PlayButton__f_fill1 = fill1;
-    this.LscalajsUtils_PlayButton__f_fill2 = fill2;
-    this.LscalajsUtils_PlayButton__f_clickCB = clickCB;
-    const $$x13 = parentSVG.append("rect");
-    const this$1 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x12 = $$x13.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$1, id));
-    const this$2 = $m_Lio_whitemice_d3v5_all_package$();
-    const d = location.LscalajsUtils_PixRectangle__f_x;
-    const $$x11 = $$x12.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$2, d));
-    const this$3 = $m_Lio_whitemice_d3v5_all_package$();
-    const d$1 = location.LscalajsUtils_PixRectangle__f_y;
-    const $$x10 = $$x11.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$3, d$1));
-    const this$4 = $m_Lio_whitemice_d3v5_all_package$();
-    const d$2 = (location.LscalajsUtils_PixRectangle__f_height / 2.0);
-    const $$x9 = $$x10.attr("rx", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$4, d$2));
-    const this$5 = $m_Lio_whitemice_d3v5_all_package$();
-    const d$3 = (location.LscalajsUtils_PixRectangle__f_height / 2.0);
-    const $$x8 = $$x9.attr("ry", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, d$3));
-    const this$6 = $m_Lio_whitemice_d3v5_all_package$();
-    const d$4 = location.LscalajsUtils_PixRectangle__f_width;
-    const $$x7 = $$x8.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$6, d$4));
-    const this$7 = $m_Lio_whitemice_d3v5_all_package$();
-    const d$5 = location.LscalajsUtils_PixRectangle__f_height;
-    const $$x6 = $$x7.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$7, d$5));
-    const this$8 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x5 = $$x6.style("stroke", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$8, fill1));
-    const this$9 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x4 = $$x5.style("strike-width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$9, "2"));
-    const this$10 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x3 = $$x4.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$10, "white"));
-    const this$11 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x2 = $$x3.style("cursor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$11, "default"));
-    const this$13 = $m_Lio_whitemice_d3v5_all_package$();
-    const fun = new $c_sjsr_AnonFunction0(((this$12) => (() => {
-      this$12.onClick__V()
-    }))(this));
-    const $$x1 = $$x2.on("click", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$13, fun));
-    this.LscalajsUtils_PlayButton__f_rect = $$x1;
-    const $$x24 = parentSVG.append("text");
-    const this$14 = $m_Lio_whitemice_d3v5_all_package$();
-    const s = (id + "-text");
-    const $$x23 = $$x24.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$14, s));
-    const this$15 = $m_Lio_whitemice_d3v5_all_package$();
-    const d$6 = (location.LscalajsUtils_PixRectangle__f_x + (location.LscalajsUtils_PixRectangle__f_width / 2.0));
-    const $$x22 = $$x23.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$15, d$6));
-    const this$16 = $m_Lio_whitemice_d3v5_all_package$();
-    const d$7 = (location.LscalajsUtils_PixRectangle__f_y + (location.LscalajsUtils_PixRectangle__f_height / 2.0));
-    const $$x21 = $$x22.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$16, d$7));
-    const this$17 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x20 = $$x21.attr("dy", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$17, ".3em"));
-    const this$18 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x19 = $$x20.style("font-size", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$18, "10pt"));
-    const this$19 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x18 = $$x19.style("text-anchor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$19, "middle"));
-    const this$20 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x17 = $$x18.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$20, fill1));
-    const this$21 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x16 = $$x17.style("cursor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$21, "default"));
-    const $$x15 = $$x16.text(textLabel);
-    const this$22 = $m_Lio_whitemice_d3v5_all_package$();
-    const fun$1 = new $c_sjsr_AnonFunction0(((this$2$1) => (() => {
-      this$2$1.onClick__V()
-    }))(this));
-    const $$x14 = $$x15.on("click", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$22, fun$1));
-    this.LscalajsUtils_PlayButton__f_text = $$x14;
-    this.LscalajsUtils_PlayButton__f_count = 0
-  };
-  onClick__V() {
-    this.LscalajsUtils_PlayButton__f_count = ((1 + this.LscalajsUtils_PlayButton__f_count) | 0);
-    const f = ((((this.LscalajsUtils_PlayButton__f_count % 2) | 0) === 0) ? this.LscalajsUtils_PlayButton__f_fill1 : this.LscalajsUtils_PlayButton__f_fill2);
-    const $$x1 = this.LscalajsUtils_PlayButton__f_text;
-    const this$1 = $m_Lio_whitemice_d3v5_all_package$();
-    $$x1.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$1, f));
-    const $$x2 = this.LscalajsUtils_PlayButton__f_rect;
-    const this$2 = $m_Lio_whitemice_d3v5_all_package$();
-    $$x2.style("stroke", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$2, f));
-    const this$3 = this.LscalajsUtils_PlayButton__f_clickCB;
-    this$3.apply__O()
-  };
-  clear__V() {
-    this.LscalajsUtils_PlayButton__f_rect.remove();
-    this.LscalajsUtils_PlayButton__f_text.remove()
-  };
-  productPrefix__T() {
-    return "PlayButton"
-  };
-  productArity__I() {
-    return 7
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.LscalajsUtils_PlayButton__f_id;
-        break
-      }
-      case 1: {
-        return this.LscalajsUtils_PlayButton__f_parentSVG;
-        break
-      }
-      case 2: {
-        return this.LscalajsUtils_PlayButton__f_location;
-        break
-      }
-      case 3: {
-        return this.LscalajsUtils_PlayButton__f_textLabel;
-        break
-      }
-      case 4: {
-        return this.LscalajsUtils_PlayButton__f_fill1;
-        break
-      }
-      case 5: {
-        return this.LscalajsUtils_PlayButton__f_fill2;
-        break
-      }
-      case 6: {
-        return this.LscalajsUtils_PlayButton__f_clickCB;
-        break
-      }
-      default: {
-        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    const this$2 = $m_s_util_hashing_MurmurHash3$();
-    return this$2.productHash__s_Product__I__I(this, (-889275714))
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_LscalajsUtils_PlayButton)) {
-      const PlayButton$1 = $as_LscalajsUtils_PlayButton(x$1);
-      let $$x2;
-      if ((this.LscalajsUtils_PlayButton__f_id === PlayButton$1.LscalajsUtils_PlayButton__f_id)) {
-        const x = this.LscalajsUtils_PlayButton__f_parentSVG;
-        const y = PlayButton$1.LscalajsUtils_PlayButton__f_parentSVG;
-        $$x2 = $m_sr_BoxesRunTime$().equals__O__O__Z(x, y)
-      } else {
-        $$x2 = false
-      };
-      let $$x1;
-      if ($$x2) {
-        const x$2 = this.LscalajsUtils_PlayButton__f_location;
-        const x$2$1 = PlayButton$1.LscalajsUtils_PlayButton__f_location;
-        $$x1 = ((x$2 === null) ? (x$2$1 === null) : x$2.equals__O__Z(x$2$1))
-      } else {
-        $$x1 = false
-      };
-      if (((($$x1 && (this.LscalajsUtils_PlayButton__f_textLabel === PlayButton$1.LscalajsUtils_PlayButton__f_textLabel)) && (this.LscalajsUtils_PlayButton__f_fill1 === PlayButton$1.LscalajsUtils_PlayButton__f_fill1)) && (this.LscalajsUtils_PlayButton__f_fill2 === PlayButton$1.LscalajsUtils_PlayButton__f_fill2))) {
-        const x$3 = this.LscalajsUtils_PlayButton__f_clickCB;
-        const x$4 = PlayButton$1.LscalajsUtils_PlayButton__f_clickCB;
-        return (x$3 === x$4)
-      } else {
-        return false
-      }
-    } else {
-      return false
-    }
-  };
-}
-function $as_LscalajsUtils_PlayButton(obj) {
-  return (((obj instanceof $c_LscalajsUtils_PlayButton) || (obj === null)) ? obj : $throwClassCastException(obj, "scalajsUtils.PlayButton"))
-}
-function $isArrayOf_LscalajsUtils_PlayButton(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LscalajsUtils_PlayButton)))
-}
-function $asArrayOf_LscalajsUtils_PlayButton(obj, depth) {
-  return (($isArrayOf_LscalajsUtils_PlayButton(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LscalajsUtils.PlayButton;", depth))
-}
-const $d_LscalajsUtils_PlayButton = new $TypeData().initClass({
-  LscalajsUtils_PlayButton: 0
-}, false, "scalajsUtils.PlayButton", {
-  LscalajsUtils_PlayButton: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_LscalajsUtils_PlayButton.prototype.$classData = $d_LscalajsUtils_PlayButton;
 const $p_LscalajsUtils_RGB__valuesStr$lzycompute__T = (function($thiz) {
   if ((!$thiz.LscalajsUtils_RGB__f_bitmap$0)) {
     const this$1 = $thiz.LscalajsUtils_RGB__f_s;
@@ -37780,163 +38652,6 @@ function $m_LscalajsUtils_SliderSVG$() {
   };
   return $n_LscalajsUtils_SliderSVG$
 }
-class $c_LscalajsUtils_TextItem extends $c_O {
-  constructor(text, id, xPct, yPct, size, anchor, fill) {
-    super();
-    this.LscalajsUtils_TextItem__f_text = null;
-    this.LscalajsUtils_TextItem__f_id = null;
-    this.LscalajsUtils_TextItem__f_xPct = 0.0;
-    this.LscalajsUtils_TextItem__f_yPct = 0.0;
-    this.LscalajsUtils_TextItem__f_size = null;
-    this.LscalajsUtils_TextItem__f_anchor = null;
-    this.LscalajsUtils_TextItem__f_fill = null;
-    this.LscalajsUtils_TextItem__f_text = text;
-    this.LscalajsUtils_TextItem__f_id = id;
-    this.LscalajsUtils_TextItem__f_xPct = xPct;
-    this.LscalajsUtils_TextItem__f_yPct = yPct;
-    this.LscalajsUtils_TextItem__f_size = size;
-    this.LscalajsUtils_TextItem__f_anchor = anchor;
-    this.LscalajsUtils_TextItem__f_fill = fill
-  };
-  clear__Lio_whitemice_d3v5_selection_Selection__V(svg) {
-    svg.selectAll(("#" + this.LscalajsUtils_TextItem__f_id)).remove()
-  };
-  render__Lio_whitemice_d3v5_selection_Selection__D__D__V(svg, width, height) {
-    svg.selectAll(("#" + this.LscalajsUtils_TextItem__f_id)).remove();
-    const $$x8 = svg.append("text");
-    const this$1 = $m_Lio_whitemice_d3v5_all_package$();
-    const s = this.LscalajsUtils_TextItem__f_id;
-    const $$x7 = $$x8.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$1, s));
-    const this$2 = $m_Lio_whitemice_d3v5_all_package$();
-    const s$1 = this.LscalajsUtils_TextItem__f_anchor;
-    const $$x6 = $$x7.style("text-anchor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$2, s$1));
-    const this$3 = $m_Lio_whitemice_d3v5_all_package$();
-    const d = (this.LscalajsUtils_TextItem__f_yPct * height);
-    const $$x5 = $$x6.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$3, d));
-    const this$4 = $m_Lio_whitemice_d3v5_all_package$();
-    const d$1 = (this.LscalajsUtils_TextItem__f_xPct * width);
-    const $$x4 = $$x5.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$4, d$1));
-    const this$5 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x3 = $$x4.attr("dy", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$5, ".75em"));
-    const this$6 = $m_Lio_whitemice_d3v5_all_package$();
-    const s$2 = this.LscalajsUtils_TextItem__f_fill;
-    const $$x2 = $$x3.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$6, s$2));
-    const this$7 = $m_Lio_whitemice_d3v5_all_package$();
-    const s$3 = this.LscalajsUtils_TextItem__f_size;
-    const $$x1 = $$x2.style("font-size", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$7, s$3));
-    $$x1.text(this.LscalajsUtils_TextItem__f_text)
-  };
-  productPrefix__T() {
-    return "TextItem"
-  };
-  productArity__I() {
-    return 7
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.LscalajsUtils_TextItem__f_text;
-        break
-      }
-      case 1: {
-        return this.LscalajsUtils_TextItem__f_id;
-        break
-      }
-      case 2: {
-        return this.LscalajsUtils_TextItem__f_xPct;
-        break
-      }
-      case 3: {
-        return this.LscalajsUtils_TextItem__f_yPct;
-        break
-      }
-      case 4: {
-        return this.LscalajsUtils_TextItem__f_size;
-        break
-      }
-      case 5: {
-        return this.LscalajsUtils_TextItem__f_anchor;
-        break
-      }
-      case 6: {
-        return this.LscalajsUtils_TextItem__f_fill;
-        break
-      }
-      default: {
-        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    let acc = (-889275714);
-    const hash = acc;
-    const x = this.LscalajsUtils_TextItem__f_text;
-    const data = $m_sr_Statics$().anyHash__O__I(x);
-    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
-    const hash$1 = acc;
-    const x$1 = this.LscalajsUtils_TextItem__f_id;
-    const data$1 = $m_sr_Statics$().anyHash__O__I(x$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
-    const hash$2 = acc;
-    const dv = this.LscalajsUtils_TextItem__f_xPct;
-    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
-    const hash$3 = acc;
-    const dv$1 = this.LscalajsUtils_TextItem__f_yPct;
-    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
-    const hash$4 = acc;
-    const x$2 = this.LscalajsUtils_TextItem__f_size;
-    const data$4 = $m_sr_Statics$().anyHash__O__I(x$2);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
-    const hash$5 = acc;
-    const x$3 = this.LscalajsUtils_TextItem__f_anchor;
-    const data$5 = $m_sr_Statics$().anyHash__O__I(x$3);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
-    const hash$6 = acc;
-    const x$4 = this.LscalajsUtils_TextItem__f_fill;
-    const data$6 = $m_sr_Statics$().anyHash__O__I(x$4);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
-    const hash$7 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$7, 7)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_LscalajsUtils_TextItem)) {
-      const TextItem$1 = $as_LscalajsUtils_TextItem(x$1);
-      return (((((((this.LscalajsUtils_TextItem__f_text === TextItem$1.LscalajsUtils_TextItem__f_text) && (this.LscalajsUtils_TextItem__f_id === TextItem$1.LscalajsUtils_TextItem__f_id)) && (this.LscalajsUtils_TextItem__f_xPct === TextItem$1.LscalajsUtils_TextItem__f_xPct)) && (this.LscalajsUtils_TextItem__f_yPct === TextItem$1.LscalajsUtils_TextItem__f_yPct)) && (this.LscalajsUtils_TextItem__f_size === TextItem$1.LscalajsUtils_TextItem__f_size)) && (this.LscalajsUtils_TextItem__f_anchor === TextItem$1.LscalajsUtils_TextItem__f_anchor)) && (this.LscalajsUtils_TextItem__f_fill === TextItem$1.LscalajsUtils_TextItem__f_fill))
-    } else {
-      return false
-    }
-  };
-}
-function $as_LscalajsUtils_TextItem(obj) {
-  return (((obj instanceof $c_LscalajsUtils_TextItem) || (obj === null)) ? obj : $throwClassCastException(obj, "scalajsUtils.TextItem"))
-}
-function $isArrayOf_LscalajsUtils_TextItem(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LscalajsUtils_TextItem)))
-}
-function $asArrayOf_LscalajsUtils_TextItem(obj, depth) {
-  return (($isArrayOf_LscalajsUtils_TextItem(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LscalajsUtils.TextItem;", depth))
-}
-const $d_LscalajsUtils_TextItem = new $TypeData().initClass({
-  LscalajsUtils_TextItem: 0
-}, false, "scalajsUtils.TextItem", {
-  LscalajsUtils_TextItem: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_LscalajsUtils_TextItem.prototype.$classData = $d_LscalajsUtils_TextItem;
 class $c_Lscalatags_JsDom$RawFrag$ extends $c_O {
   apply$mcVD$sp__D__V(v1) {
     const v = $as_T(v1);
@@ -43251,25 +43966,171 @@ class $c_LdataStories_MapController extends $c_O {
   visAreaOpt__s_Option() {
     return new $c_s_Some(this.LdataStories_MapController__f_mapSVG)
   };
-  clearTextItems__V() {
+  removeTextItem__T__V(id) {
     const this$1 = this.LdataStories_MapController__f_textItems;
     const this$2 = this$1.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start;
-    let these = this$2;
-    while ((!these.isEmpty__Z())) {
-      const arg1 = these.head__O();
-      const x$3 = $as_LscalajsUtils_TextItem(arg1);
-      x$3.clear__Lio_whitemice_d3v5_selection_Selection__V(this.LdataStories_MapController__f_mapOuterG);
-      these = $as_sci_List(these.tail__O())
+    let this$3;
+    _return: {
+      let these = this$2;
+      while ((!these.isEmpty__Z())) {
+        const arg1 = these.head__O();
+        const t = $as_LdataStories_TextItem(arg1);
+        if ((t.LdataStories_TextItem__f_id === id)) {
+          this$3 = new $c_s_Some(these.head__O());
+          break _return
+        };
+        these = $as_sc_LinearSeqOptimized(these.tail__O())
+      };
+      this$3 = $m_s_None$()
     };
-    this.LdataStories_MapController__f_textItems.clear__V()
+    if ((!this$3.isEmpty__Z())) {
+      const arg1$1 = this$3.get__O();
+      const x$2 = $as_LdataStories_TextItem(arg1$1);
+      const svgArea = this.LdataStories_MapController__f_mapOuterG;
+      $f_LdataStories_BoxObject__clear__Lio_whitemice_d3v5_selection_Selection__V(x$2, svgArea)
+    };
+    const this$4 = this.LdataStories_MapController__f_textItems;
+    const f = ((this$3$1, id$1) => ((t$3$2) => {
+      const t$3 = $as_LdataStories_TextItem(t$3$2);
+      return (t$3.LdataStories_TextItem__f_id !== id$1)
+    }))(this, id);
+    let $$x1;
+    if ((this$4 instanceof $c_sci_List)) {
+      const x2 = $as_sci_List(this$4);
+      let l = x2;
+      let result;
+      block: {
+        while (true) {
+          if (l.isEmpty__Z()) {
+            result = $m_sci_Nil$();
+            break
+          } else {
+            const h = l.head__O();
+            const t$1 = $as_sci_List(l.tail__O());
+            if (($uZ(f(h)) === false)) {
+              l = t$1;
+              continue
+            };
+            const start = l;
+            let remaining = t$1;
+            while (true) {
+              if (remaining.isEmpty__Z()) {
+                result = start;
+                break block
+              } else {
+                const x = remaining.head__O();
+                if (($uZ(f(x)) !== false)) {
+                  remaining = $as_sci_List(remaining.tail__O());
+                  continue
+                };
+                const firstMiss = remaining;
+                const newHead = new $c_sci_$colon$colon(start.head__O(), $m_sci_Nil$());
+                let toProcess = $as_sci_List(start.tail__O());
+                let currentLast = newHead;
+                while ((toProcess !== firstMiss)) {
+                  const newElem = new $c_sci_$colon$colon(toProcess.head__O(), $m_sci_Nil$());
+                  currentLast.sci_$colon$colon__f_tl = newElem;
+                  currentLast = newElem;
+                  toProcess = $as_sci_List(toProcess.tail__O())
+                };
+                let next = $as_sci_List(firstMiss.tail__O());
+                let nextToCopy = next;
+                while ((!next.isEmpty__Z())) {
+                  const head = next.head__O();
+                  if (($uZ(f(head)) !== false)) {
+                    next = $as_sci_List(next.tail__O())
+                  } else {
+                    while ((nextToCopy !== next)) {
+                      const newElem$2 = new $c_sci_$colon$colon(nextToCopy.head__O(), $m_sci_Nil$());
+                      currentLast.sci_$colon$colon__f_tl = newElem$2;
+                      currentLast = newElem$2;
+                      nextToCopy = $as_sci_List(nextToCopy.tail__O())
+                    };
+                    nextToCopy = $as_sci_List(next.tail__O());
+                    next = $as_sci_List(next.tail__O())
+                  }
+                };
+                if ((!nextToCopy.isEmpty__Z())) {
+                  currentLast.sci_$colon$colon__f_tl = nextToCopy
+                };
+                result = newHead;
+                break block
+              }
+            }
+          }
+        }
+      };
+      $$x1 = result
+    } else {
+      $m_scm_ListBuffer$();
+      const b = new $c_scm_GrowingBuilder(new $c_scm_ListBuffer());
+      const this$6 = this$4.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start;
+      let these$1 = this$6;
+      while ((!these$1.isEmpty__Z())) {
+        const arg1$2 = these$1.head__O();
+        if (($uZ(f(arg1$2)) !== false)) {
+          b.$plus$eq__O__scm_GrowingBuilder(arg1$2)
+        };
+        these$1 = $as_sci_List(these$1.tail__O())
+      };
+      $$x1 = b.scm_GrowingBuilder__f_elems
+    };
+    const newTextItems = $as_scm_ListBuffer($$x1);
+    this.LdataStories_MapController__f_textItems.clear__V();
+    this.LdataStories_MapController__f_textItems.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(newTextItems)
   };
-  updateTextItem__T__T__D__D__T__T__T__V(text, id, x, y, size, anchor, fill) {
-    const item = new $c_LscalajsUtils_TextItem(text, id, x, y, size, anchor, fill);
-    item.render__Lio_whitemice_d3v5_selection_Selection__D__D__V(this.LdataStories_MapController__f_mapOuterG, ((this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_width * this.LdataStories_MapController__f_scaledWidth) / this.LdataStories_MapController__f_scale), ((this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_height * this.LdataStories_MapController__f_scaledHeight) / this.LdataStories_MapController__f_scale));
-    const this$3 = this.LdataStories_MapController__f_textItems;
-    const array = [item];
-    const elems = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array);
-    this$3.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(elems)
+  svgDefinition__LdataStories_SvgDefinition() {
+    return new $c_LdataStories_SvgDefinition((this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_width * this.LdataStories_MapController__f_scaledWidth), (this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_height * this.LdataStories_MapController__f_scaledHeight))
+  };
+  updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V(text, id, cls, x, y, size, anchor, fill, attrs, onClick) {
+    const item = new $c_LdataStories_TextItem(text, id, cls, x, y, size, anchor, fill, attrs, onClick);
+    const arg$macro$1 = this.LdataStories_MapController__f_scaledWidth;
+    const arg$macro$2 = this.LdataStories_MapController__f_scaledHeight;
+    const this$3 = new $c_sci_StringOps("mapController.updateTextItem, %.2f %.2f");
+    const array = [arg$macro$1, arg$macro$2];
+    const this$ = this$3.sci_StringOps__f_repr;
+    $m_sc_Seq$();
+    $m_sjs_js_WrappedArray$();
+    const array$1 = [];
+    $uI(array.length);
+    let i = 0;
+    const len = $uI(array.length);
+    while ((i < len)) {
+      const index = i;
+      const arg1 = array[index];
+      const elem = $p_sci_StringLike__unwrapArg__O__O(this$3, arg1);
+      array$1.push(elem);
+      i = ((1 + i) | 0)
+    };
+    $m_s_reflect_ManifestFactory$ObjectManifest$();
+    const len$1 = $uI(array$1.length);
+    const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
+    const len$2 = result.u.length;
+    let i$1 = 0;
+    let j = 0;
+    const x$1 = $uI(array$1.length);
+    const x$2 = ((x$1 < len$2) ? x$1 : len$2);
+    const that = result.u.length;
+    const end = ((x$2 < that) ? x$2 : that);
+    while ((i$1 < end)) {
+      const $$x1 = j;
+      const index$1 = i$1;
+      result.set($$x1, array$1[index$1]);
+      i$1 = ((1 + i$1) | 0);
+      j = ((1 + j) | 0)
+    };
+    const x$3 = $m_jl_String$().format__T__AO__T(this$, result);
+    const this$18 = $m_s_Console$();
+    const this$19 = $as_Ljava_io_PrintStream(this$18.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+    this$19.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$3 + "\n"));
+    item.render__Lio_whitemice_d3v5_selection_Selection__LdataStories_SvgDefinition__V(this.LdataStories_MapController__f_mapOuterG, this.svgDefinition__LdataStories_SvgDefinition());
+    const this$22 = this.LdataStories_MapController__f_textItems;
+    const array$2 = [item];
+    const elems = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$2);
+    this$22.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(elems)
+  };
+  updateTextItem$default$10__F0() {
+    return new $c_sjsr_AnonFunction0(((this$1) => (() => (void 0)))(this))
   };
   currentDD__LdataStories_DistrictData() {
     const geoId = this.LdataStories_MapController__f_currentDistrictGeoId;
@@ -43365,7 +44226,8 @@ class $c_LdataStories_MapController extends $c_O {
   };
   setDistrictColors__F1__LscalajsUtils_AxisSpecification__V(f, a) {
     this.LdataStories_MapController__f_colorFunction = f;
-    this.LdataStories_MapController__f_axis = a
+    this.LdataStories_MapController__f_axis = a;
+    this.LdataStories_MapController__f_needsRender = true
   };
   setSatisfactionColors__F1__V(fcn) {
     const newAxis = new $c_LscalajsUtils_AxisSpecification("Representation Score", this.LdataStories_MapController__f_configData.LdataStories_ConfigurationData__f_representationDomain, new $c_sjsr_AnonFunction1(((this$1) => ((d$2) => {
@@ -43396,17 +44258,17 @@ class $c_LdataStories_MapController extends $c_O {
       this.LdataStories_MapController__f_currentDistrictGeoId = geoId;
       this.LdataStories_MapController__f_onDistrictSelect.apply$mcVI$sp__I__V(geoId);
       const this$2 = this.LdataStories_MapController__f_combinedDistrictData.LdataStories_CombinedDistrictData__f_data;
-      const p = new $c_sjsr_AnonFunction1(((this$1, geoId$1) => ((x$4$2) => {
-        const x$4 = $as_LdataStories_DistrictData(x$4$2);
-        return ($m_LscalajsUtils_FIPSStateData$().geoId__T__I(x$4.LdataStories_DistrictData__f_d.district__T()) === geoId$1)
+      const p = new $c_sjsr_AnonFunction1(((this$1, geoId$1) => ((x$5$2) => {
+        const x$5 = $as_LdataStories_DistrictData(x$5$2);
+        return ($m_LscalajsUtils_FIPSStateData$().geoId__T__I(x$5.LdataStories_DistrictData__f_d.district__T()) === geoId$1)
       }))(this, geoId));
       const idx = this$2.indexWhere__F1__I__I(p, 0);
       const this$3 = this.LdataStories_MapController__f_leanSlider;
       if ((!this$3.isEmpty__Z())) {
         const arg1 = this$3.get__O();
-        const x$5 = $as_LscalajsUtils_SliderSVG(arg1);
+        const x$6 = $as_LscalajsUtils_SliderSVG(arg1);
         const newValue = idx;
-        x$5.updateView__D__V(newValue)
+        x$6.updateView__D__V(newValue)
       }
     }
   };
@@ -43414,15 +44276,15 @@ class $c_LdataStories_MapController extends $c_O {
     this.LdataStories_MapController__f_zoomed = false;
     this.LdataStories_MapController__f_needsRender = true;
     this.LdataStories_MapController__f_map.zoomOut__D__D__V(((this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_width * this.LdataStories_MapController__f_scaledWidth) / this.LdataStories_MapController__f_scale), ((this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_height * this.LdataStories_MapController__f_scaledHeight) / this.LdataStories_MapController__f_scale));
-    this.clearTextItems__V();
+    this.removeTextItem__T__V("mapLegend");
     this.clearLeanSlider__V()
   };
   clearLeanSlider__V() {
     const this$1 = this.LdataStories_MapController__f_leanSlider;
     if ((!this$1.isEmpty__Z())) {
       const arg1 = this$1.get__O();
-      const x$6 = $as_LscalajsUtils_SliderSVG(arg1);
-      x$6.clear__V()
+      const x$7 = $as_LscalajsUtils_SliderSVG(arg1);
+      x$7.clear__V()
     };
     this.LdataStories_MapController__f_leanSlider = $m_s_None$()
   };
@@ -43430,27 +44292,27 @@ class $c_LdataStories_MapController extends $c_O {
     if (this.LdataStories_MapController__f_leanSlider.isEmpty__Z()) {
       this.createLeanSlider__I__V(geoId);
       const this$2 = this.LdataStories_MapController__f_combinedDistrictData.LdataStories_CombinedDistrictData__f_data;
-      const p = new $c_sjsr_AnonFunction1(((this$1, geoId$1) => ((x$7$2) => {
-        const x$7 = $as_LdataStories_DistrictData(x$7$2);
-        return ($m_LscalajsUtils_FIPSStateData$().geoId__T__I(x$7.LdataStories_DistrictData__f_d.district__T()) === geoId$1)
+      const p = new $c_sjsr_AnonFunction1(((this$1, geoId$1) => ((x$8$2) => {
+        const x$8 = $as_LdataStories_DistrictData(x$8$2);
+        return ($m_LscalajsUtils_FIPSStateData$().geoId__T__I(x$8.LdataStories_DistrictData__f_d.district__T()) === geoId$1)
       }))(this, geoId));
       const idx = this$2.indexWhere__F1__I__I(p, 0);
       const this$3 = this.LdataStories_MapController__f_leanSlider;
       if ((!this$3.isEmpty__Z())) {
         const arg1 = this$3.get__O();
-        const x$8 = $as_LscalajsUtils_SliderSVG(arg1);
+        const x$9 = $as_LscalajsUtils_SliderSVG(arg1);
         const newValue = idx;
-        x$8.updateView__D__V(newValue)
+        x$9.updateView__D__V(newValue)
       }
     };
     this.LdataStories_MapController__f_zoomed = true;
     this.LdataStories_MapController__f_needsRender = true;
     this.LdataStories_MapController__f_map.zoomToDistrict__I__D__D__V(geoId, ((this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_width * this.LdataStories_MapController__f_scaledWidth) / this.LdataStories_MapController__f_scale), ((this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_height * this.LdataStories_MapController__f_scaledHeight) / this.LdataStories_MapController__f_scale));
-    this.updateTextItem__T__T__D__D__T__T__T__V("Click/Pan/Zoom to explore", "mapInstructions", 0.98, 0.02, "10pt", "end", "black");
+    this.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V("Click/Pan/Zoom to explore", "mapInstructions", "label", 0.98, 0.02, "10pt", "end", "black", $m_sci_Nil$(), this.updateTextItem$default$10__F0());
     this.setDistrictLabel__LdataStories_DistrictData__V(this.currentDD__LdataStories_DistrictData())
   };
   setDistrictLabel__LdataStories_DistrictData__V(dd) {
-    this.updateTextItem__T__T__D__D__T__T__T__V(((dd.LdataStories_DistrictData__f_d.district__T() + ", ") + dd.LdataStories_DistrictData__f_d.incumbent__T()), "mapLegend", 0.5, 0.92, "12pt", "middle", "black")
+    this.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V(((dd.LdataStories_DistrictData__f_d.district__T() + ", ") + dd.LdataStories_DistrictData__f_d.incumbent__T()), "mapLegend", "label", 0.5, 0.92, "12pt", "middle", "black", $m_sci_Nil$(), this.updateTextItem$default$10__F0())
   };
   populateDistrictSummary__T__V(stringId) {
     const this$1 = this.LdataStories_MapController__f_combinedDistrictData;
@@ -43591,26 +44453,66 @@ class $c_LdataStories_MapController extends $c_O {
     this.LdataStories_MapController__f_scaledHeight = newHeight;
     this.updateViewRectangle__V();
     this.applyTranslation__V();
-    const this$1 = this.LdataStories_MapController__f_leanSlider;
-    if ((!this$1.isEmpty__Z())) {
-      this.clearLeanSlider__V();
-      this.createLeanSlider__I__V(this.LdataStories_MapController__f_currentDistrictGeoId)
-    }
+    if (this.LdataStories_MapController__f_zoomed) {
+      this.zoomToDistrict__I__V(this.LdataStories_MapController__f_currentDistrictGeoId)
+    } else {
+      this.zoomOut__V()
+    };
+    this.render__V()
   };
   applyTranslation__V() {
+    const arg$macro$1 = this.LdataStories_MapController__f_scaledWidth;
+    const arg$macro$2 = this.LdataStories_MapController__f_scaledHeight;
+    const this$3 = new $c_sci_StringOps("mapController.applyTranslation() scaledWidth %.2f scaledHeight %.2f");
+    const array = [arg$macro$1, arg$macro$2];
+    const this$ = this$3.sci_StringOps__f_repr;
+    $m_sc_Seq$();
+    $m_sjs_js_WrappedArray$();
+    const array$1 = [];
+    $uI(array.length);
+    let i = 0;
+    const len = $uI(array.length);
+    while ((i < len)) {
+      const index = i;
+      const arg1 = array[index];
+      const elem = $p_sci_StringLike__unwrapArg__O__O(this$3, arg1);
+      array$1.push(elem);
+      i = ((1 + i) | 0)
+    };
+    $m_s_reflect_ManifestFactory$ObjectManifest$();
+    const len$1 = $uI(array$1.length);
+    const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
+    const len$2 = result.u.length;
+    let i$1 = 0;
+    let j = 0;
+    const x = $uI(array$1.length);
+    const x$1 = ((x < len$2) ? x : len$2);
+    const that = result.u.length;
+    const end = ((x$1 < that) ? x$1 : that);
+    while ((i$1 < end)) {
+      const $$x1 = j;
+      const index$1 = i$1;
+      result.set($$x1, array$1[index$1]);
+      i$1 = ((1 + i$1) | 0);
+      j = ((1 + j) | 0)
+    };
+    const x$2 = $m_jl_String$().format__T__AO__T(this$, result);
+    const this$18 = $m_s_Console$();
+    const this$19 = $as_Ljava_io_PrintStream(this$18.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+    this$19.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$2 + "\n"));
     const viewX = (this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_x * this.LdataStories_MapController__f_scaledWidth);
     const viewY = (this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_y * this.LdataStories_MapController__f_scaledHeight);
-    const $$x4 = this.LdataStories_MapController__f_mapSVG.transition("mapSVGLocation").duration(500);
-    const this$4 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x3 = $$x4.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$4, viewX));
-    const this$5 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x2 = $$x3.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, viewY));
-    const this$6 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x5 = this.LdataStories_MapController__f_mapSVG.transition("mapSVGLocation").duration(500);
+    const this$23 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x4 = $$x5.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$23, viewX));
+    const this$24 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x3 = $$x4.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$24, viewY));
+    const this$25 = $m_Lio_whitemice_d3v5_all_package$();
     const d = (this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_width * this.LdataStories_MapController__f_scaledWidth);
-    const $$x1 = $$x2.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$6, d));
-    const this$7 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x2 = $$x3.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$25, d));
+    const this$26 = $m_Lio_whitemice_d3v5_all_package$();
     const d$1 = (this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_height * this.LdataStories_MapController__f_scaledHeight);
-    $$x1.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$7, d$1))
+    $$x2.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$26, d$1))
   };
   productPrefix__T() {
     return "MapController"
@@ -43963,8 +44865,49 @@ class $c_LdataStories_NokkenMemberData extends $c_O {
     super();
     this.LdataStories_NokkenMemberData__f_party = null;
     this.LdataStories_NokkenMemberData__f_nokkenPooleCSV = null;
+    this.LdataStories_NokkenMemberData__f_district = null;
     this.LdataStories_NokkenMemberData__f_bitmap$0 = false;
-    this.LdataStories_NokkenMemberData__f_nokkenPooleCSV = nokkenPooleCSV
+    this.LdataStories_NokkenMemberData__f_nokkenPooleCSV = nokkenPooleCSV;
+    const arg$macro$1 = $as_T(nokkenPooleCSV.state_abbrev);
+    const x = $as_T(nokkenPooleCSV.district_code);
+    const this$2 = new $c_sci_StringOps(x);
+    const this$ = this$2.sci_StringOps__f_repr;
+    const this$4 = $m_jl_Integer$();
+    const arg$macro$2 = this$4.parseInt__T__I__I(this$, 10);
+    const this$7 = new $c_sci_StringOps("%s-%02d");
+    const array = [arg$macro$1, arg$macro$2];
+    const this$$1 = this$7.sci_StringOps__f_repr;
+    $m_sc_Seq$();
+    $m_sjs_js_WrappedArray$();
+    const array$1 = [];
+    $uI(array.length);
+    let i = 0;
+    const len = $uI(array.length);
+    while ((i < len)) {
+      const index = i;
+      const arg1 = array[index];
+      const elem = $p_sci_StringLike__unwrapArg__O__O(this$7, arg1);
+      array$1.push(elem);
+      i = ((1 + i) | 0)
+    };
+    $m_s_reflect_ManifestFactory$ObjectManifest$();
+    const len$1 = $uI(array$1.length);
+    const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
+    const len$2 = result.u.length;
+    let i$1 = 0;
+    let j = 0;
+    const x$1 = $uI(array$1.length);
+    const x$2 = ((x$1 < len$2) ? x$1 : len$2);
+    const that = result.u.length;
+    const end = ((x$2 < that) ? x$2 : that);
+    while ((i$1 < end)) {
+      const $$x1 = j;
+      const index$1 = i$1;
+      result.set($$x1, array$1[index$1]);
+      i$1 = ((1 + i$1) | 0);
+      j = ((1 + j) | 0)
+    };
+    this.LdataStories_NokkenMemberData__f_district = $m_jl_String$().format__T__AO__T(this$$1, result)
   };
   ideology__D() {
     const x = $as_T(this.LdataStories_NokkenMemberData__f_nokkenPooleCSV.nominate_dim1);
@@ -43977,6 +44920,9 @@ class $c_LdataStories_NokkenMemberData extends $c_O {
   };
   party__Lrcvcore_PopulationTag() {
     return ((!this.LdataStories_NokkenMemberData__f_bitmap$0) ? $p_LdataStories_NokkenMemberData__party$lzycompute__Lrcvcore_PopulationTag(this) : this.LdataStories_NokkenMemberData__f_party)
+  };
+  district__T() {
+    return this.LdataStories_NokkenMemberData__f_district
   };
   productPrefix__T() {
     return "NokkenMemberData"
@@ -44244,7 +45190,7 @@ const $p_LdataStories_PolarizationDataStory__displayFinalScreen__V = (function($
   $thiz.LdataStories_PolarizationDataStory__f_map.activate__LscalajsUtils_PctRectangle__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_map.LdataStories_MapConfig__f_thumbnail);
   $thiz.LdataStories_PolarizationDataStory__f_map.setColorBySatisfaction__F1__V(new $c_sjsr_AnonFunction1(((this$4) => ((r$2) => {
     const r = $as_Lrcvcore_SimulationResult(r$2);
-    return this$4.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r.headToHeadSatisfaction__D(), 1.0)
+    return this$4.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
   }))($thiz)));
   $thiz.LdataStories_PolarizationDataStory__f_map.zoomOut__V();
   $thiz.LdataStories_PolarizationDataStory__f_house.layoutHeadToHead__D__D__V(2.0, 0.9);
@@ -44388,8 +45334,8 @@ const $p_LdataStories_PolarizationDataStory__displayPrimaryVoters__V = (function
   $thiz.LdataStories_PolarizationDataStory__f_primarySection.showPrimaryVoters__D__V(transition);
   $thiz.LdataStories_PolarizationDataStory__f_candidates.clearVoterSatisfaction__V();
   $thiz.LdataStories_PolarizationDataStory__f_candidates.colorByIdeology__V();
-  $thiz.LdataStories_PolarizationDataStory__f_candidates.selectCandidates__D__Z__F1__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_candidates.LdataStories_CandidateConfig__f_areaYPct, true, new $c_sjsr_AnonFunction1(((this$5) => ((x$2$2) => {
-    $as_LdataStories_CandidateBubble(x$2$2)
+  $thiz.LdataStories_PolarizationDataStory__f_candidates.selectCandidates__D__Z__F1__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_candidates.LdataStories_CandidateConfig__f_areaYPct, true, new $c_sjsr_AnonFunction1(((this$5) => ((x$5$2) => {
+    $as_LdataStories_CandidateBubble(x$5$2)
   }))($thiz)));
   $thiz.LdataStories_PolarizationDataStory__f_map.setDistrictColors__F1__LscalajsUtils_AxisSpecification__V(new $c_sjsr_AnonFunction1(((this$2$1) => ((d$2) => {
     const d = $as_T(d$2);
@@ -44413,8 +45359,8 @@ const $p_LdataStories_PolarizationDataStory__displayPrimaryCandidates__V = (func
   $thiz.LdataStories_PolarizationDataStory__f_primarySection.showPrimaryCandidates__V();
   $thiz.LdataStories_PolarizationDataStory__f_candidates.colorByIdeology__V();
   $thiz.LdataStories_PolarizationDataStory__f_candidates.clearVoterSatisfaction__V();
-  $thiz.LdataStories_PolarizationDataStory__f_candidates.selectCandidates__D__Z__F1__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_candidates.LdataStories_CandidateConfig__f_areaYPct, true, new $c_sjsr_AnonFunction1(((this$5) => ((x$3$2) => {
-    $as_LdataStories_CandidateBubble(x$3$2)
+  $thiz.LdataStories_PolarizationDataStory__f_candidates.selectCandidates__D__Z__F1__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_candidates.LdataStories_CandidateConfig__f_areaYPct, true, new $c_sjsr_AnonFunction1(((this$5) => ((x$6$2) => {
+    $as_LdataStories_CandidateBubble(x$6$2)
   }))($thiz)));
   $thiz.LdataStories_PolarizationDataStory__f_map.setDistrictColors__F1__LscalajsUtils_AxisSpecification__V(new $c_sjsr_AnonFunction1(((this$2$1) => ((d$2) => {
     const d = $as_T(d$2);
@@ -44443,6 +45389,98 @@ const $p_LdataStories_PolarizationDataStory__displayBigMap__F1__V = (function($t
     arg$outer.dataStories$PolarizationDataStory$$$anonfun$displayBigMap$1__D__F1__LscalajsUtils_PctRectangle__V(arg1, fcn$1, mapRect$1)
   }))($thiz, fcn, mapRect);
   $thiz.LdataStories_PolarizationDataStory__f_mapDisplayTimer = new $c_s_Some(qual$1.timeout(x$1, mapDelayMillis))
+});
+const $p_LdataStories_PolarizationDataStory__displaySelectableMap__V = (function($thiz) {
+  const fcn = new $c_sjsr_AnonFunction1(((this$1) => ((r$2) => {
+    const r = $as_Lrcvcore_SimulationResult(r$2);
+    return this$1.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r.instantRunoffResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
+  }))($thiz));
+  const this$3 = $m_s_Console$();
+  const this$4 = $as_Ljava_io_PrintStream(this$3.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+  this$4.java$lang$JSConsoleBasedPrintStream$$printString__T__V("displayBigMap\n");
+  $thiz.LdataStories_PolarizationDataStory__f_ballot.clear__V();
+  $thiz.LdataStories_PolarizationDataStory__f_house.clear__D__V(2.0);
+  $thiz.LdataStories_PolarizationDataStory__f_voters.moveVotersOffScreen__V();
+  $thiz.LdataStories_PolarizationDataStory__f_candidates.clear__V();
+  $thiz.LdataStories_PolarizationDataStory__f_primarySection.clear__V();
+  $thiz.LdataStories_PolarizationDataStory__f_general.clear__V();
+  $thiz.LdataStories_PolarizationDataStory__f_headToHead.clear__V();
+  const mapRect = $thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_map.LdataStories_MapConfig__f_fullScreen;
+  const mapDelayMillis = ($thiz.LdataStories_PolarizationDataStory__f_map.alreadyAtLocation__LscalajsUtils_PctRectangle__Z(mapRect) ? 0 : 1000);
+  const qual$1 = $i_d3$002dtimer;
+  const x$1 = ((arg$outer, fcn$2, mapRect$2) => ((arg1$2) => {
+    const arg1 = $uD(arg1$2);
+    arg$outer.dataStories$PolarizationDataStory$$$anonfun$displaySelectableMap$2__D__F1__LscalajsUtils_PctRectangle__V(arg1, fcn$2, mapRect$2)
+  }))($thiz, fcn, mapRect);
+  $thiz.LdataStories_PolarizationDataStory__f_mapDisplayTimer = new $c_s_Some(qual$1.timeout(x$1, mapDelayMillis));
+  const buttons = $as_scm_ListBuffer($m_scm_ListBuffer$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$()));
+  const this$9 = $thiz.LdataStories_PolarizationDataStory__f_configData;
+  const buttonX = (0.8 * this$9.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_desiredWidth);
+  const elem = (0.5 * $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_height);
+  let elem$1 = 0.0;
+  elem$1 = elem;
+  const action = new $c_sjsr_AnonFunction0(((this$2$1, buttons$1) => (() => {
+    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$2$1, new $c_sjsr_AnonFunction1(((this$11) => ((r$2$1) => {
+      const r$1 = $as_Lrcvcore_SimulationResult(r$2$1);
+      return r$1.actualVoterSatisfaction__D()
+    }))(this$2$1)), buttons$1)
+  }))($thiz, buttons));
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Actual", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Actual", "blue", "gray", new $c_sjsr_AnonFunction0(((this$12, action$1) => (() => {
+    action$1.apply__O()
+  }))($thiz, action))));
+  elem$1 = (25.0 + elem$1);
+  const action$2 = new $c_sjsr_AnonFunction0(((this$3$1, buttons$2) => (() => {
+    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$3$1, new $c_sjsr_AnonFunction1(((this$13) => ((r$2$2) => {
+      const r$3 = $as_Lrcvcore_SimulationResult(r$2$2);
+      return r$3.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
+    }))(this$3$1)), buttons$2)
+  }))($thiz, buttons));
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Primaries", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Primaries", "blue", "gray", new $c_sjsr_AnonFunction0(((this$14, action$3) => (() => {
+    action$3.apply__O()
+  }))($thiz, action$2))));
+  elem$1 = (25.0 + elem$1);
+  const action$4 = new $c_sjsr_AnonFunction0(((this$4$1, buttons$3) => (() => {
+    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$4$1, new $c_sjsr_AnonFunction1(((this$15) => ((r$2$3) => {
+      const r$4 = $as_Lrcvcore_SimulationResult(r$2$3);
+      return r$4.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
+    }))(this$4$1)), buttons$3)
+  }))($thiz, buttons));
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Instant Runoff with Party Primaries", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Instant Runoff with Party Primaries", "blue", "gray", new $c_sjsr_AnonFunction0(((this$16, action$5) => (() => {
+    action$5.apply__O()
+  }))($thiz, action$4))));
+  elem$1 = (25.0 + elem$1);
+  const action$6 = new $c_sjsr_AnonFunction0(((this$5$1, buttons$4) => (() => {
+    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$5$1, new $c_sjsr_AnonFunction1(((this$17) => ((r$2$4) => {
+      const r$5 = $as_Lrcvcore_SimulationResult(r$2$4);
+      return r$5.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
+    }))(this$5$1)), buttons$4)
+  }))($thiz, buttons));
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Head to Head with Party Primaries", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Head to Head with Party Primaries", "blue", "gray", new $c_sjsr_AnonFunction0(((this$18, action$7) => (() => {
+    action$7.apply__O()
+  }))($thiz, action$6))));
+  elem$1 = (25.0 + elem$1);
+  const action$8 = new $c_sjsr_AnonFunction0(((this$6$1, buttons$5) => (() => {
+    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$6$1, new $c_sjsr_AnonFunction1(((this$19) => ((r$2$5) => {
+      const r$6 = $as_Lrcvcore_SimulationResult(r$2$5);
+      return r$6.instantRunoffResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
+    }))(this$6$1)), buttons$5)
+  }))($thiz, buttons));
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Instant Runoff", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Instant Runoff", "blue", "gray", new $c_sjsr_AnonFunction0(((this$20, action$9) => (() => {
+    action$9.apply__O()
+  }))($thiz, action$8))));
+  elem$1 = (25.0 + elem$1);
+  const action$10 = new $c_sjsr_AnonFunction0(((this$7$1, buttons$6) => (() => {
+    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$7$1, new $c_sjsr_AnonFunction1(((this$21) => ((r$2$6) => {
+      const r$7 = $as_Lrcvcore_SimulationResult(r$2$6);
+      return r$7.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
+    }))(this$7$1)), buttons$6)
+  }))($thiz, buttons));
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Head to Head", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Head to Head", "blue", "gray", new $c_sjsr_AnonFunction0(((this$22, action$11) => (() => {
+    action$11.apply__O()
+  }))($thiz, action$10))));
+  elem$1 = (25.0 + elem$1);
+  const this$23 = $as_LscalajsUtils_SVGButton(buttons.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start.head__O());
+  $f_LscalajsUtils_SVGButton__activate__V(this$23)
 });
 const $p_LdataStories_PolarizationDataStory__adjustPopulation$1__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__V = (function($thiz, partisanship$1, stddev$1, skew$1) {
   const geoId = $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_currentDistrictGeoId;
@@ -44505,6 +45543,24 @@ const $p_LdataStories_PolarizationDataStory__setColorForWinner$2__T__LscalajsUti
 const $p_LdataStories_PolarizationDataStory__onUpdate$1__LdataStories_CandidateBubble__V = (function($thiz, cb) {
   $thiz.LdataStories_PolarizationDataStory__f_primarySection.update__LdataStories_PrimaryElectionSection$PartyState__LdataStories_PrimaryElectionSection$PartyState__D__V($m_LdataStories_PrimaryElectionSection$Voted$(), $m_LdataStories_PrimaryElectionSection$Voted$(), 0.0);
   $thiz.LdataStories_PolarizationDataStory__f_voters.render__V()
+});
+const $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V = (function($thiz, extractor, buttons$1) {
+  const this$2 = $m_s_Console$();
+  const this$3 = $as_Ljava_io_PrintStream(this$2.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+  this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V("setting colors\n");
+  $thiz.LdataStories_PolarizationDataStory__f_map.setColorBySatisfaction__F1__V(new $c_sjsr_AnonFunction1(((this$4, extractor$1) => ((r$2) => {
+    const r = $as_Lrcvcore_SimulationResult(r$2);
+    return this$4.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA($uD(extractor$1.apply__O__O(r)), 1.0)
+  }))($thiz, extractor)));
+  $thiz.LdataStories_PolarizationDataStory__f_map.render__V();
+  const this$5 = buttons$1.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start;
+  let these = this$5;
+  while ((!these.isEmpty__Z())) {
+    const arg1 = these.head__O();
+    const b = $as_LscalajsUtils_RadioButton(arg1);
+    $f_LscalajsUtils_SVGButton__deActivate__V(b);
+    these = $as_sci_List(these.tail__O())
+  }
 });
 const $p_LdataStories_PolarizationDataStory__colorDistrictBySat$1__T__LscalajsUtils_RGBA = (function($thiz, d) {
   const this$1 = $thiz.LdataStories_PolarizationDataStory__f_map.currentDD__LdataStories_DistrictData();
@@ -44659,6 +45715,7 @@ const $p_LdataStories_PolarizationDataStory__onUpdate$2__LdataStories_CandidateB
 class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDrivenContent {
   constructor(vizDiv, htmlId, dvrList, nokkenData, usTopo, simResults, sampleCongress, configData) {
     super();
+    this.LdataStories_PolarizationDataStory__f_SizeAttrs$module = null;
     this.LdataStories_PolarizationDataStory__f_vizDiv = null;
     this.LdataStories_PolarizationDataStory__f_htmlId = null;
     this.LdataStories_PolarizationDataStory__f_dvrList = null;
@@ -44692,6 +45749,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     this.LdataStories_PolarizationDataStory__f_mapDisplayTimer = null;
     this.LdataStories_PolarizationDataStory__f_sizeChangeCallback = null;
     this.LdataStories_PolarizationDataStory__f_simConfig = null;
+    this.LdataStories_PolarizationDataStory__f_textItems = null;
     this.LdataStories_PolarizationDataStory__f_white = null;
     this.LdataStories_PolarizationDataStory__f_lightGray = null;
     this.LdataStories_PolarizationDataStory__f_vizDiv = vizDiv;
@@ -44780,6 +45838,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     this.LdataStories_PolarizationDataStory__f_mapDisplayTimer = $m_s_None$();
     this.LdataStories_PolarizationDataStory__f_sizeChangeCallback = new $c_sjsr_AnonFunction0(((this$3$1) => (() => (void 0)))(this));
     this.LdataStories_PolarizationDataStory__f_simConfig = $m_Lrcvcore_CongressionalSimulationConfig$().defaultConfig__I__Lrcvcore_CongressionalSimulationConfig(4);
+    this.LdataStories_PolarizationDataStory__f_textItems = $as_scm_ListBuffer($m_scm_ListBuffer$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$()));
     const $$x23 = $i_d3.select($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window());
     const this$25 = $m_Lio_whitemice_d3v5_all_package$();
     const fun = new $c_sjsr_AnonFunction0(((this$4$1) => (() => {
@@ -44796,6 +45855,36 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
       return this.LdataStories_PolarizationDataStory__f_white
     } else {
       return this.LdataStories_PolarizationDataStory__f_lightGray
+    }
+  };
+  clearTextItems__V() {
+    const this$1 = this.LdataStories_PolarizationDataStory__f_textItems;
+    const this$2 = this$1.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start;
+    let these = this$2;
+    while ((!these.isEmpty__Z())) {
+      const arg1 = these.head__O();
+      const x$1 = $as_LdataStories_TextItem(arg1);
+      const svgArea = this.LdataStories_PolarizationDataStory__f_graphicArea;
+      $f_LdataStories_BoxObject__clear__Lio_whitemice_d3v5_selection_Selection__V(x$1, svgArea);
+      these = $as_sci_List(these.tail__O())
+    };
+    this.LdataStories_PolarizationDataStory__f_textItems.clear__V()
+  };
+  renderTextItems__V() {
+    const this$1 = this.computeSizeAttrs__LdataStories_PolarizationDataStory$SizeAttrs();
+    const svgDef = new $c_LdataStories_SvgDefinition(this$1.LdataStories_PolarizationDataStory$SizeAttrs__f_width, this$1.LdataStories_PolarizationDataStory$SizeAttrs__f_height);
+    const x = ("svgDef is " + this.computeSizeAttrs__LdataStories_PolarizationDataStory$SizeAttrs());
+    const this$3 = $m_s_Console$();
+    const this$4 = $as_Ljava_io_PrintStream(this$3.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+    this$4.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
+    const this$5 = this.LdataStories_PolarizationDataStory__f_textItems;
+    const this$6 = this$5.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start;
+    let these = this$6;
+    while ((!these.isEmpty__Z())) {
+      const arg1 = these.head__O();
+      const x$2 = $as_LdataStories_TextItem(arg1);
+      x$2.render__Lio_whitemice_d3v5_selection_Selection__LdataStories_SvgDefinition__V(this.LdataStories_PolarizationDataStory__f_graphicArea, svgDef);
+      these = $as_sci_List(these.tail__O())
     }
   };
   applyPopulation__I__V(geoId) {
@@ -44898,6 +45987,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
       this$8.update__T__J__V("OnDistrictSelection", new $c_RTLong(lo$2, hi$2))
     };
     this.updateInner__I__V(section);
+    this.renderTextItems__V();
     this.LdataStories_PolarizationDataStory__f_candidates.render__V();
     this.LdataStories_PolarizationDataStory__f_house.render__V();
     this.LdataStories_PolarizationDataStory__f_voters.render__V();
@@ -44918,18 +46008,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     this.LdataStories_PolarizationDataStory__f_general.clear__V();
     this.LdataStories_PolarizationDataStory__f_headToHead.clear__V();
     this.LdataStories_PolarizationDataStory__f_map.clear__V();
-    this.LdataStories_PolarizationDataStory__f_ballot.clear__V();
-    const box = this.LdataStories_PolarizationDataStory__f_house.LdataStories_MemberController__f_box;
-    const $$x1 = $m_sc_Seq$();
-    const array = [new $c_LdataStories_StyleModifier("text-decoration", "underline"), new $c_LdataStories_StyleModifier("cursor", "default")];
-    box.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V("How does simulation work?", "where-text", "link", 0.02, (-0.6), "12pt", "left", "black", $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))), new $c_sjsr_AnonFunction0(((this$6) => (() => {
-      this$6.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback.apply__O__O("https://blog.betterchoices.vote/simulation-how")
-    }))(this)));
-    const $$x2 = $m_sc_Seq$();
-    const array$1 = [new $c_LdataStories_StyleModifier("text-decoration", "underline"), new $c_LdataStories_StyleModifier("cursor", "default")];
-    box.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V("Why does this matter?", "why-text", "link", 0.98, (-0.6), "12pt", "end", "black", $as_sc_Seq($$x2.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$1))), new $c_sjsr_AnonFunction0(((this$2$1) => (() => {
-      this$2$1.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback.apply__O__O("https://blog.betterchoices.vote/simulation-why")
-    }))(this)))
+    this.LdataStories_PolarizationDataStory__f_ballot.clear__V()
   };
   displayHouseAndVoters__V() {
     this.LdataStories_PolarizationDataStory__f_house.LdataStories_MemberController__f_box.clearTextItems__V();
@@ -44951,42 +46030,18 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     this.LdataStories_PolarizationDataStory__f_general.clear__V();
     this.LdataStories_PolarizationDataStory__f_headToHead.clear__V();
     this.LdataStories_PolarizationDataStory__f_map.clear__V();
-    this.LdataStories_PolarizationDataStory__f_ballot.clear__V();
-    const box = this.LdataStories_PolarizationDataStory__f_house.LdataStories_MemberController__f_box;
-    const $$x1 = $m_sc_Seq$();
-    const array = [new $c_LdataStories_StyleModifier("text-decoration", "underline"), new $c_LdataStories_StyleModifier("cursor", "default")];
-    box.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V("Where do these numbers come from?", "where-text", "link", 0.05, (-0.6), "12pt", "start", "black", $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))), new $c_sjsr_AnonFunction0(((this$7) => (() => {
-      this$7.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback.apply__O__O("https://blog.betterchoices.vote/voters-where")
-    }))(this)));
-    const $$x2 = $m_sc_Seq$();
-    const array$1 = [new $c_LdataStories_StyleModifier("text-decoration", "underline"), new $c_LdataStories_StyleModifier("cursor", "default")];
-    box.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V("Why does this matter?", "why-text", "link", 0.95, (-0.6), "12pt", "end", "black", $as_sc_Seq($$x2.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$1))), new $c_sjsr_AnonFunction0(((this$2$1) => (() => {
-      this$2$1.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback.apply__O__O("https://blog.betterchoices.vote/voters-why")
-    }))(this)))
+    this.LdataStories_PolarizationDataStory__f_ballot.clear__V()
   };
-  displayHouse__V() {
+  displayHouse__I__V(year) {
     this.LdataStories_PolarizationDataStory__f_house.layoutNomHistogram__D__D__D__Z__V(this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y1Pct, 3.0, this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_opacity1, true);
-    this.LdataStories_PolarizationDataStory__f_house.renderTimeAxis__I__V(1940);
+    this.LdataStories_PolarizationDataStory__f_house.renderTimeAxis__I__V(year);
     this.LdataStories_PolarizationDataStory__f_voters.moveVotersOffScreen__V();
     this.LdataStories_PolarizationDataStory__f_candidates.clear__V();
     this.LdataStories_PolarizationDataStory__f_primarySection.clear__V();
     this.LdataStories_PolarizationDataStory__f_general.clear__V();
     this.LdataStories_PolarizationDataStory__f_headToHead.clear__V();
     this.LdataStories_PolarizationDataStory__f_map.clear__V();
-    this.LdataStories_PolarizationDataStory__f_ballot.clear__V();
-    const box = this.LdataStories_PolarizationDataStory__f_house.LdataStories_MemberController__f_box;
-    const $$x2 = box.LdataStories_ScaledBox__f_elementLocation.LdataStories_ElementLocation__f_height;
-    const $$x1 = $m_sc_Seq$();
-    const array = [new $c_LdataStories_StyleModifier("text-decoration", "underline"), new $c_LdataStories_StyleModifier("cursor", "default")];
-    box.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V("Where do these numbers come from?", "where-text", "link", 0.5, (0.14 + $$x2), "12pt", "middle", "black", $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))), new $c_sjsr_AnonFunction0(((this$3) => (() => {
-      this$3.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback.apply__O__O("https://blog.betterchoices.vote/polarization")
-    }))(this)));
-    const $$x4 = box.LdataStories_ScaledBox__f_elementLocation.LdataStories_ElementLocation__f_height;
-    const $$x3 = $m_sc_Seq$();
-    const array$1 = [new $c_LdataStories_StyleModifier("text-decoration", "underline"), new $c_LdataStories_StyleModifier("cursor", "default")];
-    box.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V("Why does this matter?", "why-text", "link", 0.5, (0.17 + $$x4), "12pt", "middle", "black", $as_sc_Seq($$x3.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$1))), new $c_sjsr_AnonFunction0(((this$2$1) => (() => {
-      this$2$1.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback.apply__O__O("https://blog.betterchoices.vote/polarization-why")
-    }))(this)))
+    this.LdataStories_PolarizationDataStory__f_ballot.clear__V()
   };
   displayVoterWidget__V() {
     const this$2 = $m_s_Console$();
@@ -45031,11 +46086,11 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
       const x = $uD(x$2);
       partisanship$1.sr_DoubleRef__f_elem = x
     }))(this, partisanship));
-    new $c_LscalajsUtils_SliderSVG("partisanship", this.LdataStories_PolarizationDataStory__f_voters.LdataStories_VoterController__f_voterArea, partisanshipLocation, range, ((range.T2$mcDD$sp__f__1$mcD$sp + range.T2$mcDD$sp__f__2$mcD$sp) / 2.0), 10.0, $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(0, 0, 0, 1.0), $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(0, 0, 0, 0.2), "Less Partisanship", "More Partisanship", new $c_sjsr_AnonFunction1(((this$10) => ((x$2$1) => {
-      $uD(x$2$1)
-    }))(this)), new $c_sjsr_AnonFunction1(((this$2$2, callback$1) => ((x$3$2) => {
-      const x$3 = $uD(x$3$2);
-      callback$1.apply$mcVD$sp__D__V(x$3)
+    new $c_LscalajsUtils_SliderSVG("partisanship", this.LdataStories_PolarizationDataStory__f_voters.LdataStories_VoterController__f_voterArea, partisanshipLocation, range, ((range.T2$mcDD$sp__f__1$mcD$sp + range.T2$mcDD$sp__f__2$mcD$sp) / 2.0), 10.0, $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(0, 0, 0, 1.0), $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(0, 0, 0, 0.2), "Less Partisanship", "More Partisanship", new $c_sjsr_AnonFunction1(((this$10) => ((x$3$2) => {
+      $uD(x$3$2)
+    }))(this)), new $c_sjsr_AnonFunction1(((this$2$2, callback$1) => ((x$2$1) => {
+      const x$1 = $uD(x$2$1);
+      callback$1.apply$mcVD$sp__D__V(x$1)
     }))(this, callback)), new $c_sjsr_AnonFunction1(((this$3$2, callback$2, partisanship$1$1, stddev$1, skew$1) => ((x$4$2) => {
       const x$4 = $uD(x$4$2);
       callback$2.apply$mcVD$sp__D__V(x$4);
@@ -45046,11 +46101,11 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
       const x$3$1 = $uD(x$3$2$1);
       stddev$2.sr_DoubleRef__f_elem = x$3$1
     }))(this, stddev));
-    new $c_LscalajsUtils_SliderSVG("variance", this.LdataStories_PolarizationDataStory__f_voters.LdataStories_VoterController__f_voterArea, stddevLocation, range$1, ((range$1.T2$mcDD$sp__f__1$mcD$sp + range$1.T2$mcDD$sp__f__2$mcD$sp) / 2.0), 10.0, $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(0, 0, 0, 1.0), $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(0, 0, 0, 0.2), "Less Variance", "More Variance", new $c_sjsr_AnonFunction1(((this$11) => ((x$2$2) => {
-      $uD(x$2$2)
-    }))(this)), new $c_sjsr_AnonFunction1(((this$2$3, callback$4) => ((x$3$2$2) => {
-      const x$3$3 = $uD(x$3$2$2);
-      callback$4.apply$mcVD$sp__D__V(x$3$3)
+    new $c_LscalajsUtils_SliderSVG("variance", this.LdataStories_PolarizationDataStory__f_voters.LdataStories_VoterController__f_voterArea, stddevLocation, range$1, ((range$1.T2$mcDD$sp__f__1$mcD$sp + range$1.T2$mcDD$sp__f__2$mcD$sp) / 2.0), 10.0, $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(0, 0, 0, 1.0), $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(0, 0, 0, 0.2), "Less Variance", "More Variance", new $c_sjsr_AnonFunction1(((this$11) => ((x$3$2$2) => {
+      $uD(x$3$2$2)
+    }))(this)), new $c_sjsr_AnonFunction1(((this$2$3, callback$4) => ((x$2$2) => {
+      const x$5 = $uD(x$2$2);
+      callback$4.apply$mcVD$sp__D__V(x$5)
     }))(this, callback$3)), new $c_sjsr_AnonFunction1(((this$3$3, callback$5, partisanship$1$2, stddev$1$1, skew$1$1) => ((x$4$2$1) => {
       const x$4$1 = $uD(x$4$2$1);
       callback$5.apply$mcVD$sp__D__V(x$4$1);
@@ -45061,11 +46116,11 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
       const x$4$3 = $uD(x$4$2$2);
       skew$2.sr_DoubleRef__f_elem = x$4$3
     }))(this, skew));
-    new $c_LscalajsUtils_SliderSVG("skew", this.LdataStories_PolarizationDataStory__f_voters.LdataStories_VoterController__f_voterArea, skewLocation, range$2, ((range$2.T2$mcDD$sp__f__1$mcD$sp + range$2.T2$mcDD$sp__f__2$mcD$sp) / 2.0), 10.0, $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(0, 0, 0, 1.0), $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(0, 0, 0, 0.2), "Less Skew", "More Skew", new $c_sjsr_AnonFunction1(((this$12) => ((x$2$3) => {
-      $uD(x$2$3)
-    }))(this)), new $c_sjsr_AnonFunction1(((this$2$4, callback$7) => ((x$3$2$3) => {
-      const x$3$4 = $uD(x$3$2$3);
-      callback$7.apply$mcVD$sp__D__V(x$3$4)
+    new $c_LscalajsUtils_SliderSVG("skew", this.LdataStories_PolarizationDataStory__f_voters.LdataStories_VoterController__f_voterArea, skewLocation, range$2, ((range$2.T2$mcDD$sp__f__1$mcD$sp + range$2.T2$mcDD$sp__f__2$mcD$sp) / 2.0), 10.0, $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(0, 0, 0, 1.0), $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(0, 0, 0, 0.2), "Less Skew", "More Skew", new $c_sjsr_AnonFunction1(((this$12) => ((x$3$2$3) => {
+      $uD(x$3$2$3)
+    }))(this)), new $c_sjsr_AnonFunction1(((this$2$4, callback$7) => ((x$2$3) => {
+      const x$6 = $uD(x$2$3);
+      callback$7.apply$mcVD$sp__D__V(x$6)
     }))(this, callback$6)), new $c_sjsr_AnonFunction1(((this$3$4, callback$8, partisanship$1$3, stddev$1$2, skew$1$2) => ((x$4$2$3) => {
       const x$4$4 = $uD(x$4$2$3);
       callback$8.apply$mcVD$sp__D__V(x$4$4);
@@ -45083,9 +46138,10 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
         arg1.stop()
       };
       this.LdataStories_PolarizationDataStory__f_mapDisplayTimer = $m_s_None$();
+      this.clearTextItems__V();
       switch (section) {
         case 0: {
-          this.displayHouse__V();
+          this.displayHouse__I__V(1940);
           break
         }
         case 100: {
@@ -45110,7 +46166,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
         case 201: {
           $p_LdataStories_PolarizationDataStory__displayBigMap__F1__V(this, new $c_sjsr_AnonFunction1(((this$3) => ((r$3$2) => {
             const r$3 = $as_Lrcvcore_SimulationResult(r$3$2);
-            return this$3.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r$3.primarySatisfaction__D(), 1.0)
+            return this$3.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r$3.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
           }))(this)));
           break
         }
@@ -45153,7 +46209,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
         case 1300: {
           $p_LdataStories_PolarizationDataStory__displayBigMap__F1__V(this, new $c_sjsr_AnonFunction1(((this$4) => ((r$4$2) => {
             const r$4 = $as_Lrcvcore_SimulationResult(r$4$2);
-            return this$4.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r$4.headToHeadSatisfaction__D(), 1.0)
+            return this$4.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r$4.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
           }))(this)));
           break
         }
@@ -45165,11 +46221,26 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
           this.displayVoterWidget__V();
           break
         }
+        case 2100: {
+          $p_LdataStories_PolarizationDataStory__displaySelectableMap__V(this);
+          break
+        }
+        case 2200: {
+          this.displayHouse__I__V(1789);
+          break
+        }
       };
+      $m_LdataStories_PDSLinks$().displayLinks__I__sc_Seq(section).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$5) => ((l$2) => {
+        const l = $as_LdataStories_LinkSpecification(l$2);
+        const this$8 = this$5.LdataStories_PolarizationDataStory__f_textItems;
+        const array = [l.textItem__F1__LdataStories_TextItem(this$5.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback)];
+        const elems = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array);
+        this$8.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(elems)
+      }))(this)));
       this.LdataStories_PolarizationDataStory__f_lastSection = section
     }
   };
-  onSizeChange__V() {
+  computeSizeAttrs__LdataStories_PolarizationDataStory$SizeAttrs() {
     const svgNode = this.LdataStories_PolarizationDataStory__f_svgArea.node();
     const height = $uI(svgNode.clientHeight);
     const actualWidth = $uI(svgNode.clientWidth);
@@ -45179,39 +46250,44 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     const this$3 = this.LdataStories_PolarizationDataStory__f_configData;
     const scale = (width / this$3.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_desiredWidth);
     const hShift = (((actualWidth - width) / 2.0) / scale);
-    const transformString = (("translate(" + hShift) + ", 0)");
+    return new $c_LdataStories_PolarizationDataStory$SizeAttrs(this, width, height, scale, hShift)
+  };
+  onSizeChange__V() {
+    const sizeAttrs = this.computeSizeAttrs__LdataStories_PolarizationDataStory$SizeAttrs();
+    const transformString = (("translate(" + sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_hShift) + ", 0)");
     const $$x1 = this.LdataStories_PolarizationDataStory__f_graphicArea;
-    const this$4 = $m_Lio_whitemice_d3v5_all_package$();
-    $$x1.attr("transform", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$4, transformString));
+    const this$1 = $m_Lio_whitemice_d3v5_all_package$();
+    $$x1.attr("transform", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$1, transformString));
     this.LdataStories_PolarizationDataStory__f_vizRect = this.LdataStories_PolarizationDataStory__f_vizArea.node().getBoundingClientRect();
     const $$x8 = this.LdataStories_PolarizationDataStory__f_voterCanvas;
-    const this$5 = $m_Lio_whitemice_d3v5_all_package$();
+    const this$2 = $m_Lio_whitemice_d3v5_all_package$();
     const d = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.width) * this.LdataStories_PolarizationDataStory__f_dpr);
-    const $$x7 = $$x8.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, d));
-    const this$6 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x7 = $$x8.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$2, d));
+    const this$3 = $m_Lio_whitemice_d3v5_all_package$();
     const d$1 = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.height) * this.LdataStories_PolarizationDataStory__f_dpr);
-    const $$x6 = $$x7.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$6, d$1));
-    const this$7 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x6 = $$x7.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$3, d$1));
+    const this$4 = $m_Lio_whitemice_d3v5_all_package$();
     const s = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.width) + "px");
-    const $$x5 = $$x6.style("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$7, s));
-    const this$8 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x5 = $$x6.style("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$4, s));
+    const this$5 = $m_Lio_whitemice_d3v5_all_package$();
     const s$1 = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.height) + "px");
-    const $$x4 = $$x5.style("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$8, s$1));
-    const this$9 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x3 = $$x4.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$9, "fixed"));
-    const this$10 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x2 = $$x3.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$10, 0));
-    const this$11 = $m_Lio_whitemice_d3v5_all_package$();
-    $$x2.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$11, 0));
+    const $$x4 = $$x5.style("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$5, s$1));
+    const this$6 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x3 = $$x4.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$6, "fixed"));
+    const this$7 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x2 = $$x3.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$7, 0));
+    const this$8 = $m_Lio_whitemice_d3v5_all_package$();
+    $$x2.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$8, 0));
     this.LdataStories_PolarizationDataStory__f_voterContext.scale(this.LdataStories_PolarizationDataStory__f_dpr, this.LdataStories_PolarizationDataStory__f_dpr);
-    this.LdataStories_PolarizationDataStory__f_voterContext.translate(hShift, 0.0);
-    this.LdataStories_PolarizationDataStory__f_house.onResize__D__D__V(width, height);
-    this.LdataStories_PolarizationDataStory__f_voters.onResize__D__D__V(width, height);
-    this.LdataStories_PolarizationDataStory__f_map.onResize__D__D__V(width, height);
-    this.LdataStories_PolarizationDataStory__f_candidates.onResize__D__D__V(width, height);
-    this.LdataStories_PolarizationDataStory__f_ballot.onResize__D__D__V(width, height);
-    const this$12 = this.LdataStories_PolarizationDataStory__f_sizeChangeCallback;
-    this$12.apply__O()
+    this.LdataStories_PolarizationDataStory__f_voterContext.translate(sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_hShift, 0.0);
+    this.LdataStories_PolarizationDataStory__f_house.onResize__D__D__V(sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_width, sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_height);
+    this.LdataStories_PolarizationDataStory__f_voters.onResize__D__D__V(sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_width, sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_height);
+    this.LdataStories_PolarizationDataStory__f_map.onResize__D__D__V(sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_width, sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_height);
+    this.LdataStories_PolarizationDataStory__f_candidates.onResize__D__D__V(sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_width, sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_height);
+    this.LdataStories_PolarizationDataStory__f_ballot.onResize__D__D__V(sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_width, sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_height);
+    const this$9 = this.LdataStories_PolarizationDataStory__f_sizeChangeCallback;
+    this$9.apply__O();
+    this.renderTextItems__V()
   };
   displayVoterSatisfaction__V() {
     const this$2 = $m_s_Console$();
@@ -45242,18 +46318,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
       const cb = $as_LdataStories_CandidateBubble(cb$2);
       $p_LdataStories_PolarizationDataStory__onUpdate$2__LdataStories_CandidateBubble__LdataStories_VoterRepresentationLayout__V(this$2$1, cb, layout$1)
     }))(this, layout)));
-    $p_LdataStories_PolarizationDataStory__onUpdate$2__LdataStories_CandidateBubble__LdataStories_VoterRepresentationLayout__V(this, this.LdataStories_PolarizationDataStory__f_candidates.idealCandidate__LdataStories_CandidateBubble(), layout);
-    const box = this.LdataStories_PolarizationDataStory__f_voters.LdataStories_VoterController__f_box;
-    const $$x1 = $m_sc_Seq$();
-    const array = [new $c_LdataStories_StyleModifier("text-decoration", "underline"), new $c_LdataStories_StyleModifier("cursor", "default")];
-    box.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V("How is representation calculated?", "where-text", "link", 0.02, (-0.18), "12pt", "left", "black", $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))), new $c_sjsr_AnonFunction0(((this$3$1) => (() => {
-      this$3$1.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback.apply__O__O("https://blog.betterchoices.vote/representation-how")
-    }))(this)));
-    const $$x2 = $m_sc_Seq$();
-    const array$1 = [new $c_LdataStories_StyleModifier("text-decoration", "underline"), new $c_LdataStories_StyleModifier("cursor", "default")];
-    box.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V("Why does this matter?", "why-text", "link", 0.98, (-0.18), "12pt", "end", "black", $as_sc_Seq($$x2.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$1))), new $c_sjsr_AnonFunction0(((this$4$1) => (() => {
-      this$4$1.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback.apply__O__O("https://blog.betterchoices.vote/representation-why")
-    }))(this)))
+    $p_LdataStories_PolarizationDataStory__onUpdate$2__LdataStories_CandidateBubble__LdataStories_VoterRepresentationLayout__V(this, this.LdataStories_PolarizationDataStory__f_candidates.idealCandidate__LdataStories_CandidateBubble(), layout)
   };
   showRankedChoiceBallot__Lio_whitemice_d3v5_selection_Selection__V(vizArea) {
     this.LdataStories_PolarizationDataStory__f_candidates.clear__V();
@@ -45368,9 +46433,15 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
       return false
     }
   };
-  dataStories$PolarizationDataStory$$$anonfun$displayBigMap$1__D__F1__LscalajsUtils_PctRectangle__V(x$4, fcn$1, mapRect$1) {
+  dataStories$PolarizationDataStory$$$anonfun$displayBigMap$1__D__F1__LscalajsUtils_PctRectangle__V(x$7, fcn$1, mapRect$1) {
     this.LdataStories_PolarizationDataStory__f_map.setColorBySatisfaction__F1__V(fcn$1);
     this.LdataStories_PolarizationDataStory__f_map.activate__LscalajsUtils_PctRectangle__V(mapRect$1);
+    this.LdataStories_PolarizationDataStory__f_map.zoomOut__V();
+    this.LdataStories_PolarizationDataStory__f_map.render__V()
+  };
+  dataStories$PolarizationDataStory$$$anonfun$displaySelectableMap$2__D__F1__LscalajsUtils_PctRectangle__V(x$8, fcn$2, mapRect$2) {
+    this.LdataStories_PolarizationDataStory__f_map.setColorBySatisfaction__F1__V(fcn$2);
+    this.LdataStories_PolarizationDataStory__f_map.activate__LscalajsUtils_PctRectangle__V(mapRect$2);
     this.LdataStories_PolarizationDataStory__f_map.zoomOut__V();
     this.LdataStories_PolarizationDataStory__f_map.render__V()
   };
@@ -45474,6 +46545,189 @@ function $m_LdataStories_PrimaryElectionSection$Voted$() {
   };
   return $n_LdataStories_PrimaryElectionSection$Voted$
 }
+class $c_LdataStories_RectItem extends $c_O {
+  constructor(id, shape, x, y, width, height, attrs) {
+    super();
+    this.LdataStories_RectItem__f_id = null;
+    this.LdataStories_RectItem__f_shape = null;
+    this.LdataStories_RectItem__f_x = 0.0;
+    this.LdataStories_RectItem__f_y = 0.0;
+    this.LdataStories_RectItem__f_width = 0.0;
+    this.LdataStories_RectItem__f_height = 0.0;
+    this.LdataStories_RectItem__f_attrs = null;
+    this.LdataStories_RectItem__f_id = id;
+    this.LdataStories_RectItem__f_shape = shape;
+    this.LdataStories_RectItem__f_x = x;
+    this.LdataStories_RectItem__f_y = y;
+    this.LdataStories_RectItem__f_width = width;
+    this.LdataStories_RectItem__f_height = height;
+    this.LdataStories_RectItem__f_attrs = attrs
+  };
+  id__T() {
+    return this.LdataStories_RectItem__f_id
+  };
+  render__s_Option__LdataStories_SvgDefinition__V(svgAreaOpt, svgDefinition) {
+    if ((!svgAreaOpt.isEmpty__Z())) {
+      const arg1 = svgAreaOpt.get__O();
+      this.render__Lio_whitemice_d3v5_selection_Selection__LdataStories_SvgDefinition__V(arg1, svgDefinition)
+    }
+  };
+  render__Lio_whitemice_d3v5_selection_Selection__LdataStories_SvgDefinition__V(svgArea, svgDefinition) {
+    $f_LdataStories_BoxObject__clear__Lio_whitemice_d3v5_selection_Selection__V(this, svgArea);
+    const sel = svgArea.append(this.LdataStories_RectItem__f_shape);
+    const $$x5 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel);
+    const this$2 = $m_Lio_whitemice_d3v5_all_package$();
+    const s = this.LdataStories_RectItem__f_id;
+    const $$x4 = $$x5.attrId__sjs_js_$bar__Lio_whitemice_d3v5_selection_Selection($f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$2, s));
+    const this$3 = $m_Lio_whitemice_d3v5_all_package$();
+    const d = (this.LdataStories_RectItem__f_y * svgDefinition.LdataStories_SvgDefinition__f_height);
+    const $$x3 = $$x4.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$3, d));
+    const this$4 = $m_Lio_whitemice_d3v5_all_package$();
+    const d$1 = (this.LdataStories_RectItem__f_x * svgDefinition.LdataStories_SvgDefinition__f_width);
+    const $$x2 = $$x3.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$4, d$1));
+    const this$5 = $m_Lio_whitemice_d3v5_all_package$();
+    const d$2 = (this.LdataStories_RectItem__f_width * svgDefinition.LdataStories_SvgDefinition__f_width);
+    const $$x1 = $$x2.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, d$2));
+    const this$6 = $m_Lio_whitemice_d3v5_all_package$();
+    const d$3 = (this.LdataStories_RectItem__f_height * svgDefinition.LdataStories_SvgDefinition__f_height);
+    const obj = $$x1.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$6, d$3));
+    this.LdataStories_RectItem__f_attrs.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$7, obj$1) => ((x0$1$2) => {
+      const x0$1 = $as_LdataStories_HtmlModifier(x0$1$2);
+      if ((x0$1 instanceof $c_LdataStories_StyleModifier)) {
+        const x2 = $as_LdataStories_StyleModifier(x0$1);
+        const $$x6 = x2.LdataStories_StyleModifier__f_attr;
+        const this$8 = $m_Lio_whitemice_d3v5_all_package$();
+        const s$1 = x2.LdataStories_StyleModifier__f_value;
+        return obj$1.style($$x6, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$8, s$1))
+      } else if ((x0$1 instanceof $c_LdataStories_AttrModifier)) {
+        const x3 = $as_LdataStories_AttrModifier(x0$1);
+        const $$x7 = x3.LdataStories_AttrModifier__f_attr;
+        const this$9 = $m_Lio_whitemice_d3v5_all_package$();
+        const s$2 = x3.LdataStories_AttrModifier__f_value;
+        return obj$1.attr($$x7, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$9, s$2))
+      } else {
+        throw new $c_s_MatchError(x0$1)
+      }
+    }))(this, obj)))
+  };
+  productPrefix__T() {
+    return "RectItem"
+  };
+  productArity__I() {
+    return 7
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LdataStories_RectItem__f_id;
+        break
+      }
+      case 1: {
+        return this.LdataStories_RectItem__f_shape;
+        break
+      }
+      case 2: {
+        return this.LdataStories_RectItem__f_x;
+        break
+      }
+      case 3: {
+        return this.LdataStories_RectItem__f_y;
+        break
+      }
+      case 4: {
+        return this.LdataStories_RectItem__f_width;
+        break
+      }
+      case 5: {
+        return this.LdataStories_RectItem__f_height;
+        break
+      }
+      case 6: {
+        return this.LdataStories_RectItem__f_attrs;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const x = this.LdataStories_RectItem__f_id;
+    const data = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const x$1 = this.LdataStories_RectItem__f_shape;
+    const data$1 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const dv = this.LdataStories_RectItem__f_x;
+    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const dv$1 = this.LdataStories_RectItem__f_y;
+    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const dv$2 = this.LdataStories_RectItem__f_width;
+    const data$4 = $m_sr_Statics$().doubleHash__D__I(dv$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    const dv$3 = this.LdataStories_RectItem__f_height;
+    const data$5 = $m_sr_Statics$().doubleHash__D__I(dv$3);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
+    const hash$6 = acc;
+    const x$2 = this.LdataStories_RectItem__f_attrs;
+    const data$6 = $m_sr_Statics$().anyHash__O__I(x$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
+    const hash$7 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$7, 7)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_LdataStories_RectItem)) {
+      const RectItem$1 = $as_LdataStories_RectItem(x$1);
+      if (((((((this.LdataStories_RectItem__f_id === RectItem$1.LdataStories_RectItem__f_id) && (this.LdataStories_RectItem__f_shape === RectItem$1.LdataStories_RectItem__f_shape)) && (this.LdataStories_RectItem__f_x === RectItem$1.LdataStories_RectItem__f_x)) && (this.LdataStories_RectItem__f_y === RectItem$1.LdataStories_RectItem__f_y)) && (this.LdataStories_RectItem__f_width === RectItem$1.LdataStories_RectItem__f_width)) && (this.LdataStories_RectItem__f_height === RectItem$1.LdataStories_RectItem__f_height))) {
+        const x = this.LdataStories_RectItem__f_attrs;
+        const x$2 = RectItem$1.LdataStories_RectItem__f_attrs;
+        return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_LdataStories_RectItem(obj) {
+  return (((obj instanceof $c_LdataStories_RectItem) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.RectItem"))
+}
+function $isArrayOf_LdataStories_RectItem(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_RectItem)))
+}
+function $asArrayOf_LdataStories_RectItem(obj, depth) {
+  return (($isArrayOf_LdataStories_RectItem(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.RectItem;", depth))
+}
+const $d_LdataStories_RectItem = new $TypeData().initClass({
+  LdataStories_RectItem: 0
+}, false, "dataStories.RectItem", {
+  LdataStories_RectItem: 1,
+  O: 1,
+  LdataStories_BoxObject: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LdataStories_RectItem.prototype.$classData = $d_LdataStories_RectItem;
 class $c_LdataStories_ScaledBox$BoxStyleLine$ extends $c_O {
   productPrefix__T() {
     return "BoxStyleLine"
@@ -45552,444 +46806,6 @@ function $m_LdataStories_ScaledBox$BoxStyleRectangle$() {
   };
   return $n_LdataStories_ScaledBox$BoxStyleRectangle$
 }
-class $c_LdataStories_ScaledBox$RectItem extends $c_O {
-  constructor(outer, id, shape, x, y, width, height, attrs) {
-    super();
-    this.LdataStories_ScaledBox$RectItem__f_id = null;
-    this.LdataStories_ScaledBox$RectItem__f_shape = null;
-    this.LdataStories_ScaledBox$RectItem__f_x = 0.0;
-    this.LdataStories_ScaledBox$RectItem__f_y = 0.0;
-    this.LdataStories_ScaledBox$RectItem__f_width = 0.0;
-    this.LdataStories_ScaledBox$RectItem__f_height = 0.0;
-    this.LdataStories_ScaledBox$RectItem__f_attrs = null;
-    this.LdataStories_ScaledBox$RectItem__f_$outer = null;
-    this.LdataStories_ScaledBox$RectItem__f_id = id;
-    this.LdataStories_ScaledBox$RectItem__f_shape = shape;
-    this.LdataStories_ScaledBox$RectItem__f_x = x;
-    this.LdataStories_ScaledBox$RectItem__f_y = y;
-    this.LdataStories_ScaledBox$RectItem__f_width = width;
-    this.LdataStories_ScaledBox$RectItem__f_height = height;
-    this.LdataStories_ScaledBox$RectItem__f_attrs = attrs;
-    if ((outer === null)) {
-      throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-    } else {
-      this.LdataStories_ScaledBox$RectItem__f_$outer = outer
-    }
-  };
-  id__T() {
-    return this.LdataStories_ScaledBox$RectItem__f_id
-  };
-  clear__V() {
-    const this$1 = this.LdataStories_ScaledBox$RectItem__f_$outer.LdataStories_ScaledBox__f_svgAreaOpt;
-    if ((!this$1.isEmpty__Z())) {
-      const arg1 = this$1.get__O();
-      arg1.selectAll(("#" + this.LdataStories_ScaledBox$RectItem__f_id)).remove()
-    }
-  };
-  render__V() {
-    const this$1 = this.LdataStories_ScaledBox$RectItem__f_$outer.LdataStories_ScaledBox__f_svgAreaOpt;
-    if ((!this$1.isEmpty__Z())) {
-      const arg1 = this$1.get__O();
-      this.clear__V();
-      const sel = arg1.append(this.LdataStories_ScaledBox$RectItem__f_shape);
-      const $$x5 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel);
-      const this$3 = $m_Lio_whitemice_d3v5_all_package$();
-      const s = this.LdataStories_ScaledBox$RectItem__f_id;
-      const $$x4 = $$x5.attrId__sjs_js_$bar__Lio_whitemice_d3v5_selection_Selection($f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$3, s));
-      const this$4 = $m_Lio_whitemice_d3v5_all_package$();
-      const d = (this.LdataStories_ScaledBox$RectItem__f_y * this.LdataStories_ScaledBox$RectItem__f_$outer.LdataStories_ScaledBox__f_svgDefinition.LdataStories_SvgDefinition__f_height);
-      const $$x3 = $$x4.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$4, d));
-      const this$5 = $m_Lio_whitemice_d3v5_all_package$();
-      const d$1 = (this.LdataStories_ScaledBox$RectItem__f_x * this.LdataStories_ScaledBox$RectItem__f_$outer.LdataStories_ScaledBox__f_svgDefinition.LdataStories_SvgDefinition__f_width);
-      const $$x2 = $$x3.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, d$1));
-      const this$6 = $m_Lio_whitemice_d3v5_all_package$();
-      const d$2 = (this.LdataStories_ScaledBox$RectItem__f_width * this.LdataStories_ScaledBox$RectItem__f_$outer.LdataStories_ScaledBox__f_svgDefinition.LdataStories_SvgDefinition__f_width);
-      const $$x1 = $$x2.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$6, d$2));
-      const this$7 = $m_Lio_whitemice_d3v5_all_package$();
-      const d$3 = (this.LdataStories_ScaledBox$RectItem__f_height * this.LdataStories_ScaledBox$RectItem__f_$outer.LdataStories_ScaledBox__f_svgDefinition.LdataStories_SvgDefinition__f_height);
-      const obj = $$x1.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$7, d$3));
-      this.LdataStories_ScaledBox$RectItem__f_attrs.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$8, obj$1) => ((x0$1$2) => {
-        const x0$1 = $as_LdataStories_HtmlModifier(x0$1$2);
-        if ((x0$1 instanceof $c_LdataStories_StyleModifier)) {
-          const x2 = $as_LdataStories_StyleModifier(x0$1);
-          const $$x6 = x2.LdataStories_StyleModifier__f_attr;
-          const this$9 = $m_Lio_whitemice_d3v5_all_package$();
-          const s$1 = x2.LdataStories_StyleModifier__f_value;
-          return obj$1.style($$x6, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$9, s$1))
-        } else if ((x0$1 instanceof $c_LdataStories_AttrModifier)) {
-          const x3 = $as_LdataStories_AttrModifier(x0$1);
-          const $$x7 = x3.LdataStories_AttrModifier__f_attr;
-          const this$10 = $m_Lio_whitemice_d3v5_all_package$();
-          const s$2 = x3.LdataStories_AttrModifier__f_value;
-          return obj$1.attr($$x7, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$10, s$2))
-        } else {
-          throw new $c_s_MatchError(x0$1)
-        }
-      }))(this, obj)))
-    }
-  };
-  productPrefix__T() {
-    return "RectItem"
-  };
-  productArity__I() {
-    return 7
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.LdataStories_ScaledBox$RectItem__f_id;
-        break
-      }
-      case 1: {
-        return this.LdataStories_ScaledBox$RectItem__f_shape;
-        break
-      }
-      case 2: {
-        return this.LdataStories_ScaledBox$RectItem__f_x;
-        break
-      }
-      case 3: {
-        return this.LdataStories_ScaledBox$RectItem__f_y;
-        break
-      }
-      case 4: {
-        return this.LdataStories_ScaledBox$RectItem__f_width;
-        break
-      }
-      case 5: {
-        return this.LdataStories_ScaledBox$RectItem__f_height;
-        break
-      }
-      case 6: {
-        return this.LdataStories_ScaledBox$RectItem__f_attrs;
-        break
-      }
-      default: {
-        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    let acc = (-889275714);
-    const hash = acc;
-    const x = this.LdataStories_ScaledBox$RectItem__f_id;
-    const data = $m_sr_Statics$().anyHash__O__I(x);
-    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
-    const hash$1 = acc;
-    const x$1 = this.LdataStories_ScaledBox$RectItem__f_shape;
-    const data$1 = $m_sr_Statics$().anyHash__O__I(x$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
-    const hash$2 = acc;
-    const dv = this.LdataStories_ScaledBox$RectItem__f_x;
-    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
-    const hash$3 = acc;
-    const dv$1 = this.LdataStories_ScaledBox$RectItem__f_y;
-    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
-    const hash$4 = acc;
-    const dv$2 = this.LdataStories_ScaledBox$RectItem__f_width;
-    const data$4 = $m_sr_Statics$().doubleHash__D__I(dv$2);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
-    const hash$5 = acc;
-    const dv$3 = this.LdataStories_ScaledBox$RectItem__f_height;
-    const data$5 = $m_sr_Statics$().doubleHash__D__I(dv$3);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
-    const hash$6 = acc;
-    const x$2 = this.LdataStories_ScaledBox$RectItem__f_attrs;
-    const data$6 = $m_sr_Statics$().anyHash__O__I(x$2);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
-    const hash$7 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$7, 7)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if (((x$1 instanceof $c_LdataStories_ScaledBox$RectItem) && ($as_LdataStories_ScaledBox$RectItem(x$1).LdataStories_ScaledBox$RectItem__f_$outer === this.LdataStories_ScaledBox$RectItem__f_$outer))) {
-      const RectItem$1 = $as_LdataStories_ScaledBox$RectItem(x$1);
-      if (((((((this.LdataStories_ScaledBox$RectItem__f_id === RectItem$1.LdataStories_ScaledBox$RectItem__f_id) && (this.LdataStories_ScaledBox$RectItem__f_shape === RectItem$1.LdataStories_ScaledBox$RectItem__f_shape)) && (this.LdataStories_ScaledBox$RectItem__f_x === RectItem$1.LdataStories_ScaledBox$RectItem__f_x)) && (this.LdataStories_ScaledBox$RectItem__f_y === RectItem$1.LdataStories_ScaledBox$RectItem__f_y)) && (this.LdataStories_ScaledBox$RectItem__f_width === RectItem$1.LdataStories_ScaledBox$RectItem__f_width)) && (this.LdataStories_ScaledBox$RectItem__f_height === RectItem$1.LdataStories_ScaledBox$RectItem__f_height))) {
-        const x = this.LdataStories_ScaledBox$RectItem__f_attrs;
-        const x$2 = RectItem$1.LdataStories_ScaledBox$RectItem__f_attrs;
-        return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-      } else {
-        return false
-      }
-    } else {
-      return false
-    }
-  };
-}
-function $as_LdataStories_ScaledBox$RectItem(obj) {
-  return (((obj instanceof $c_LdataStories_ScaledBox$RectItem) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.ScaledBox$RectItem"))
-}
-function $isArrayOf_LdataStories_ScaledBox$RectItem(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_ScaledBox$RectItem)))
-}
-function $asArrayOf_LdataStories_ScaledBox$RectItem(obj, depth) {
-  return (($isArrayOf_LdataStories_ScaledBox$RectItem(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.ScaledBox$RectItem;", depth))
-}
-const $d_LdataStories_ScaledBox$RectItem = new $TypeData().initClass({
-  LdataStories_ScaledBox$RectItem: 0
-}, false, "dataStories.ScaledBox$RectItem", {
-  LdataStories_ScaledBox$RectItem: 1,
-  O: 1,
-  LdataStories_ScaledBox$BoxObject: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_LdataStories_ScaledBox$RectItem.prototype.$classData = $d_LdataStories_ScaledBox$RectItem;
-class $c_LdataStories_ScaledBox$TextItem extends $c_O {
-  constructor(outer, text, id, cls, x, y, size, anchor, fill, attrs, onClick) {
-    super();
-    this.LdataStories_ScaledBox$TextItem__f_text = null;
-    this.LdataStories_ScaledBox$TextItem__f_id = null;
-    this.LdataStories_ScaledBox$TextItem__f_cls = null;
-    this.LdataStories_ScaledBox$TextItem__f_x = 0.0;
-    this.LdataStories_ScaledBox$TextItem__f_y = 0.0;
-    this.LdataStories_ScaledBox$TextItem__f_size = null;
-    this.LdataStories_ScaledBox$TextItem__f_anchor = null;
-    this.LdataStories_ScaledBox$TextItem__f_fill = null;
-    this.LdataStories_ScaledBox$TextItem__f_attrs = null;
-    this.LdataStories_ScaledBox$TextItem__f_onClick = null;
-    this.LdataStories_ScaledBox$TextItem__f_$outer = null;
-    this.LdataStories_ScaledBox$TextItem__f_text = text;
-    this.LdataStories_ScaledBox$TextItem__f_id = id;
-    this.LdataStories_ScaledBox$TextItem__f_cls = cls;
-    this.LdataStories_ScaledBox$TextItem__f_x = x;
-    this.LdataStories_ScaledBox$TextItem__f_y = y;
-    this.LdataStories_ScaledBox$TextItem__f_size = size;
-    this.LdataStories_ScaledBox$TextItem__f_anchor = anchor;
-    this.LdataStories_ScaledBox$TextItem__f_fill = fill;
-    this.LdataStories_ScaledBox$TextItem__f_attrs = attrs;
-    this.LdataStories_ScaledBox$TextItem__f_onClick = onClick;
-    if ((outer === null)) {
-      throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-    } else {
-      this.LdataStories_ScaledBox$TextItem__f_$outer = outer
-    }
-  };
-  id__T() {
-    return this.LdataStories_ScaledBox$TextItem__f_id
-  };
-  clear__V() {
-    const this$1 = this.LdataStories_ScaledBox$TextItem__f_$outer.LdataStories_ScaledBox__f_svgAreaOpt;
-    if ((!this$1.isEmpty__Z())) {
-      const arg1 = this$1.get__O();
-      arg1.selectAll(("#" + this.LdataStories_ScaledBox$TextItem__f_id)).remove()
-    }
-  };
-  render__V() {
-    const this$1 = this.LdataStories_ScaledBox$TextItem__f_$outer.LdataStories_ScaledBox__f_svgAreaOpt;
-    if ((!this$1.isEmpty__Z())) {
-      const arg1 = this$1.get__O();
-      arg1.selectAll(("#" + this.LdataStories_ScaledBox$TextItem__f_id)).remove();
-      const $$x9 = arg1.append("text");
-      const this$2 = $m_Lio_whitemice_d3v5_all_package$();
-      const s = this.LdataStories_ScaledBox$TextItem__f_id;
-      const sel = $$x9.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$2, s));
-      const $$x8 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel).cls__T__Lio_whitemice_d3v5_selection_Selection(this.LdataStories_ScaledBox$TextItem__f_cls);
-      const this$4 = $m_Lio_whitemice_d3v5_all_package$();
-      const s$1 = this.LdataStories_ScaledBox$TextItem__f_anchor;
-      const $$x7 = $$x8.style("text-anchor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$4, s$1));
-      const this$5 = $m_Lio_whitemice_d3v5_all_package$();
-      const d = (this.LdataStories_ScaledBox$TextItem__f_y * this.LdataStories_ScaledBox$TextItem__f_$outer.LdataStories_ScaledBox__f_svgDefinition.LdataStories_SvgDefinition__f_height);
-      const $$x6 = $$x7.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, d));
-      const this$6 = $m_Lio_whitemice_d3v5_all_package$();
-      const d$1 = (this.LdataStories_ScaledBox$TextItem__f_x * this.LdataStories_ScaledBox$TextItem__f_$outer.LdataStories_ScaledBox__f_svgDefinition.LdataStories_SvgDefinition__f_width);
-      const $$x5 = $$x6.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$6, d$1));
-      const this$7 = $m_Lio_whitemice_d3v5_all_package$();
-      const $$x4 = $$x5.attr("dy", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$7, ".75em"));
-      const this$8 = $m_Lio_whitemice_d3v5_all_package$();
-      const s$2 = this.LdataStories_ScaledBox$TextItem__f_fill;
-      const $$x3 = $$x4.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$8, s$2));
-      const this$9 = $m_Lio_whitemice_d3v5_all_package$();
-      const s$3 = this.LdataStories_ScaledBox$TextItem__f_size;
-      const $$x2 = $$x3.style("font-size", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$9, s$3));
-      const $$x1 = $$x2.text(this.LdataStories_ScaledBox$TextItem__f_text);
-      const this$12 = $m_Lio_whitemice_d3v5_all_package$();
-      const fun = new $c_sjsr_AnonFunction0(((this$10) => (() => {
-        const this$11 = this$10.LdataStories_ScaledBox$TextItem__f_onClick;
-        this$11.apply__O()
-      }))(this));
-      const obj = $$x1.on("click", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$12, fun));
-      this.LdataStories_ScaledBox$TextItem__f_attrs.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$2$1, obj$1) => ((x0$1$2) => {
-        const x0$1 = $as_LdataStories_HtmlModifier(x0$1$2);
-        if ((x0$1 instanceof $c_LdataStories_StyleModifier)) {
-          const x2 = $as_LdataStories_StyleModifier(x0$1);
-          const $$x10 = x2.LdataStories_StyleModifier__f_attr;
-          const this$13 = $m_Lio_whitemice_d3v5_all_package$();
-          const s$4 = x2.LdataStories_StyleModifier__f_value;
-          return obj$1.style($$x10, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$13, s$4))
-        } else if ((x0$1 instanceof $c_LdataStories_AttrModifier)) {
-          const x3 = $as_LdataStories_AttrModifier(x0$1);
-          const $$x11 = x3.LdataStories_AttrModifier__f_attr;
-          const this$14 = $m_Lio_whitemice_d3v5_all_package$();
-          const s$5 = x3.LdataStories_AttrModifier__f_value;
-          return obj$1.attr($$x11, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$14, s$5))
-        } else {
-          throw new $c_s_MatchError(x0$1)
-        }
-      }))(this, obj)))
-    }
-  };
-  productPrefix__T() {
-    return "TextItem"
-  };
-  productArity__I() {
-    return 10
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.LdataStories_ScaledBox$TextItem__f_text;
-        break
-      }
-      case 1: {
-        return this.LdataStories_ScaledBox$TextItem__f_id;
-        break
-      }
-      case 2: {
-        return this.LdataStories_ScaledBox$TextItem__f_cls;
-        break
-      }
-      case 3: {
-        return this.LdataStories_ScaledBox$TextItem__f_x;
-        break
-      }
-      case 4: {
-        return this.LdataStories_ScaledBox$TextItem__f_y;
-        break
-      }
-      case 5: {
-        return this.LdataStories_ScaledBox$TextItem__f_size;
-        break
-      }
-      case 6: {
-        return this.LdataStories_ScaledBox$TextItem__f_anchor;
-        break
-      }
-      case 7: {
-        return this.LdataStories_ScaledBox$TextItem__f_fill;
-        break
-      }
-      case 8: {
-        return this.LdataStories_ScaledBox$TextItem__f_attrs;
-        break
-      }
-      case 9: {
-        return this.LdataStories_ScaledBox$TextItem__f_onClick;
-        break
-      }
-      default: {
-        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    let acc = (-889275714);
-    const hash = acc;
-    const x = this.LdataStories_ScaledBox$TextItem__f_text;
-    const data = $m_sr_Statics$().anyHash__O__I(x);
-    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
-    const hash$1 = acc;
-    const x$1 = this.LdataStories_ScaledBox$TextItem__f_id;
-    const data$1 = $m_sr_Statics$().anyHash__O__I(x$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
-    const hash$2 = acc;
-    const x$2 = this.LdataStories_ScaledBox$TextItem__f_cls;
-    const data$2 = $m_sr_Statics$().anyHash__O__I(x$2);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
-    const hash$3 = acc;
-    const dv = this.LdataStories_ScaledBox$TextItem__f_x;
-    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
-    const hash$4 = acc;
-    const dv$1 = this.LdataStories_ScaledBox$TextItem__f_y;
-    const data$4 = $m_sr_Statics$().doubleHash__D__I(dv$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
-    const hash$5 = acc;
-    const x$3 = this.LdataStories_ScaledBox$TextItem__f_size;
-    const data$5 = $m_sr_Statics$().anyHash__O__I(x$3);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
-    const hash$6 = acc;
-    const x$4 = this.LdataStories_ScaledBox$TextItem__f_anchor;
-    const data$6 = $m_sr_Statics$().anyHash__O__I(x$4);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
-    const hash$7 = acc;
-    const x$5 = this.LdataStories_ScaledBox$TextItem__f_fill;
-    const data$7 = $m_sr_Statics$().anyHash__O__I(x$5);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$7, data$7);
-    const hash$8 = acc;
-    const x$6 = this.LdataStories_ScaledBox$TextItem__f_attrs;
-    const data$8 = $m_sr_Statics$().anyHash__O__I(x$6);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$8, data$8);
-    const hash$9 = acc;
-    const x$7 = this.LdataStories_ScaledBox$TextItem__f_onClick;
-    const data$9 = $m_sr_Statics$().anyHash__O__I(x$7);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$9, data$9);
-    const hash$10 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$10, 10)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if (((x$1 instanceof $c_LdataStories_ScaledBox$TextItem) && ($as_LdataStories_ScaledBox$TextItem(x$1).LdataStories_ScaledBox$TextItem__f_$outer === this.LdataStories_ScaledBox$TextItem__f_$outer))) {
-      const TextItem$1 = $as_LdataStories_ScaledBox$TextItem(x$1);
-      let $$x1;
-      if (((((((((this.LdataStories_ScaledBox$TextItem__f_text === TextItem$1.LdataStories_ScaledBox$TextItem__f_text) && (this.LdataStories_ScaledBox$TextItem__f_id === TextItem$1.LdataStories_ScaledBox$TextItem__f_id)) && (this.LdataStories_ScaledBox$TextItem__f_cls === TextItem$1.LdataStories_ScaledBox$TextItem__f_cls)) && (this.LdataStories_ScaledBox$TextItem__f_x === TextItem$1.LdataStories_ScaledBox$TextItem__f_x)) && (this.LdataStories_ScaledBox$TextItem__f_y === TextItem$1.LdataStories_ScaledBox$TextItem__f_y)) && (this.LdataStories_ScaledBox$TextItem__f_size === TextItem$1.LdataStories_ScaledBox$TextItem__f_size)) && (this.LdataStories_ScaledBox$TextItem__f_anchor === TextItem$1.LdataStories_ScaledBox$TextItem__f_anchor)) && (this.LdataStories_ScaledBox$TextItem__f_fill === TextItem$1.LdataStories_ScaledBox$TextItem__f_fill))) {
-        const x = this.LdataStories_ScaledBox$TextItem__f_attrs;
-        const x$2 = TextItem$1.LdataStories_ScaledBox$TextItem__f_attrs;
-        $$x1 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-      } else {
-        $$x1 = false
-      };
-      if ($$x1) {
-        const x$3 = this.LdataStories_ScaledBox$TextItem__f_onClick;
-        const x$4 = TextItem$1.LdataStories_ScaledBox$TextItem__f_onClick;
-        return (x$3 === x$4)
-      } else {
-        return false
-      }
-    } else {
-      return false
-    }
-  };
-}
-function $as_LdataStories_ScaledBox$TextItem(obj) {
-  return (((obj instanceof $c_LdataStories_ScaledBox$TextItem) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.ScaledBox$TextItem"))
-}
-function $isArrayOf_LdataStories_ScaledBox$TextItem(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_ScaledBox$TextItem)))
-}
-function $asArrayOf_LdataStories_ScaledBox$TextItem(obj, depth) {
-  return (($isArrayOf_LdataStories_ScaledBox$TextItem(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.ScaledBox$TextItem;", depth))
-}
-const $d_LdataStories_ScaledBox$TextItem = new $TypeData().initClass({
-  LdataStories_ScaledBox$TextItem: 0
-}, false, "dataStories.ScaledBox$TextItem", {
-  LdataStories_ScaledBox$TextItem: 1,
-  O: 1,
-  LdataStories_ScaledBox$BoxObject: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_LdataStories_ScaledBox$TextItem.prototype.$classData = $d_LdataStories_ScaledBox$TextItem;
 class $c_LdataStories_SemiSigmoidSequencer extends $c_O {
   constructor(trajectory) {
     super();
@@ -46061,14 +46877,16 @@ const $d_LdataStories_SemiSigmoidSequencer = new $TypeData().initClass({
 });
 $c_LdataStories_SemiSigmoidSequencer.prototype.$classData = $d_LdataStories_SemiSigmoidSequencer;
 class $c_LdataStories_SimulationMemberData extends $c_O {
-  constructor(ideology, name, party) {
+  constructor(ideology, name, party, district) {
     super();
     this.LdataStories_SimulationMemberData__f_ideology = 0.0;
     this.LdataStories_SimulationMemberData__f_name = null;
     this.LdataStories_SimulationMemberData__f_party = null;
+    this.LdataStories_SimulationMemberData__f_district = null;
     this.LdataStories_SimulationMemberData__f_ideology = ideology;
     this.LdataStories_SimulationMemberData__f_name = name;
-    this.LdataStories_SimulationMemberData__f_party = party
+    this.LdataStories_SimulationMemberData__f_party = party;
+    this.LdataStories_SimulationMemberData__f_district = district
   };
   ideology__D() {
     return this.LdataStories_SimulationMemberData__f_ideology
@@ -46079,11 +46897,14 @@ class $c_LdataStories_SimulationMemberData extends $c_O {
   party__Lrcvcore_PopulationTag() {
     return this.LdataStories_SimulationMemberData__f_party
   };
+  district__T() {
+    return this.LdataStories_SimulationMemberData__f_district
+  };
   productPrefix__T() {
     return "SimulationMemberData"
   };
   productArity__I() {
-    return 3
+    return 4
   };
   productElement__I__O(x$1) {
     switch (x$1) {
@@ -46097,6 +46918,10 @@ class $c_LdataStories_SimulationMemberData extends $c_O {
       }
       case 2: {
         return this.LdataStories_SimulationMemberData__f_party;
+        break
+      }
+      case 3: {
+        return this.LdataStories_SimulationMemberData__f_district;
         break
       }
       default: {
@@ -46122,7 +46947,11 @@ class $c_LdataStories_SimulationMemberData extends $c_O {
     const data$2 = $m_sr_Statics$().anyHash__O__I(x$1);
     acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
     const hash$3 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$3, 3)
+    const x$2 = this.LdataStories_SimulationMemberData__f_district;
+    const data$3 = $m_sr_Statics$().anyHash__O__I(x$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$4, 4)
   };
   toString__T() {
     return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
@@ -46132,10 +46961,16 @@ class $c_LdataStories_SimulationMemberData extends $c_O {
       return true
     } else if ((x$1 instanceof $c_LdataStories_SimulationMemberData)) {
       const SimulationMemberData$1 = $as_LdataStories_SimulationMemberData(x$1);
+      let $$x1;
       if (((this.LdataStories_SimulationMemberData__f_ideology === SimulationMemberData$1.LdataStories_SimulationMemberData__f_ideology) && (this.LdataStories_SimulationMemberData__f_name === SimulationMemberData$1.LdataStories_SimulationMemberData__f_name))) {
         const x = this.LdataStories_SimulationMemberData__f_party;
         const x$2 = SimulationMemberData$1.LdataStories_SimulationMemberData__f_party;
-        return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+        $$x1 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        return (this.LdataStories_SimulationMemberData__f_district === SimulationMemberData$1.LdataStories_SimulationMemberData__f_district)
       } else {
         return false
       }
@@ -46236,6 +47071,279 @@ const $d_LdataStories_StyleModifier = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_LdataStories_StyleModifier.prototype.$classData = $d_LdataStories_StyleModifier;
+class $c_LdataStories_TextItem extends $c_O {
+  constructor(text, id, cls, x, y, size, anchor, fill, attrs, onClick) {
+    super();
+    this.LdataStories_TextItem__f_text = null;
+    this.LdataStories_TextItem__f_id = null;
+    this.LdataStories_TextItem__f_cls = null;
+    this.LdataStories_TextItem__f_x = 0.0;
+    this.LdataStories_TextItem__f_y = 0.0;
+    this.LdataStories_TextItem__f_size = null;
+    this.LdataStories_TextItem__f_anchor = null;
+    this.LdataStories_TextItem__f_fill = null;
+    this.LdataStories_TextItem__f_attrs = null;
+    this.LdataStories_TextItem__f_onClick = null;
+    this.LdataStories_TextItem__f_text = text;
+    this.LdataStories_TextItem__f_id = id;
+    this.LdataStories_TextItem__f_cls = cls;
+    this.LdataStories_TextItem__f_x = x;
+    this.LdataStories_TextItem__f_y = y;
+    this.LdataStories_TextItem__f_size = size;
+    this.LdataStories_TextItem__f_anchor = anchor;
+    this.LdataStories_TextItem__f_fill = fill;
+    this.LdataStories_TextItem__f_attrs = attrs;
+    this.LdataStories_TextItem__f_onClick = onClick
+  };
+  id__T() {
+    return this.LdataStories_TextItem__f_id
+  };
+  render__Lio_whitemice_d3v5_selection_Selection__LdataStories_SvgDefinition__V(svgArea, svgDefinition) {
+    const arg$macro$1 = this.LdataStories_TextItem__f_id;
+    const arg$macro$2 = (this.LdataStories_TextItem__f_x * svgDefinition.LdataStories_SvgDefinition__f_width);
+    const arg$macro$3 = (this.LdataStories_TextItem__f_y * svgDefinition.LdataStories_SvgDefinition__f_height);
+    const this$3 = new $c_sci_StringOps("rendering text %s at %.2f %.2f");
+    const array = [arg$macro$1, arg$macro$2, arg$macro$3];
+    const this$ = this$3.sci_StringOps__f_repr;
+    $m_sc_Seq$();
+    $m_sjs_js_WrappedArray$();
+    const array$1 = [];
+    $uI(array.length);
+    let i = 0;
+    const len = $uI(array.length);
+    while ((i < len)) {
+      const index = i;
+      const arg1 = array[index];
+      const elem = $p_sci_StringLike__unwrapArg__O__O(this$3, arg1);
+      array$1.push(elem);
+      i = ((1 + i) | 0)
+    };
+    $m_s_reflect_ManifestFactory$ObjectManifest$();
+    const len$1 = $uI(array$1.length);
+    const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
+    const len$2 = result.u.length;
+    let i$1 = 0;
+    let j = 0;
+    const x = $uI(array$1.length);
+    const x$1 = ((x < len$2) ? x : len$2);
+    const that = result.u.length;
+    const end = ((x$1 < that) ? x$1 : that);
+    while ((i$1 < end)) {
+      const $$x1 = j;
+      const index$1 = i$1;
+      result.set($$x1, array$1[index$1]);
+      i$1 = ((1 + i$1) | 0);
+      j = ((1 + j) | 0)
+    };
+    const x$2 = $m_jl_String$().format__T__AO__T(this$, result);
+    const this$18 = $m_s_Console$();
+    const this$19 = $as_Ljava_io_PrintStream(this$18.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+    this$19.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$2 + "\n"));
+    svgArea.selectAll(("#" + this.LdataStories_TextItem__f_id)).remove();
+    const $$x10 = svgArea.append("text");
+    const this$20 = $m_Lio_whitemice_d3v5_all_package$();
+    const s = this.LdataStories_TextItem__f_id;
+    const sel = $$x10.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$20, s));
+    const $$x9 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel).cls__T__Lio_whitemice_d3v5_selection_Selection(this.LdataStories_TextItem__f_cls);
+    const this$22 = $m_Lio_whitemice_d3v5_all_package$();
+    const s$1 = this.LdataStories_TextItem__f_anchor;
+    const $$x8 = $$x9.style("text-anchor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$22, s$1));
+    const this$23 = $m_Lio_whitemice_d3v5_all_package$();
+    const d = (this.LdataStories_TextItem__f_y * svgDefinition.LdataStories_SvgDefinition__f_height);
+    const $$x7 = $$x8.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$23, d));
+    const this$24 = $m_Lio_whitemice_d3v5_all_package$();
+    const d$1 = (this.LdataStories_TextItem__f_x * svgDefinition.LdataStories_SvgDefinition__f_width);
+    const $$x6 = $$x7.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$24, d$1));
+    const this$25 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x5 = $$x6.attr("dy", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$25, ".75em"));
+    const this$26 = $m_Lio_whitemice_d3v5_all_package$();
+    const s$2 = this.LdataStories_TextItem__f_fill;
+    const $$x4 = $$x5.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$26, s$2));
+    const this$27 = $m_Lio_whitemice_d3v5_all_package$();
+    const s$3 = this.LdataStories_TextItem__f_size;
+    const $$x3 = $$x4.style("font-size", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$27, s$3));
+    const $$x2 = $$x3.text(this.LdataStories_TextItem__f_text);
+    const this$30 = $m_Lio_whitemice_d3v5_all_package$();
+    const fun = new $c_sjsr_AnonFunction0(((this$28) => (() => {
+      const this$29 = this$28.LdataStories_TextItem__f_onClick;
+      this$29.apply__O()
+    }))(this));
+    const obj = $$x2.on("click", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$30, fun));
+    this.LdataStories_TextItem__f_attrs.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$2$1, obj$1) => ((x0$1$2) => {
+      const x0$1 = $as_LdataStories_HtmlModifier(x0$1$2);
+      if ((x0$1 instanceof $c_LdataStories_StyleModifier)) {
+        const x2 = $as_LdataStories_StyleModifier(x0$1);
+        const $$x11 = x2.LdataStories_StyleModifier__f_attr;
+        const this$31 = $m_Lio_whitemice_d3v5_all_package$();
+        const s$4 = x2.LdataStories_StyleModifier__f_value;
+        return obj$1.style($$x11, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$31, s$4))
+      } else if ((x0$1 instanceof $c_LdataStories_AttrModifier)) {
+        const x3 = $as_LdataStories_AttrModifier(x0$1);
+        const $$x12 = x3.LdataStories_AttrModifier__f_attr;
+        const this$32 = $m_Lio_whitemice_d3v5_all_package$();
+        const s$5 = x3.LdataStories_AttrModifier__f_value;
+        return obj$1.attr($$x12, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$32, s$5))
+      } else {
+        throw new $c_s_MatchError(x0$1)
+      }
+    }))(this, obj)))
+  };
+  render__s_Option__LdataStories_SvgDefinition__V(svgAreaOpt, svgDefinition) {
+    if ((!svgAreaOpt.isEmpty__Z())) {
+      const arg1 = svgAreaOpt.get__O();
+      this.render__Lio_whitemice_d3v5_selection_Selection__LdataStories_SvgDefinition__V(arg1, svgDefinition)
+    }
+  };
+  productPrefix__T() {
+    return "TextItem"
+  };
+  productArity__I() {
+    return 10
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LdataStories_TextItem__f_text;
+        break
+      }
+      case 1: {
+        return this.LdataStories_TextItem__f_id;
+        break
+      }
+      case 2: {
+        return this.LdataStories_TextItem__f_cls;
+        break
+      }
+      case 3: {
+        return this.LdataStories_TextItem__f_x;
+        break
+      }
+      case 4: {
+        return this.LdataStories_TextItem__f_y;
+        break
+      }
+      case 5: {
+        return this.LdataStories_TextItem__f_size;
+        break
+      }
+      case 6: {
+        return this.LdataStories_TextItem__f_anchor;
+        break
+      }
+      case 7: {
+        return this.LdataStories_TextItem__f_fill;
+        break
+      }
+      case 8: {
+        return this.LdataStories_TextItem__f_attrs;
+        break
+      }
+      case 9: {
+        return this.LdataStories_TextItem__f_onClick;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const x = this.LdataStories_TextItem__f_text;
+    const data = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const x$1 = this.LdataStories_TextItem__f_id;
+    const data$1 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const x$2 = this.LdataStories_TextItem__f_cls;
+    const data$2 = $m_sr_Statics$().anyHash__O__I(x$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const dv = this.LdataStories_TextItem__f_x;
+    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const dv$1 = this.LdataStories_TextItem__f_y;
+    const data$4 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    const x$3 = this.LdataStories_TextItem__f_size;
+    const data$5 = $m_sr_Statics$().anyHash__O__I(x$3);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
+    const hash$6 = acc;
+    const x$4 = this.LdataStories_TextItem__f_anchor;
+    const data$6 = $m_sr_Statics$().anyHash__O__I(x$4);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
+    const hash$7 = acc;
+    const x$5 = this.LdataStories_TextItem__f_fill;
+    const data$7 = $m_sr_Statics$().anyHash__O__I(x$5);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$7, data$7);
+    const hash$8 = acc;
+    const x$6 = this.LdataStories_TextItem__f_attrs;
+    const data$8 = $m_sr_Statics$().anyHash__O__I(x$6);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$8, data$8);
+    const hash$9 = acc;
+    const x$7 = this.LdataStories_TextItem__f_onClick;
+    const data$9 = $m_sr_Statics$().anyHash__O__I(x$7);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$9, data$9);
+    const hash$10 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$10, 10)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_LdataStories_TextItem)) {
+      const TextItem$1 = $as_LdataStories_TextItem(x$1);
+      let $$x1;
+      if (((((((((this.LdataStories_TextItem__f_text === TextItem$1.LdataStories_TextItem__f_text) && (this.LdataStories_TextItem__f_id === TextItem$1.LdataStories_TextItem__f_id)) && (this.LdataStories_TextItem__f_cls === TextItem$1.LdataStories_TextItem__f_cls)) && (this.LdataStories_TextItem__f_x === TextItem$1.LdataStories_TextItem__f_x)) && (this.LdataStories_TextItem__f_y === TextItem$1.LdataStories_TextItem__f_y)) && (this.LdataStories_TextItem__f_size === TextItem$1.LdataStories_TextItem__f_size)) && (this.LdataStories_TextItem__f_anchor === TextItem$1.LdataStories_TextItem__f_anchor)) && (this.LdataStories_TextItem__f_fill === TextItem$1.LdataStories_TextItem__f_fill))) {
+        const x = this.LdataStories_TextItem__f_attrs;
+        const x$2 = TextItem$1.LdataStories_TextItem__f_attrs;
+        $$x1 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$3 = this.LdataStories_TextItem__f_onClick;
+        const x$4 = TextItem$1.LdataStories_TextItem__f_onClick;
+        return (x$3 === x$4)
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_LdataStories_TextItem(obj) {
+  return (((obj instanceof $c_LdataStories_TextItem) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.TextItem"))
+}
+function $isArrayOf_LdataStories_TextItem(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_TextItem)))
+}
+function $asArrayOf_LdataStories_TextItem(obj, depth) {
+  return (($isArrayOf_LdataStories_TextItem(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.TextItem;", depth))
+}
+const $d_LdataStories_TextItem = new $TypeData().initClass({
+  LdataStories_TextItem: 0
+}, false, "dataStories.TextItem", {
+  LdataStories_TextItem: 1,
+  O: 1,
+  LdataStories_BoxObject: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LdataStories_TextItem.prototype.$classData = $d_LdataStories_TextItem;
 class $c_LdataStories_VoterBubble extends $c_LdataStories_Bubble {
   constructor(radius, zStart) {
     super();
@@ -47523,26 +48631,24 @@ const $d_Lrcvcore_DistrictVotingRecordRawImp = new $TypeData().initClass({
 });
 $c_Lrcvcore_DistrictVotingRecordRawImp.prototype.$classData = $d_Lrcvcore_DistrictVotingRecordRawImp;
 class $c_Lrcvcore_SimulationResultInstance extends $c_O {
-  constructor(district, medianVoterIdeology, actualVoterSatisfaction, primaryIdeology, primarySatisfaction, instantRunoffIdeology, instantRunoffSatisfaction, headToHeadIdeology, headToHeadSatisfaction) {
+  constructor(district, medianVoterIdeology, actualVoterSatisfaction, primaryResult, irPrimaryResult, h2hPrimaryResult, instantRunoffResult, headToHeadResult) {
     super();
     this.Lrcvcore_SimulationResultInstance__f_district = null;
     this.Lrcvcore_SimulationResultInstance__f_medianVoterIdeology = 0.0;
     this.Lrcvcore_SimulationResultInstance__f_actualVoterSatisfaction = 0.0;
-    this.Lrcvcore_SimulationResultInstance__f_primaryIdeology = 0.0;
-    this.Lrcvcore_SimulationResultInstance__f_primarySatisfaction = 0.0;
-    this.Lrcvcore_SimulationResultInstance__f_instantRunoffIdeology = 0.0;
-    this.Lrcvcore_SimulationResultInstance__f_instantRunoffSatisfaction = 0.0;
-    this.Lrcvcore_SimulationResultInstance__f_headToHeadIdeology = 0.0;
-    this.Lrcvcore_SimulationResultInstance__f_headToHeadSatisfaction = 0.0;
+    this.Lrcvcore_SimulationResultInstance__f_primaryResult = null;
+    this.Lrcvcore_SimulationResultInstance__f_irPrimaryResult = null;
+    this.Lrcvcore_SimulationResultInstance__f_h2hPrimaryResult = null;
+    this.Lrcvcore_SimulationResultInstance__f_instantRunoffResult = null;
+    this.Lrcvcore_SimulationResultInstance__f_headToHeadResult = null;
     this.Lrcvcore_SimulationResultInstance__f_district = district;
     this.Lrcvcore_SimulationResultInstance__f_medianVoterIdeology = medianVoterIdeology;
     this.Lrcvcore_SimulationResultInstance__f_actualVoterSatisfaction = actualVoterSatisfaction;
-    this.Lrcvcore_SimulationResultInstance__f_primaryIdeology = primaryIdeology;
-    this.Lrcvcore_SimulationResultInstance__f_primarySatisfaction = primarySatisfaction;
-    this.Lrcvcore_SimulationResultInstance__f_instantRunoffIdeology = instantRunoffIdeology;
-    this.Lrcvcore_SimulationResultInstance__f_instantRunoffSatisfaction = instantRunoffSatisfaction;
-    this.Lrcvcore_SimulationResultInstance__f_headToHeadIdeology = headToHeadIdeology;
-    this.Lrcvcore_SimulationResultInstance__f_headToHeadSatisfaction = headToHeadSatisfaction
+    this.Lrcvcore_SimulationResultInstance__f_primaryResult = primaryResult;
+    this.Lrcvcore_SimulationResultInstance__f_irPrimaryResult = irPrimaryResult;
+    this.Lrcvcore_SimulationResultInstance__f_h2hPrimaryResult = h2hPrimaryResult;
+    this.Lrcvcore_SimulationResultInstance__f_instantRunoffResult = instantRunoffResult;
+    this.Lrcvcore_SimulationResultInstance__f_headToHeadResult = headToHeadResult
   };
   medianVoterIdeology__D() {
     return this.Lrcvcore_SimulationResultInstance__f_medianVoterIdeology
@@ -47550,26 +48656,20 @@ class $c_Lrcvcore_SimulationResultInstance extends $c_O {
   actualVoterSatisfaction__D() {
     return this.Lrcvcore_SimulationResultInstance__f_actualVoterSatisfaction
   };
-  primaryIdeology__D() {
-    return this.Lrcvcore_SimulationResultInstance__f_primaryIdeology
+  primaryResult__Lrcvcore_ProcessResult() {
+    return this.Lrcvcore_SimulationResultInstance__f_primaryResult
   };
-  primarySatisfaction__D() {
-    return this.Lrcvcore_SimulationResultInstance__f_primarySatisfaction
+  instantRunoffResult__Lrcvcore_ProcessResult() {
+    return this.Lrcvcore_SimulationResultInstance__f_instantRunoffResult
   };
-  headToHeadIdeology__D() {
-    return this.Lrcvcore_SimulationResultInstance__f_headToHeadIdeology
-  };
-  headToHeadSatisfaction__D() {
-    return this.Lrcvcore_SimulationResultInstance__f_headToHeadSatisfaction
-  };
-  primaryParty__Lrcvcore_PopulationTag() {
-    return ((this.Lrcvcore_SimulationResultInstance__f_primaryIdeology > 0.0) ? $m_Lrcvcore_Republicans$() : $m_Lrcvcore_Democrats$())
+  headToHeadResult__Lrcvcore_ProcessResult() {
+    return this.Lrcvcore_SimulationResultInstance__f_headToHeadResult
   };
   productPrefix__T() {
     return "SimulationResultInstance"
   };
   productArity__I() {
-    return 9
+    return 8
   };
   productElement__I__O(x$1) {
     switch (x$1) {
@@ -47586,27 +48686,23 @@ class $c_Lrcvcore_SimulationResultInstance extends $c_O {
         break
       }
       case 3: {
-        return this.Lrcvcore_SimulationResultInstance__f_primaryIdeology;
+        return this.Lrcvcore_SimulationResultInstance__f_primaryResult;
         break
       }
       case 4: {
-        return this.Lrcvcore_SimulationResultInstance__f_primarySatisfaction;
+        return this.Lrcvcore_SimulationResultInstance__f_irPrimaryResult;
         break
       }
       case 5: {
-        return this.Lrcvcore_SimulationResultInstance__f_instantRunoffIdeology;
+        return this.Lrcvcore_SimulationResultInstance__f_h2hPrimaryResult;
         break
       }
       case 6: {
-        return this.Lrcvcore_SimulationResultInstance__f_instantRunoffSatisfaction;
+        return this.Lrcvcore_SimulationResultInstance__f_instantRunoffResult;
         break
       }
       case 7: {
-        return this.Lrcvcore_SimulationResultInstance__f_headToHeadIdeology;
-        break
-      }
-      case 8: {
-        return this.Lrcvcore_SimulationResultInstance__f_headToHeadSatisfaction;
+        return this.Lrcvcore_SimulationResultInstance__f_headToHeadResult;
         break
       }
       default: {
@@ -47632,31 +48728,27 @@ class $c_Lrcvcore_SimulationResultInstance extends $c_O {
     const data$2 = $m_sr_Statics$().doubleHash__D__I(dv$1);
     acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
     const hash$3 = acc;
-    const dv$2 = this.Lrcvcore_SimulationResultInstance__f_primaryIdeology;
-    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv$2);
+    const x$1 = this.Lrcvcore_SimulationResultInstance__f_primaryResult;
+    const data$3 = $m_sr_Statics$().anyHash__O__I(x$1);
     acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
     const hash$4 = acc;
-    const dv$3 = this.Lrcvcore_SimulationResultInstance__f_primarySatisfaction;
-    const data$4 = $m_sr_Statics$().doubleHash__D__I(dv$3);
+    const x$2 = this.Lrcvcore_SimulationResultInstance__f_irPrimaryResult;
+    const data$4 = $m_sr_Statics$().anyHash__O__I(x$2);
     acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
     const hash$5 = acc;
-    const dv$4 = this.Lrcvcore_SimulationResultInstance__f_instantRunoffIdeology;
-    const data$5 = $m_sr_Statics$().doubleHash__D__I(dv$4);
+    const x$3 = this.Lrcvcore_SimulationResultInstance__f_h2hPrimaryResult;
+    const data$5 = $m_sr_Statics$().anyHash__O__I(x$3);
     acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
     const hash$6 = acc;
-    const dv$5 = this.Lrcvcore_SimulationResultInstance__f_instantRunoffSatisfaction;
-    const data$6 = $m_sr_Statics$().doubleHash__D__I(dv$5);
+    const x$4 = this.Lrcvcore_SimulationResultInstance__f_instantRunoffResult;
+    const data$6 = $m_sr_Statics$().anyHash__O__I(x$4);
     acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
     const hash$7 = acc;
-    const dv$6 = this.Lrcvcore_SimulationResultInstance__f_headToHeadIdeology;
-    const data$7 = $m_sr_Statics$().doubleHash__D__I(dv$6);
+    const x$5 = this.Lrcvcore_SimulationResultInstance__f_headToHeadResult;
+    const data$7 = $m_sr_Statics$().anyHash__O__I(x$5);
     acc = $m_sr_Statics$().mix__I__I__I(hash$7, data$7);
     const hash$8 = acc;
-    const dv$7 = this.Lrcvcore_SimulationResultInstance__f_headToHeadSatisfaction;
-    const data$8 = $m_sr_Statics$().doubleHash__D__I(dv$7);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$8, data$8);
-    const hash$9 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$9, 9)
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$8, 8)
   };
   toString__T() {
     return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
@@ -47666,7 +48758,45 @@ class $c_Lrcvcore_SimulationResultInstance extends $c_O {
       return true
     } else if ((x$1 instanceof $c_Lrcvcore_SimulationResultInstance)) {
       const SimulationResultInstance$1 = $as_Lrcvcore_SimulationResultInstance(x$1);
-      return (((((((((this.Lrcvcore_SimulationResultInstance__f_district === SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_district) && (this.Lrcvcore_SimulationResultInstance__f_medianVoterIdeology === SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_medianVoterIdeology)) && (this.Lrcvcore_SimulationResultInstance__f_actualVoterSatisfaction === SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_actualVoterSatisfaction)) && (this.Lrcvcore_SimulationResultInstance__f_primaryIdeology === SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_primaryIdeology)) && (this.Lrcvcore_SimulationResultInstance__f_primarySatisfaction === SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_primarySatisfaction)) && (this.Lrcvcore_SimulationResultInstance__f_instantRunoffIdeology === SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_instantRunoffIdeology)) && (this.Lrcvcore_SimulationResultInstance__f_instantRunoffSatisfaction === SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_instantRunoffSatisfaction)) && (this.Lrcvcore_SimulationResultInstance__f_headToHeadIdeology === SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_headToHeadIdeology)) && (this.Lrcvcore_SimulationResultInstance__f_headToHeadSatisfaction === SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_headToHeadSatisfaction))
+      let $$x4;
+      if ((((this.Lrcvcore_SimulationResultInstance__f_district === SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_district) && (this.Lrcvcore_SimulationResultInstance__f_medianVoterIdeology === SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_medianVoterIdeology)) && (this.Lrcvcore_SimulationResultInstance__f_actualVoterSatisfaction === SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_actualVoterSatisfaction))) {
+        const x = this.Lrcvcore_SimulationResultInstance__f_primaryResult;
+        const x$2 = SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_primaryResult;
+        $$x4 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x4 = false
+      };
+      let $$x3;
+      if ($$x4) {
+        const x$3 = this.Lrcvcore_SimulationResultInstance__f_irPrimaryResult;
+        const x$4 = SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_irPrimaryResult;
+        $$x3 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        $$x3 = false
+      };
+      let $$x2;
+      if ($$x3) {
+        const x$5 = this.Lrcvcore_SimulationResultInstance__f_h2hPrimaryResult;
+        const x$6 = SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_h2hPrimaryResult;
+        $$x2 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+      } else {
+        $$x2 = false
+      };
+      let $$x1;
+      if ($$x2) {
+        const x$7 = this.Lrcvcore_SimulationResultInstance__f_instantRunoffResult;
+        const x$8 = SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_instantRunoffResult;
+        $$x1 = ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$9 = this.Lrcvcore_SimulationResultInstance__f_headToHeadResult;
+        const x$10 = SimulationResultInstance$1.Lrcvcore_SimulationResultInstance__f_headToHeadResult;
+        return ((x$9 === null) ? (x$10 === null) : x$9.equals__O__Z(x$10))
+      } else {
+        return false
+      }
     } else {
       return false
     }
@@ -47693,132 +48823,56 @@ const $d_Lrcvcore_SimulationResultInstance = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Lrcvcore_SimulationResultInstance.prototype.$classData = $d_Lrcvcore_SimulationResultInstance;
-const $p_Lrcvcore_SimulationResultSummary__primaryParty$lzycompute__Lrcvcore_PopulationTag = (function($thiz) {
-  if (((1 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0)) {
-    const rCount = $thiz.Lrcvcore_SimulationResultSummary__f_results.count__F1__I(new $c_sjsr_AnonFunction1(((this$1) => ((r$2) => {
-      const r = $as_Lrcvcore_SimulationResultInstance(r$2);
-      const x = r.primaryParty__Lrcvcore_PopulationTag();
-      const x$2 = $m_Lrcvcore_Republicans$();
-      return ((x !== null) && x.equals__O__Z(x$2))
-    }))($thiz)));
-    $thiz.Lrcvcore_SimulationResultSummary__f_primaryParty = ((rCount > ($thiz.Lrcvcore_SimulationResultSummary__f_results.length__I() / 2.0)) ? $m_Lrcvcore_Republicans$() : ((rCount < ($thiz.Lrcvcore_SimulationResultSummary__f_results.length__I() / 2.0)) ? $m_Lrcvcore_Democrats$() : $thiz.randomParty__Lrcvcore_PopulationTag()));
-    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (1 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0)
-  };
-  return $thiz.Lrcvcore_SimulationResultSummary__f_primaryParty
-});
-const $p_Lrcvcore_SimulationResultSummary__primaryResults$lzycompute__sc_Seq = (function($thiz) {
-  if (((2 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0)) {
-    const this$2 = $thiz.Lrcvcore_SimulationResultSummary__f_results;
-    const p = new $c_sjsr_AnonFunction1(((this$1) => ((x$1$2) => {
+const $p_Lrcvcore_SimulationResultSummary__primaryResult$lzycompute__Lrcvcore_ProcessResult = (function($thiz) {
+  if (((((1 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0)) {
+    const $$x3 = $m_Lrcvcore_ProcessResult$();
+    const $$x2 = $thiz.Lrcvcore_SimulationResultSummary__f_results;
+    const $$x1 = new $c_sjsr_AnonFunction1(((this$1) => ((x$1$2) => {
       const x$1 = $as_Lrcvcore_SimulationResultInstance(x$1$2);
-      const x = x$1.primaryParty__Lrcvcore_PopulationTag();
-      const x$2 = this$1.primaryParty__Lrcvcore_PopulationTag();
-      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-    }))($thiz));
-    $thiz.Lrcvcore_SimulationResultSummary__f_primaryResults = $as_sc_Seq(this$2.filterImpl__F1__Z__O(p, false));
-    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (2 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0)
-  };
-  return $thiz.Lrcvcore_SimulationResultSummary__f_primaryResults
-});
-const $p_Lrcvcore_SimulationResultSummary__medianVoterIdeology$lzycompute__D = (function($thiz) {
-  if (((8 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0)) {
-    const $$x2 = $thiz.primaryResults__sc_Seq();
-    const $$x1 = new $c_sjsr_AnonFunction1(((this$1) => ((x$3$2) => {
-      const x$3 = $as_Lrcvcore_SimulationResultInstance(x$3$2);
-      return x$3.Lrcvcore_SimulationResultInstance__f_medianVoterIdeology
+      return x$1.Lrcvcore_SimulationResultInstance__f_primaryResult
     }))($thiz));
     const this$2 = $m_sc_Seq$();
-    $thiz.Lrcvcore_SimulationResultSummary__f_medianVoterIdeology = $thiz.avg__sc_Seq__D($as_sc_Seq($$x2.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)));
-    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (8 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0)
+    $thiz.Lrcvcore_SimulationResultSummary__f_primaryResult = $$x3.apply__sc_Seq__Lrcvcore_ProcessResult($as_sc_Seq($$x2.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)));
+    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (((1 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24)
   };
-  return $thiz.Lrcvcore_SimulationResultSummary__f_medianVoterIdeology
+  return $thiz.Lrcvcore_SimulationResultSummary__f_primaryResult
 });
-const $p_Lrcvcore_SimulationResultSummary__actualVoterSatisfaction$lzycompute__D = (function($thiz) {
-  if (((16 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0)) {
-    const $$x2 = $thiz.primaryResults__sc_Seq();
+const $p_Lrcvcore_SimulationResultSummary__instantRunoffResult$lzycompute__Lrcvcore_ProcessResult = (function($thiz) {
+  if (((((8 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0)) {
+    const $$x3 = $m_Lrcvcore_ProcessResult$();
+    const $$x2 = $thiz.Lrcvcore_SimulationResultSummary__f_results;
     const $$x1 = new $c_sjsr_AnonFunction1(((this$1) => ((x$4$2) => {
       const x$4 = $as_Lrcvcore_SimulationResultInstance(x$4$2);
-      return x$4.Lrcvcore_SimulationResultInstance__f_actualVoterSatisfaction
+      return x$4.Lrcvcore_SimulationResultInstance__f_instantRunoffResult
     }))($thiz));
     const this$2 = $m_sc_Seq$();
-    $thiz.Lrcvcore_SimulationResultSummary__f_actualVoterSatisfaction = $thiz.avg__sc_Seq__D($as_sc_Seq($$x2.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)));
-    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (16 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0)
+    $thiz.Lrcvcore_SimulationResultSummary__f_instantRunoffResult = $$x3.apply__sc_Seq__Lrcvcore_ProcessResult($as_sc_Seq($$x2.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)));
+    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (((8 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24)
   };
-  return $thiz.Lrcvcore_SimulationResultSummary__f_actualVoterSatisfaction
+  return $thiz.Lrcvcore_SimulationResultSummary__f_instantRunoffResult
 });
-const $p_Lrcvcore_SimulationResultSummary__primaryIdeology$lzycompute__D = (function($thiz) {
-  if (((32 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0)) {
-    const this$2 = $thiz.primaryResults__sc_Seq();
-    const p = new $c_sjsr_AnonFunction1(((this$1) => ((x$5$2) => {
+const $p_Lrcvcore_SimulationResultSummary__headToHeadResult$lzycompute__Lrcvcore_ProcessResult = (function($thiz) {
+  if (((((16 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0)) {
+    const $$x3 = $m_Lrcvcore_ProcessResult$();
+    const $$x2 = $thiz.Lrcvcore_SimulationResultSummary__f_results;
+    const $$x1 = new $c_sjsr_AnonFunction1(((this$1) => ((x$5$2) => {
       const x$5 = $as_Lrcvcore_SimulationResultInstance(x$5$2);
-      const x = x$5.primaryParty__Lrcvcore_PopulationTag();
-      const x$2 = this$1.primaryParty__Lrcvcore_PopulationTag();
-      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-    }))($thiz));
-    const $$x2 = $as_sc_TraversableLike(this$2.filterImpl__F1__Z__O(p, false));
-    const $$x1 = new $c_sjsr_AnonFunction1(((this$2$1) => ((x$6$2) => {
-      const x$6 = $as_Lrcvcore_SimulationResultInstance(x$6$2);
-      return x$6.Lrcvcore_SimulationResultInstance__f_primaryIdeology
-    }))($thiz));
-    const this$3 = $m_sc_Seq$();
-    $thiz.Lrcvcore_SimulationResultSummary__f_primaryIdeology = $thiz.avg__sc_Seq__D($as_sc_Seq($$x2.map__F1__scg_CanBuildFrom__O($$x1, this$3.scg_GenTraversableFactory__f_ReusableCBFInstance)));
-    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (32 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0)
-  };
-  return $thiz.Lrcvcore_SimulationResultSummary__f_primaryIdeology
-});
-const $p_Lrcvcore_SimulationResultSummary__primarySatisfaction$lzycompute__D = (function($thiz) {
-  if (((64 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0)) {
-    const $$x2 = $thiz.primaryResults__sc_Seq();
-    const $$x1 = new $c_sjsr_AnonFunction1(((this$1) => ((x$7$2) => {
-      const x$7 = $as_Lrcvcore_SimulationResultInstance(x$7$2);
-      return x$7.Lrcvcore_SimulationResultInstance__f_primarySatisfaction
+      return x$5.Lrcvcore_SimulationResultInstance__f_headToHeadResult
     }))($thiz));
     const this$2 = $m_sc_Seq$();
-    $thiz.Lrcvcore_SimulationResultSummary__f_primarySatisfaction = $thiz.avg__sc_Seq__D($as_sc_Seq($$x2.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)));
-    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (64 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0)
+    $thiz.Lrcvcore_SimulationResultSummary__f_headToHeadResult = $$x3.apply__sc_Seq__Lrcvcore_ProcessResult($as_sc_Seq($$x2.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)));
+    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (((16 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24)
   };
-  return $thiz.Lrcvcore_SimulationResultSummary__f_primarySatisfaction
-});
-const $p_Lrcvcore_SimulationResultSummary__headToHeadIdeology$lzycompute__D = (function($thiz) {
-  if (((512 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0)) {
-    const $$x2 = $thiz.Lrcvcore_SimulationResultSummary__f_results;
-    const $$x1 = new $c_sjsr_AnonFunction1(((this$1) => ((x$10$2) => {
-      const x$10 = $as_Lrcvcore_SimulationResultInstance(x$10$2);
-      return x$10.Lrcvcore_SimulationResultInstance__f_headToHeadIdeology
-    }))($thiz));
-    const this$2 = $m_sc_Seq$();
-    $thiz.Lrcvcore_SimulationResultSummary__f_headToHeadIdeology = $thiz.avg__sc_Seq__D($as_sc_Seq($$x2.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)));
-    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (512 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0)
-  };
-  return $thiz.Lrcvcore_SimulationResultSummary__f_headToHeadIdeology
-});
-const $p_Lrcvcore_SimulationResultSummary__headToHeadSatisfaction$lzycompute__D = (function($thiz) {
-  if (((1024 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0)) {
-    const $$x2 = $thiz.Lrcvcore_SimulationResultSummary__f_results;
-    const $$x1 = new $c_sjsr_AnonFunction1(((this$1) => ((x$11$2) => {
-      const x$11 = $as_Lrcvcore_SimulationResultInstance(x$11$2);
-      return x$11.Lrcvcore_SimulationResultInstance__f_headToHeadSatisfaction
-    }))($thiz));
-    const this$2 = $m_sc_Seq$();
-    $thiz.Lrcvcore_SimulationResultSummary__f_headToHeadSatisfaction = $thiz.avg__sc_Seq__D($as_sc_Seq($$x2.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)));
-    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (1024 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0)
-  };
-  return $thiz.Lrcvcore_SimulationResultSummary__f_headToHeadSatisfaction
+  return $thiz.Lrcvcore_SimulationResultSummary__f_headToHeadResult
 });
 class $c_Lrcvcore_SimulationResultSummary extends $c_O {
   constructor(results) {
     super();
-    this.Lrcvcore_SimulationResultSummary__f_primaryParty = null;
-    this.Lrcvcore_SimulationResultSummary__f_primaryResults = null;
-    this.Lrcvcore_SimulationResultSummary__f_instantRunoffResults = null;
-    this.Lrcvcore_SimulationResultSummary__f_medianVoterIdeology = 0.0;
-    this.Lrcvcore_SimulationResultSummary__f_actualVoterSatisfaction = 0.0;
-    this.Lrcvcore_SimulationResultSummary__f_primaryIdeology = 0.0;
-    this.Lrcvcore_SimulationResultSummary__f_primarySatisfaction = 0.0;
-    this.Lrcvcore_SimulationResultSummary__f_instantRunoffIdeology = 0.0;
-    this.Lrcvcore_SimulationResultSummary__f_instantRunoffSatisfaction = 0.0;
-    this.Lrcvcore_SimulationResultSummary__f_headToHeadIdeology = 0.0;
-    this.Lrcvcore_SimulationResultSummary__f_headToHeadSatisfaction = 0.0;
+    this.Lrcvcore_SimulationResultSummary__f_primaryResult = null;
+    this.Lrcvcore_SimulationResultSummary__f_irPrimaryResult = null;
+    this.Lrcvcore_SimulationResultSummary__f_h2hPrimaryResult = null;
+    this.Lrcvcore_SimulationResultSummary__f_instantRunoffResult = null;
+    this.Lrcvcore_SimulationResultSummary__f_headToHeadResult = null;
     this.Lrcvcore_SimulationResultSummary__f_results = null;
     this.Lrcvcore_SimulationResultSummary__f_bitmap$0 = 0;
     this.Lrcvcore_SimulationResultSummary__f_results = results
@@ -47828,40 +48882,20 @@ class $c_Lrcvcore_SimulationResultSummary extends $c_O {
     const this$1 = $m_sc_Seq$();
     return new $c_Lrcvcore_SimulationResultSummary($as_sc_Seq($$x1.$colon$plus__O__scg_CanBuildFrom__O(rhs, this$1.scg_GenTraversableFactory__f_ReusableCBFInstance)))
   };
-  avg__sc_Seq__D(data) {
-    return ($uD(data.sum__s_math_Numeric__O($m_s_math_Numeric$DoubleIsFractional$())) / data.length__I())
-  };
-  randomParty__Lrcvcore_PopulationTag() {
-    const this$1 = $m_s_util_Random$();
-    if (this$1.s_util_Random__f_self.nextBoolean__Z()) {
-      return $m_Lrcvcore_Republicans$()
-    } else {
-      return $m_Lrcvcore_Democrats$()
-    }
-  };
-  primaryParty__Lrcvcore_PopulationTag() {
-    return (((1 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0) ? $p_Lrcvcore_SimulationResultSummary__primaryParty$lzycompute__Lrcvcore_PopulationTag(this) : this.Lrcvcore_SimulationResultSummary__f_primaryParty)
-  };
-  primaryResults__sc_Seq() {
-    return (((2 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0) ? $p_Lrcvcore_SimulationResultSummary__primaryResults$lzycompute__sc_Seq(this) : this.Lrcvcore_SimulationResultSummary__f_primaryResults)
-  };
   medianVoterIdeology__D() {
-    return (((8 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0) ? $p_Lrcvcore_SimulationResultSummary__medianVoterIdeology$lzycompute__D(this) : this.Lrcvcore_SimulationResultSummary__f_medianVoterIdeology)
+    return $as_Lrcvcore_SimulationResultInstance(this.Lrcvcore_SimulationResultSummary__f_results.head__O()).Lrcvcore_SimulationResultInstance__f_medianVoterIdeology
   };
   actualVoterSatisfaction__D() {
-    return (((16 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0) ? $p_Lrcvcore_SimulationResultSummary__actualVoterSatisfaction$lzycompute__D(this) : this.Lrcvcore_SimulationResultSummary__f_actualVoterSatisfaction)
+    return $as_Lrcvcore_SimulationResultInstance(this.Lrcvcore_SimulationResultSummary__f_results.head__O()).Lrcvcore_SimulationResultInstance__f_actualVoterSatisfaction
   };
-  primaryIdeology__D() {
-    return (((32 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0) ? $p_Lrcvcore_SimulationResultSummary__primaryIdeology$lzycompute__D(this) : this.Lrcvcore_SimulationResultSummary__f_primaryIdeology)
+  primaryResult__Lrcvcore_ProcessResult() {
+    return (((((1 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lrcvcore_SimulationResultSummary__primaryResult$lzycompute__Lrcvcore_ProcessResult(this) : this.Lrcvcore_SimulationResultSummary__f_primaryResult)
   };
-  primarySatisfaction__D() {
-    return (((64 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0) ? $p_Lrcvcore_SimulationResultSummary__primarySatisfaction$lzycompute__D(this) : this.Lrcvcore_SimulationResultSummary__f_primarySatisfaction)
+  instantRunoffResult__Lrcvcore_ProcessResult() {
+    return (((((8 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lrcvcore_SimulationResultSummary__instantRunoffResult$lzycompute__Lrcvcore_ProcessResult(this) : this.Lrcvcore_SimulationResultSummary__f_instantRunoffResult)
   };
-  headToHeadIdeology__D() {
-    return (((512 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0) ? $p_Lrcvcore_SimulationResultSummary__headToHeadIdeology$lzycompute__D(this) : this.Lrcvcore_SimulationResultSummary__f_headToHeadIdeology)
-  };
-  headToHeadSatisfaction__D() {
-    return (((1024 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) === 0) ? $p_Lrcvcore_SimulationResultSummary__headToHeadSatisfaction$lzycompute__D(this) : this.Lrcvcore_SimulationResultSummary__f_headToHeadSatisfaction)
+  headToHeadResult__Lrcvcore_ProcessResult() {
+    return (((((16 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lrcvcore_SimulationResultSummary__headToHeadResult$lzycompute__Lrcvcore_ProcessResult(this) : this.Lrcvcore_SimulationResultSummary__f_headToHeadResult)
   };
   productPrefix__T() {
     return "SimulationResultSummary"
@@ -49389,7 +50423,7 @@ class $c_LscalajsUtils_CSimConfigWidget extends $c_O {
       const u$7 = $uD(u$7$2);
       this$10$1.onMouseUp__D__V(u$7)
     }))(this)));
-    this.LscalajsUtils_CSimConfigWidget__f_ideologyNoise = new $c_LscalajsUtils_SliderInput("ideologyNoise", "Ideology Diversity", this.LscalajsUtils_CSimConfigWidget__f_sliderWidth, 0.0, 20.0, 0.1, this.LscalajsUtils_CSimConfigWidget__f_simConfig.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise, "%4.1f", new $c_sjsr_AnonFunction1(((this$11$1) => ((s$4$2) => {
+    this.LscalajsUtils_CSimConfigWidget__f_ideologyNoise = new $c_LscalajsUtils_SliderInput("ideologyNoise", "Ideology Diversity", this.LscalajsUtils_CSimConfigWidget__f_sliderWidth, 0.0, 20.0, 0.1, this.LscalajsUtils_CSimConfigWidget__f_simConfig.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance, "%4.1f", new $c_sjsr_AnonFunction1(((this$11$1) => ((s$4$2) => {
       const s$4 = $uD(s$4$2);
       this$11$1.onChangeIdeology__D__V(s$4)
     }))(this)), new $c_sjsr_AnonFunction1(((this$12$1) => ((u$8$2) => {
@@ -49487,12 +50521,13 @@ class $c_LscalajsUtils_CSimConfigWidget extends $c_O {
     const x$10 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates;
     const x$11 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates;
     const x$12 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates;
-    const x$13 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread;
-    const x$14 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise;
-    const x$15 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
-    const x$16 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
-    const x$17 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
-    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$7, newConfig, x$8, x$9, x$10, x$11, x$12, x$13, x$14, x$15, x$16, x$17)
+    const x$13 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset;
+    const x$14 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread;
+    const x$15 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance;
+    const x$16 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
+    const x$17 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
+    const x$18 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
+    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$7, newConfig, x$8, x$9, x$10, x$11, x$12, x$13, x$14, x$15, x$16, x$17, x$18)
   };
   onChangeLoyalty__D__V(l) {
     const qual$1 = this.LscalajsUtils_CSimConfigWidget__f_simConfig.Lrcvcore_CongressionalSimulationConfig__f_config;
@@ -49508,12 +50543,13 @@ class $c_LscalajsUtils_CSimConfigWidget extends $c_O {
     const x$10 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates;
     const x$11 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates;
     const x$12 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates;
-    const x$13 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread;
-    const x$14 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise;
-    const x$15 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
-    const x$16 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
-    const x$17 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
-    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$7, newConfig, x$8, x$9, x$10, x$11, x$12, x$13, x$14, x$15, x$16, x$17)
+    const x$13 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset;
+    const x$14 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread;
+    const x$15 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance;
+    const x$16 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
+    const x$17 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
+    const x$18 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
+    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$7, newConfig, x$8, x$9, x$10, x$11, x$12, x$13, x$14, x$15, x$16, x$17, x$18)
   };
   onChangePartyBonus__D__V(b) {
     const qual$1 = this.LscalajsUtils_CSimConfigWidget__f_simConfig.Lrcvcore_CongressionalSimulationConfig__f_config;
@@ -49529,12 +50565,13 @@ class $c_LscalajsUtils_CSimConfigWidget extends $c_O {
     const x$10 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates;
     const x$11 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates;
     const x$12 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates;
-    const x$13 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread;
-    const x$14 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise;
-    const x$15 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
-    const x$16 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
-    const x$17 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
-    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$7, newConfig, x$8, x$9, x$10, x$11, x$12, x$13, x$14, x$15, x$16, x$17)
+    const x$13 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset;
+    const x$14 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread;
+    const x$15 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance;
+    const x$16 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
+    const x$17 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
+    const x$18 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
+    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$7, newConfig, x$8, x$9, x$10, x$11, x$12, x$13, x$14, x$15, x$16, x$17, x$18)
   };
   onChangeFear__D__V(s) {
     const qual$1 = this.LscalajsUtils_CSimConfigWidget__f_simConfig.Lrcvcore_CongressionalSimulationConfig__f_config;
@@ -49550,12 +50587,13 @@ class $c_LscalajsUtils_CSimConfigWidget extends $c_O {
     const x$10 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates;
     const x$11 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates;
     const x$12 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates;
-    const x$13 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread;
-    const x$14 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise;
-    const x$15 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
-    const x$16 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
-    const x$17 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
-    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$7, newConfig, x$8, x$9, x$10, x$11, x$12, x$13, x$14, x$15, x$16, x$17)
+    const x$13 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset;
+    const x$14 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread;
+    const x$15 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance;
+    const x$16 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
+    const x$17 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
+    const x$18 = qual$2.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
+    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$7, newConfig, x$8, x$9, x$10, x$11, x$12, x$13, x$14, x$15, x$16, x$17, x$18)
   };
   onChangeMoney__D__V(s) {
     const qual$1 = this.LscalajsUtils_CSimConfigWidget__f_simConfig;
@@ -49566,11 +50604,12 @@ class $c_LscalajsUtils_CSimConfigWidget extends $c_O {
     const x$6 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates;
     const x$7 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates;
     const x$8 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates;
-    const x$9 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread;
-    const x$10 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise;
-    const x$11 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
-    const x$12 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
-    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$2, x$3, x$4, x$5, x$6, x$7, x$8, x$9, x$10, x$11, s, x$12)
+    const x$9 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset;
+    const x$10 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread;
+    const x$11 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance;
+    const x$12 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
+    const x$13 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
+    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$2, x$3, x$4, x$5, x$6, x$7, x$8, x$9, x$10, x$11, x$12, s, x$13)
   };
   onChangeQuality__D__V(s) {
     const qual$1 = this.LscalajsUtils_CSimConfigWidget__f_simConfig;
@@ -49581,11 +50620,12 @@ class $c_LscalajsUtils_CSimConfigWidget extends $c_O {
     const x$6 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates;
     const x$7 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates;
     const x$8 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates;
-    const x$9 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread;
-    const x$10 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise;
-    const x$11 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
-    const x$12 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
-    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$2, x$3, x$4, x$5, x$6, x$7, x$8, x$9, x$10, x$11, x$12, s)
+    const x$9 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset;
+    const x$10 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread;
+    const x$11 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance;
+    const x$12 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
+    const x$13 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
+    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$2, x$3, x$4, x$5, x$6, x$7, x$8, x$9, x$10, x$11, x$12, x$13, s)
   };
   onChangeIdeology__D__V(s) {
     const qual$1 = this.LscalajsUtils_CSimConfigWidget__f_simConfig;
@@ -49596,11 +50636,12 @@ class $c_LscalajsUtils_CSimConfigWidget extends $c_O {
     const x$6 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates;
     const x$7 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates;
     const x$8 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates;
-    const x$9 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread;
-    const x$10 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
-    const x$11 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
-    const x$12 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
-    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$2, x$3, x$4, x$5, x$6, x$7, x$8, x$9, s, x$10, x$11, x$12)
+    const x$9 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset;
+    const x$10 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread;
+    const x$11 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
+    const x$12 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
+    const x$13 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
+    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$2, x$3, x$4, x$5, x$6, x$7, x$8, x$9, x$10, s, x$11, x$12, x$13)
   };
   onChangeSkew__D__V(s) {
     const qual$1 = this.LscalajsUtils_CSimConfigWidget__f_simConfig;
@@ -49611,11 +50652,12 @@ class $c_LscalajsUtils_CSimConfigWidget extends $c_O {
     const x$6 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates;
     const x$7 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates;
     const x$8 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates;
-    const x$9 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_ideologySpread;
-    const x$10 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_ideologyNoise;
-    const x$11 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
-    const x$12 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
-    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$2, x$3, x$4, x$5, x$6, x$7, x$8, x$9, x$10, s, x$11, x$12)
+    const x$9 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset;
+    const x$10 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread;
+    const x$11 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance;
+    const x$12 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_moneyNoise;
+    const x$13 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_qualityNoise;
+    this.LscalajsUtils_CSimConfigWidget__f_simConfig = new $c_Lrcvcore_CongressionalSimulationConfig(x$2, x$3, x$4, x$5, x$6, x$7, x$8, x$9, x$10, x$11, s, x$12, x$13)
   };
   onMouseUp__D__V(u) {
     const ref = this.LscalajsUtils_CSimConfigWidget__f_onChangeActor;
@@ -49814,6 +50856,351 @@ function $m_LscalajsUtils_LegendVisible$() {
   };
   return $n_LscalajsUtils_LegendVisible$
 }
+class $c_LscalajsUtils_PlayButton extends $c_O {
+  constructor(id, parentSVG, location, textLabel, activeColor, inactiveColor, clickCB) {
+    super();
+    this.LscalajsUtils_PlayButton__f_id = null;
+    this.LscalajsUtils_PlayButton__f_parentSVG = null;
+    this.LscalajsUtils_PlayButton__f_location = null;
+    this.LscalajsUtils_PlayButton__f_textLabel = null;
+    this.LscalajsUtils_PlayButton__f_activeColor = null;
+    this.LscalajsUtils_PlayButton__f_inactiveColor = null;
+    this.LscalajsUtils_PlayButton__f_clickCB = null;
+    this.LscalajsUtils_PlayButton__f_rect = null;
+    this.LscalajsUtils_PlayButton__f_text = null;
+    this.LscalajsUtils_PlayButton__f_isActive = false;
+    this.LscalajsUtils_PlayButton__f_id = id;
+    this.LscalajsUtils_PlayButton__f_parentSVG = parentSVG;
+    this.LscalajsUtils_PlayButton__f_location = location;
+    this.LscalajsUtils_PlayButton__f_textLabel = textLabel;
+    this.LscalajsUtils_PlayButton__f_activeColor = activeColor;
+    this.LscalajsUtils_PlayButton__f_inactiveColor = inactiveColor;
+    this.LscalajsUtils_PlayButton__f_clickCB = clickCB;
+    $f_LscalajsUtils_SVGButton__$init$__V(this)
+  };
+  rect__Lio_whitemice_d3v5_selection_Selection() {
+    return this.LscalajsUtils_PlayButton__f_rect
+  };
+  text__Lio_whitemice_d3v5_selection_Selection() {
+    return this.LscalajsUtils_PlayButton__f_text
+  };
+  isActive__Z() {
+    return this.LscalajsUtils_PlayButton__f_isActive
+  };
+  isActive_$eq__Z__V(x$1) {
+    this.LscalajsUtils_PlayButton__f_isActive = x$1
+  };
+  scalajsUtils$SVGButton$_setter_$rect_$eq__Lio_whitemice_d3v5_selection_Selection__V(x$1) {
+    this.LscalajsUtils_PlayButton__f_rect = x$1
+  };
+  scalajsUtils$SVGButton$_setter_$text_$eq__Lio_whitemice_d3v5_selection_Selection__V(x$1) {
+    this.LscalajsUtils_PlayButton__f_text = x$1
+  };
+  id__T() {
+    return this.LscalajsUtils_PlayButton__f_id
+  };
+  parentSVG__Lio_whitemice_d3v5_selection_Selection() {
+    return this.LscalajsUtils_PlayButton__f_parentSVG
+  };
+  location__LscalajsUtils_PixRectangle() {
+    return this.LscalajsUtils_PlayButton__f_location
+  };
+  textLabel__T() {
+    return this.LscalajsUtils_PlayButton__f_textLabel
+  };
+  activeColor__T() {
+    return this.LscalajsUtils_PlayButton__f_activeColor
+  };
+  inactiveColor__T() {
+    return this.LscalajsUtils_PlayButton__f_inactiveColor
+  };
+  clickCB__F0() {
+    return this.LscalajsUtils_PlayButton__f_clickCB
+  };
+  onClick__V() {
+    const currentState = this.LscalajsUtils_PlayButton__f_isActive;
+    const this$1 = this.LscalajsUtils_PlayButton__f_clickCB;
+    this$1.apply__O();
+    this.LscalajsUtils_PlayButton__f_isActive = (!currentState);
+    $f_LscalajsUtils_SVGButton__updateColor__V(this)
+  };
+  productPrefix__T() {
+    return "PlayButton"
+  };
+  productArity__I() {
+    return 7
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LscalajsUtils_PlayButton__f_id;
+        break
+      }
+      case 1: {
+        return this.LscalajsUtils_PlayButton__f_parentSVG;
+        break
+      }
+      case 2: {
+        return this.LscalajsUtils_PlayButton__f_location;
+        break
+      }
+      case 3: {
+        return this.LscalajsUtils_PlayButton__f_textLabel;
+        break
+      }
+      case 4: {
+        return this.LscalajsUtils_PlayButton__f_activeColor;
+        break
+      }
+      case 5: {
+        return this.LscalajsUtils_PlayButton__f_inactiveColor;
+        break
+      }
+      case 6: {
+        return this.LscalajsUtils_PlayButton__f_clickCB;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__I(this, (-889275714))
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_LscalajsUtils_PlayButton)) {
+      const PlayButton$1 = $as_LscalajsUtils_PlayButton(x$1);
+      let $$x2;
+      if ((this.LscalajsUtils_PlayButton__f_id === PlayButton$1.LscalajsUtils_PlayButton__f_id)) {
+        const x = this.LscalajsUtils_PlayButton__f_parentSVG;
+        const y = PlayButton$1.LscalajsUtils_PlayButton__f_parentSVG;
+        $$x2 = $m_sr_BoxesRunTime$().equals__O__O__Z(x, y)
+      } else {
+        $$x2 = false
+      };
+      let $$x1;
+      if ($$x2) {
+        const x$2 = this.LscalajsUtils_PlayButton__f_location;
+        const x$2$1 = PlayButton$1.LscalajsUtils_PlayButton__f_location;
+        $$x1 = ((x$2 === null) ? (x$2$1 === null) : x$2.equals__O__Z(x$2$1))
+      } else {
+        $$x1 = false
+      };
+      if (((($$x1 && (this.LscalajsUtils_PlayButton__f_textLabel === PlayButton$1.LscalajsUtils_PlayButton__f_textLabel)) && (this.LscalajsUtils_PlayButton__f_activeColor === PlayButton$1.LscalajsUtils_PlayButton__f_activeColor)) && (this.LscalajsUtils_PlayButton__f_inactiveColor === PlayButton$1.LscalajsUtils_PlayButton__f_inactiveColor))) {
+        const x$3 = this.LscalajsUtils_PlayButton__f_clickCB;
+        const x$4 = PlayButton$1.LscalajsUtils_PlayButton__f_clickCB;
+        return (x$3 === x$4)
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_LscalajsUtils_PlayButton(obj) {
+  return (((obj instanceof $c_LscalajsUtils_PlayButton) || (obj === null)) ? obj : $throwClassCastException(obj, "scalajsUtils.PlayButton"))
+}
+function $isArrayOf_LscalajsUtils_PlayButton(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LscalajsUtils_PlayButton)))
+}
+function $asArrayOf_LscalajsUtils_PlayButton(obj, depth) {
+  return (($isArrayOf_LscalajsUtils_PlayButton(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LscalajsUtils.PlayButton;", depth))
+}
+const $d_LscalajsUtils_PlayButton = new $TypeData().initClass({
+  LscalajsUtils_PlayButton: 0
+}, false, "scalajsUtils.PlayButton", {
+  LscalajsUtils_PlayButton: 1,
+  O: 1,
+  LscalajsUtils_SVGButton: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LscalajsUtils_PlayButton.prototype.$classData = $d_LscalajsUtils_PlayButton;
+class $c_LscalajsUtils_RadioButton extends $c_O {
+  constructor(id, parentSVG, location, textLabel, activeColor, inactiveColor, clickCB) {
+    super();
+    this.LscalajsUtils_RadioButton__f_id = null;
+    this.LscalajsUtils_RadioButton__f_parentSVG = null;
+    this.LscalajsUtils_RadioButton__f_location = null;
+    this.LscalajsUtils_RadioButton__f_textLabel = null;
+    this.LscalajsUtils_RadioButton__f_activeColor = null;
+    this.LscalajsUtils_RadioButton__f_inactiveColor = null;
+    this.LscalajsUtils_RadioButton__f_clickCB = null;
+    this.LscalajsUtils_RadioButton__f_rect = null;
+    this.LscalajsUtils_RadioButton__f_text = null;
+    this.LscalajsUtils_RadioButton__f_isActive = false;
+    this.LscalajsUtils_RadioButton__f_id = id;
+    this.LscalajsUtils_RadioButton__f_parentSVG = parentSVG;
+    this.LscalajsUtils_RadioButton__f_location = location;
+    this.LscalajsUtils_RadioButton__f_textLabel = textLabel;
+    this.LscalajsUtils_RadioButton__f_activeColor = activeColor;
+    this.LscalajsUtils_RadioButton__f_inactiveColor = inactiveColor;
+    this.LscalajsUtils_RadioButton__f_clickCB = clickCB;
+    $f_LscalajsUtils_SVGButton__$init$__V(this)
+  };
+  rect__Lio_whitemice_d3v5_selection_Selection() {
+    return this.LscalajsUtils_RadioButton__f_rect
+  };
+  text__Lio_whitemice_d3v5_selection_Selection() {
+    return this.LscalajsUtils_RadioButton__f_text
+  };
+  isActive__Z() {
+    return this.LscalajsUtils_RadioButton__f_isActive
+  };
+  isActive_$eq__Z__V(x$1) {
+    this.LscalajsUtils_RadioButton__f_isActive = x$1
+  };
+  scalajsUtils$SVGButton$_setter_$rect_$eq__Lio_whitemice_d3v5_selection_Selection__V(x$1) {
+    this.LscalajsUtils_RadioButton__f_rect = x$1
+  };
+  scalajsUtils$SVGButton$_setter_$text_$eq__Lio_whitemice_d3v5_selection_Selection__V(x$1) {
+    this.LscalajsUtils_RadioButton__f_text = x$1
+  };
+  id__T() {
+    return this.LscalajsUtils_RadioButton__f_id
+  };
+  parentSVG__Lio_whitemice_d3v5_selection_Selection() {
+    return this.LscalajsUtils_RadioButton__f_parentSVG
+  };
+  location__LscalajsUtils_PixRectangle() {
+    return this.LscalajsUtils_RadioButton__f_location
+  };
+  textLabel__T() {
+    return this.LscalajsUtils_RadioButton__f_textLabel
+  };
+  activeColor__T() {
+    return this.LscalajsUtils_RadioButton__f_activeColor
+  };
+  inactiveColor__T() {
+    return this.LscalajsUtils_RadioButton__f_inactiveColor
+  };
+  clickCB__F0() {
+    return this.LscalajsUtils_RadioButton__f_clickCB
+  };
+  onClick__V() {
+    const this$1 = this.LscalajsUtils_RadioButton__f_clickCB;
+    this$1.apply__O();
+    this.LscalajsUtils_RadioButton__f_isActive = true;
+    $f_LscalajsUtils_SVGButton__updateColor__V(this)
+  };
+  productPrefix__T() {
+    return "RadioButton"
+  };
+  productArity__I() {
+    return 7
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LscalajsUtils_RadioButton__f_id;
+        break
+      }
+      case 1: {
+        return this.LscalajsUtils_RadioButton__f_parentSVG;
+        break
+      }
+      case 2: {
+        return this.LscalajsUtils_RadioButton__f_location;
+        break
+      }
+      case 3: {
+        return this.LscalajsUtils_RadioButton__f_textLabel;
+        break
+      }
+      case 4: {
+        return this.LscalajsUtils_RadioButton__f_activeColor;
+        break
+      }
+      case 5: {
+        return this.LscalajsUtils_RadioButton__f_inactiveColor;
+        break
+      }
+      case 6: {
+        return this.LscalajsUtils_RadioButton__f_clickCB;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__I(this, (-889275714))
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_LscalajsUtils_RadioButton)) {
+      const RadioButton$1 = $as_LscalajsUtils_RadioButton(x$1);
+      let $$x2;
+      if ((this.LscalajsUtils_RadioButton__f_id === RadioButton$1.LscalajsUtils_RadioButton__f_id)) {
+        const x = this.LscalajsUtils_RadioButton__f_parentSVG;
+        const y = RadioButton$1.LscalajsUtils_RadioButton__f_parentSVG;
+        $$x2 = $m_sr_BoxesRunTime$().equals__O__O__Z(x, y)
+      } else {
+        $$x2 = false
+      };
+      let $$x1;
+      if ($$x2) {
+        const x$2 = this.LscalajsUtils_RadioButton__f_location;
+        const x$2$1 = RadioButton$1.LscalajsUtils_RadioButton__f_location;
+        $$x1 = ((x$2 === null) ? (x$2$1 === null) : x$2.equals__O__Z(x$2$1))
+      } else {
+        $$x1 = false
+      };
+      if (((($$x1 && (this.LscalajsUtils_RadioButton__f_textLabel === RadioButton$1.LscalajsUtils_RadioButton__f_textLabel)) && (this.LscalajsUtils_RadioButton__f_activeColor === RadioButton$1.LscalajsUtils_RadioButton__f_activeColor)) && (this.LscalajsUtils_RadioButton__f_inactiveColor === RadioButton$1.LscalajsUtils_RadioButton__f_inactiveColor))) {
+        const x$3 = this.LscalajsUtils_RadioButton__f_clickCB;
+        const x$4 = RadioButton$1.LscalajsUtils_RadioButton__f_clickCB;
+        return (x$3 === x$4)
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_LscalajsUtils_RadioButton(obj) {
+  return (((obj instanceof $c_LscalajsUtils_RadioButton) || (obj === null)) ? obj : $throwClassCastException(obj, "scalajsUtils.RadioButton"))
+}
+function $isArrayOf_LscalajsUtils_RadioButton(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LscalajsUtils_RadioButton)))
+}
+function $asArrayOf_LscalajsUtils_RadioButton(obj, depth) {
+  return (($isArrayOf_LscalajsUtils_RadioButton(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LscalajsUtils.RadioButton;", depth))
+}
+const $d_LscalajsUtils_RadioButton = new $TypeData().initClass({
+  LscalajsUtils_RadioButton: 0
+}, false, "scalajsUtils.RadioButton", {
+  LscalajsUtils_RadioButton: 1,
+  O: 1,
+  LscalajsUtils_SVGButton: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LscalajsUtils_RadioButton.prototype.$classData = $d_LscalajsUtils_RadioButton;
 class $c_Lscalatags_JsDom$RawFrag extends $c_O {
   constructor(v) {
     super();
@@ -52325,7 +53712,8 @@ class $c_LdataStories_CandidateController extends $c_LdataStories_RouteControlle
     this.LdataStories_RouteController__f_dirty = true;
     this.colorByIdeology__V();
     this.applyCurrentLayout__V();
-    this.renderCandidates__I__V(0)
+    this.renderCandidates__I__V(0);
+    this.renderBubbles__V()
   };
   constructCandidates__LdataStories_DistrictData__sc_IndexedSeq(data) {
     const config = $m_Lrcvcore_CongressionalSimulationConfig$().defaultConfig__I__Lrcvcore_CongressionalSimulationConfig(3);
@@ -52741,14 +54129,15 @@ class $c_LdataStories_CandidateController extends $c_LdataStories_RouteControlle
     const $$x17 = $$x18.attr("text-anchor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$53, "middle"));
     const this$54 = $m_Lio_whitemice_d3v5_all_package$();
     $$x17.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$54, "white"));
-    const $$x27 = enteringG.merge(u);
-    const this$71 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x28 = enteringG.merge(u);
+    const this$90 = $m_Lio_whitemice_d3v5_all_package$();
     const fun$9 = new $c_sjsr_AnonFunction1(((this$10$1) => ((b$5$2) => {
       const b$5 = $as_LdataStories_CandidateBubble(b$5$2);
-      const arg$macro$6 = b$5.LdataStories_Bubble__f_x;
-      const arg$macro$7 = b$5.LdataStories_Bubble__f_y;
-      const this$57 = new $c_sci_StringOps("translate(%s, %s)");
-      const array$4 = [arg$macro$6, arg$macro$7];
+      const arg$macro$6 = $as_Lrcvcore_Candidate(b$5.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_name;
+      const arg$macro$7 = b$5.LdataStories_Bubble__f_x;
+      const arg$macro$8 = b$5.LdataStories_Bubble__f_y;
+      const this$57 = new $c_sci_StringOps("translate: %5s %7.2f %7.2f");
+      const array$4 = [arg$macro$6, arg$macro$7, arg$macro$8];
       const this$$2 = this$57.sci_StringOps__f_repr;
       $m_sc_Seq$();
       $m_sjs_js_WrappedArray$();
@@ -52780,9 +54169,104 @@ class $c_LdataStories_CandidateController extends $c_LdataStories_RouteControlle
         i$5 = ((1 + i$5) | 0);
         j$2 = ((1 + j$2) | 0)
       };
-      return $m_jl_String$().format__T__AO__T(this$$2, result$2)
+      const x$6 = $m_jl_String$().format__T__AO__T(this$$2, result$2);
+      const this$72 = $m_s_Console$();
+      const this$73 = $as_Ljava_io_PrintStream(this$72.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+      this$73.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$6 + "\n"));
+      const arg$macro$9 = b$5.LdataStories_Bubble__f_x;
+      const arg$macro$10 = b$5.LdataStories_Bubble__f_y;
+      const this$76 = new $c_sci_StringOps("translate(%s, %s)");
+      const array$6 = [arg$macro$9, arg$macro$10];
+      const this$$3 = this$76.sci_StringOps__f_repr;
+      $m_sc_Seq$();
+      $m_sjs_js_WrappedArray$();
+      const array$7 = [];
+      $uI(array$6.length);
+      let i$6 = 0;
+      const len$9 = $uI(array$6.length);
+      while ((i$6 < len$9)) {
+        const index$6 = i$6;
+        const arg1$3 = array$6[index$6];
+        const elem$3 = $p_sci_StringLike__unwrapArg__O__O(this$76, arg1$3);
+        array$7.push(elem$3);
+        i$6 = ((1 + i$6) | 0)
+      };
+      $m_s_reflect_ManifestFactory$ObjectManifest$();
+      const len$10 = $uI(array$7.length);
+      const result$3 = $newArrayObject($d_O.getArrayOf(), [len$10]);
+      const len$11 = result$3.u.length;
+      let i$7 = 0;
+      let j$3 = 0;
+      const x$7 = $uI(array$7.length);
+      const x$8 = ((x$7 < len$11) ? x$7 : len$11);
+      const that$3 = result$3.u.length;
+      const end$3 = ((x$8 < that$3) ? x$8 : that$3);
+      while ((i$7 < end$3)) {
+        const $$x27 = j$3;
+        const index$7 = i$7;
+        result$3.set($$x27, array$7[index$7]);
+        i$7 = ((1 + i$7) | 0);
+        j$3 = ((1 + j$3) | 0)
+      };
+      return $m_jl_String$().format__T__AO__T(this$$3, result$3)
     }))(this));
-    $$x27.attr("transform", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f1ToCallback__F1__sjs_js_$bar(this$71, fun$9))
+    $$x28.attr("transform", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f1ToCallback__F1__sjs_js_$bar(this$90, fun$9));
+    const $$x31 = this.LdataStories_CandidateController__f_candidateArea.selectAll(".candidate-name");
+    const $$x30 = $m_sjs_js_JSConverters$JSRichGenTraversableOnce$();
+    const col$1 = this.LdataStories_CandidateController__f_candidates;
+    const $$x29 = $$x31.data($$x30.toJSArray$extension__sc_GenTraversableOnce__sjs_js_Array(col$1));
+    const this$92 = $m_Lio_whitemice_d3v5_all_package$();
+    const fun$10 = new $c_sjsr_AnonFunction1(((this$11$1) => ((b$6$2) => {
+      const b$6 = $as_LdataStories_CandidateBubble(b$6$2);
+      return $as_Lrcvcore_Candidate(b$6.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_name
+    }))(this));
+    $$x29.text($f_Lio_whitemice_d3v5_selection_SelectionImplicits__f1ToCallback__F1__sjs_js_$bar(this$92, fun$10));
+    this.debugPrintCandidates__T__V("renderBubbles")
+  };
+  debugPrintCandidates__T__V(prefix) {
+    this.LdataStories_CandidateController__f_candidates.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$1, prefix$1) => ((c$2) => {
+      const c = $as_LdataStories_CandidateBubble(c$2);
+      const arg$macro$2 = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_name;
+      const arg$macro$3 = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_ideology;
+      const arg$macro$4 = c.LdataStories_Bubble__f_x;
+      const this$4 = new $c_sci_StringOps("%20s: %5s %.2f %.2f");
+      const array = [prefix$1, arg$macro$2, arg$macro$3, arg$macro$4];
+      const this$ = this$4.sci_StringOps__f_repr;
+      $m_sc_Seq$();
+      $m_sjs_js_WrappedArray$();
+      const array$1 = [];
+      $uI(array.length);
+      let i = 0;
+      const len = $uI(array.length);
+      while ((i < len)) {
+        const index = i;
+        const arg1 = array[index];
+        const elem = $p_sci_StringLike__unwrapArg__O__O(this$4, arg1);
+        array$1.push(elem);
+        i = ((1 + i) | 0)
+      };
+      $m_s_reflect_ManifestFactory$ObjectManifest$();
+      const len$1 = $uI(array$1.length);
+      const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
+      const len$2 = result.u.length;
+      let i$1 = 0;
+      let j = 0;
+      const x = $uI(array$1.length);
+      const x$1 = ((x < len$2) ? x : len$2);
+      const that = result.u.length;
+      const end = ((x$1 < that) ? x$1 : that);
+      while ((i$1 < end)) {
+        const $$x1 = j;
+        const index$1 = i$1;
+        result.set($$x1, array$1[index$1]);
+        i$1 = ((1 + i$1) | 0);
+        j = ((1 + j) | 0)
+      };
+      const x$2 = $m_jl_String$().format__T__AO__T(this$, result);
+      const this$19 = $m_s_Console$();
+      const this$20 = $as_Ljava_io_PrintStream(this$19.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+      this$20.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$2 + "\n"))
+    }))(this, prefix)))
   };
   createResultsAxis__T__T__sc_Seq__D__D__D__V(id, label, labels, xWidth, xPct, yPct) {
     this.clearAxis__T__V(id);
@@ -53165,7 +54649,8 @@ const $p_LdataStories_MemberController__createHistogram$2__D__LdataStories_Layou
 const $p_LdataStories_MemberController__createHistogram$3__D__LdataStories_LayoutManager = (function($thiz, yPct$2) {
   return new $c_LdataStories_HistogramLayout(new $c_sjsr_AnonFunction1(((this$1) => ((m$2) => {
     const m = $as_LdataStories_MemberBubble(m$2);
-    return m.LdataStories_MemberBubble__f_dd.LdataStories_DistrictData__f_s.headToHeadIdeology__D()
+    const this$2 = m.LdataStories_MemberBubble__f_dd.LdataStories_DistrictData__f_s;
+    return this$2.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_ideology
   }))($thiz)), (yPct$2 * $thiz.LdataStories_RouteController__f_scaledHeight), $thiz.LdataStories_MemberController__f_box.LdataStories_ScaledBox__f_xScale, $thiz.LdataStories_MemberController__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_layoutRadius)
 });
 const $p_LdataStories_MemberController__createHistogram$4__D__LdataStories_LayoutManager = (function($thiz, yPct$3) {
@@ -53498,7 +54983,7 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
         const dd$1 = $as_LdataStories_DistrictData(x0$2._1__O());
         const i$1 = $uI(x0$2._2__O());
         const s = $as_Lrcvcore_SimulationResult(this$2$1.LdataStories_MemberController__f_combinedDistrictData.LdataStories_CombinedDistrictData__f_sampleCongress.apply__O__O(dd$1.LdataStories_DistrictData__f_d.district__T()));
-        const md = new $c_LdataStories_SimulationMemberData(s.primaryIdeology__D(), ("Simulated Winner " + dd$1.LdataStories_DistrictData__f_d.district__T()), s.primaryParty__Lrcvcore_PopulationTag());
+        const md = new $c_LdataStories_SimulationMemberData(s.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_ideology, ("Simulated Winner " + dd$1.LdataStories_DistrictData__f_d.district__T()), s.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_party, dd$1.LdataStories_DistrictData__f_d.district__T());
         const m$1 = new $c_LdataStories_MemberBubble(dd$1, md, this$2$1.LdataStories_MemberController__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_radius, $m_LdataStories_MemberBubble$SimulationMember$(), (i$1 / this$2$1.LdataStories_MemberController__f_combinedDistrictData.LdataStories_CombinedDistrictData__f_size));
         m$1.LdataStories_Bubble__f_x = $m_LdataStories_RandomHelpers$().randRange__D__D__D(0.0, this$2$1.LdataStories_RouteController__f_scaledWidth);
         m$1.LdataStories_Bubble__f_y = $m_LdataStories_RandomHelpers$().randRange__D__D__D((-100.0), (-50.0));
@@ -53541,28 +55026,32 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     const this$1 = $m_Lio_whitemice_d3v5_all_package$();
     $$x1.style("z-index", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$1, 10));
     this.clearSimAxis__V();
-    const this$3 = this.LdataStories_MemberController__f_members;
+    const this$5 = this.LdataStories_MemberController__f_members;
     const lt = new $c_sjsr_AnonFunction2(((this$2) => ((x0$1$2, x1$1$2) => {
       const x0$1 = $as_LdataStories_MemberBubble(x0$1$2);
       const x1$1 = $as_LdataStories_MemberBubble(x1$1$2);
-      return (x0$1.LdataStories_MemberBubble__f_dd.LdataStories_DistrictData__f_s.headToHeadIdeology__D() < x1$1.LdataStories_MemberBubble__f_dd.LdataStories_DistrictData__f_s.headToHeadIdeology__D())
+      const this$3 = x0$1.LdataStories_MemberBubble__f_dd.LdataStories_DistrictData__f_s;
+      const $$x2 = this$3.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_ideology;
+      const this$4 = x1$1.LdataStories_MemberBubble__f_dd.LdataStories_DistrictData__f_s;
+      return ($$x2 < this$4.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_ideology)
     }))(this));
-    this.LdataStories_MemberController__f_members = $as_sc_IndexedSeq($f_sc_SeqLike__sortWith__F2__O(this$3, lt));
+    this.LdataStories_MemberController__f_members = $as_sc_IndexedSeq($f_sc_SeqLike__sortWith__F2__O(this$5, lt));
     this.LdataStories_MemberController__f_currentOpacity = opacity;
     this.setColor__F1__V(new $c_sjsr_AnonFunction1(((this$2$1) => ((m$2) => {
       const m = $as_LdataStories_MemberBubble(m$2);
-      const ideology = m.LdataStories_MemberBubble__f_dd.LdataStories_DistrictData__f_s.headToHeadIdeology__D();
+      const this$6 = m.LdataStories_MemberBubble__f_dd.LdataStories_DistrictData__f_s;
+      const ideology = this$6.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_ideology;
       const opacity$1 = this$2$1.LdataStories_MemberController__f_currentOpacity;
       return $m_LscalajsUtils_PopulationColorPicker$().ideologyColorScale__D__D__LscalajsUtils_RGBA(ideology, opacity$1)
     }))(this)));
-    const $$x2 = this.LdataStories_MemberController__f_houseArea.transition().duration(1000);
-    const this$5 = $m_Lio_whitemice_d3v5_all_package$();
-    $$x2.attr("opacity", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, opacity));
+    const $$x3 = this.LdataStories_MemberController__f_houseArea.transition().duration(1000);
+    const this$8 = $m_Lio_whitemice_d3v5_all_package$();
+    $$x3.attr("opacity", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$8, opacity));
     const yPct = this.LdataStories_MemberController__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y2Pct;
     this.LdataStories_MemberController__f_box.update__LdataStories_ElementDimensions__V(new $c_LdataStories_ElementDimensions(0.0, yPct, 1.0, 0.0));
-    const $$x3 = this.LdataStories_MemberController__f_box;
-    const this$6 = this.LdataStories_MemberController__f_configData;
-    $$x3.updateAxisLabel__T__T__V("Head to Head House of Representatives by Ideology", this$6.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_fontSize2);
+    const $$x4 = this.LdataStories_MemberController__f_box;
+    const this$9 = this.LdataStories_MemberController__f_configData;
+    $$x4.updateAxisLabel__T__T__V("Head to Head House of Representatives by Ideology", this$9.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_fontSize2);
     this.LdataStories_MemberController__f_box.clearObject__T__V("year-text");
     const trajectory = new $c_Lio_whitemice_d3v5_route_Sequencer(new $c_LdataStories_SemiSigmoidSequencer(new $c_Lio_whitemice_d3v5_route_Direct()), 0.4, 0.4);
     const array = [new $c_LdataStories_LayoutSpec(new $c_sjsr_AnonFunction1(((this$3$1) => ((m$3$2) => {
@@ -53632,13 +55121,12 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
   displayToolTip__LdataStories_MemberBubble__V(m) {
     const $$x5 = $m_sc_Seq$();
     const $$x4 = m.LdataStories_MemberBubble__f__memberData.name__T();
-    const this$1 = m.LdataStories_MemberBubble__f_dd;
-    const $$x3 = this$1.LdataStories_DistrictData__f_d.district__T();
+    const $$x3 = m.LdataStories_MemberBubble__f__memberData.district__T();
     const $$x2 = m.LdataStories_MemberBubble__f__memberData.party__Lrcvcore_PopulationTag().name__T();
     const arg$macro$1 = m.LdataStories_MemberBubble__f__memberData.ideology__D();
-    const this$4 = new $c_sci_StringOps("<br>IdeologyScore: %.0f");
+    const this$3 = new $c_sci_StringOps("<br>IdeologyScore: %.0f");
     const array = [arg$macro$1];
-    const this$ = this$4.sci_StringOps__f_repr;
+    const this$ = this$3.sci_StringOps__f_repr;
     $m_sc_Seq$();
     $m_sjs_js_WrappedArray$();
     const array$1 = [];
@@ -53648,7 +55136,7 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     while ((i < len)) {
       const index = i;
       const arg1 = array[index];
-      const elem = $p_sci_StringLike__unwrapArg__O__O(this$4, arg1);
+      const elem = $p_sci_StringLike__unwrapArg__O__O(this$3, arg1);
       array$1.push(elem);
       i = ((1 + i) | 0)
     };
@@ -53673,22 +55161,22 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     const strings = $as_sc_Seq($$x5.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$2)));
     this.LdataStories_MemberController__f_districtDetails.selectAll("*").remove();
     const $$x9 = this.LdataStories_MemberController__f_districtDetails.selectAll("text").data($m_sjs_js_JSConverters$JSRichGenTraversableOnce$().toJSArray$extension__sc_GenTraversableOnce__sjs_js_Array(strings)).enter().append("text");
-    const this$22 = $m_Lio_whitemice_d3v5_all_package$();
-    const fun = new $c_sjsr_AnonFunction1(((this$21) => ((s$2) => {
+    const this$21 = $m_Lio_whitemice_d3v5_all_package$();
+    const fun = new $c_sjsr_AnonFunction1(((this$20) => ((s$2) => {
       const s = $as_T(s$2);
       return s
     }))(this));
-    const $$x8 = $$x9.html($f_Lio_whitemice_d3v5_selection_SelectionImplicits__f1ToCallback__F1__sjs_js_$bar(this$22, fun));
+    const $$x8 = $$x9.html($f_Lio_whitemice_d3v5_selection_SelectionImplicits__f1ToCallback__F1__sjs_js_$bar(this$21, fun));
+    const this$22 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x7 = $$x8.attr("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$22, "black"));
     const this$23 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x7 = $$x8.attr("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$23, "black"));
+    const $$x6 = $$x7.attr("font-family", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$23, "sans-serif"));
     const this$24 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x6 = $$x7.attr("font-family", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$24, "sans-serif"));
-    const this$25 = $m_Lio_whitemice_d3v5_all_package$();
-    $$x6.attr("font-size", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$25, "16px"));
+    $$x6.attr("font-size", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$24, "16px"));
     const rect = this.LdataStories_MemberController__f_districtDetails.node().getBoundingClientRect();
     const $$x10 = this.LdataStories_MemberController__f_districtDetails;
-    const this$26 = $m_Lio_whitemice_d3v5_all_package$();
-    $$x10.style("opacity", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$26, 1));
+    const this$25 = $m_Lio_whitemice_d3v5_all_package$();
+    $$x10.style("opacity", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$25, 1));
     const x$2 = $uI($i_d3.event.x);
     const y = $uI($i_d3.event.y);
     let x1$1___1;
@@ -53721,12 +55209,12 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     const tipLeft = x1$1___1$mcD$sp;
     const tipTop = x1$1___2$mcD$sp;
     const $$x19 = this.LdataStories_MemberController__f_districtDetails;
-    const this$29 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x18 = $$x19.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$29, "fixed"));
-    const this$46 = $m_Lio_whitemice_d3v5_all_package$();
-    const this$32 = new $c_sci_StringOps("%.0fpx");
+    const this$28 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x18 = $$x19.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$28, "fixed"));
+    const this$45 = $m_Lio_whitemice_d3v5_all_package$();
+    const this$31 = new $c_sci_StringOps("%.0fpx");
     const array$3 = [tipLeft];
-    const this$$1 = this$32.sci_StringOps__f_repr;
+    const this$$1 = this$31.sci_StringOps__f_repr;
     $m_sc_Seq$();
     $m_sjs_js_WrappedArray$();
     const array$4 = [];
@@ -53736,7 +55224,7 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     while ((i$2 < len$3)) {
       const index$2 = i$2;
       const arg1$1 = array$3[index$2];
-      const elem$1 = $p_sci_StringLike__unwrapArg__O__O(this$32, arg1$1);
+      const elem$1 = $p_sci_StringLike__unwrapArg__O__O(this$31, arg1$1);
       array$4.push(elem$1);
       i$2 = ((1 + i$2) | 0)
     };
@@ -53758,11 +55246,11 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
       j$1 = ((1 + j$1) | 0)
     };
     const s$1 = $m_jl_String$().format__T__AO__T(this$$1, result$1);
-    const $$x16 = $$x18.style("left", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$46, s$1));
-    const this$63 = $m_Lio_whitemice_d3v5_all_package$();
-    const this$49 = new $c_sci_StringOps("%.0fpx");
+    const $$x16 = $$x18.style("left", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$45, s$1));
+    const this$62 = $m_Lio_whitemice_d3v5_all_package$();
+    const this$48 = new $c_sci_StringOps("%.0fpx");
     const array$5 = [tipTop];
-    const this$$2 = this$49.sci_StringOps__f_repr;
+    const this$$2 = this$48.sci_StringOps__f_repr;
     $m_sc_Seq$();
     $m_sjs_js_WrappedArray$();
     const array$6 = [];
@@ -53772,7 +55260,7 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     while ((i$4 < len$6)) {
       const index$4 = i$4;
       const arg1$2 = array$5[index$4];
-      const elem$2 = $p_sci_StringLike__unwrapArg__O__O(this$49, arg1$2);
+      const elem$2 = $p_sci_StringLike__unwrapArg__O__O(this$48, arg1$2);
       array$6.push(elem$2);
       i$4 = ((1 + i$4) | 0)
     };
@@ -53794,9 +55282,9 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
       j$2 = ((1 + j$2) | 0)
     };
     const s$3 = $m_jl_String$().format__T__AO__T(this$$2, result$2);
-    const $$x14 = $$x16.style("top", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$63, s$3));
-    const this$64 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x13 = $$x14.style("background-color", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$64, "#aaa"));
+    const $$x14 = $$x16.style("top", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$62, s$3));
+    const this$63 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x13 = $$x14.style("background-color", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$63, "#aaa"));
     $$x13.raise()
   };
   hideToolTip__V() {
@@ -53861,7 +55349,7 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     if ((!this$2.isEmpty__Z())) {
       const arg1$1 = this$2.get__O();
       const x$16 = $as_LscalajsUtils_PlayButton(arg1$1);
-      x$16.clear__V()
+      $f_LscalajsUtils_SVGButton__clear__V(x$16)
     };
     const $$x5 = this.LdataStories_MemberController__f_houseArea;
     const $$x4 = new $c_T2$mcDD$sp(startYear, 2020.0);
@@ -53972,7 +55460,7 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     if ((!this$2.isEmpty__Z())) {
       const arg1$1 = this$2.get__O();
       const x$20 = $as_LscalajsUtils_PlayButton(arg1$1);
-      x$20.clear__V()
+      $f_LscalajsUtils_SVGButton__clear__V(x$20)
     };
     this.LdataStories_MemberController__f_playButton = $m_s_None$()
   };
@@ -54460,8 +55948,8 @@ class $c_LdataStories_VoterController extends $c_LdataStories_RouteController {
       const x$5 = $as_LdataStories_VoterBubble(x$5$2);
       x$5.LdataStories_VoterBubble__f_primaryVoter = false
     }))(this)));
-    this.choosePrimaryVoters__Lrcvcore_CombinedPopulation__Lrcvcore_PopulationTag__D__D__V(population, $m_Lrcvcore_Republicans$(), (0.18 * population.percentWeight__Lrcvcore_PopulationTag__D($m_Lrcvcore_Republicans$())), 5.0);
-    this.choosePrimaryVoters__Lrcvcore_CombinedPopulation__Lrcvcore_PopulationTag__D__D__V(population, $m_Lrcvcore_Democrats$(), (0.18 * population.percentWeight__Lrcvcore_PopulationTag__D($m_Lrcvcore_Democrats$())), 5.0)
+    this.choosePrimaryVoters__Lrcvcore_CombinedPopulation__Lrcvcore_PopulationTag__D__D__V(population, $m_Lrcvcore_Republicans$(), (0.2 * population.percentWeight__Lrcvcore_PopulationTag__D($m_Lrcvcore_Republicans$())), 5.0);
+    this.choosePrimaryVoters__Lrcvcore_CombinedPopulation__Lrcvcore_PopulationTag__D__D__V(population, $m_Lrcvcore_Democrats$(), (0.2 * population.percentWeight__Lrcvcore_PopulationTag__D($m_Lrcvcore_Democrats$())), 5.0)
   };
   render__V() {
     this.LdataStories_VoterController__f_box.render__V();
@@ -64092,6 +65580,13 @@ const $f_sci_StringLike__split__C__AT = (function($thiz, separator) {
   const regex = $p_sci_StringLike__escape__C__T($thiz, separator);
   return $f_T__split__T__I__AT(this$1, regex, 0)
 });
+const $f_sci_StringLike__format__sc_Seq__T = (function($thiz, args) {
+  const format = $thiz.toString__T();
+  const $$x1 = new $c_sjsr_AnonFunction1(((this$1) => ((arg$2) => $p_sci_StringLike__unwrapArg__O__O(this$1, arg$2)))($thiz));
+  const this$2 = $m_sc_Seq$();
+  const args$1 = $asArrayOf_O($as_sc_TraversableOnce(args.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)).toArray__s_reflect_ClassTag__O($m_s_reflect_ManifestFactory$ObjectManifest$()), 1);
+  return $m_jl_String$().format__T__AO__T(format, args$1)
+});
 const $p_scm_LinkedListLike__length0__scm_Seq__I__I = (function($thiz, elem, acc) {
   while (true) {
     const this$1 = $as_scm_LinkedListLike(elem);
@@ -64217,6 +65712,10 @@ class $c_sci_StringOps extends $c_O {
     super();
     this.sci_StringOps__f_repr = null;
     this.sci_StringOps__f_repr = repr
+  };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    const this$ = this.sci_StringOps__f_repr;
+    return $f_T__toCharArray__AC(this$)
   };
   compareTo__O__I(that) {
     const other = $as_T(that);
@@ -64523,6 +66022,9 @@ class $c_Lakka_util_Collections$PartialImmutableValuesIterable extends $c_O {
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
   };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
+  };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
     const cbf = this$1.scg_GenTraversableFactory__f_ReusableCBFInstance;
@@ -64609,6 +66111,10 @@ const $f_scm_ArrayOps__slice__I__I__O = (function($thiz, from, until) {
     $m_s_Array$().copy__O__I__O__I__I__V(reprVal, lo, result, 0, size)
   };
   return result
+});
+const $f_scm_ArrayOps__toArray__s_reflect_ClassTag__O = (function($thiz, evidence$1) {
+  const thatElementClass = evidence$1.runtimeClass__jl_Class();
+  return (($p_scm_ArrayOps__elementClass__jl_Class($thiz) === thatElementClass) ? $thiz.repr__O() : $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O($thiz, evidence$1))
 });
 class $c_Lakka_actor_dungeon_ChildrenContainer$ChildRestartsIterable extends $c_Lakka_util_Collections$PartialImmutableValuesIterable {
   constructor(stats) {
@@ -64757,6 +66263,9 @@ class $c_scm_ArrayOps$ofInt extends $c_O {
   };
   slice__I__I__O(from, until) {
     return $f_scm_ArrayOps__slice__I__I__O(this, from, until)
+  };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_scm_ArrayOps__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   isEmpty__Z() {
     return $f_sc_IndexedSeqOptimized__isEmpty__Z(this)
@@ -65152,6 +66661,9 @@ class $c_Lorg_scalajs_dom_ext_EasySeq extends $c_O {
   toSeq__sc_Seq() {
     return this
   };
+  indices__sci_Range() {
+    return $f_sc_SeqLike__indices__sci_Range(this)
+  };
   toString__T() {
     return $f_sc_TraversableLike__toString__T(this)
   };
@@ -65256,6 +66768,9 @@ class $c_Lorg_scalajs_dom_ext_EasySeq extends $c_O {
   };
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
+  };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
@@ -65466,6 +66981,9 @@ class $c_sc_AbstractSeq extends $c_sc_AbstractIterable {
   };
   toSeq__sc_Seq() {
     return this.thisCollection__sc_Seq()
+  };
+  indices__sci_Range() {
+    return $f_sc_SeqLike__indices__sci_Range(this)
   };
   toString__T() {
     return $f_sc_TraversableLike__toString__T(this)
@@ -66613,6 +68131,9 @@ class $c_Lakka_util_Collections$EmptyImmutableSeq$ extends $c_O {
   $colon$plus__O__scg_CanBuildFrom__O(elem, bf) {
     return $f_sc_SeqLike__$colon$plus__O__scg_CanBuildFrom__O(this, elem, bf)
   };
+  indices__sci_Range() {
+    return $f_sc_SeqLike__indices__sci_Range(this)
+  };
   toString__T() {
     return $f_sc_TraversableLike__toString__T(this)
   };
@@ -66731,6 +68252,9 @@ class $c_Lakka_util_Collections$EmptyImmutableSeq$ extends $c_O {
   };
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
+  };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
@@ -68225,6 +69749,9 @@ class $c_sci_TreeSet extends $c_O {
   };
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
+  };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
@@ -69763,6 +71290,9 @@ class $c_sci_TreeMap extends $c_O {
   };
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
+  };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
@@ -72938,6 +74468,9 @@ class $c_sci_WrappedString extends $c_sc_AbstractSeq {
     const this$1 = this.sci_WrappedString__f_self;
     return (65535 & $uI(this$1.charCodeAt(n)))
   };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_T__toCharArray__AC(this.sci_WrappedString__f_self)
+  };
   compareTo__O__I(that) {
     const other = $as_T(that);
     const this$1 = this.sci_WrappedString__f_self;
@@ -73875,6 +75408,10 @@ class $c_scm_AbstractBuffer extends $c_scm_AbstractSeq {
     return $f_scg_Growable__$plus$plus$eq__sc_TraversableOnce__scg_Growable(this, xs)
   };
 }
+const $p_scm_WrappedArray__elementClass__jl_Class = (function($thiz) {
+  const this$1 = $thiz.array__O();
+  return $objectGetClass(this$1).getComponentType__jl_Class()
+});
 class $c_scm_WrappedArray extends $c_scm_AbstractSeq {
   isEmpty__Z() {
     return $f_sc_IndexedSeqOptimized__isEmpty__Z(this)
@@ -73939,6 +75476,10 @@ class $c_scm_WrappedArray extends $c_scm_AbstractSeq {
   };
   sizeHintIfCheap__I() {
     return this.length__I()
+  };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    const thatElementClass = evidence$1.runtimeClass__jl_Class();
+    return (($p_scm_WrappedArray__elementClass__jl_Class(this) === thatElementClass) ? this.array__O() : $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1))
   };
   stringPrefix__T() {
     return "WrappedArray"
@@ -75914,6 +77455,10 @@ class $c_scm_ListBuffer extends $c_scm_AbstractBuffer {
     const this$1 = this.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start;
     return $f_sc_LinearSeqOptimized__contains__O__Z(this$1, elem)
   };
+  indices__sci_Range() {
+    const this$1 = this.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start;
+    return $f_sc_SeqLike__indices__sci_Range(this$1)
+  };
   sameElements__sc_GenIterable__Z(that) {
     const this$1 = this.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start;
     return $f_sc_LinearSeqOptimized__sameElements__sc_GenIterable__Z(this$1, that)
@@ -76295,6 +77840,9 @@ class $c_scm_StringBuilder extends $c_scm_AbstractSeq {
   };
   slice__I__I__O(from, until) {
     return $f_sci_StringLike__slice__I__I__O(this, from, until)
+  };
+  toArray__s_reflect_ClassTag__O(evidence$1) {
+    return $f_T__toCharArray__AC(this.scm_StringBuilder__f_underlying.jl_StringBuilder__f_java$lang$StringBuilder$$content)
   };
   compareTo__O__I(that) {
     const other = $as_T(that);
