@@ -46229,13 +46229,27 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
           this.displayHouse__I__V(1789);
           break
         }
+        case 2300: {
+          $p_LdataStories_PolarizationDataStory__displayBigMap__F1__V(this, new $c_sjsr_AnonFunction1(((this$5) => ((r$5$2) => {
+            const r$5 = $as_Lrcvcore_SimulationResult(r$5$2);
+            return this$5.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r$5.actualVoterSatisfaction__D(), 1.0)
+          }))(this)));
+          break
+        }
+        case 2301: {
+          $p_LdataStories_PolarizationDataStory__displayBigMap__F1__V(this, new $c_sjsr_AnonFunction1(((this$6) => ((r$6$2) => {
+            const r$6 = $as_Lrcvcore_SimulationResult(r$6$2);
+            return this$6.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r$6.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
+          }))(this)));
+          break
+        }
       };
-      $m_LdataStories_PDSLinks$().displayLinks__I__sc_Seq(section).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$5) => ((l$2) => {
+      $m_LdataStories_PDSLinks$().displayLinks__I__sc_Seq(section).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$7) => ((l$2) => {
         const l = $as_LdataStories_LinkSpecification(l$2);
-        const this$8 = this$5.LdataStories_PolarizationDataStory__f_textItems;
-        const array = [l.textItem__F1__LdataStories_TextItem(this$5.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback)];
+        const this$10 = this$7.LdataStories_PolarizationDataStory__f_textItems;
+        const array = [l.textItem__F1__LdataStories_TextItem(this$7.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback)];
         const elems = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array);
-        this$8.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(elems)
+        this$10.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(elems)
       }))(this)));
       this.LdataStories_PolarizationDataStory__f_lastSection = section
     }
