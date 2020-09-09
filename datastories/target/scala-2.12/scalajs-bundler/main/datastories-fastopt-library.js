@@ -95,7 +95,7 @@ var ScalaJSBundlerLibrary =
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  "require": (function(x0) {
+  "require": (function(x1) {
     return {
       "d3-interpolate": __webpack_require__(/*! d3-interpolate */ "./node_modules/d3-interpolate/src/index.js"),
       "d3-zoom": __webpack_require__(/*! d3-zoom */ "./node_modules/d3-zoom/src/index.js"),
@@ -108,7 +108,7 @@ module.exports = {
       "d3": __webpack_require__(/*! d3 */ "./node_modules/d3/index.js"),
       "d3-axis": __webpack_require__(/*! d3-axis */ "./node_modules/d3-axis/src/index.js"),
       "d3-drag": __webpack_require__(/*! d3-drag */ "./node_modules/d3-drag/src/index.js")
-    }[x0]
+    }[x1]
   })
 }
 

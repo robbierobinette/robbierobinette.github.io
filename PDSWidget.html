@@ -46,11 +46,19 @@
         const queryString = window.location.search;
         console.log(queryString);
         const urlParams = new URLSearchParams(queryString);
-        const section = urlParams.get('section')
-        console.log(section);
 
-        var pds = PolarizationDataStory("visDiv", "overlayDiv", doNothing)
-        pds.update(2100, 0)
+        if (urlParams.has('section')) {
+
+            const section = Number(urlParams.get('section'));
+            var progress = 0;
+            if (urlParams.has('progress')) {
+                progress = Number(urlParams.get('progress'));
+            }
+            console.log("Section: ", section, "Progress: ", progress);
+
+            var pds = PolarizationDataStory("visDiv", "overlayDiv", doNothing);
+            pds.update(section, progress);
+       }
 </script>
 
 </body>

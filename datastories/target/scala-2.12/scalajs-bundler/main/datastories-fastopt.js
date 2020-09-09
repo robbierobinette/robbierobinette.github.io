@@ -5787,52 +5787,52 @@ class $c_LdataStories_PDSLinks$ extends $c_O {
     $n_LdataStories_PDSLinks$ = this;
     const $$x32 = $m_sc_Seq$();
     const $$x31 = $m_sc_Seq$();
-    const array = [new $c_LdataStories_LinkSpecification("house-where", 0.05, 0.3, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/polarization"), new $c_LdataStories_LinkSpecification("house-why", 0.95, 0.3, "end", "Why does this matter?", "https://blog.betterchoices.vote/polarization-why")];
+    const array = [new $c_LdataStories_LinkSpecification("house-where", 0.05, 0.3, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/polarization"), new $c_LdataStories_LinkSpecification("house-why", 0.95, 0.3, "end", "Why this matters.", "https://blog.betterchoices.vote/polarization-why")];
     const $$x30 = new $c_LdataStories_PageLinks(0, $as_sc_Seq($$x31.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))));
     const $$x29 = $m_sc_Seq$();
-    const array$1 = [new $c_LdataStories_LinkSpecification("voters-where", 0.05, 0.3, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/voters-where"), new $c_LdataStories_LinkSpecification("voters-why", 0.95, 0.3, "end", "Why does this matter?", "https://blog.betterchoices.vote/voters-why")];
+    const array$1 = [new $c_LdataStories_LinkSpecification("voters-where", 0.05, 0.3, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/voters-where"), new $c_LdataStories_LinkSpecification("voters-why", 0.95, 0.3, "end", "Why this matters.", "https://blog.betterchoices.vote/voters-why")];
     const $$x28 = new $c_LdataStories_PageLinks(100, $as_sc_Seq($$x29.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$1))));
     const $$x27 = $m_sc_Seq$();
-    const array$2 = [new $c_LdataStories_LinkSpecification("simulation-where", 0.05, 0.3, "beginning", "How does simulation work?", "https://blog.betterchoices.vote/simulation-how"), new $c_LdataStories_LinkSpecification("simulation-why", 0.95, 0.3, "end", "Why does this matter?", "https://blog.betterchoices.vote/simulation-why")];
+    const array$2 = [new $c_LdataStories_LinkSpecification("simulation-where", 0.05, 0.3, "beginning", "How does simulation work?", "https://blog.betterchoices.vote/simulation-how"), new $c_LdataStories_LinkSpecification("simulation-why", 0.95, 0.3, "end", "Why this matters.", "https://blog.betterchoices.vote/simulation-why")];
     const $$x26 = new $c_LdataStories_PageLinks(125, $as_sc_Seq($$x27.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$2))));
     const $$x25 = $m_sc_Seq$();
-    const array$3 = [new $c_LdataStories_LinkSpecification("representation-where", 0.05, 0.3, "beginning", "How is representation calculated?", "https://blog.betterchoices.vote/representation-how"), new $c_LdataStories_LinkSpecification("representation-why", 0.95, 0.3, "end", "Why does this matter?", "https://blog.betterchoices.vote/representation-why")];
+    const array$3 = [new $c_LdataStories_LinkSpecification("representation-where", 0.05, 0.3, "beginning", "How is representation calculated?", "https://blog.betterchoices.vote/representation-how"), new $c_LdataStories_LinkSpecification("representation-why", 0.95, 0.3, "end", "Why this matters.", "https://blog.betterchoices.vote/representation-why")];
     const $$x24 = new $c_LdataStories_PageLinks(150, $as_sc_Seq($$x25.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$3))));
     const $$x23 = $m_sc_Seq$();
-    const array$4 = [new $c_LdataStories_LinkSpecification("actual-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/actual-representation-how"), new $c_LdataStories_LinkSpecification("actual-map-why", 0.95, 0.25, "end", "Why does this matter?", "https://blog.betterchoices.vote/actual-representation-why")];
+    const array$4 = [new $c_LdataStories_LinkSpecification("actual-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/actual-representation-how"), new $c_LdataStories_LinkSpecification("actual-map-why", 0.95, 0.25, "end", "Why this matters.", "https://blog.betterchoices.vote/actual-representation-why")];
     const $$x22 = new $c_LdataStories_PageLinks(200, $as_sc_Seq($$x23.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$4))));
     const $$x21 = $m_sc_Seq$();
-    const array$5 = [new $c_LdataStories_LinkSpecification("expected-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/expected-map-how"), new $c_LdataStories_LinkSpecification("expected-map-why", 0.95, 0.25, "end", "Why does this matter?", "https://blog.betterchoices.vote/expected-map-why")];
+    const array$5 = [new $c_LdataStories_LinkSpecification("expected-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/expected-map-how"), new $c_LdataStories_LinkSpecification("expected-map-why", 0.95, 0.25, "end", "Why this matters.", "https://blog.betterchoices.vote/expected-map-why")];
     const $$x20 = new $c_LdataStories_PageLinks(201, $as_sc_Seq($$x21.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$5))));
     const $$x19 = $m_sc_Seq$();
-    const array$6 = [new $c_LdataStories_LinkSpecification("primary-simulation-how", 0.05, 0.22, "beginning", "How does primary simulation work?", "https://blog.betterchoices.vote/primary-sim-how"), new $c_LdataStories_LinkSpecification("primary-simulation-why", 0.95, 0.22, "end", "Why does this matter?", "https://blog.betterchoices.vote/primary-sim-why")];
+    const array$6 = [new $c_LdataStories_LinkSpecification("primary-simulation-how", 0.05, 0.22, "beginning", "How does primary simulation work?", "https://blog.betterchoices.vote/primary-sim-how"), new $c_LdataStories_LinkSpecification("primary-simulation-why", 0.95, 0.22, "end", "Why this matters.", "https://blog.betterchoices.vote/primary-sim-why")];
     const $$x18 = new $c_LdataStories_PageLinks(700, $as_sc_Seq($$x19.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$6))));
     const $$x17 = $m_sc_Seq$();
-    const array$7 = [new $c_LdataStories_LinkSpecification("primary-voters-how", 0.05, 0.22, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/primary-voters-how"), new $c_LdataStories_LinkSpecification("primary-voters-why", 0.95, 0.22, "end", "Why does this matter?", "https://blog.betterchoices.vote/primary-voters-why")];
+    const array$7 = [new $c_LdataStories_LinkSpecification("primary-voters-how", 0.05, 0.22, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/primary-voters-how"), new $c_LdataStories_LinkSpecification("primary-voters-why", 0.95, 0.22, "end", "Why this matters.", "https://blog.betterchoices.vote/primary-voters-why")];
     const $$x16 = new $c_LdataStories_PageLinks(701, $as_sc_Seq($$x17.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$7))));
     const $$x15 = $m_sc_Seq$();
-    const array$8 = [new $c_LdataStories_LinkSpecification("primaries-where", 0.05, 0.22, "beginning", "How do the voters make their choices?", "https://blog.betterchoices.vote/primaries-where"), new $c_LdataStories_LinkSpecification("primaries-why", 0.95, 0.22, "end", "Why does this matter?", "https://blog.betterchoices.vote/primarys-why")];
+    const array$8 = [new $c_LdataStories_LinkSpecification("primaries-where", 0.05, 0.22, "beginning", "How do the voters make their choices?", "https://blog.betterchoices.vote/primaries-where"), new $c_LdataStories_LinkSpecification("primaries-why", 0.95, 0.22, "end", "Why this matters.", "https://blog.betterchoices.vote/primarys-why")];
     const $$x14 = new $c_LdataStories_PageLinks(800, $as_sc_Seq($$x15.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$8))));
     const $$x13 = $m_sc_Seq$();
-    const array$9 = [new $c_LdataStories_LinkSpecification("general-where", 0.05, 0.22, "beginning", "Where to these numbers come from?", "https://blog.betterchoices.vote/general-where"), new $c_LdataStories_LinkSpecification("general-why", 0.95, 0.22, "end", "Why does this matter?", "https://blog.betterchoices.vote/general-why")];
+    const array$9 = [new $c_LdataStories_LinkSpecification("general-where", 0.05, 0.22, "beginning", "Where to these numbers come from?", "https://blog.betterchoices.vote/general-where"), new $c_LdataStories_LinkSpecification("general-why", 0.95, 0.22, "end", "Why this matters.", "https://blog.betterchoices.vote/general-why")];
     const $$x12 = new $c_LdataStories_PageLinks(1000, $as_sc_Seq($$x13.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$9))));
     const $$x11 = $m_sc_Seq$();
-    const array$10 = [new $c_LdataStories_LinkSpecification("general-election-how", 0.05, 0.22, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/general-election-how"), new $c_LdataStories_LinkSpecification("general-election-why", 0.95, 0.22, "end", "Why does this matter?", "https://blog.betterchoices.vote/general-election-why")];
+    const array$10 = [new $c_LdataStories_LinkSpecification("general-election-how", 0.05, 0.22, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/general-election-how"), new $c_LdataStories_LinkSpecification("general-election-why", 0.95, 0.22, "end", "Why this matters.", "https://blog.betterchoices.vote/general-election-why")];
     const $$x10 = new $c_LdataStories_PageLinks(1100, $as_sc_Seq($$x11.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$10))));
     const $$x9 = $m_sc_Seq$();
-    const array$11 = [new $c_LdataStories_LinkSpecification("rcv-what", 0.05, 0.25, "beginning", "What is a ranked choice ballot?", "https://blog.betterchoices.vote/ranked-choice-what"), new $c_LdataStories_LinkSpecification("rcv-why", 0.95, 0.25, "end", "Why does this matter?", "https://blog.betterchoices.vote/ranked-choice-why")];
+    const array$11 = [new $c_LdataStories_LinkSpecification("head-to-head-intro", 0.05, 0.25, "beginning", "Introducing Head-to-Head.", "https://blog.betterchoices.vote/head-to-head-intro")];
     const $$x8 = new $c_LdataStories_PageLinks(1150, $as_sc_Seq($$x9.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$11))));
     const $$x7 = $m_sc_Seq$();
-    const array$12 = [new $c_LdataStories_LinkSpecification("head-to-head-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/head-to-head-how"), new $c_LdataStories_LinkSpecification("head-to-head-why", 0.95, 0.25, "end", "Why does this matter?", "https://blog.betterchoices.vote/head-to-head-why")];
+    const array$12 = [new $c_LdataStories_LinkSpecification("head-to-head-details", 0.05, 0.25, "beginning", "More details about Head-to-Head.", "https://blog.betterchoices.vote/head-to-head-details")];
     const $$x6 = new $c_LdataStories_PageLinks(1175, $as_sc_Seq($$x7.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$12))));
     const $$x5 = $m_sc_Seq$();
-    const array$13 = [new $c_LdataStories_LinkSpecification("h2h-result-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/h2h-result-how"), new $c_LdataStories_LinkSpecification("h2h-result-why", 0.95, 0.25, "end", "Why does this matter?", "https://blog.betterchoices.vote/h2h-result-why")];
+    const array$13 = [new $c_LdataStories_LinkSpecification("h2h-result-numbers", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/h2h-result-numbers"), new $c_LdataStories_LinkSpecification("h2h-result-why", 0.95, 0.25, "end", "Why this matters.", "https://blog.betterchoices.vote/h2h-result-why")];
     const $$x4 = new $c_LdataStories_PageLinks(1200, $as_sc_Seq($$x5.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$13))));
     const $$x3 = $m_sc_Seq$();
-    const array$14 = [new $c_LdataStories_LinkSpecification("h2h-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/h2h-map-how"), new $c_LdataStories_LinkSpecification("h2h-map-why", 0.95, 0.25, "end", "Why does this matter?", "https://blog.betterchoices.vote/h2h-map-why")];
+    const array$14 = [new $c_LdataStories_LinkSpecification("h2h-map-mean", 0.05, 0.25, "beginning", "What does this map mean?", "https://blog.betterchoices.vote/h2h-map-mean"), new $c_LdataStories_LinkSpecification("instant-runoff", 0.95, 0.25, "end", "What about Instant Runoff?", "https://blog.betterchoices.vote/instant-runoff"), new $c_LdataStories_LinkSpecification("gerrymandering", 0.95, 0.27, "end", "Head-to-Head and gerrymandering.", "https://blog.betterchoices.vote/h2h-gerrymandering"), new $c_LdataStories_LinkSpecification("party-primaries", 0.95, 0.29, "end", "Why no party primaries?", "https://blog.betterchoices.vote/h2h-primaries"), new $c_LdataStories_LinkSpecification("h2h-tactical-voting", 0.95, 0.31, "end", "What is Tactical Voting?", "https://blog.betterchoices.vote/h2h-tactical-voting"), new $c_LdataStories_LinkSpecification("h2h-cycles", 0.95, 0.33, "end", "What are cycles?", "https://blog.betterchoices.vote/head-to-head-cycles")];
     const $$x2 = new $c_LdataStories_PageLinks(1300, $as_sc_Seq($$x3.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$14))));
     const $$x1 = $m_sc_Seq$();
-    const array$15 = [new $c_LdataStories_LinkSpecification("final-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/final-how"), new $c_LdataStories_LinkSpecification("final-why", 0.95, 0.25, "end", "Why does this matter?", "https://blog.betterchoices.vote/final-why")];
+    const array$15 = [new $c_LdataStories_LinkSpecification("final-why", 0.95, 0.25, "end", "What this means.", "https://blog.betterchoices.vote/final-why")];
     const array$16 = [$$x30, $$x28, $$x26, $$x24, $$x22, $$x20, $$x18, $$x16, $$x14, $$x12, $$x10, $$x8, $$x6, $$x4, $$x2, new $c_LdataStories_PageLinks(1400, $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$15))))];
     this.LdataStories_PDSLinks$__f_links = $as_sc_Seq($$x32.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$16)));
     const $$x35 = $m_s_Predef$().s_Predef$__f_Map;
@@ -11531,70 +11531,72 @@ const $f_LscalajsUtils_SVGButton__clear__V = (function($thiz) {
   $thiz.text__Lio_whitemice_d3v5_selection_Selection().remove()
 });
 const $f_LscalajsUtils_SVGButton__$init$__V = (function($thiz) {
-  const $$x13 = $thiz.parentSVG__Lio_whitemice_d3v5_selection_Selection().append("rect");
-  const this$1 = $m_Lio_whitemice_d3v5_all_package$();
-  const s = $thiz.id__T();
-  const $$x12 = $$x13.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$1, s));
+  const sel = $thiz.parentSVG__Lio_whitemice_d3v5_selection_Selection().append("rect");
+  const $$x13 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel).cls__T__Lio_whitemice_d3v5_selection_Selection("button");
   const this$2 = $m_Lio_whitemice_d3v5_all_package$();
-  const d = $thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_x;
-  const $$x11 = $$x12.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$2, d));
+  const s = $thiz.id__T();
+  const $$x12 = $$x13.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$2, s));
   const this$3 = $m_Lio_whitemice_d3v5_all_package$();
-  const d$1 = $thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_y;
-  const $$x10 = $$x11.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$3, d$1));
+  const d = $thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_x;
+  const $$x11 = $$x12.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$3, d));
   const this$4 = $m_Lio_whitemice_d3v5_all_package$();
-  const d$2 = ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_height / 2.0);
-  const $$x9 = $$x10.attr("rx", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$4, d$2));
+  const d$1 = $thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_y;
+  const $$x10 = $$x11.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$4, d$1));
   const this$5 = $m_Lio_whitemice_d3v5_all_package$();
-  const d$3 = ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_height / 2.0);
-  const $$x8 = $$x9.attr("ry", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, d$3));
+  const d$2 = ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_height / 2.0);
+  const $$x9 = $$x10.attr("rx", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, d$2));
   const this$6 = $m_Lio_whitemice_d3v5_all_package$();
-  const d$4 = $thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_width;
-  const $$x7 = $$x8.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$6, d$4));
+  const d$3 = ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_height / 2.0);
+  const $$x8 = $$x9.attr("ry", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$6, d$3));
   const this$7 = $m_Lio_whitemice_d3v5_all_package$();
-  const d$5 = $thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_height;
-  const $$x6 = $$x7.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$7, d$5));
+  const d$4 = $thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_width;
+  const $$x7 = $$x8.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$7, d$4));
   const this$8 = $m_Lio_whitemice_d3v5_all_package$();
-  const s$1 = $thiz.inactiveColor__T();
-  const $$x5 = $$x6.style("stroke", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$8, s$1));
+  const d$5 = $thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_height;
+  const $$x6 = $$x7.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$8, d$5));
   const this$9 = $m_Lio_whitemice_d3v5_all_package$();
-  const $$x4 = $$x5.style("strike-width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$9, "2"));
+  const s$1 = $thiz.inactiveColor__T();
+  const $$x5 = $$x6.style("stroke", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$9, s$1));
   const this$10 = $m_Lio_whitemice_d3v5_all_package$();
-  const $$x3 = $$x4.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$10, "white"));
+  const $$x4 = $$x5.style("strike-width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$10, "2"));
   const this$11 = $m_Lio_whitemice_d3v5_all_package$();
-  const $$x2 = $$x3.style("cursor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$11, "default"));
-  const this$13 = $m_Lio_whitemice_d3v5_all_package$();
-  const fun = new $c_sjsr_AnonFunction0(((this$12) => (() => {
-    this$12.onClick__V()
+  const $$x3 = $$x4.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$11, "white"));
+  const this$12 = $m_Lio_whitemice_d3v5_all_package$();
+  const $$x2 = $$x3.style("cursor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$12, "default"));
+  const this$14 = $m_Lio_whitemice_d3v5_all_package$();
+  const fun = new $c_sjsr_AnonFunction0(((this$13) => (() => {
+    this$13.onClick__V()
   }))($thiz));
-  const $$x1 = $$x2.on("click", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$13, fun));
+  const $$x1 = $$x2.on("click", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$14, fun));
   $thiz.scalajsUtils$SVGButton$_setter_$rect_$eq__Lio_whitemice_d3v5_selection_Selection__V($$x1);
   const $$x24 = $thiz.parentSVG__Lio_whitemice_d3v5_selection_Selection().append("text");
-  const this$14 = $m_Lio_whitemice_d3v5_all_package$();
-  const s$2 = ($thiz.id__T() + "-text");
-  const $$x23 = $$x24.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$14, s$2));
   const this$15 = $m_Lio_whitemice_d3v5_all_package$();
-  const d$6 = ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_x + ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_width / 2.0));
-  const $$x22 = $$x23.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$15, d$6));
-  const this$16 = $m_Lio_whitemice_d3v5_all_package$();
-  const d$7 = ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_y + ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_height / 2.0));
-  const $$x21 = $$x22.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$16, d$7));
+  const s$2 = ($thiz.id__T() + "-text");
+  const sel$1 = $$x24.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$15, s$2));
+  const $$x23 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel$1).cls__T__Lio_whitemice_d3v5_selection_Selection("button");
   const this$17 = $m_Lio_whitemice_d3v5_all_package$();
-  const $$x20 = $$x21.attr("dy", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$17, ".3em"));
+  const d$6 = ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_x + ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_width / 2.0));
+  const $$x22 = $$x23.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$17, d$6));
   const this$18 = $m_Lio_whitemice_d3v5_all_package$();
-  const $$x19 = $$x20.style("font-size", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$18, "10pt"));
+  const d$7 = ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_y + ($thiz.location__LscalajsUtils_PixRectangle().LscalajsUtils_PixRectangle__f_height / 2.0));
+  const $$x21 = $$x22.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$18, d$7));
   const this$19 = $m_Lio_whitemice_d3v5_all_package$();
-  const $$x18 = $$x19.style("text-anchor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$19, "middle"));
+  const $$x20 = $$x21.attr("dy", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$19, ".3em"));
   const this$20 = $m_Lio_whitemice_d3v5_all_package$();
-  const s$3 = $thiz.inactiveColor__T();
-  const $$x17 = $$x18.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$20, s$3));
+  const $$x19 = $$x20.style("font-size", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$20, "10pt"));
   const this$21 = $m_Lio_whitemice_d3v5_all_package$();
-  const $$x16 = $$x17.style("cursor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$21, "default"));
-  const $$x15 = $$x16.text($thiz.textLabel__T());
+  const $$x18 = $$x19.style("text-anchor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$21, "middle"));
   const this$22 = $m_Lio_whitemice_d3v5_all_package$();
+  const s$3 = $thiz.inactiveColor__T();
+  const $$x17 = $$x18.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$22, s$3));
+  const this$23 = $m_Lio_whitemice_d3v5_all_package$();
+  const $$x16 = $$x17.style("cursor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$23, "default"));
+  const $$x15 = $$x16.text($thiz.textLabel__T());
+  const this$24 = $m_Lio_whitemice_d3v5_all_package$();
   const fun$1 = new $c_sjsr_AnonFunction0(((this$2$1) => (() => {
     this$2$1.onClick__V()
   }))($thiz));
-  const $$x14 = $$x15.on("click", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$22, fun$1));
+  const $$x14 = $$x15.on("click", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$24, fun$1));
   $thiz.scalajsUtils$SVGButton$_setter_$text_$eq__Lio_whitemice_d3v5_selection_Selection__V($$x14);
   $thiz.isActive_$eq__Z__V(false)
 });
@@ -43494,7 +43496,7 @@ class $c_LdataStories_HeadToHeadSection extends $c_LdataStories_GeneralDisplay {
       const this$8 = $m_sc_IndexedSeq$();
       bubbles = $as_sc_IndexedSeq($$x4.$colon$plus__O__scg_CanBuildFrom__O(fauxCandidate$2, this$8.sc_IndexedSeq$__f_ReusableCBF))
     };
-    this.LdataStories_GeneralDisplay__f_voteIsDirty = false;
+    this.LdataStories_GeneralDisplay__f_voteIsDirty = true;
     this.setPreferredCandidates__sc_Seq__V(bubbles);
     this.LdataStories_GeneralDisplay__f_voteIsDirty = false;
     return bubbles
@@ -45404,6 +45406,7 @@ const $p_LdataStories_PolarizationDataStory__displayBigMap__F1__V = (function($t
   const this$2 = $m_s_Console$();
   const this$3 = $as_Ljava_io_PrintStream(this$2.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
   this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V("displayBigMap\n");
+  $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner.selectAll(".button").remove();
   $thiz.LdataStories_PolarizationDataStory__f_ballot.clear__V();
   $thiz.LdataStories_PolarizationDataStory__f_house.clear__D__V(2.0);
   $thiz.LdataStories_PolarizationDataStory__f_voters.moveVotersOffScreen__V();
@@ -45420,14 +45423,10 @@ const $p_LdataStories_PolarizationDataStory__displayBigMap__F1__V = (function($t
   }))($thiz, fcn, mapRect);
   $thiz.LdataStories_PolarizationDataStory__f_mapDisplayTimer = new $c_s_Some(qual$1.timeout(x$1, mapDelayMillis))
 });
-const $p_LdataStories_PolarizationDataStory__displaySelectableMap__V = (function($thiz) {
-  const fcn = new $c_sjsr_AnonFunction1(((this$1) => ((r$2) => {
-    const r = $as_Lrcvcore_SimulationResult(r$2);
-    return this$1.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r.instantRunoffResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
-  }))($thiz));
-  const this$3 = $m_s_Console$();
-  const this$4 = $as_Ljava_io_PrintStream(this$3.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
-  this$4.java$lang$JSConsoleBasedPrintStream$$printString__T__V("displayBigMap\n");
+const $p_LdataStories_PolarizationDataStory__displaySelectableMap__I__V = (function($thiz, initialSelectionIndex) {
+  const this$2 = $m_s_Console$();
+  const this$3 = $as_Ljava_io_PrintStream(this$2.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+  this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V("displayBigMap\n");
   $thiz.LdataStories_PolarizationDataStory__f_ballot.clear__V();
   $thiz.LdataStories_PolarizationDataStory__f_house.clear__D__V(2.0);
   $thiz.LdataStories_PolarizationDataStory__f_voters.moveVotersOffScreen__V();
@@ -45438,78 +45437,79 @@ const $p_LdataStories_PolarizationDataStory__displaySelectableMap__V = (function
   const mapRect = $thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_map.LdataStories_MapConfig__f_fullScreen;
   const mapDelayMillis = ($thiz.LdataStories_PolarizationDataStory__f_map.alreadyAtLocation__LscalajsUtils_PctRectangle__Z(mapRect) ? 0 : 1000);
   const qual$1 = $i_d3$002dtimer;
-  const x$1 = ((arg$outer, fcn$2, mapRect$2) => ((arg1$2) => {
+  const x$1 = ((arg$outer, mapRect$2) => ((arg1$2) => {
     const arg1 = $uD(arg1$2);
-    arg$outer.dataStories$PolarizationDataStory$$$anonfun$displaySelectableMap$2__D__F1__LscalajsUtils_PctRectangle__V(arg1, fcn$2, mapRect$2)
-  }))($thiz, fcn, mapRect);
+    arg$outer.dataStories$PolarizationDataStory$$$anonfun$displaySelectableMap$1__D__LscalajsUtils_PctRectangle__V(arg1, mapRect$2)
+  }))($thiz, mapRect);
   $thiz.LdataStories_PolarizationDataStory__f_mapDisplayTimer = new $c_s_Some(qual$1.timeout(x$1, mapDelayMillis));
   const buttons = $as_scm_ListBuffer($m_scm_ListBuffer$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$()));
-  const this$9 = $thiz.LdataStories_PolarizationDataStory__f_configData;
-  const buttonX = (0.8 * this$9.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_desiredWidth);
+  const this$8 = $thiz.LdataStories_PolarizationDataStory__f_configData;
+  const buttonX = (0.8 * this$8.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_desiredWidth);
   const elem = (0.5 * $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_height);
   let elem$1 = 0.0;
   elem$1 = elem;
-  const action = new $c_sjsr_AnonFunction0(((this$2$1, buttons$1) => (() => {
-    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$2$1, new $c_sjsr_AnonFunction1(((this$11) => ((r$2$1) => {
-      const r$1 = $as_Lrcvcore_SimulationResult(r$2$1);
-      return r$1.actualVoterSatisfaction__D()
-    }))(this$2$1)), buttons$1)
+  $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner.selectAll(".button").remove();
+  const action = new $c_sjsr_AnonFunction0(((this$10, buttons$1) => (() => {
+    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$10, new $c_sjsr_AnonFunction1(((this$11) => ((r$2) => {
+      const r = $as_Lrcvcore_SimulationResult(r$2);
+      return r.actualVoterSatisfaction__D()
+    }))(this$10)), buttons$1)
   }))($thiz, buttons));
   buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Actual", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Actual", "blue", "gray", new $c_sjsr_AnonFunction0(((this$12, action$1) => (() => {
     action$1.apply__O()
   }))($thiz, action))));
   elem$1 = (25.0 + elem$1);
-  const action$2 = new $c_sjsr_AnonFunction0(((this$3$1, buttons$2) => (() => {
-    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$3$1, new $c_sjsr_AnonFunction1(((this$13) => ((r$2$2) => {
-      const r$3 = $as_Lrcvcore_SimulationResult(r$2$2);
-      return r$3.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
-    }))(this$3$1)), buttons$2)
+  const action$2 = new $c_sjsr_AnonFunction0(((this$2$1, buttons$2) => (() => {
+    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$2$1, new $c_sjsr_AnonFunction1(((this$13) => ((r$2$1) => {
+      const r$1 = $as_Lrcvcore_SimulationResult(r$2$1);
+      return r$1.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
+    }))(this$2$1)), buttons$2)
   }))($thiz, buttons));
-  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Primaries", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Primaries", "blue", "gray", new $c_sjsr_AnonFunction0(((this$14, action$3) => (() => {
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Primaries Simulation", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Primaries Simulation", "blue", "gray", new $c_sjsr_AnonFunction0(((this$14, action$3) => (() => {
     action$3.apply__O()
   }))($thiz, action$2))));
   elem$1 = (25.0 + elem$1);
-  const action$4 = new $c_sjsr_AnonFunction0(((this$4$1, buttons$3) => (() => {
-    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$4$1, new $c_sjsr_AnonFunction1(((this$15) => ((r$2$3) => {
-      const r$4 = $as_Lrcvcore_SimulationResult(r$2$3);
-      return r$4.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
-    }))(this$4$1)), buttons$3)
+  const action$4 = new $c_sjsr_AnonFunction0(((this$3$1, buttons$3) => (() => {
+    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$3$1, new $c_sjsr_AnonFunction1(((this$15) => ((r$2$2) => {
+      const r$3 = $as_Lrcvcore_SimulationResult(r$2$2);
+      return r$3.irPrimaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
+    }))(this$3$1)), buttons$3)
   }))($thiz, buttons));
   buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Instant Runoff with Party Primaries", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Instant Runoff with Party Primaries", "blue", "gray", new $c_sjsr_AnonFunction0(((this$16, action$5) => (() => {
     action$5.apply__O()
   }))($thiz, action$4))));
   elem$1 = (25.0 + elem$1);
-  const action$6 = new $c_sjsr_AnonFunction0(((this$5$1, buttons$4) => (() => {
-    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$5$1, new $c_sjsr_AnonFunction1(((this$17) => ((r$2$4) => {
-      const r$5 = $as_Lrcvcore_SimulationResult(r$2$4);
-      return r$5.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
-    }))(this$5$1)), buttons$4)
+  const action$6 = new $c_sjsr_AnonFunction0(((this$4$1, buttons$4) => (() => {
+    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$4$1, new $c_sjsr_AnonFunction1(((this$17) => ((r$2$3) => {
+      const r$4 = $as_Lrcvcore_SimulationResult(r$2$3);
+      return r$4.h2hPrimaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
+    }))(this$4$1)), buttons$4)
   }))($thiz, buttons));
   buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Head to Head with Party Primaries", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Head to Head with Party Primaries", "blue", "gray", new $c_sjsr_AnonFunction0(((this$18, action$7) => (() => {
     action$7.apply__O()
   }))($thiz, action$6))));
   elem$1 = (25.0 + elem$1);
-  const action$8 = new $c_sjsr_AnonFunction0(((this$6$1, buttons$5) => (() => {
-    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$6$1, new $c_sjsr_AnonFunction1(((this$19) => ((r$2$5) => {
-      const r$6 = $as_Lrcvcore_SimulationResult(r$2$5);
-      return r$6.instantRunoffResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
-    }))(this$6$1)), buttons$5)
+  const action$8 = new $c_sjsr_AnonFunction0(((this$5$1, buttons$5) => (() => {
+    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$5$1, new $c_sjsr_AnonFunction1(((this$19) => ((r$2$4) => {
+      const r$5 = $as_Lrcvcore_SimulationResult(r$2$4);
+      return r$5.instantRunoffResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
+    }))(this$5$1)), buttons$5)
   }))($thiz, buttons));
   buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Instant Runoff", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Instant Runoff", "blue", "gray", new $c_sjsr_AnonFunction0(((this$20, action$9) => (() => {
     action$9.apply__O()
   }))($thiz, action$8))));
   elem$1 = (25.0 + elem$1);
-  const action$10 = new $c_sjsr_AnonFunction0(((this$7$1, buttons$6) => (() => {
-    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$7$1, new $c_sjsr_AnonFunction1(((this$21) => ((r$2$6) => {
-      const r$7 = $as_Lrcvcore_SimulationResult(r$2$6);
-      return r$7.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
-    }))(this$7$1)), buttons$6)
+  const action$10 = new $c_sjsr_AnonFunction0(((this$6$1, buttons$6) => (() => {
+    $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V(this$6$1, new $c_sjsr_AnonFunction1(((this$21) => ((r$2$5) => {
+      const r$6 = $as_Lrcvcore_SimulationResult(r$2$5);
+      return r$6.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
+    }))(this$6$1)), buttons$6)
   }))($thiz, buttons));
   buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Head to Head", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Head to Head", "blue", "gray", new $c_sjsr_AnonFunction0(((this$22, action$11) => (() => {
     action$11.apply__O()
   }))($thiz, action$10))));
   elem$1 = (25.0 + elem$1);
-  const this$23 = $as_LscalajsUtils_SVGButton(buttons.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start.head__O());
+  const this$23 = $as_LscalajsUtils_SVGButton(buttons.apply__I__O(initialSelectionIndex));
   $f_LscalajsUtils_SVGButton__activate__V(this$23)
 });
 const $p_LdataStories_PolarizationDataStory__adjustPopulation$1__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__V = (function($thiz, partisanship$1, stddev$1, skew$1) {
@@ -46016,7 +46016,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
       const hi$2 = ((((-2147483648) ^ lo$2) > ((-2147483648) ^ lo$1)) ? (((-1) + ((hi$1 - hi) | 0)) | 0) : ((hi$1 - hi) | 0));
       this$8.update__T__J__V("OnDistrictSelection", new $c_RTLong(lo$2, hi$2))
     };
-    this.updateInner__I__V(section);
+    this.updateInner__I__D__V(section, progress);
     this.renderTextItems__V();
     this.LdataStories_PolarizationDataStory__f_candidates.render__V();
     this.LdataStories_PolarizationDataStory__f_house.render__V();
@@ -46157,7 +46157,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
       $p_LdataStories_PolarizationDataStory__adjustPopulation$1__sr_DoubleRef__sr_DoubleRef__sr_DoubleRef__V(this$3$4, partisanship$1$3, stddev$1$2, skew$1$2)
     }))(this, callback$6, partisanship, stddev, skew)))
   };
-  updateInner__I__V(section) {
+  updateInner__I__D__V(section, progress) {
     _return: {
       if ((section === this.LdataStories_PolarizationDataStory__f_lastSection)) {
         break _return
@@ -46237,10 +46237,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
           break
         }
         case 1300: {
-          $p_LdataStories_PolarizationDataStory__displayBigMap__F1__V(this, new $c_sjsr_AnonFunction1(((this$4) => ((r$4$2) => {
-            const r$4 = $as_Lrcvcore_SimulationResult(r$4$2);
-            return this$4.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r$4.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
-          }))(this)));
+          $p_LdataStories_PolarizationDataStory__displaySelectableMap__I__V(this, 5);
           break
         }
         case 1400: {
@@ -46252,7 +46249,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
           break
         }
         case 2100: {
-          $p_LdataStories_PolarizationDataStory__displaySelectableMap__V(this);
+          $p_LdataStories_PolarizationDataStory__displaySelectableMap__I__V(this, (($doubleToInt(progress) % 6) | 0));
           break
         }
         case 2200: {
@@ -46260,26 +46257,26 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
           break
         }
         case 2300: {
-          $p_LdataStories_PolarizationDataStory__displayBigMap__F1__V(this, new $c_sjsr_AnonFunction1(((this$5) => ((r$5$2) => {
-            const r$5 = $as_Lrcvcore_SimulationResult(r$5$2);
-            return this$5.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r$5.actualVoterSatisfaction__D(), 1.0)
+          $p_LdataStories_PolarizationDataStory__displayBigMap__F1__V(this, new $c_sjsr_AnonFunction1(((this$4) => ((r$4$2) => {
+            const r$4 = $as_Lrcvcore_SimulationResult(r$4$2);
+            return this$4.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r$4.actualVoterSatisfaction__D(), 1.0)
           }))(this)));
           break
         }
         case 2301: {
-          $p_LdataStories_PolarizationDataStory__displayBigMap__F1__V(this, new $c_sjsr_AnonFunction1(((this$6) => ((r$6$2) => {
-            const r$6 = $as_Lrcvcore_SimulationResult(r$6$2);
-            return this$6.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r$6.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
+          $p_LdataStories_PolarizationDataStory__displayBigMap__F1__V(this, new $c_sjsr_AnonFunction1(((this$5) => ((r$5$2) => {
+            const r$5 = $as_Lrcvcore_SimulationResult(r$5$2);
+            return this$5.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r$5.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
           }))(this)));
           break
         }
       };
-      $m_LdataStories_PDSLinks$().displayLinks__I__sc_Seq(section).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$7) => ((l$2) => {
+      $m_LdataStories_PDSLinks$().displayLinks__I__sc_Seq(section).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$6) => ((l$2) => {
         const l = $as_LdataStories_LinkSpecification(l$2);
-        const this$10 = this$7.LdataStories_PolarizationDataStory__f_textItems;
-        const array = [l.textItem__F1__LdataStories_TextItem(this$7.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback)];
+        const this$9 = this$6.LdataStories_PolarizationDataStory__f_textItems;
+        const array = [l.textItem__F1__LdataStories_TextItem(this$6.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_iFrameCallback)];
         const elems = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array);
-        this$10.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(elems)
+        this$9.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(elems)
       }))(this)));
       this.LdataStories_PolarizationDataStory__f_lastSection = section
     }
@@ -46483,8 +46480,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     this.LdataStories_PolarizationDataStory__f_map.zoomOut__V();
     this.LdataStories_PolarizationDataStory__f_map.render__V()
   };
-  dataStories$PolarizationDataStory$$$anonfun$displaySelectableMap$2__D__F1__LscalajsUtils_PctRectangle__V(x$8, fcn$2, mapRect$2) {
-    this.LdataStories_PolarizationDataStory__f_map.setColorBySatisfaction__F1__V(fcn$2);
+  dataStories$PolarizationDataStory$$$anonfun$displaySelectableMap$1__D__LscalajsUtils_PctRectangle__V(x$8, mapRect$2) {
     this.LdataStories_PolarizationDataStory__f_map.activate__LscalajsUtils_PctRectangle__V(mapRect$2);
     this.LdataStories_PolarizationDataStory__f_map.zoomOut__V();
     this.LdataStories_PolarizationDataStory__f_map.render__V()
@@ -48703,6 +48699,12 @@ class $c_Lrcvcore_SimulationResultInstance extends $c_O {
   primaryResult__Lrcvcore_ProcessResult() {
     return this.Lrcvcore_SimulationResultInstance__f_primaryResult
   };
+  irPrimaryResult__Lrcvcore_ProcessResult() {
+    return this.Lrcvcore_SimulationResultInstance__f_irPrimaryResult
+  };
+  h2hPrimaryResult__Lrcvcore_ProcessResult() {
+    return this.Lrcvcore_SimulationResultInstance__f_h2hPrimaryResult
+  };
   instantRunoffResult__Lrcvcore_ProcessResult() {
     return this.Lrcvcore_SimulationResultInstance__f_instantRunoffResult
   };
@@ -48881,6 +48883,34 @@ const $p_Lrcvcore_SimulationResultSummary__primaryResult$lzycompute__Lrcvcore_Pr
   };
   return $thiz.Lrcvcore_SimulationResultSummary__f_primaryResult
 });
+const $p_Lrcvcore_SimulationResultSummary__irPrimaryResult$lzycompute__Lrcvcore_ProcessResult = (function($thiz) {
+  if (((((2 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0)) {
+    const $$x3 = $m_Lrcvcore_ProcessResult$();
+    const $$x2 = $thiz.Lrcvcore_SimulationResultSummary__f_results;
+    const $$x1 = new $c_sjsr_AnonFunction1(((this$1) => ((x$2$2) => {
+      const x$2 = $as_Lrcvcore_SimulationResultInstance(x$2$2);
+      return x$2.Lrcvcore_SimulationResultInstance__f_irPrimaryResult
+    }))($thiz));
+    const this$2 = $m_sc_Seq$();
+    $thiz.Lrcvcore_SimulationResultSummary__f_irPrimaryResult = $$x3.apply__sc_Seq__Lrcvcore_ProcessResult($as_sc_Seq($$x2.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)));
+    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (((2 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24)
+  };
+  return $thiz.Lrcvcore_SimulationResultSummary__f_irPrimaryResult
+});
+const $p_Lrcvcore_SimulationResultSummary__h2hPrimaryResult$lzycompute__Lrcvcore_ProcessResult = (function($thiz) {
+  if (((((4 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0)) {
+    const $$x3 = $m_Lrcvcore_ProcessResult$();
+    const $$x2 = $thiz.Lrcvcore_SimulationResultSummary__f_results;
+    const $$x1 = new $c_sjsr_AnonFunction1(((this$1) => ((x$3$2) => {
+      const x$3 = $as_Lrcvcore_SimulationResultInstance(x$3$2);
+      return x$3.Lrcvcore_SimulationResultInstance__f_h2hPrimaryResult
+    }))($thiz));
+    const this$2 = $m_sc_Seq$();
+    $thiz.Lrcvcore_SimulationResultSummary__f_h2hPrimaryResult = $$x3.apply__sc_Seq__Lrcvcore_ProcessResult($as_sc_Seq($$x2.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)));
+    $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0 = (((4 | $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24)
+  };
+  return $thiz.Lrcvcore_SimulationResultSummary__f_h2hPrimaryResult
+});
 const $p_Lrcvcore_SimulationResultSummary__instantRunoffResult$lzycompute__Lrcvcore_ProcessResult = (function($thiz) {
   if (((((8 & $thiz.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0)) {
     const $$x3 = $m_Lrcvcore_ProcessResult$();
@@ -48934,6 +48964,12 @@ class $c_Lrcvcore_SimulationResultSummary extends $c_O {
   };
   primaryResult__Lrcvcore_ProcessResult() {
     return (((((1 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lrcvcore_SimulationResultSummary__primaryResult$lzycompute__Lrcvcore_ProcessResult(this) : this.Lrcvcore_SimulationResultSummary__f_primaryResult)
+  };
+  irPrimaryResult__Lrcvcore_ProcessResult() {
+    return (((((2 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lrcvcore_SimulationResultSummary__irPrimaryResult$lzycompute__Lrcvcore_ProcessResult(this) : this.Lrcvcore_SimulationResultSummary__f_irPrimaryResult)
+  };
+  h2hPrimaryResult__Lrcvcore_ProcessResult() {
+    return (((((4 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lrcvcore_SimulationResultSummary__h2hPrimaryResult$lzycompute__Lrcvcore_ProcessResult(this) : this.Lrcvcore_SimulationResultSummary__f_h2hPrimaryResult)
   };
   instantRunoffResult__Lrcvcore_ProcessResult() {
     return (((((8 & this.Lrcvcore_SimulationResultSummary__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lrcvcore_SimulationResultSummary__instantRunoffResult$lzycompute__Lrcvcore_ProcessResult(this) : this.Lrcvcore_SimulationResultSummary__f_instantRunoffResult)
@@ -53760,7 +53796,19 @@ class $c_LdataStories_CandidateController extends $c_LdataStories_RouteControlle
     this.renderBubbles__V()
   };
   constructCandidates__LdataStories_DistrictData__sc_IndexedSeq(data) {
-    const config = $m_Lrcvcore_CongressionalSimulationConfig$().defaultConfig__I__Lrcvcore_CongressionalSimulationConfig(3);
+    const qual$1 = $m_Lrcvcore_CongressionalSimulationConfig$().defaultConfig__I__Lrcvcore_CongressionalSimulationConfig(3);
+    const x$3 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_label;
+    const x$4 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_config;
+    const x$5 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_popConfig;
+    const x$6 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nRepublicanCandidates;
+    const x$7 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nDemocraticCandidates;
+    const x$8 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nIndependentCandidates;
+    const x$9 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_nMedianVoterCandidates;
+    const x$10 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateOffset;
+    const x$11 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateSpread;
+    const x$12 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_candidateVariance;
+    const x$13 = qual$1.Lrcvcore_CongressionalSimulationConfig__f_primarySkew;
+    const config = new $c_Lrcvcore_CongressionalSimulationConfig(x$3, x$4, x$5, x$6, x$7, x$8, x$9, x$10, x$11, x$12, x$13, 0.0, 0.0);
     const $$x1 = data.LdataStories_DistrictData__f_d;
     const this$2 = $m_RTLong$();
     const value = (1000000.0 * $uD((0, $m_jl_System$NanoTime$().jl_System$NanoTime$__f_getHighPrecisionTime)()));
@@ -54173,15 +54221,14 @@ class $c_LdataStories_CandidateController extends $c_LdataStories_RouteControlle
     const $$x17 = $$x18.attr("text-anchor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$53, "middle"));
     const this$54 = $m_Lio_whitemice_d3v5_all_package$();
     $$x17.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$54, "white"));
-    const $$x28 = enteringG.merge(u);
-    const this$90 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x27 = enteringG.merge(u);
+    const this$71 = $m_Lio_whitemice_d3v5_all_package$();
     const fun$9 = new $c_sjsr_AnonFunction1(((this$10$1) => ((b$5$2) => {
       const b$5 = $as_LdataStories_CandidateBubble(b$5$2);
-      const arg$macro$6 = $as_Lrcvcore_Candidate(b$5.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_name;
-      const arg$macro$7 = b$5.LdataStories_Bubble__f_x;
-      const arg$macro$8 = b$5.LdataStories_Bubble__f_y;
-      const this$57 = new $c_sci_StringOps("translate: %5s %7.2f %7.2f");
-      const array$4 = [arg$macro$6, arg$macro$7, arg$macro$8];
+      const arg$macro$6 = b$5.LdataStories_Bubble__f_x;
+      const arg$macro$7 = b$5.LdataStories_Bubble__f_y;
+      const this$57 = new $c_sci_StringOps("translate(%s, %s)");
+      const array$4 = [arg$macro$6, arg$macro$7];
       const this$$2 = this$57.sci_StringOps__f_repr;
       $m_sc_Seq$();
       $m_sjs_js_WrappedArray$();
@@ -54213,68 +54260,33 @@ class $c_LdataStories_CandidateController extends $c_LdataStories_RouteControlle
         i$5 = ((1 + i$5) | 0);
         j$2 = ((1 + j$2) | 0)
       };
-      const x$6 = $m_jl_String$().format__T__AO__T(this$$2, result$2);
-      const this$72 = $m_s_Console$();
-      const this$73 = $as_Ljava_io_PrintStream(this$72.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
-      this$73.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$6 + "\n"));
-      const arg$macro$9 = b$5.LdataStories_Bubble__f_x;
-      const arg$macro$10 = b$5.LdataStories_Bubble__f_y;
-      const this$76 = new $c_sci_StringOps("translate(%s, %s)");
-      const array$6 = [arg$macro$9, arg$macro$10];
-      const this$$3 = this$76.sci_StringOps__f_repr;
-      $m_sc_Seq$();
-      $m_sjs_js_WrappedArray$();
-      const array$7 = [];
-      $uI(array$6.length);
-      let i$6 = 0;
-      const len$9 = $uI(array$6.length);
-      while ((i$6 < len$9)) {
-        const index$6 = i$6;
-        const arg1$3 = array$6[index$6];
-        const elem$3 = $p_sci_StringLike__unwrapArg__O__O(this$76, arg1$3);
-        array$7.push(elem$3);
-        i$6 = ((1 + i$6) | 0)
-      };
-      $m_s_reflect_ManifestFactory$ObjectManifest$();
-      const len$10 = $uI(array$7.length);
-      const result$3 = $newArrayObject($d_O.getArrayOf(), [len$10]);
-      const len$11 = result$3.u.length;
-      let i$7 = 0;
-      let j$3 = 0;
-      const x$7 = $uI(array$7.length);
-      const x$8 = ((x$7 < len$11) ? x$7 : len$11);
-      const that$3 = result$3.u.length;
-      const end$3 = ((x$8 < that$3) ? x$8 : that$3);
-      while ((i$7 < end$3)) {
-        const $$x27 = j$3;
-        const index$7 = i$7;
-        result$3.set($$x27, array$7[index$7]);
-        i$7 = ((1 + i$7) | 0);
-        j$3 = ((1 + j$3) | 0)
-      };
-      return $m_jl_String$().format__T__AO__T(this$$3, result$3)
+      return $m_jl_String$().format__T__AO__T(this$$2, result$2)
     }))(this));
-    $$x28.attr("transform", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f1ToCallback__F1__sjs_js_$bar(this$90, fun$9));
-    const $$x31 = this.LdataStories_CandidateController__f_candidateArea.selectAll(".candidate-name");
-    const $$x30 = $m_sjs_js_JSConverters$JSRichGenTraversableOnce$();
+    $$x27.attr("transform", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f1ToCallback__F1__sjs_js_$bar(this$71, fun$9));
+    const $$x30 = this.LdataStories_CandidateController__f_candidateArea.selectAll(".candidate-name");
+    const $$x29 = $m_sjs_js_JSConverters$JSRichGenTraversableOnce$();
     const col$1 = this.LdataStories_CandidateController__f_candidates;
-    const $$x29 = $$x31.data($$x30.toJSArray$extension__sc_GenTraversableOnce__sjs_js_Array(col$1));
-    const this$92 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x28 = $$x30.data($$x29.toJSArray$extension__sc_GenTraversableOnce__sjs_js_Array(col$1));
+    const this$73 = $m_Lio_whitemice_d3v5_all_package$();
     const fun$10 = new $c_sjsr_AnonFunction1(((this$11$1) => ((b$6$2) => {
       const b$6 = $as_LdataStories_CandidateBubble(b$6$2);
       return $as_Lrcvcore_Candidate(b$6.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_name
     }))(this));
-    $$x29.text($f_Lio_whitemice_d3v5_selection_SelectionImplicits__f1ToCallback__F1__sjs_js_$bar(this$92, fun$10));
-    this.debugPrintCandidates__T__V("renderBubbles")
+    $$x28.text($f_Lio_whitemice_d3v5_selection_SelectionImplicits__f1ToCallback__F1__sjs_js_$bar(this$73, fun$10))
   };
   debugPrintCandidates__T__V(prefix) {
     this.LdataStories_CandidateController__f_candidates.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$1, prefix$1) => ((c$2) => {
       const c = $as_LdataStories_CandidateBubble(c$2);
+      const cc = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O());
       const arg$macro$2 = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_name;
-      const arg$macro$3 = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_ideology;
-      const arg$macro$4 = c.LdataStories_Bubble__f_x;
-      const this$4 = new $c_sci_StringOps("%20s: %5s %.2f %.2f");
-      const array = [prefix$1, arg$macro$2, arg$macro$3, arg$macro$4];
+      const arg$macro$3 = cc.Lrcvcore_Candidate__f_party.Lrcvcore_PopulationGroup__f_tag.shortName__T();
+      const arg$macro$4 = cc.Lrcvcore_Candidate__f_quality;
+      const arg$macro$5 = cc.Lrcvcore_Candidate__f_money;
+      const arg$macro$6 = cc.Lrcvcore_Candidate__f_incumbent;
+      const arg$macro$7 = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_ideology;
+      const arg$macro$8 = c.LdataStories_Bubble__f_x;
+      const this$4 = new $c_sci_StringOps("%20s: %5s %s % .2f % 6.2f %s %.2f %.2f");
+      const array = [prefix$1, arg$macro$2, arg$macro$3, arg$macro$4, arg$macro$5, arg$macro$6, arg$macro$7, arg$macro$8];
       const this$ = this$4.sci_StringOps__f_repr;
       $m_sc_Seq$();
       $m_sjs_js_WrappedArray$();
