@@ -45455,7 +45455,7 @@ const $p_LdataStories_PolarizationDataStory__displaySelectableMap__I__V = (funct
       return r.actualVoterSatisfaction__D()
     }))(this$10)), buttons$1)
   }))($thiz, buttons));
-  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Actual", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Actual", "blue", "gray", new $c_sjsr_AnonFunction0(((this$12, action$1) => (() => {
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Current", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Current", "blue", "gray", new $c_sjsr_AnonFunction0(((this$12, action$1) => (() => {
     action$1.apply__O()
   }))($thiz, action))));
   elem$1 = (25.0 + elem$1);
@@ -45465,7 +45465,7 @@ const $p_LdataStories_PolarizationDataStory__displaySelectableMap__I__V = (funct
       return r$1.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
     }))(this$2$1)), buttons$2)
   }))($thiz, buttons));
-  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Primaries Simulation", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Primaries Simulation", "blue", "gray", new $c_sjsr_AnonFunction0(((this$14, action$3) => (() => {
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Simulation of Current", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Simulation of Current", "blue", "gray", new $c_sjsr_AnonFunction0(((this$14, action$3) => (() => {
     action$3.apply__O()
   }))($thiz, action$2))));
   elem$1 = (25.0 + elem$1);
@@ -45495,7 +45495,7 @@ const $p_LdataStories_PolarizationDataStory__displaySelectableMap__I__V = (funct
       return r$5.instantRunoffResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
     }))(this$5$1)), buttons$5)
   }))($thiz, buttons));
-  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Instant Runoff", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Instant Runoff", "blue", "gray", new $c_sjsr_AnonFunction0(((this$20, action$9) => (() => {
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Instant Runoff with Blanket Primaries", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Instant Runoff with Blanket Primaries", "blue", "gray", new $c_sjsr_AnonFunction0(((this$20, action$9) => (() => {
     action$9.apply__O()
   }))($thiz, action$8))));
   elem$1 = (25.0 + elem$1);
@@ -45505,7 +45505,7 @@ const $p_LdataStories_PolarizationDataStory__displaySelectableMap__I__V = (funct
       return r$6.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
     }))(this$6$1)), buttons$6)
   }))($thiz, buttons));
-  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Head to Head", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Head to Head", "blue", "gray", new $c_sjsr_AnonFunction0(((this$22, action$11) => (() => {
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Head to Head with Blanket Primaries", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Head to Head with Blanket Primaries", "blue", "gray", new $c_sjsr_AnonFunction0(((this$22, action$11) => (() => {
     action$11.apply__O()
   }))($thiz, action$10))));
   elem$1 = (25.0 + elem$1);
