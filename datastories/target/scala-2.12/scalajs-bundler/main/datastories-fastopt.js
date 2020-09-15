@@ -5785,64 +5785,67 @@ class $c_LdataStories_PDSLinks$ extends $c_O {
     this.LdataStories_PDSLinks$__f_links = null;
     this.LdataStories_PDSLinks$__f_linkMap = null;
     $n_LdataStories_PDSLinks$ = this;
-    const $$x32 = $m_sc_Seq$();
+    const $$x34 = $m_sc_Seq$();
+    const $$x33 = $m_sc_Seq$();
+    const array = [new $c_LdataStories_LinkSpecification("house-where", 0.05, 0.3, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/polarization"), new $c_LdataStories_LinkSpecification("house-why", 0.95, 0.3, "end", "Why this matters", "https://blog.betterchoices.vote/polarization-why")];
+    const $$x32 = new $c_LdataStories_PageLinks(0, $as_sc_Seq($$x33.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))));
     const $$x31 = $m_sc_Seq$();
-    const array = [new $c_LdataStories_LinkSpecification("house-where", 0.05, 0.3, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/polarization"), new $c_LdataStories_LinkSpecification("house-why", 0.95, 0.3, "end", "Why this matters.", "https://blog.betterchoices.vote/polarization-why")];
-    const $$x30 = new $c_LdataStories_PageLinks(0, $as_sc_Seq($$x31.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))));
+    const array$1 = [new $c_LdataStories_LinkSpecification("voters-where", 0.05, 0.3, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/voters-where"), new $c_LdataStories_LinkSpecification("voters-why", 0.95, 0.3, "end", "Why this matters", "https://blog.betterchoices.vote/voters-why")];
+    const $$x30 = new $c_LdataStories_PageLinks(100, $as_sc_Seq($$x31.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$1))));
     const $$x29 = $m_sc_Seq$();
-    const array$1 = [new $c_LdataStories_LinkSpecification("voters-where", 0.05, 0.3, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/voters-where"), new $c_LdataStories_LinkSpecification("voters-why", 0.95, 0.3, "end", "Why this matters.", "https://blog.betterchoices.vote/voters-why")];
-    const $$x28 = new $c_LdataStories_PageLinks(100, $as_sc_Seq($$x29.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$1))));
+    const array$2 = [new $c_LdataStories_LinkSpecification("simulation-where", 0.05, 0.3, "beginning", "How does simulation work?", "https://blog.betterchoices.vote/simulation-how"), new $c_LdataStories_LinkSpecification("simulation-why", 0.95, 0.3, "end", "Why this matters", "https://blog.betterchoices.vote/simulation-why")];
+    const $$x28 = new $c_LdataStories_PageLinks(125, $as_sc_Seq($$x29.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$2))));
     const $$x27 = $m_sc_Seq$();
-    const array$2 = [new $c_LdataStories_LinkSpecification("simulation-where", 0.05, 0.3, "beginning", "How does simulation work?", "https://blog.betterchoices.vote/simulation-how"), new $c_LdataStories_LinkSpecification("simulation-why", 0.95, 0.3, "end", "Why this matters.", "https://blog.betterchoices.vote/simulation-why")];
-    const $$x26 = new $c_LdataStories_PageLinks(125, $as_sc_Seq($$x27.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$2))));
+    const array$3 = [new $c_LdataStories_LinkSpecification("representation-where", 0.05, 0.3, "beginning", "How is representation calculated?", "https://blog.betterchoices.vote/representation-how"), new $c_LdataStories_LinkSpecification("representation-why", 0.95, 0.3, "end", "Why this matters", "https://blog.betterchoices.vote/representation-why")];
+    const $$x26 = new $c_LdataStories_PageLinks(150, $as_sc_Seq($$x27.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$3))));
     const $$x25 = $m_sc_Seq$();
-    const array$3 = [new $c_LdataStories_LinkSpecification("representation-where", 0.05, 0.3, "beginning", "How is representation calculated?", "https://blog.betterchoices.vote/representation-how"), new $c_LdataStories_LinkSpecification("representation-why", 0.95, 0.3, "end", "Why this matters.", "https://blog.betterchoices.vote/representation-why")];
-    const $$x24 = new $c_LdataStories_PageLinks(150, $as_sc_Seq($$x25.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$3))));
+    const array$4 = [new $c_LdataStories_LinkSpecification("actual-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/actual-representation-how"), new $c_LdataStories_LinkSpecification("actual-map-why", 0.95, 0.25, "end", "Why this matters", "https://blog.betterchoices.vote/actual-representation-why")];
+    const $$x24 = new $c_LdataStories_PageLinks(200, $as_sc_Seq($$x25.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$4))));
     const $$x23 = $m_sc_Seq$();
-    const array$4 = [new $c_LdataStories_LinkSpecification("actual-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/actual-representation-how"), new $c_LdataStories_LinkSpecification("actual-map-why", 0.95, 0.25, "end", "Why this matters.", "https://blog.betterchoices.vote/actual-representation-why")];
-    const $$x22 = new $c_LdataStories_PageLinks(200, $as_sc_Seq($$x23.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$4))));
+    const array$5 = [new $c_LdataStories_LinkSpecification("expected-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/expected-map-how"), new $c_LdataStories_LinkSpecification("expected-map-why", 0.95, 0.25, "end", "Why this matters", "https://blog.betterchoices.vote/expected-map-why")];
+    const $$x22 = new $c_LdataStories_PageLinks(201, $as_sc_Seq($$x23.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$5))));
     const $$x21 = $m_sc_Seq$();
-    const array$5 = [new $c_LdataStories_LinkSpecification("expected-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/expected-map-how"), new $c_LdataStories_LinkSpecification("expected-map-why", 0.95, 0.25, "end", "Why this matters.", "https://blog.betterchoices.vote/expected-map-why")];
-    const $$x20 = new $c_LdataStories_PageLinks(201, $as_sc_Seq($$x21.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$5))));
+    const array$6 = [new $c_LdataStories_LinkSpecification("primary-simulation-how", 0.05, 0.22, "beginning", "How does primary simulation work?", "https://blog.betterchoices.vote/primary-sim-how"), new $c_LdataStories_LinkSpecification("primary-simulation-why", 0.95, 0.22, "end", "Why this matters", "https://blog.betterchoices.vote/primary-sim-why")];
+    const $$x20 = new $c_LdataStories_PageLinks(700, $as_sc_Seq($$x21.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$6))));
     const $$x19 = $m_sc_Seq$();
-    const array$6 = [new $c_LdataStories_LinkSpecification("primary-simulation-how", 0.05, 0.22, "beginning", "How does primary simulation work?", "https://blog.betterchoices.vote/primary-sim-how"), new $c_LdataStories_LinkSpecification("primary-simulation-why", 0.95, 0.22, "end", "Why this matters.", "https://blog.betterchoices.vote/primary-sim-why")];
-    const $$x18 = new $c_LdataStories_PageLinks(700, $as_sc_Seq($$x19.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$6))));
+    const array$7 = [new $c_LdataStories_LinkSpecification("primary-voters-how", 0.05, 0.22, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/primary-voters-how"), new $c_LdataStories_LinkSpecification("primary-voters-why", 0.95, 0.22, "end", "Why this matters", "https://blog.betterchoices.vote/primary-voters-why")];
+    const $$x18 = new $c_LdataStories_PageLinks(701, $as_sc_Seq($$x19.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$7))));
     const $$x17 = $m_sc_Seq$();
-    const array$7 = [new $c_LdataStories_LinkSpecification("primary-voters-how", 0.05, 0.22, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/primary-voters-how"), new $c_LdataStories_LinkSpecification("primary-voters-why", 0.95, 0.22, "end", "Why this matters.", "https://blog.betterchoices.vote/primary-voters-why")];
-    const $$x16 = new $c_LdataStories_PageLinks(701, $as_sc_Seq($$x17.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$7))));
+    const array$8 = [new $c_LdataStories_LinkSpecification("primaries-where", 0.05, 0.22, "beginning", "How do the voters make their choices?", "https://blog.betterchoices.vote/primaries-where"), new $c_LdataStories_LinkSpecification("primaries-why", 0.95, 0.22, "end", "Why this matters", "https://blog.betterchoices.vote/primaries-why")];
+    const $$x16 = new $c_LdataStories_PageLinks(800, $as_sc_Seq($$x17.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$8))));
     const $$x15 = $m_sc_Seq$();
-    const array$8 = [new $c_LdataStories_LinkSpecification("primaries-where", 0.05, 0.22, "beginning", "How do the voters make their choices?", "https://blog.betterchoices.vote/primaries-where"), new $c_LdataStories_LinkSpecification("primaries-why", 0.95, 0.22, "end", "Why this matters.", "https://blog.betterchoices.vote/primarys-why")];
-    const $$x14 = new $c_LdataStories_PageLinks(800, $as_sc_Seq($$x15.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$8))));
+    const array$9 = [new $c_LdataStories_LinkSpecification("general-where", 0.05, 0.22, "beginning", "Where to these numbers come from?", "https://blog.betterchoices.vote/general-where"), new $c_LdataStories_LinkSpecification("general-why", 0.95, 0.22, "end", "Why this matters", "https://blog.betterchoices.vote/general-why")];
+    const $$x14 = new $c_LdataStories_PageLinks(1000, $as_sc_Seq($$x15.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$9))));
     const $$x13 = $m_sc_Seq$();
-    const array$9 = [new $c_LdataStories_LinkSpecification("general-where", 0.05, 0.22, "beginning", "Where to these numbers come from?", "https://blog.betterchoices.vote/general-where"), new $c_LdataStories_LinkSpecification("general-why", 0.95, 0.22, "end", "Why this matters.", "https://blog.betterchoices.vote/general-why")];
-    const $$x12 = new $c_LdataStories_PageLinks(1000, $as_sc_Seq($$x13.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$9))));
+    const array$10 = [new $c_LdataStories_LinkSpecification("general-election-how", 0.05, 0.22, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/general-election-how"), new $c_LdataStories_LinkSpecification("general-election-why", 0.95, 0.22, "end", "Why this matters", "https://blog.betterchoices.vote/general-election-why")];
+    const $$x12 = new $c_LdataStories_PageLinks(1100, $as_sc_Seq($$x13.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$10))));
     const $$x11 = $m_sc_Seq$();
-    const array$10 = [new $c_LdataStories_LinkSpecification("general-election-how", 0.05, 0.22, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/general-election-how"), new $c_LdataStories_LinkSpecification("general-election-why", 0.95, 0.22, "end", "Why this matters.", "https://blog.betterchoices.vote/general-election-why")];
-    const $$x10 = new $c_LdataStories_PageLinks(1100, $as_sc_Seq($$x11.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$10))));
+    const array$11 = [new $c_LdataStories_LinkSpecification("head-to-head-intro", 0.05, 0.25, "beginning", "Introducing Head-to-Head", "https://blog.betterchoices.vote/head-to-head-intro")];
+    const $$x10 = new $c_LdataStories_PageLinks(1150, $as_sc_Seq($$x11.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$11))));
     const $$x9 = $m_sc_Seq$();
-    const array$11 = [new $c_LdataStories_LinkSpecification("head-to-head-intro", 0.05, 0.25, "beginning", "Introducing Head-to-Head.", "https://blog.betterchoices.vote/head-to-head-intro")];
-    const $$x8 = new $c_LdataStories_PageLinks(1150, $as_sc_Seq($$x9.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$11))));
+    const array$12 = [new $c_LdataStories_LinkSpecification("head-to-head-details", 0.05, 0.25, "beginning", "More about Head-to-Head", "https://blog.betterchoices.vote/head-to-head-details")];
+    const $$x8 = new $c_LdataStories_PageLinks(1175, $as_sc_Seq($$x9.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$12))));
     const $$x7 = $m_sc_Seq$();
-    const array$12 = [new $c_LdataStories_LinkSpecification("head-to-head-details", 0.05, 0.25, "beginning", "More details about Head-to-Head.", "https://blog.betterchoices.vote/head-to-head-details")];
-    const $$x6 = new $c_LdataStories_PageLinks(1175, $as_sc_Seq($$x7.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$12))));
+    const array$13 = [new $c_LdataStories_LinkSpecification("h2h-result-numbers", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/h2h-result-numbers"), new $c_LdataStories_LinkSpecification("h2h-result-why", 0.95, 0.25, "end", "Why this matters", "https://blog.betterchoices.vote/h2h-result-why")];
+    const $$x6 = new $c_LdataStories_PageLinks(1200, $as_sc_Seq($$x7.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$13))));
     const $$x5 = $m_sc_Seq$();
-    const array$13 = [new $c_LdataStories_LinkSpecification("h2h-result-numbers", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/h2h-result-numbers"), new $c_LdataStories_LinkSpecification("h2h-result-why", 0.95, 0.25, "end", "Why this matters.", "https://blog.betterchoices.vote/h2h-result-why")];
-    const $$x4 = new $c_LdataStories_PageLinks(1200, $as_sc_Seq($$x5.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$13))));
+    const array$14 = [new $c_LdataStories_LinkSpecification("h2h-map-mean", 0.05, 0.25, "beginning", "What does this map mean?", "https://blog.betterchoices.vote/h2h-map-mean"), new $c_LdataStories_LinkSpecification("h2h-tactical-voting", 0.95, 0.25, "end", "What is Tactical Voting?", "https://blog.betterchoices.vote/h2h-tactical-voting"), new $c_LdataStories_LinkSpecification("h2h-cycles", 0.95, 0.27, "end", "What are cycles?", "https://blog.betterchoices.vote/head-to-head-cycles"), new $c_LdataStories_LinkSpecification("implementation", 0.95, 0.29, "end", "Head-to-Head Implementation", "https://blog.betterchoices.vote/h2h-implementation")];
+    const $$x4 = new $c_LdataStories_PageLinks(1300, $as_sc_Seq($$x5.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$14))));
     const $$x3 = $m_sc_Seq$();
-    const array$14 = [new $c_LdataStories_LinkSpecification("h2h-map-mean", 0.05, 0.25, "beginning", "What does this map mean?", "https://blog.betterchoices.vote/h2h-map-mean"), new $c_LdataStories_LinkSpecification("instant-runoff", 0.95, 0.25, "end", "What about Instant Runoff?", "https://blog.betterchoices.vote/instant-runoff"), new $c_LdataStories_LinkSpecification("gerrymandering", 0.95, 0.27, "end", "Head-to-Head and gerrymandering.", "https://blog.betterchoices.vote/h2h-gerrymandering"), new $c_LdataStories_LinkSpecification("party-primaries", 0.95, 0.29, "end", "Why no party primaries?", "https://blog.betterchoices.vote/h2h-primaries"), new $c_LdataStories_LinkSpecification("h2h-tactical-voting", 0.95, 0.31, "end", "What is Tactical Voting?", "https://blog.betterchoices.vote/h2h-tactical-voting"), new $c_LdataStories_LinkSpecification("h2h-cycles", 0.95, 0.33, "end", "What are cycles?", "https://blog.betterchoices.vote/head-to-head-cycles")];
-    const $$x2 = new $c_LdataStories_PageLinks(1300, $as_sc_Seq($$x3.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$14))));
+    const array$15 = [new $c_LdataStories_LinkSpecification("h2h-congress-about", 0.95, 0.25, "end", "More about polarization", "https://blog.betterchoices.vote/h2h-congress-about"), new $c_LdataStories_LinkSpecification("instant-runoff", 0.95, 0.27, "end", "What about Instant Runoff?", "https://blog.betterchoices.vote/instant-runoff"), new $c_LdataStories_LinkSpecification("gerrymandering", 0.95, 0.29, "end", "Head-to-Head and gerrymandering", "https://blog.betterchoices.vote/h2h-gerrymandering"), new $c_LdataStories_LinkSpecification("party-primaries", 0.95, 0.31, "end", "Why no party primaries?", "https://blog.betterchoices.vote/h2h-primaries")];
+    const $$x2 = new $c_LdataStories_PageLinks(1350, $as_sc_Seq($$x3.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$15))));
     const $$x1 = $m_sc_Seq$();
-    const array$15 = [new $c_LdataStories_LinkSpecification("final-why", 0.95, 0.25, "end", "What this means.", "https://blog.betterchoices.vote/final-why")];
-    const array$16 = [$$x30, $$x28, $$x26, $$x24, $$x22, $$x20, $$x18, $$x16, $$x14, $$x12, $$x10, $$x8, $$x6, $$x4, $$x2, new $c_LdataStories_PageLinks(1400, $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$15))))];
-    this.LdataStories_PDSLinks$__f_links = $as_sc_Seq($$x32.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$16)));
-    const $$x35 = $m_s_Predef$().s_Predef$__f_Map;
-    const $$x34 = this.LdataStories_PDSLinks$__f_links;
-    const $$x33 = new $c_sjsr_AnonFunction1(((this$35) => ((l$2) => {
+    const array$16 = [new $c_LdataStories_LinkSpecification("final-why", 0.95, 0.25, "end", "Wrapping up", "https://blog.betterchoices.vote/final"), new $c_LdataStories_LinkSpecification("get-involved", 0.95, 0.27, "end", "Get Involved", "https://blog.betterchoices.vote/get-involved"), new $c_LdataStories_LinkSpecification("credits", 0.95, 0.29, "end", "Credits", "https://blog.betterchoices.vote/about")];
+    const array$17 = [$$x32, $$x30, $$x28, $$x26, $$x24, $$x22, $$x20, $$x18, $$x16, $$x14, $$x12, $$x10, $$x8, $$x6, $$x4, $$x2, new $c_LdataStories_PageLinks(1400, $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$16))))];
+    this.LdataStories_PDSLinks$__f_links = $as_sc_Seq($$x34.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$17)));
+    const $$x37 = $m_s_Predef$().s_Predef$__f_Map;
+    const $$x36 = this.LdataStories_PDSLinks$__f_links;
+    const $$x35 = new $c_sjsr_AnonFunction1(((this$37) => ((l$2) => {
       const l = $as_LdataStories_PageLinks(l$2);
       return $ct_T2__O__O__(new $c_T2(), l.LdataStories_PageLinks__f_section, l)
     }))(this));
-    const this$36 = $m_sc_Seq$();
-    this.LdataStories_PDSLinks$__f_linkMap = $as_sci_Map($$x35.apply__sc_Seq__sc_GenMap($as_sc_Seq($$x34.map__F1__scg_CanBuildFrom__O($$x33, this$36.scg_GenTraversableFactory__f_ReusableCBFInstance))))
+    const this$38 = $m_sc_Seq$();
+    this.LdataStories_PDSLinks$__f_linkMap = $as_sci_Map($$x37.apply__sc_Seq__sc_GenMap($as_sc_Seq($$x36.map__F1__scg_CanBuildFrom__O($$x35, this$38.scg_GenTraversableFactory__f_ReusableCBFInstance))))
   };
   displayLinks__I__sc_Seq(section) {
     const xo = this.LdataStories_PDSLinks$__f_linkMap.get__O__s_Option(section);
@@ -11471,50 +11474,12 @@ function $m_LscalajsUtils_PopulationColorPicker$() {
 }
 const $f_LscalajsUtils_SVGButton__updateColor__V = (function($thiz) {
   const f = ($thiz.isActive__Z() ? $thiz.activeColor__T() : $thiz.inactiveColor__T());
-  const arg$macro$1 = $thiz.textLabel__T();
-  const this$3 = new $c_sci_StringOps("setting color for %30s to %10s");
-  const array = [arg$macro$1, f];
-  const this$ = this$3.sci_StringOps__f_repr;
-  $m_sc_Seq$();
-  $m_sjs_js_WrappedArray$();
-  const array$1 = [];
-  $uI(array.length);
-  let i = 0;
-  const len = $uI(array.length);
-  while ((i < len)) {
-    const index = i;
-    const arg1 = array[index];
-    const elem = $p_sci_StringLike__unwrapArg__O__O(this$3, arg1);
-    array$1.push(elem);
-    i = ((1 + i) | 0)
-  };
-  $m_s_reflect_ManifestFactory$ObjectManifest$();
-  const len$1 = $uI(array$1.length);
-  const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
-  const len$2 = result.u.length;
-  let i$1 = 0;
-  let j = 0;
-  const x = $uI(array$1.length);
-  const x$1 = ((x < len$2) ? x : len$2);
-  const that = result.u.length;
-  const end = ((x$1 < that) ? x$1 : that);
-  while ((i$1 < end)) {
-    const $$x1 = j;
-    const index$1 = i$1;
-    result.set($$x1, array$1[index$1]);
-    i$1 = ((1 + i$1) | 0);
-    j = ((1 + j) | 0)
-  };
-  const x$2 = $m_jl_String$().format__T__AO__T(this$, result);
-  const this$18 = $m_s_Console$();
-  const this$19 = $as_Ljava_io_PrintStream(this$18.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
-  this$19.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$2 + "\n"));
-  const $$x2 = $thiz.text__Lio_whitemice_d3v5_selection_Selection();
-  const this$20 = $m_Lio_whitemice_d3v5_all_package$();
-  $$x2.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$20, f));
-  const $$x3 = $thiz.rect__Lio_whitemice_d3v5_selection_Selection();
-  const this$21 = $m_Lio_whitemice_d3v5_all_package$();
-  $$x3.style("stroke", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$21, f))
+  const $$x1 = $thiz.text__Lio_whitemice_d3v5_selection_Selection();
+  const this$1 = $m_Lio_whitemice_d3v5_all_package$();
+  $$x1.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$1, f));
+  const $$x2 = $thiz.rect__Lio_whitemice_d3v5_selection_Selection();
+  const this$2 = $m_Lio_whitemice_d3v5_all_package$();
+  $$x2.style("stroke", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$2, f))
 });
 const $f_LscalajsUtils_SVGButton__activate__V = (function($thiz) {
   const this$1 = $thiz.clickCB__F0();
@@ -21715,9 +21680,6 @@ class $c_Lakka_util_Collections$PartialImmutableValuesIterable$$anon$1 extends $
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
   };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
-  };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
     const cbf = this$1.scg_GenTraversableFactory__f_ReusableCBFInstance;
@@ -22161,18 +22123,6 @@ const $f_T__split__T__I__AT = (function($thiz, regex, limit) {
 });
 const $f_T__subSequence__I__I__jl_CharSequence = (function($thiz, beginIndex, endIndex) {
   return $as_T($thiz.substring(beginIndex, endIndex))
-});
-const $f_T__toCharArray__AC = (function($thiz) {
-  const len = $uI($thiz.length);
-  const result = $newArrayObject($d_C.getArrayOf(), [len]);
-  let i = 0;
-  while ((i < len)) {
-    const $$x1 = i;
-    const index = i;
-    result.set($$x1, (65535 & $uI($thiz.charCodeAt(index))));
-    i = ((1 + i) | 0)
-  };
-  return result
 });
 const $f_T__toString__T = (function($thiz) {
   return $thiz
@@ -23273,9 +23223,6 @@ class $c_Lorg_scalajs_dom_ext_EasySeq$$anon$1 extends $c_O {
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
   };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
-  };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
     const cbf = this$1.scg_GenTraversableFactory__f_ReusableCBFInstance;
@@ -23616,9 +23563,6 @@ class $c_sc_AbstractIterator extends $c_O {
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
   };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
-  };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
     const cbf = this$1.scg_GenTraversableFactory__f_ReusableCBFInstance;
@@ -23753,9 +23697,6 @@ class $c_sc_Iterator$ConcatIterator extends $c_O {
   };
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
-  };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
@@ -24096,9 +24037,6 @@ class $c_sci_RedBlackTree$TreeIterator extends $c_O {
   };
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
-  };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
@@ -30085,223 +30023,93 @@ class $c_LdataStories_PrimaryElectionSection extends $c_O {
     const value = (1000000.0 * $uD((0, $m_jl_System$NanoTime$().jl_System$NanoTime$__f_getHighPrecisionTime)()));
     const lo = this$3.org$scalajs$linker$runtime$RuntimeLong$$fromDoubleImpl__D__I(value);
     const hi = this$3.RTLong$__f_org$scalajs$linker$runtime$RuntimeLong$$hiReturn;
-    this.LdataStories_PrimaryElectionSection__f_cc.debugPrintCandidates__T__V("setPreferredCandidates");
-    this.LdataStories_PrimaryElectionSection__f_cc.LdataStories_CandidateController__f_candidates.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$4) => ((c$2) => {
-      const c = $as_LdataStories_CandidateBubble(c$2);
-      const arg$macro$1 = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_name;
-      const arg$macro$2 = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_ideology;
-      const this$7 = new $c_sci_StringOps("c.name %5s %.2f");
-      const array = [arg$macro$1, arg$macro$2];
-      const this$ = this$7.sci_StringOps__f_repr;
-      $m_sc_Seq$();
-      $m_sjs_js_WrappedArray$();
-      const array$1 = [];
-      $uI(array.length);
-      let i = 0;
-      const len = $uI(array.length);
-      while ((i < len)) {
-        const index = i;
-        const arg1 = array[index];
-        const elem = $p_sci_StringLike__unwrapArg__O__O(this$7, arg1);
-        array$1.push(elem);
-        i = ((1 + i) | 0)
-      };
-      $m_s_reflect_ManifestFactory$ObjectManifest$();
-      const len$1 = $uI(array$1.length);
-      const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
-      const len$2 = result.u.length;
-      let i$1 = 0;
-      let j = 0;
-      const x = $uI(array$1.length);
-      const x$1 = ((x < len$2) ? x : len$2);
-      const that = result.u.length;
-      const end = ((x$1 < that) ? x$1 : that);
-      while ((i$1 < end)) {
-        const $$x1 = j;
-        const index$1 = i$1;
-        result.set($$x1, array$1[index$1]);
-        i$1 = ((1 + i$1) | 0);
-        j = ((1 + j) | 0)
-      };
-      const x$2 = $m_jl_String$().format__T__AO__T(this$, result);
-      const this$22 = $m_s_Console$();
-      const this$23 = $as_Ljava_io_PrintStream(this$22.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
-      this$23.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$2 + "\n"))
-    }))(this)));
-    const this$24 = this.LdataStories_PrimaryElectionSection__f_cc.LdataStories_CandidateController__f_candidates;
-    const p = new $c_sjsr_AnonFunction1(((this$2$1, tag$4) => ((x$7$2) => {
+    const this$5 = this.LdataStories_PrimaryElectionSection__f_cc.LdataStories_CandidateController__f_candidates;
+    const p = new $c_sjsr_AnonFunction1(((this$4, tag$4) => ((x$7$2) => {
       const x$7 = $as_LdataStories_CandidateBubble(x$7$2);
-      const x$3 = x$7.tag__Lrcvcore_PopulationTag();
-      return ((x$3 === null) ? (tag$4 === null) : x$3.equals__O__Z(tag$4))
+      const x = x$7.tag__Lrcvcore_PopulationTag();
+      return ((x === null) ? (tag$4 === null) : x.equals__O__Z(tag$4))
     }))(this, tag));
-    const bubblesForTag = $as_sc_IndexedSeq($f_sc_TraversableLike__filterImpl__F1__Z__O(this$24, p, false));
-    const f = new $c_sjsr_AnonFunction1(((this$3$1) => ((x$8$2) => {
+    const bubblesForTag = $as_sc_IndexedSeq($f_sc_TraversableLike__filterImpl__F1__Z__O(this$5, p, false));
+    const f = new $c_sjsr_AnonFunction1(((this$2$1) => ((x$8$2) => {
       const x$8 = $as_LdataStories_CandidateBubble(x$8$2);
       return $as_Lrcvcore_Candidate(x$8.LdataStories_CandidateBubble__f_candidateOpt.get__O())
     }))(this));
-    const this$25 = $m_sc_IndexedSeq$();
-    const bf$1 = this$25.sc_IndexedSeq$__f_ReusableCBF;
-    const candidates = $as_sc_IndexedSeq($f_sc_TraversableLike__map__F1__scg_CanBuildFrom__O(bubblesForTag, f, bf$1));
-    const f$1 = new $c_sjsr_AnonFunction1(((this$4$1) => ((x$9$2) => {
-      const x$9 = $as_Lrcvcore_Candidate(x$9$2);
-      return x$9.Lrcvcore_Candidate__f_name
-    }))(this));
-    const this$26 = $m_sc_IndexedSeq$();
-    const bf$2 = this$26.sc_IndexedSeq$__f_ReusableCBF;
-    const x$4 = ("candidates:  " + $as_sc_TraversableOnce($f_sc_TraversableLike__map__F1__scg_CanBuildFrom__O(candidates, f$1, bf$2)).mkString__T__T(", "));
-    const this$28 = $m_s_Console$();
-    const this$29 = $as_Ljava_io_PrintStream(this$28.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
-    this$29.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$4 + "\n"));
-    const this$30 = $m_Lrcvcore_GaussianGenerator$();
-    const this$31 = this$30.Lrcvcore_GaussianGenerator$__f_generator;
-    const this$32 = this$31.Lrcvcore_GaussianGenerator__f_rand;
-    this$32.s_util_Random__f_self.setSeed__J__V($L0);
-    const this$33 = this.LdataStories_PrimaryElectionSection__f_vc.LdataStories_VoterController__f_voters;
-    const p$1 = new $c_sjsr_AnonFunction1(((this$5$1, tag$4$1) => ((v$2) => {
+    const this$6 = $m_sc_IndexedSeq$();
+    const bf = this$6.sc_IndexedSeq$__f_ReusableCBF;
+    const candidates = $as_sc_IndexedSeq($f_sc_TraversableLike__map__F1__scg_CanBuildFrom__O(bubblesForTag, f, bf));
+    const this$7 = $m_Lrcvcore_GaussianGenerator$();
+    const this$8 = this$7.Lrcvcore_GaussianGenerator$__f_generator;
+    const this$9 = this$8.Lrcvcore_GaussianGenerator__f_rand;
+    this$9.s_util_Random__f_self.setSeed__J__V($L0);
+    const this$10 = this.LdataStories_PrimaryElectionSection__f_vc.LdataStories_VoterController__f_voters;
+    const p$1 = new $c_sjsr_AnonFunction1(((this$3$1, tag$4$1) => ((v$2) => {
       const v = $as_LdataStories_VoterBubble(v$2);
       if (v.LdataStories_VoterBubble__f_primaryVoter) {
-        const x$5 = v.tag__Lrcvcore_PopulationTag();
-        return ((x$5 === null) ? (tag$4$1 === null) : x$5.equals__O__Z(tag$4$1))
+        const x$1 = v.tag__Lrcvcore_PopulationTag();
+        return ((x$1 === null) ? (tag$4$1 === null) : x$1.equals__O__Z(tag$4$1))
       } else {
         return false
       }
     }))(this, tag));
-    $as_sc_IterableLike($f_sc_TraversableLike__filterImpl__F1__Z__O(this$33, p$1, false)).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$6$1, candidates$1) => ((v$3$2) => {
+    $as_sc_IterableLike($f_sc_TraversableLike__filterImpl__F1__Z__O(this$10, p$1, false)).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$4$1, candidates$1) => ((v$3$2) => {
       const v$3 = $as_LdataStories_VoterBubble(v$3$2);
       v$3.setPrimaryCandidateIndex__sc_Seq__V(candidates$1)
     }))(this, candidates)));
     const n = candidates.length__I();
     let elems = null;
     elems = [];
-    let i$2 = 0;
-    while ((i$2 < n)) {
+    let i = 0;
+    while ((i < n)) {
       elems.push(0);
-      i$2 = ((1 + i$2) | 0)
+      i = ((1 + i) | 0)
     };
     const counts = $makeNativeArrayWrapper($d_I.getArrayOf(), elems);
-    const this$39 = this.LdataStories_PrimaryElectionSection__f_vc.LdataStories_VoterController__f_voters;
-    const p$2 = new $c_sjsr_AnonFunction1(((this$8$1, tag$4$2) => ((v$4$2) => {
+    const this$16 = this.LdataStories_PrimaryElectionSection__f_vc.LdataStories_VoterController__f_voters;
+    const p$2 = new $c_sjsr_AnonFunction1(((this$6$1, tag$4$2) => ((v$4$2) => {
       const v$4 = $as_LdataStories_VoterBubble(v$4$2);
       if (v$4.LdataStories_VoterBubble__f_primaryVoter) {
-        const x$6 = v$4.tag__Lrcvcore_PopulationTag();
-        return ((x$6 === null) ? (tag$4$2 === null) : x$6.equals__O__Z(tag$4$2))
+        const x$2 = v$4.tag__Lrcvcore_PopulationTag();
+        return ((x$2 === null) ? (tag$4$2 === null) : x$2.equals__O__Z(tag$4$2))
       } else {
         return false
       }
     }))(this, tag));
-    $as_sc_IterableLike($f_sc_TraversableLike__filterImpl__F1__Z__O(this$39, p$2, false)).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$9$1, counts$1) => ((v$5$2) => {
+    $as_sc_IterableLike($f_sc_TraversableLike__filterImpl__F1__Z__O(this$16, p$2, false)).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$7$1, counts$1) => ((v$5$2) => {
       const v$5 = $as_LdataStories_VoterBubble(v$5$2);
       const ev$1 = v$5.LdataStories_VoterBubble__f_primaryCandidateIndex;
       counts$1.set(ev$1, ((1 + counts$1.get(ev$1)) | 0))
     }))(this, counts)));
-    let elems$1 = null;
-    elems$1 = [];
-    let i$3 = 0;
-    const len$3 = counts.u.length;
-    while ((i$3 < len$3)) {
-      const idx = i$3;
-      const arg1$1 = counts.get(idx);
-      const this$50 = new $c_sci_StringOps("%d");
-      const array$2 = [arg1$1];
-      const args = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$2);
-      const elem$1 = $f_sci_StringLike__format__sc_Seq__T(this$50, args);
-      const unboxedElem = ((elem$1 === null) ? null : elem$1);
-      elems$1.push(unboxedElem);
-      i$3 = ((1 + i$3) | 0)
-    };
-    const xs = $makeNativeArrayWrapper($d_T.getArrayOf(), elems$1);
-    const b = $ct_scm_StringBuilder__(new $c_scm_StringBuilder());
-    let elem$2 = false;
-    elem$2 = true;
-    b.append__T__scm_StringBuilder("");
-    let i$4 = 0;
-    const len$4 = xs.u.length;
-    while ((i$4 < len$4)) {
-      const index$2 = i$4;
-      const arg1$2 = xs.get(index$2);
-      if (elem$2) {
-        b.append__O__scm_StringBuilder(arg1$2);
-        elem$2 = false
-      } else {
-        b.append__T__scm_StringBuilder(", ");
-        b.append__O__scm_StringBuilder(arg1$2)
-      };
-      i$4 = ((1 + i$4) | 0)
-    };
-    b.append__T__scm_StringBuilder("");
-    const arg$macro$4 = b.scm_StringBuilder__f_underlying.jl_StringBuilder__f_java$lang$StringBuilder$$content;
-    const this$57 = new $c_sci_StringOps("counts:  %s");
-    const array$3 = [arg$macro$4];
-    const this$$1 = this$57.sci_StringOps__f_repr;
-    $m_sc_Seq$();
-    $m_sjs_js_WrappedArray$();
-    const array$4 = [];
-    $uI(array$3.length);
-    let i$5 = 0;
-    const len$5 = $uI(array$3.length);
-    while ((i$5 < len$5)) {
-      const index$3 = i$5;
-      const arg1$3 = array$3[index$3];
-      const elem$3 = $p_sci_StringLike__unwrapArg__O__O(this$57, arg1$3);
-      array$4.push(elem$3);
-      i$5 = ((1 + i$5) | 0)
-    };
-    $m_s_reflect_ManifestFactory$ObjectManifest$();
-    const len$6 = $uI(array$4.length);
-    const result$1 = $newArrayObject($d_O.getArrayOf(), [len$6]);
-    const len$7 = result$1.u.length;
-    let i$6 = 0;
-    let j$1 = 0;
-    const x$10 = $uI(array$4.length);
-    const x$11 = ((x$10 < len$7) ? x$10 : len$7);
-    const that$1 = result$1.u.length;
-    const end$1 = ((x$11 < that$1) ? x$11 : that$1);
-    while ((i$6 < end$1)) {
-      const $$x2 = j$1;
-      const index$4 = i$6;
-      result$1.set($$x2, array$4[index$4]);
-      i$6 = ((1 + i$6) | 0);
-      j$1 = ((1 + j$1) | 0)
-    };
-    const x$12 = $m_jl_String$().format__T__AO__T(this$$1, result$1);
-    const this$72 = $m_s_Console$();
-    const this$73 = $as_Ljava_io_PrintStream(this$72.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
-    this$73.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$12 + "\n"));
-    const this$76 = new $c_scm_ArrayOps$ofInt(counts);
+    const this$19 = new $c_scm_ArrayOps$ofInt(counts);
     const cmp = $m_s_math_Ordering$Int$();
-    const elem$4 = $f_sc_TraversableOnce__max__s_math_Ordering__O(this$76, cmp);
-    const len$8 = counts.u.length;
-    let i$7 = 0;
+    const elem = $f_sc_TraversableOnce__max__s_math_Ordering__O(this$19, cmp);
+    const len = counts.u.length;
+    let i$1 = 0;
     while (true) {
-      let $$x3;
-      if ((i$7 < len$8)) {
-        const idx$1 = i$7;
-        const arg1$4 = counts.get(idx$1);
-        $$x3 = (!$m_sr_BoxesRunTime$().equals__O__O__Z(elem$4, arg1$4))
+      let $$x1;
+      if ((i$1 < len)) {
+        const idx = i$1;
+        const arg1 = counts.get(idx);
+        $$x1 = (!$m_sr_BoxesRunTime$().equals__O__O__Z(elem, arg1))
       } else {
-        $$x3 = false
+        $$x1 = false
       };
-      if ($$x3) {
-        i$7 = ((1 + i$7) | 0)
+      if ($$x1) {
+        i$1 = ((1 + i$1) | 0)
       } else {
         break
       }
     };
-    const n$1 = i$7;
+    const n$1 = i$1;
     const winner = $as_LdataStories_CandidateBubble(bubblesForTag.apply__I__O(((n$1 >= counts.u.length) ? (-1) : n$1)));
-    const x$13 = ("winner: " + winner);
-    const this$83 = $m_s_Console$();
-    const this$84 = $as_Ljava_io_PrintStream(this$83.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
-    this$84.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$13 + "\n"));
-    bubblesForTag.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$11$1) => ((x$10$2) => {
-      const x$10$1 = $as_LdataStories_CandidateBubble(x$10$2);
-      x$10$1.LdataStories_CandidateBubble__f_primaryWinner = false
+    bubblesForTag.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$8$1) => ((x$9$2) => {
+      const x$9 = $as_LdataStories_CandidateBubble(x$9$2);
+      x$9.LdataStories_CandidateBubble__f_primaryWinner = false
     }))(this)));
     winner.LdataStories_CandidateBubble__f_primaryWinner = true;
-    const this$86 = $m_RTLong$();
+    const this$26 = $m_RTLong$();
     const value$1 = (1000000.0 * $uD((0, $m_jl_System$NanoTime$().jl_System$NanoTime$__f_getHighPrecisionTime)()));
-    const lo$1 = this$86.org$scalajs$linker$runtime$RuntimeLong$$fromDoubleImpl__D__I(value$1);
-    const hi$1 = this$86.RTLong$__f_org$scalajs$linker$runtime$RuntimeLong$$hiReturn;
+    const lo$1 = this$26.org$scalajs$linker$runtime$RuntimeLong$$fromDoubleImpl__D__I(value$1);
+    const hi$1 = this$26.RTLong$__f_org$scalajs$linker$runtime$RuntimeLong$$hiReturn;
     const lo$2 = ((lo$1 - lo) | 0);
     const hi$2 = ((((-2147483648) ^ lo$2) > ((-2147483648) ^ lo$1)) ? (((-1) + ((hi$1 - hi) | 0)) | 0) : ((hi$1 - hi) | 0));
     this$1.update__T__J__V("setPreferredCandidates", new $c_RTLong(lo$2, hi$2))
@@ -30318,18 +30126,18 @@ class $c_LdataStories_PrimaryElectionSection extends $c_O {
     this.LdataStories_PrimaryElectionSection__f_resultTimer = $m_s_None$();
     const $$x3 = $m_Lrcvcore_Republicans$();
     const this$2 = this.LdataStories_PrimaryElectionSection__f_cc.LdataStories_CandidateController__f_candidates;
-    const p = new $c_sjsr_AnonFunction1(((this$1) => ((x$11$2) => {
-      const x$11 = $as_LdataStories_CandidateBubble(x$11$2);
-      const x = x$11.tag__Lrcvcore_PopulationTag();
+    const p = new $c_sjsr_AnonFunction1(((this$1) => ((x$10$2) => {
+      const x$10 = $as_LdataStories_CandidateBubble(x$10$2);
+      const x = x$10.tag__Lrcvcore_PopulationTag();
       const x$2 = $m_Lrcvcore_Republicans$();
       return ((x !== null) && x.equals__O__Z(x$2))
     }))(this));
     const $$x2 = $ct_T2__O__O__(new $c_T2(), $$x3, $f_sc_TraversableLike__filterImpl__F1__Z__O(this$2, p, false));
     const $$x1 = $m_Lrcvcore_Democrats$();
     const this$3 = this.LdataStories_PrimaryElectionSection__f_cc.LdataStories_CandidateController__f_candidates;
-    const p$1 = new $c_sjsr_AnonFunction1(((this$2$1) => ((x$12$2) => {
-      const x$12 = $as_LdataStories_CandidateBubble(x$12$2);
-      const x$1 = x$12.tag__Lrcvcore_PopulationTag();
+    const p$1 = new $c_sjsr_AnonFunction1(((this$2$1) => ((x$11$2) => {
+      const x$11 = $as_LdataStories_CandidateBubble(x$11$2);
+      const x$1 = x$11.tag__Lrcvcore_PopulationTag();
       const x$2$1 = $m_Lrcvcore_Democrats$();
       return ((x$1 !== null) && x$1.equals__O__Z(x$2$1))
     }))(this));
@@ -30345,9 +30153,9 @@ class $c_LdataStories_PrimaryElectionSection extends $c_O {
     };
     $as_sci_Map(this$7.scm_MapBuilder__f_elems);
     const this$8 = this.LdataStories_PrimaryElectionSection__f_cc.LdataStories_CandidateController__f_candidates;
-    const p$2 = new $c_sjsr_AnonFunction1(((this$3$1) => ((x$13$2) => {
-      const x$13 = $as_LdataStories_CandidateBubble(x$13$2);
-      return x$13.LdataStories_CandidateBubble__f_primaryWinner
+    const p$2 = new $c_sjsr_AnonFunction1(((this$3$1) => ((x$12$2) => {
+      const x$12 = $as_LdataStories_CandidateBubble(x$12$2);
+      return x$12.LdataStories_CandidateBubble__f_primaryWinner
     }))(this));
     $as_sc_IterableLike($f_sc_TraversableLike__filterImpl__F1__Z__O(this$8, p$2, false)).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$4$1) => ((c$2) => {
       const c = $as_LdataStories_CandidateBubble(c$2);
@@ -44116,50 +43924,11 @@ class $c_LdataStories_MapController extends $c_O {
   };
   updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V(text, id, cls, x, y, size, anchor, fill, attrs, onClick) {
     const item = new $c_LdataStories_TextItem(text, id, cls, x, y, size, anchor, fill, attrs, onClick);
-    const arg$macro$1 = this.LdataStories_MapController__f_scaledWidth;
-    const arg$macro$2 = this.LdataStories_MapController__f_scaledHeight;
-    const this$3 = new $c_sci_StringOps("mapController.updateTextItem, %.2f %.2f");
-    const array = [arg$macro$1, arg$macro$2];
-    const this$ = this$3.sci_StringOps__f_repr;
-    $m_sc_Seq$();
-    $m_sjs_js_WrappedArray$();
-    const array$1 = [];
-    $uI(array.length);
-    let i = 0;
-    const len = $uI(array.length);
-    while ((i < len)) {
-      const index = i;
-      const arg1 = array[index];
-      const elem = $p_sci_StringLike__unwrapArg__O__O(this$3, arg1);
-      array$1.push(elem);
-      i = ((1 + i) | 0)
-    };
-    $m_s_reflect_ManifestFactory$ObjectManifest$();
-    const len$1 = $uI(array$1.length);
-    const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
-    const len$2 = result.u.length;
-    let i$1 = 0;
-    let j = 0;
-    const x$1 = $uI(array$1.length);
-    const x$2 = ((x$1 < len$2) ? x$1 : len$2);
-    const that = result.u.length;
-    const end = ((x$2 < that) ? x$2 : that);
-    while ((i$1 < end)) {
-      const $$x1 = j;
-      const index$1 = i$1;
-      result.set($$x1, array$1[index$1]);
-      i$1 = ((1 + i$1) | 0);
-      j = ((1 + j) | 0)
-    };
-    const x$3 = $m_jl_String$().format__T__AO__T(this$, result);
-    const this$18 = $m_s_Console$();
-    const this$19 = $as_Ljava_io_PrintStream(this$18.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
-    this$19.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$3 + "\n"));
     item.render__Lio_whitemice_d3v5_selection_Selection__LdataStories_SvgDefinition__V(this.LdataStories_MapController__f_mapOuterG, this.svgDefinition__LdataStories_SvgDefinition());
-    const this$22 = this.LdataStories_MapController__f_textItems;
-    const array$2 = [item];
-    const elems = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$2);
-    this$22.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(elems)
+    const this$3 = this.LdataStories_MapController__f_textItems;
+    const array = [item];
+    const elems = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array);
+    this$3.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(elems)
   };
   updateTextItem$default$10__F0() {
     return new $c_sjsr_AnonFunction0(((this$1) => (() => (void 0)))(this))
@@ -44493,58 +44262,19 @@ class $c_LdataStories_MapController extends $c_O {
     this.render__V()
   };
   applyTranslation__V() {
-    const arg$macro$1 = this.LdataStories_MapController__f_scaledWidth;
-    const arg$macro$2 = this.LdataStories_MapController__f_scaledHeight;
-    const this$3 = new $c_sci_StringOps("mapController.applyTranslation() scaledWidth %.2f scaledHeight %.2f");
-    const array = [arg$macro$1, arg$macro$2];
-    const this$ = this$3.sci_StringOps__f_repr;
-    $m_sc_Seq$();
-    $m_sjs_js_WrappedArray$();
-    const array$1 = [];
-    $uI(array.length);
-    let i = 0;
-    const len = $uI(array.length);
-    while ((i < len)) {
-      const index = i;
-      const arg1 = array[index];
-      const elem = $p_sci_StringLike__unwrapArg__O__O(this$3, arg1);
-      array$1.push(elem);
-      i = ((1 + i) | 0)
-    };
-    $m_s_reflect_ManifestFactory$ObjectManifest$();
-    const len$1 = $uI(array$1.length);
-    const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
-    const len$2 = result.u.length;
-    let i$1 = 0;
-    let j = 0;
-    const x = $uI(array$1.length);
-    const x$1 = ((x < len$2) ? x : len$2);
-    const that = result.u.length;
-    const end = ((x$1 < that) ? x$1 : that);
-    while ((i$1 < end)) {
-      const $$x1 = j;
-      const index$1 = i$1;
-      result.set($$x1, array$1[index$1]);
-      i$1 = ((1 + i$1) | 0);
-      j = ((1 + j) | 0)
-    };
-    const x$2 = $m_jl_String$().format__T__AO__T(this$, result);
-    const this$18 = $m_s_Console$();
-    const this$19 = $as_Ljava_io_PrintStream(this$18.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
-    this$19.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$2 + "\n"));
     const viewX = (this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_x * this.LdataStories_MapController__f_scaledWidth);
     const viewY = (this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_y * this.LdataStories_MapController__f_scaledHeight);
-    const $$x5 = this.LdataStories_MapController__f_mapSVG.transition("mapSVGLocation").duration(500);
-    const this$23 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x4 = $$x5.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$23, viewX));
-    const this$24 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x3 = $$x4.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$24, viewY));
-    const this$25 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x4 = this.LdataStories_MapController__f_mapSVG.transition("mapSVGLocation").duration(500);
+    const this$4 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x3 = $$x4.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$4, viewX));
+    const this$5 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x2 = $$x3.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, viewY));
+    const this$6 = $m_Lio_whitemice_d3v5_all_package$();
     const d = (this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_width * this.LdataStories_MapController__f_scaledWidth);
-    const $$x2 = $$x3.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$25, d));
-    const this$26 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x1 = $$x2.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$6, d));
+    const this$7 = $m_Lio_whitemice_d3v5_all_package$();
     const d$1 = (this.LdataStories_MapController__f_viewRectangle.LscalajsUtils_PctRectangle__f_height * this.LdataStories_MapController__f_scaledHeight);
-    $$x2.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$26, d$1))
+    $$x1.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$7, d$1))
   };
   productPrefix__T() {
     return "MapController"
@@ -45210,6 +44940,48 @@ const $d_LdataStories_ParabolicTrajectory = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_LdataStories_ParabolicTrajectory.prototype.$classData = $d_LdataStories_ParabolicTrajectory;
+const $p_LdataStories_PolarizationDataStory__displayHeadToHeadHouse__V = (function($thiz) {
+  const this$2 = $m_s_Console$();
+  const this$3 = $as_Ljava_io_PrintStream(this$2.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+  this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V("HeadToHeadHouse\n");
+  $thiz.LdataStories_PolarizationDataStory__f_candidates.clear__V();
+  $thiz.LdataStories_PolarizationDataStory__f_general.clear__V();
+  $thiz.LdataStories_PolarizationDataStory__f_headToHead.clear__V();
+  $thiz.LdataStories_PolarizationDataStory__f_primarySection.clear__V();
+  $thiz.LdataStories_PolarizationDataStory__f_ballot.clear__V();
+  $thiz.LdataStories_PolarizationDataStory__f_voters.moveVotersOffScreen__V();
+  $thiz.LdataStories_PolarizationDataStory__f_map.activate__LscalajsUtils_PctRectangle__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_map.LdataStories_MapConfig__f_thumbnail);
+  $thiz.LdataStories_PolarizationDataStory__f_map.setColorBySatisfaction__F1__V(new $c_sjsr_AnonFunction1(((this$4) => ((r$2) => {
+    const r = $as_Lrcvcore_SimulationResult(r$2);
+    return this$4.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
+  }))($thiz)));
+  $thiz.LdataStories_PolarizationDataStory__f_map.zoomOut__V();
+  $thiz.LdataStories_PolarizationDataStory__f_house.clearButtons__V();
+  $thiz.LdataStories_PolarizationDataStory__f_house.clearTimeAxis__V();
+  $thiz.LdataStories_PolarizationDataStory__f_house.layoutHeadToHead__D__D__V(4.0, 0.9);
+  const buttons = $as_scm_ListBuffer($m_scm_ListBuffer$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$()));
+  const this$5 = $thiz.LdataStories_PolarizationDataStory__f_configData;
+  const buttonX = (0.6 * this$5.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_desiredWidth);
+  const elem = (0.5 * $thiz.LdataStories_PolarizationDataStory__f_house.LdataStories_RouteController__f_scaledHeight);
+  let elem$1 = 0.0;
+  elem$1 = elem;
+  const action = new $c_sjsr_AnonFunction0(((this$2$1, buttons$1) => (() => {
+    $p_LdataStories_PolarizationDataStory__layoutHeadToHead$1__scm_ListBuffer__V(this$2$1, buttons$1)
+  }))($thiz, buttons));
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Head to Head with Blanket Primaries", $thiz.LdataStories_PolarizationDataStory__f_house.LdataStories_MemberController__f_houseArea, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Head to Head with Blanket Primaries", "blue", "gray", new $c_sjsr_AnonFunction0(((this$7, action$1) => (() => {
+    action$1.apply__O()
+  }))($thiz, action))));
+  elem$1 = (25.0 + elem$1);
+  const action$2 = new $c_sjsr_AnonFunction0(((this$3$1, buttons$2) => (() => {
+    $p_LdataStories_PolarizationDataStory__layoutPartyPrimaries$1__scm_ListBuffer__V(this$3$1, buttons$2)
+  }))($thiz, buttons));
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Current Party-Primary System", $thiz.LdataStories_PolarizationDataStory__f_house.LdataStories_MemberController__f_houseArea, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Current Party-Primary System", "blue", "gray", new $c_sjsr_AnonFunction0(((this$8, action$3) => (() => {
+    action$3.apply__O()
+  }))($thiz, action$2))));
+  elem$1 = (25.0 + elem$1);
+  const this$9 = $as_LscalajsUtils_SVGButton(buttons.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start.head__O());
+  $f_LscalajsUtils_SVGButton__activate__V(this$9)
+});
 const $p_LdataStories_PolarizationDataStory__displayFinalScreen__V = (function($thiz) {
   const this$2 = $m_s_Console$();
   const this$3 = $as_Ljava_io_PrintStream(this$2.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
@@ -45225,6 +44997,7 @@ const $p_LdataStories_PolarizationDataStory__displayFinalScreen__V = (function($
     return this$4.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
   }))($thiz)));
   $thiz.LdataStories_PolarizationDataStory__f_map.zoomOut__V();
+  $thiz.LdataStories_PolarizationDataStory__f_house.clearButtons__V();
   $thiz.LdataStories_PolarizationDataStory__f_house.layoutHeadToHead__D__D__V(2.0, 0.9);
   $thiz.LdataStories_PolarizationDataStory__f_voters.setNewPopulation__Lrcvcore_CombinedPopulation__V($m_Lrcvcore_NokkenPopulation$().apply__D__D__D__D__D__Lrcvcore_CombinedPopulation(0.5, 0.5, 30.0, 30.0, 0.5));
   $thiz.LdataStories_PolarizationDataStory__f_voters.arrangeByIdeology__D__T__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_voters.LdataStories_VoterConfig__f_y2, "Voter Ideology");
@@ -45455,7 +45228,7 @@ const $p_LdataStories_PolarizationDataStory__displaySelectableMap__I__V = (funct
       return r.actualVoterSatisfaction__D()
     }))(this$10)), buttons$1)
   }))($thiz, buttons));
-  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Current", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Current", "blue", "gray", new $c_sjsr_AnonFunction0(((this$12, action$1) => (() => {
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Actual for Party-Primary System", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Actual for Party-Primary System", "blue", "gray", new $c_sjsr_AnonFunction0(((this$12, action$1) => (() => {
     action$1.apply__O()
   }))($thiz, action))));
   elem$1 = (25.0 + elem$1);
@@ -45465,7 +45238,7 @@ const $p_LdataStories_PolarizationDataStory__displaySelectableMap__I__V = (funct
       return r$1.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction
     }))(this$2$1)), buttons$2)
   }))($thiz, buttons));
-  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Simulation of Current", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Simulation of Current", "blue", "gray", new $c_sjsr_AnonFunction0(((this$14, action$3) => (() => {
+  buttons.$plus$eq__O__scm_ListBuffer(new $c_LscalajsUtils_RadioButton("Simulation of Party-Primary System", $thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_map.LscalajsUtils_DistrictMap__f_mapInner, new $c_LscalajsUtils_PixRectangle(buttonX, elem$1, 250.0, 20.0), "Simulation of Party-Primary System", "blue", "gray", new $c_sjsr_AnonFunction0(((this$14, action$3) => (() => {
     action$3.apply__O()
   }))($thiz, action$2))));
   elem$1 = (25.0 + elem$1);
@@ -45525,6 +45298,37 @@ const $p_LdataStories_PolarizationDataStory__adjustPopulation$1__sr_DoubleRef__s
     $thiz.LdataStories_PolarizationDataStory__f_voters.render__V()
   }
 });
+const $p_LdataStories_PolarizationDataStory__layoutPartyPrimaries$1__scm_ListBuffer__V = (function($thiz, buttons$1) {
+  $thiz.LdataStories_PolarizationDataStory__f_map.setColorBySatisfaction__F1__V(new $c_sjsr_AnonFunction1(((this$1) => ((r$2) => {
+    const r = $as_Lrcvcore_SimulationResult(r$2);
+    return this$1.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r.actualVoterSatisfaction__D(), 1.0)
+  }))($thiz)));
+  $thiz.LdataStories_PolarizationDataStory__f_map.render__V();
+  $thiz.LdataStories_PolarizationDataStory__f_house.layoutNomHistogram__D__D__D__Z__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y2Pct, 2.0, 0.9, false);
+  $thiz.LdataStories_PolarizationDataStory__f_house.setColor__F1__V(new $c_sjsr_AnonFunction1(((this$2) => ((m$2) => {
+    const m = $as_LdataStories_MemberBubble(m$2);
+    const ideology = m.LdataStories_MemberBubble__f__memberData.ideology__D();
+    return $m_LscalajsUtils_PopulationColorPicker$().ideologyColorScale__D__D__LscalajsUtils_RGBA(ideology, 0.9)
+  }))($thiz)));
+  $thiz.LdataStories_PolarizationDataStory__f_house.render__V();
+  $as_LscalajsUtils_SVGButton(buttons$1.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start.head__O()).deActivate__V()
+});
+const $p_LdataStories_PolarizationDataStory__layoutHeadToHead$1__scm_ListBuffer__V = (function($thiz, buttons$1) {
+  $thiz.LdataStories_PolarizationDataStory__f_map.setColorBySatisfaction__F1__V(new $c_sjsr_AnonFunction1(((this$1) => ((r$2) => {
+    const r = $as_Lrcvcore_SimulationResult(r$2);
+    return this$1.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
+  }))($thiz)));
+  $thiz.LdataStories_PolarizationDataStory__f_map.render__V();
+  $thiz.LdataStories_PolarizationDataStory__f_house.layoutHeadToHead__D__D__V(2.0, 0.9);
+  $thiz.LdataStories_PolarizationDataStory__f_house.setColor__F1__V(new $c_sjsr_AnonFunction1(((this$2) => ((m$2) => {
+    const m = $as_LdataStories_MemberBubble(m$2);
+    const this$3 = m.LdataStories_MemberBubble__f_dd.LdataStories_DistrictData__f_s;
+    const ideology = this$3.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_ideology;
+    return $m_LscalajsUtils_PopulationColorPicker$().ideologyColorScale__D__D__LscalajsUtils_RGBA(ideology, 0.9)
+  }))($thiz)));
+  $thiz.LdataStories_PolarizationDataStory__f_house.render__V();
+  $as_LscalajsUtils_SVGButton(buttons$1.last__O()).deActivate__V()
+});
 const $p_LdataStories_PolarizationDataStory__onCandidateUpdate$1__LdataStories_CandidateBubble__V = (function($thiz, updatedCandidate) {
   if ((!updatedCandidate.LdataStories_CandidateBubble__f_idealCandidate)) {
     $thiz.LdataStories_PolarizationDataStory__f_candidates.LdataStories_CandidateController__f_candidates.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$1) => ((c$2) => {
@@ -45574,7 +45378,7 @@ const $p_LdataStories_PolarizationDataStory__onUpdate$1__LdataStories_CandidateB
   $thiz.LdataStories_PolarizationDataStory__f_primarySection.update__LdataStories_PrimaryElectionSection$PartyState__LdataStories_PrimaryElectionSection$PartyState__D__V($m_LdataStories_PrimaryElectionSection$Voted$(), $m_LdataStories_PrimaryElectionSection$Voted$(), 0.0);
   $thiz.LdataStories_PolarizationDataStory__f_voters.render__V()
 });
-const $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V = (function($thiz, extractor, buttons$1) {
+const $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V = (function($thiz, extractor, buttons$2) {
   const this$2 = $m_s_Console$();
   const this$3 = $as_Ljava_io_PrintStream(this$2.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
   this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V("setting colors\n");
@@ -45583,7 +45387,7 @@ const $p_LdataStories_PolarizationDataStory__setColor$1__F1__scm_ListBuffer__V =
     return this$4.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA($uD(extractor$1.apply__O__O(r)), 1.0)
   }))($thiz, extractor)));
   $thiz.LdataStories_PolarizationDataStory__f_map.render__V();
-  const this$5 = buttons$1.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start;
+  const this$5 = buttons$2.scm_ListBuffer__f_scala$collection$mutable$ListBuffer$$start;
   let these = this$5;
   while ((!these.isEmpty__Z())) {
     const arg1 = these.head__O();
@@ -46031,6 +45835,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V("displayHouseAndSimulation\n");
     this.LdataStories_PolarizationDataStory__f_house.LdataStories_MemberController__f_box.clearTextItems__V();
     this.LdataStories_PolarizationDataStory__f_house.clearTimeAxis__V();
+    this.LdataStories_PolarizationDataStory__f_house.clearButtons__V();
     this.LdataStories_PolarizationDataStory__f_house.layoutSimVsActual__D__D__V(this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y2Pct, this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y1Pct);
     this.LdataStories_PolarizationDataStory__f_voters.moveVotersOffScreen__V();
     this.LdataStories_PolarizationDataStory__f_candidates.clear__V();
@@ -46050,6 +45855,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     this.LdataStories_PolarizationDataStory__f_voters.colorByIdeology__D__V(0.9);
     this.LdataStories_PolarizationDataStory__f_voters.setNewPopulation__Lrcvcore_CombinedPopulation__V($m_Lrcvcore_NokkenPopulation$().apply__D__D__D__D__D__Lrcvcore_CombinedPopulation(0.5, 0.5, 30.0, 30.0, 0.5));
     this.LdataStories_PolarizationDataStory__f_voters.clearLeanAxis__V();
+    this.LdataStories_PolarizationDataStory__f_house.clearButtons__V();
     this.LdataStories_PolarizationDataStory__f_house.layoutNomHistogram__D__D__D__Z__V(this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y2Pct, 1.0, this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_opacity2, false);
     this.LdataStories_PolarizationDataStory__f_house.clearTimeAxis__V();
     this.LdataStories_PolarizationDataStory__f_voters.arrangeByIdeology__D__T__V(this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_voters.LdataStories_VoterConfig__f_y2, "Voter Ideology");
@@ -46063,6 +45869,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     this.LdataStories_PolarizationDataStory__f_ballot.clear__V()
   };
   displayHouse__I__V(year) {
+    this.LdataStories_PolarizationDataStory__f_house.clearButtons__V();
     this.LdataStories_PolarizationDataStory__f_house.layoutNomHistogram__D__D__D__Z__V(this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y1Pct, 3.0, this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_opacity1, true);
     this.LdataStories_PolarizationDataStory__f_house.renderTimeAxis__I__V(year);
     this.LdataStories_PolarizationDataStory__f_voters.moveVotersOffScreen__V();
@@ -46238,6 +46045,10 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
         }
         case 1300: {
           $p_LdataStories_PolarizationDataStory__displaySelectableMap__I__V(this, 5);
+          break
+        }
+        case 1350: {
+          $p_LdataStories_PolarizationDataStory__displayHeadToHeadHouse__V(this);
           break
         }
         case 1400: {
@@ -47139,90 +46950,50 @@ class $c_LdataStories_TextItem extends $c_O {
     return this.LdataStories_TextItem__f_id
   };
   render__Lio_whitemice_d3v5_selection_Selection__LdataStories_SvgDefinition__V(svgArea, svgDefinition) {
-    const arg$macro$1 = this.LdataStories_TextItem__f_id;
-    const arg$macro$2 = (this.LdataStories_TextItem__f_x * svgDefinition.LdataStories_SvgDefinition__f_width);
-    const arg$macro$3 = (this.LdataStories_TextItem__f_y * svgDefinition.LdataStories_SvgDefinition__f_height);
-    const this$3 = new $c_sci_StringOps("rendering text %s at %.2f %.2f");
-    const array = [arg$macro$1, arg$macro$2, arg$macro$3];
-    const this$ = this$3.sci_StringOps__f_repr;
-    $m_sc_Seq$();
-    $m_sjs_js_WrappedArray$();
-    const array$1 = [];
-    $uI(array.length);
-    let i = 0;
-    const len = $uI(array.length);
-    while ((i < len)) {
-      const index = i;
-      const arg1 = array[index];
-      const elem = $p_sci_StringLike__unwrapArg__O__O(this$3, arg1);
-      array$1.push(elem);
-      i = ((1 + i) | 0)
-    };
-    $m_s_reflect_ManifestFactory$ObjectManifest$();
-    const len$1 = $uI(array$1.length);
-    const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
-    const len$2 = result.u.length;
-    let i$1 = 0;
-    let j = 0;
-    const x = $uI(array$1.length);
-    const x$1 = ((x < len$2) ? x : len$2);
-    const that = result.u.length;
-    const end = ((x$1 < that) ? x$1 : that);
-    while ((i$1 < end)) {
-      const $$x1 = j;
-      const index$1 = i$1;
-      result.set($$x1, array$1[index$1]);
-      i$1 = ((1 + i$1) | 0);
-      j = ((1 + j) | 0)
-    };
-    const x$2 = $m_jl_String$().format__T__AO__T(this$, result);
-    const this$18 = $m_s_Console$();
-    const this$19 = $as_Ljava_io_PrintStream(this$18.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
-    this$19.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$2 + "\n"));
     svgArea.selectAll(("#" + this.LdataStories_TextItem__f_id)).remove();
-    const $$x10 = svgArea.append("text");
-    const this$20 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x9 = svgArea.append("text");
+    const this$1 = $m_Lio_whitemice_d3v5_all_package$();
     const s = this.LdataStories_TextItem__f_id;
-    const sel = $$x10.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$20, s));
-    const $$x9 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel).cls__T__Lio_whitemice_d3v5_selection_Selection(this.LdataStories_TextItem__f_cls);
-    const this$22 = $m_Lio_whitemice_d3v5_all_package$();
+    const sel = $$x9.attr("id", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$1, s));
+    const $$x8 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel).cls__T__Lio_whitemice_d3v5_selection_Selection(this.LdataStories_TextItem__f_cls);
+    const this$3 = $m_Lio_whitemice_d3v5_all_package$();
     const s$1 = this.LdataStories_TextItem__f_anchor;
-    const $$x8 = $$x9.style("text-anchor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$22, s$1));
-    const this$23 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x7 = $$x8.style("text-anchor", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$3, s$1));
+    const this$4 = $m_Lio_whitemice_d3v5_all_package$();
     const d = (this.LdataStories_TextItem__f_y * svgDefinition.LdataStories_SvgDefinition__f_height);
-    const $$x7 = $$x8.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$23, d));
-    const this$24 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x6 = $$x7.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$4, d));
+    const this$5 = $m_Lio_whitemice_d3v5_all_package$();
     const d$1 = (this.LdataStories_TextItem__f_x * svgDefinition.LdataStories_SvgDefinition__f_width);
-    const $$x6 = $$x7.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$24, d$1));
-    const this$25 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x5 = $$x6.attr("dy", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$25, ".75em"));
-    const this$26 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x5 = $$x6.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, d$1));
+    const this$6 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x4 = $$x5.attr("dy", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$6, ".75em"));
+    const this$7 = $m_Lio_whitemice_d3v5_all_package$();
     const s$2 = this.LdataStories_TextItem__f_fill;
-    const $$x4 = $$x5.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$26, s$2));
-    const this$27 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x3 = $$x4.style("fill", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$7, s$2));
+    const this$8 = $m_Lio_whitemice_d3v5_all_package$();
     const s$3 = this.LdataStories_TextItem__f_size;
-    const $$x3 = $$x4.style("font-size", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$27, s$3));
-    const $$x2 = $$x3.text(this.LdataStories_TextItem__f_text);
-    const this$30 = $m_Lio_whitemice_d3v5_all_package$();
-    const fun = new $c_sjsr_AnonFunction0(((this$28) => (() => {
-      const this$29 = this$28.LdataStories_TextItem__f_onClick;
-      this$29.apply__O()
+    const $$x2 = $$x3.style("font-size", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$8, s$3));
+    const $$x1 = $$x2.text(this.LdataStories_TextItem__f_text);
+    const this$11 = $m_Lio_whitemice_d3v5_all_package$();
+    const fun = new $c_sjsr_AnonFunction0(((this$9) => (() => {
+      const this$10 = this$9.LdataStories_TextItem__f_onClick;
+      this$10.apply__O()
     }))(this));
-    const obj = $$x2.on("click", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$30, fun));
+    const obj = $$x1.on("click", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$11, fun));
     this.LdataStories_TextItem__f_attrs.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$2$1, obj$1) => ((x0$1$2) => {
       const x0$1 = $as_LdataStories_HtmlModifier(x0$1$2);
       if ((x0$1 instanceof $c_LdataStories_StyleModifier)) {
         const x2 = $as_LdataStories_StyleModifier(x0$1);
-        const $$x11 = x2.LdataStories_StyleModifier__f_attr;
-        const this$31 = $m_Lio_whitemice_d3v5_all_package$();
+        const $$x10 = x2.LdataStories_StyleModifier__f_attr;
+        const this$12 = $m_Lio_whitemice_d3v5_all_package$();
         const s$4 = x2.LdataStories_StyleModifier__f_value;
-        return obj$1.style($$x11, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$31, s$4))
+        return obj$1.style($$x10, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$12, s$4))
       } else if ((x0$1 instanceof $c_LdataStories_AttrModifier)) {
         const x3 = $as_LdataStories_AttrModifier(x0$1);
-        const $$x12 = x3.LdataStories_AttrModifier__f_attr;
-        const this$32 = $m_Lio_whitemice_d3v5_all_package$();
+        const $$x11 = x3.LdataStories_AttrModifier__f_attr;
+        const this$13 = $m_Lio_whitemice_d3v5_all_package$();
         const s$5 = x3.LdataStories_AttrModifier__f_value;
-        return obj$1.attr($$x12, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$32, s$5))
+        return obj$1.attr($$x11, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$13, s$5))
       } else {
         throw new $c_s_MatchError(x0$1)
       }
@@ -51004,6 +50775,14 @@ class $c_LscalajsUtils_PlayButton extends $c_O {
     this.LscalajsUtils_PlayButton__f_isActive = (!currentState);
     $f_LscalajsUtils_SVGButton__updateColor__V(this)
   };
+  deActivate__V() {
+    if (this.LscalajsUtils_PlayButton__f_isActive) {
+      this.LscalajsUtils_PlayButton__f_isActive = false;
+      $f_LscalajsUtils_SVGButton__updateColor__V(this);
+      const this$1 = this.LscalajsUtils_PlayButton__f_clickCB;
+      this$1.apply__O()
+    }
+  };
   productPrefix__T() {
     return "PlayButton"
   };
@@ -51130,6 +50909,9 @@ class $c_LscalajsUtils_RadioButton extends $c_O {
     this.LscalajsUtils_RadioButton__f_inactiveColor = inactiveColor;
     this.LscalajsUtils_RadioButton__f_clickCB = clickCB;
     $f_LscalajsUtils_SVGButton__$init$__V(this)
+  };
+  deActivate__V() {
+    $f_LscalajsUtils_SVGButton__deActivate__V(this)
   };
   rect__Lio_whitemice_d3v5_selection_Selection() {
     return this.LscalajsUtils_RadioButton__f_rect
@@ -54274,56 +54056,6 @@ class $c_LdataStories_CandidateController extends $c_LdataStories_RouteControlle
     }))(this));
     $$x28.text($f_Lio_whitemice_d3v5_selection_SelectionImplicits__f1ToCallback__F1__sjs_js_$bar(this$73, fun$10))
   };
-  debugPrintCandidates__T__V(prefix) {
-    this.LdataStories_CandidateController__f_candidates.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$1, prefix$1) => ((c$2) => {
-      const c = $as_LdataStories_CandidateBubble(c$2);
-      const cc = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O());
-      const arg$macro$2 = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_name;
-      const arg$macro$3 = cc.Lrcvcore_Candidate__f_party.Lrcvcore_PopulationGroup__f_tag.shortName__T();
-      const arg$macro$4 = cc.Lrcvcore_Candidate__f_quality;
-      const arg$macro$5 = cc.Lrcvcore_Candidate__f_money;
-      const arg$macro$6 = cc.Lrcvcore_Candidate__f_incumbent;
-      const arg$macro$7 = $as_Lrcvcore_Candidate(c.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_ideology;
-      const arg$macro$8 = c.LdataStories_Bubble__f_x;
-      const this$4 = new $c_sci_StringOps("%20s: %5s %s % .2f % 6.2f %s %.2f %.2f");
-      const array = [prefix$1, arg$macro$2, arg$macro$3, arg$macro$4, arg$macro$5, arg$macro$6, arg$macro$7, arg$macro$8];
-      const this$ = this$4.sci_StringOps__f_repr;
-      $m_sc_Seq$();
-      $m_sjs_js_WrappedArray$();
-      const array$1 = [];
-      $uI(array.length);
-      let i = 0;
-      const len = $uI(array.length);
-      while ((i < len)) {
-        const index = i;
-        const arg1 = array[index];
-        const elem = $p_sci_StringLike__unwrapArg__O__O(this$4, arg1);
-        array$1.push(elem);
-        i = ((1 + i) | 0)
-      };
-      $m_s_reflect_ManifestFactory$ObjectManifest$();
-      const len$1 = $uI(array$1.length);
-      const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
-      const len$2 = result.u.length;
-      let i$1 = 0;
-      let j = 0;
-      const x = $uI(array$1.length);
-      const x$1 = ((x < len$2) ? x : len$2);
-      const that = result.u.length;
-      const end = ((x$1 < that) ? x$1 : that);
-      while ((i$1 < end)) {
-        const $$x1 = j;
-        const index$1 = i$1;
-        result.set($$x1, array$1[index$1]);
-        i$1 = ((1 + i$1) | 0);
-        j = ((1 + j) | 0)
-      };
-      const x$2 = $m_jl_String$().format__T__AO__T(this$, result);
-      const this$19 = $m_s_Console$();
-      const this$20 = $as_Ljava_io_PrintStream(this$19.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
-      this$20.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$2 + "\n"))
-    }))(this, prefix)))
-  };
   createResultsAxis__T__T__sc_Seq__D__D__D__V(id, label, labels, xWidth, xPct, yPct) {
     this.clearAxis__T__V(id);
     const axis = new $c_LdataStories_CategoryAxis(this.LdataStories_CandidateController__f_candidateArea, id, label, labels, xWidth, xPct, yPct);
@@ -54959,6 +54691,9 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     }))(this)), new $c_sjsr_AnonFunction0(((this$5) => (() => new $c_LdataStories_OffscreenLayout(0.0, this$5.LdataStories_RouteController__f_scaledWidth, (-200.0), (-100.0))))(this)), trajectory, duration, "Offscreen Layout")];
     this.setCurrentLayout__sc_Seq__V($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))
   };
+  clearButtons__V() {
+    this.LdataStories_MemberController__f_houseArea.selectAll(".button").remove()
+  };
   layoutSimVsActual__D__D__V(actualsY, simY) {
     const $$x1 = this.LdataStories_MemberController__f_houseArea;
     const this$1 = $m_Lio_whitemice_d3v5_all_package$();
@@ -55039,7 +54774,7 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
         const dd$1 = $as_LdataStories_DistrictData(x0$2._1__O());
         const i$1 = $uI(x0$2._2__O());
         const s = $as_Lrcvcore_SimulationResult(this$2$1.LdataStories_MemberController__f_combinedDistrictData.LdataStories_CombinedDistrictData__f_sampleCongress.apply__O__O(dd$1.LdataStories_DistrictData__f_d.district__T()));
-        const md = new $c_LdataStories_SimulationMemberData(s.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_ideology, ("Simulated Winner " + dd$1.LdataStories_DistrictData__f_d.district__T()), s.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_party, dd$1.LdataStories_DistrictData__f_d.district__T());
+        const md = new $c_LdataStories_SimulationMemberData(s.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_ideology, "Simulated Winner", s.primaryResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_party, dd$1.LdataStories_DistrictData__f_d.district__T());
         const m$1 = new $c_LdataStories_MemberBubble(dd$1, md, this$2$1.LdataStories_MemberController__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_radius, $m_LdataStories_MemberBubble$SimulationMember$(), (i$1 / this$2$1.LdataStories_MemberController__f_combinedDistrictData.LdataStories_CombinedDistrictData__f_size));
         m$1.LdataStories_Bubble__f_x = $m_LdataStories_RandomHelpers$().randRange__D__D__D(0.0, this$2$1.LdataStories_RouteController__f_scaledWidth);
         m$1.LdataStories_Bubble__f_y = $m_LdataStories_RandomHelpers$().randRange__D__D__D((-100.0), (-50.0));
@@ -55060,6 +54795,7 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     return $as_sc_IndexedSeq($f_sc_SeqLike__sortWith__F2__O(this$8, lt))
   };
   clear__D__V(transition) {
+    this.clearButtons__V();
     this.LdataStories_MemberController__f_box.clear__V();
     this.clearTimeAxis__V();
     const x$1 = new $c_sjsr_AnonFunction1(((this$1) => ((x$11$2) => {
@@ -55119,7 +54855,7 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
       } else {
         return false
       }
-    }))(this)), new $c_sjsr_AnonFunction0(((this$4$1, yPct$1) => (() => $p_LdataStories_MemberController__createHistogram$3__D__LdataStories_LayoutManager(this$4$1, yPct$1)))(this, yPct)), trajectory, 2.0, "Actual Histogram"), new $c_LdataStories_LayoutSpec(new $c_sjsr_AnonFunction1(((this$5$1) => ((m$4$2) => {
+    }))(this)), new $c_sjsr_AnonFunction0(((this$4$1) => (() => new $c_LdataStories_OffscreenLayout(0.0, this$4$1.LdataStories_RouteController__f_scaledWidth, (-200.0), (-100.0))))(this)), trajectory, transition, "Actual Histogram"), new $c_LdataStories_LayoutSpec(new $c_sjsr_AnonFunction1(((this$5$1) => ((m$4$2) => {
       const m$4 = $as_LdataStories_MemberBubble(m$4$2);
       if ((!m$4.LdataStories_MemberBubble__f_active)) {
         return true
@@ -55128,7 +54864,7 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
         const x$2$1 = $m_LdataStories_MemberBubble$SimulationMember$();
         return ((x$1 !== null) && (x$1 === x$2$1))
       }
-    }))(this)), new $c_sjsr_AnonFunction0(((this$6$1) => (() => new $c_LdataStories_OffscreenLayout(0.0, this$6$1.LdataStories_RouteController__f_scaledWidth, (-200.0), (-100.0))))(this)), trajectory, 2.0, "Simulation Histogram")];
+    }))(this)), new $c_sjsr_AnonFunction0(((this$6$1, yPct$1) => (() => $p_LdataStories_MemberController__createHistogram$3__D__LdataStories_LayoutManager(this$6$1, yPct$1)))(this, yPct)), trajectory, transition, "Simulation Histogram")];
     this.setCurrentLayout__sc_Seq__V($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))
   };
   layoutNomHistogram__D__D__D__Z__V(yPct, transition, opacity, showLinks) {
@@ -65636,13 +65372,6 @@ const $f_sci_StringLike__split__C__AT = (function($thiz, separator) {
   const regex = $p_sci_StringLike__escape__C__T($thiz, separator);
   return $f_T__split__T__I__AT(this$1, regex, 0)
 });
-const $f_sci_StringLike__format__sc_Seq__T = (function($thiz, args) {
-  const format = $thiz.toString__T();
-  const $$x1 = new $c_sjsr_AnonFunction1(((this$1) => ((arg$2) => $p_sci_StringLike__unwrapArg__O__O(this$1, arg$2)))($thiz));
-  const this$2 = $m_sc_Seq$();
-  const args$1 = $asArrayOf_O($as_sc_TraversableOnce(args.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)).toArray__s_reflect_ClassTag__O($m_s_reflect_ManifestFactory$ObjectManifest$()), 1);
-  return $m_jl_String$().format__T__AO__T(format, args$1)
-});
 const $p_scm_LinkedListLike__length0__scm_Seq__I__I = (function($thiz, elem, acc) {
   while (true) {
     const this$1 = $as_scm_LinkedListLike(elem);
@@ -65768,10 +65497,6 @@ class $c_sci_StringOps extends $c_O {
     super();
     this.sci_StringOps__f_repr = null;
     this.sci_StringOps__f_repr = repr
-  };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    const this$ = this.sci_StringOps__f_repr;
-    return $f_T__toCharArray__AC(this$)
   };
   compareTo__O__I(that) {
     const other = $as_T(that);
@@ -66078,9 +65803,6 @@ class $c_Lakka_util_Collections$PartialImmutableValuesIterable extends $c_O {
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
   };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
-  };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
     const cbf = this$1.scg_GenTraversableFactory__f_ReusableCBFInstance;
@@ -66167,10 +65889,6 @@ const $f_scm_ArrayOps__slice__I__I__O = (function($thiz, from, until) {
     $m_s_Array$().copy__O__I__O__I__I__V(reprVal, lo, result, 0, size)
   };
   return result
-});
-const $f_scm_ArrayOps__toArray__s_reflect_ClassTag__O = (function($thiz, evidence$1) {
-  const thatElementClass = evidence$1.runtimeClass__jl_Class();
-  return (($p_scm_ArrayOps__elementClass__jl_Class($thiz) === thatElementClass) ? $thiz.repr__O() : $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O($thiz, evidence$1))
 });
 class $c_Lakka_actor_dungeon_ChildrenContainer$ChildRestartsIterable extends $c_Lakka_util_Collections$PartialImmutableValuesIterable {
   constructor(stats) {
@@ -66319,9 +66037,6 @@ class $c_scm_ArrayOps$ofInt extends $c_O {
   };
   slice__I__I__O(from, until) {
     return $f_scm_ArrayOps__slice__I__I__O(this, from, until)
-  };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_scm_ArrayOps__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   isEmpty__Z() {
     return $f_sc_IndexedSeqOptimized__isEmpty__Z(this)
@@ -66824,9 +66539,6 @@ class $c_Lorg_scalajs_dom_ext_EasySeq extends $c_O {
   };
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
-  };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
@@ -68308,9 +68020,6 @@ class $c_Lakka_util_Collections$EmptyImmutableSeq$ extends $c_O {
   };
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
-  };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
@@ -69805,9 +69514,6 @@ class $c_sci_TreeSet extends $c_O {
   };
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
-  };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
@@ -71346,9 +71052,6 @@ class $c_sci_TreeMap extends $c_O {
   };
   copyToArray__O__I__V(xs, start) {
     $f_sc_TraversableOnce__copyToArray__O__I__V(this, xs, start)
-  };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1)
   };
   toList__sci_List() {
     const this$1 = $m_sci_List$();
@@ -74524,9 +74227,6 @@ class $c_sci_WrappedString extends $c_sc_AbstractSeq {
     const this$1 = this.sci_WrappedString__f_self;
     return (65535 & $uI(this$1.charCodeAt(n)))
   };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_T__toCharArray__AC(this.sci_WrappedString__f_self)
-  };
   compareTo__O__I(that) {
     const other = $as_T(that);
     const this$1 = this.sci_WrappedString__f_self;
@@ -75464,10 +75164,6 @@ class $c_scm_AbstractBuffer extends $c_scm_AbstractSeq {
     return $f_scg_Growable__$plus$plus$eq__sc_TraversableOnce__scg_Growable(this, xs)
   };
 }
-const $p_scm_WrappedArray__elementClass__jl_Class = (function($thiz) {
-  const this$1 = $thiz.array__O();
-  return $objectGetClass(this$1).getComponentType__jl_Class()
-});
 class $c_scm_WrappedArray extends $c_scm_AbstractSeq {
   isEmpty__Z() {
     return $f_sc_IndexedSeqOptimized__isEmpty__Z(this)
@@ -75532,10 +75228,6 @@ class $c_scm_WrappedArray extends $c_scm_AbstractSeq {
   };
   sizeHintIfCheap__I() {
     return this.length__I()
-  };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    const thatElementClass = evidence$1.runtimeClass__jl_Class();
-    return (($p_scm_WrappedArray__elementClass__jl_Class(this) === thatElementClass) ? this.array__O() : $f_sc_TraversableOnce__toArray__s_reflect_ClassTag__O(this, evidence$1))
   };
   stringPrefix__T() {
     return "WrappedArray"
@@ -77896,9 +77588,6 @@ class $c_scm_StringBuilder extends $c_scm_AbstractSeq {
   };
   slice__I__I__O(from, until) {
     return $f_sci_StringLike__slice__I__I__O(this, from, until)
-  };
-  toArray__s_reflect_ClassTag__O(evidence$1) {
-    return $f_T__toCharArray__AC(this.scm_StringBuilder__f_underlying.jl_StringBuilder__f_java$lang$StringBuilder$$content)
   };
   compareTo__O__I(that) {
     const other = $as_T(that);
