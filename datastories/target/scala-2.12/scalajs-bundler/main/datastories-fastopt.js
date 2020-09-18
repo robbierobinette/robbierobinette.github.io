@@ -5320,11 +5320,7 @@ const $f_LdataStories_BoxObject__clear__s_Option__V = (function($thiz, svgAreaOp
   }
 });
 const $f_LdataStories_BoxObject__clear__Lio_whitemice_d3v5_selection_Selection__V = (function($thiz, svgArea) {
-  const x = ("removing object " + $thiz.id__T());
-  const this$2 = $m_s_Console$();
-  const this$3 = $as_Ljava_io_PrintStream(this$2.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
-  this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
-  svgArea.selectAll(("#" + $thiz.id__T())).remove()
+  svgArea.selectAll(("#" + $thiz.LdataStories_TextItem__f_id)).remove()
 });
 function $is_LdataStories_BoxObject(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.LdataStories_BoxObject)))
@@ -5493,10 +5489,10 @@ function $m_LdataStories_Counter$() {
   return $n_LdataStories_Counter$
 }
 const $p_LdataStories_GeneralDisplay__barWidth__I = (function($thiz) {
-  return $thiz.configData__LdataStories_ConfigurationData().LdataStories_ConfigurationData__f_general.LdataStories_GeneralConfig__f_barWidth
+  return $thiz.configData__LdataStories_ConfigurationData().LdataStories_ConfigurationData__f_generalResultsLayout.LdataStories_GeneralConfig__f_barWidth
 });
 const $p_LdataStories_GeneralDisplay__barSpacing__I = (function($thiz) {
-  return $thiz.configData__LdataStories_ConfigurationData().LdataStories_ConfigurationData__f_general.LdataStories_GeneralConfig__f_barSpacing
+  return $thiz.configData__LdataStories_ConfigurationData().LdataStories_ConfigurationData__f_generalResultsLayout.LdataStories_GeneralConfig__f_barSpacing
 });
 const $p_LdataStories_GeneralDisplay__colorDistrictBySat$1__T__LscalajsUtils_RGBA = (function($thiz, d) {
   const this$1 = $thiz.map__LdataStories_MapController().currentDD__LdataStories_DistrictData();
@@ -5654,7 +5650,7 @@ class $c_LdataStories_GeneralDisplay extends $c_O {
   };
   xPct__I__D(nCandidates) {
     const this$1 = this.configData__LdataStories_ConfigurationData();
-    const barCenter = ((2.0 * this$1.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_desiredWidth) / 3.0);
+    const barCenter = (0.7 * this$1.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_desiredWidth);
     const axisStart = (barCenter - (this.axisLength__I__D(nCandidates) / 2.0));
     const this$2 = this.configData__LdataStories_ConfigurationData();
     return (axisStart / this$2.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_desiredWidth)
@@ -5667,14 +5663,14 @@ class $c_LdataStories_GeneralDisplay extends $c_O {
     const this$2 = $m_sc_Seq$();
     const names = $as_sc_Seq(candidates.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance));
     const nCandidates = candidates.length__I();
-    this.cc__LdataStories_CandidateController().createResultsAxis__T__T__sc_Seq__D__D__D__V("general-axis", "General Election Results", names, this.axisLength__I__D(nCandidates), this.xPct__I__D(nCandidates), this.configData__LdataStories_ConfigurationData().LdataStories_ConfigurationData__f_general.LdataStories_GeneralConfig__f_yPct)
+    this.cc__LdataStories_CandidateController().createResultsAxis__T__T__sc_Seq__D__D__D__V("general-axis", "General Election Results", names, this.axisLength__I__D(nCandidates), this.xPct__I__D(nCandidates), this.configData__LdataStories_ConfigurationData().LdataStories_ConfigurationData__f_generalResultsLayout.LdataStories_GeneralConfig__f_resultYPct)
   };
   getBarLayout__sc_Seq__LdataStories_LayoutManager(candidates) {
     const nCandidates = candidates.length__I();
     return new $c_LdataStories_BarChartLayout(new $c_sjsr_AnonFunction1(((this$1) => ((v$2) => {
       const v = $as_LdataStories_VoterBubble(v$2);
       return v.LdataStories_VoterBubble__f_generalCandidateIndex
-    }))(this)), nCandidates, (this.xPct__I__D(nCandidates) * this.vc__LdataStories_VoterController().LdataStories_RouteController__f_scaledWidth), (this.configData__LdataStories_ConfigurationData().LdataStories_ConfigurationData__f_general.LdataStories_GeneralConfig__f_yPct * this.vc__LdataStories_VoterController().LdataStories_RouteController__f_scaledHeight), $p_LdataStories_GeneralDisplay__barWidth__I(this), $p_LdataStories_GeneralDisplay__barSpacing__I(this), this.vc__LdataStories_VoterController().LdataStories_VoterController__f_layoutRadius)
+    }))(this)), nCandidates, (this.xPct__I__D(nCandidates) * this.vc__LdataStories_VoterController().LdataStories_RouteController__f_scaledWidth), (this.configData__LdataStories_ConfigurationData().LdataStories_ConfigurationData__f_generalResultsLayout.LdataStories_GeneralConfig__f_resultYPct * this.vc__LdataStories_VoterController().LdataStories_RouteController__f_scaledHeight), $p_LdataStories_GeneralDisplay__barWidth__I(this), $p_LdataStories_GeneralDisplay__barSpacing__I(this), this.vc__LdataStories_VoterController().LdataStories_VoterController__f_layoutRadius)
   };
   clear__V() {
     this.stopTimer__V();
@@ -5779,120 +5775,79 @@ function $isArrayOf_LdataStories_LayoutManager(obj, depth) {
 function $asArrayOf_LdataStories_LayoutManager(obj, depth) {
   return (($isArrayOf_LdataStories_LayoutManager(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.LayoutManager;", depth))
 }
+const $p_LdataStories_PDSLinks$__getLinkSpec__LdataStories_LinkLocation__LdataStories_LinkSpecification = (function($thiz, ll) {
+  const lc = $as_LdataStories_LinkContent($thiz.LdataStories_PDSLinks$__f_linkContentMap.apply__O__O(ll.LdataStories_LinkLocation__f_name));
+  return new $c_LdataStories_LinkSpecification(ll.LdataStories_LinkLocation__f_name, ll.LdataStories_LinkLocation__f_xPct, ll.LdataStories_LinkLocation__f_yPct, ll.LdataStories_LinkLocation__f_textAnchor, lc.LdataStories_LinkContent__f_text, lc.LdataStories_LinkContent__f_url)
+});
 class $c_LdataStories_PDSLinks$ extends $c_O {
   constructor() {
     super();
+    this.LdataStories_PDSLinks$__f_desktopLocations = null;
+    this.LdataStories_PDSLinks$__f_phoneLocations = null;
     this.LdataStories_PDSLinks$__f_links = null;
+    this.LdataStories_PDSLinks$__f_linkContentMap = null;
     this.LdataStories_PDSLinks$__f_linkMap = null;
     $n_LdataStories_PDSLinks$ = this;
-    const $$x34 = $m_sc_Seq$();
-    const $$x33 = $m_sc_Seq$();
-    const array = [new $c_LdataStories_LinkSpecification("house-where", 0.05, 0.3, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/polarization"), new $c_LdataStories_LinkSpecification("house-why", 0.95, 0.3, "end", "Why this matters", "https://blog.betterchoices.vote/polarization-why")];
-    const $$x32 = new $c_LdataStories_PageLinks(0, $as_sc_Seq($$x33.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))));
-    const $$x31 = $m_sc_Seq$();
-    const array$1 = [new $c_LdataStories_LinkSpecification("voters-where", 0.05, 0.3, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/voters-where"), new $c_LdataStories_LinkSpecification("voters-why", 0.95, 0.3, "end", "Why this matters", "https://blog.betterchoices.vote/voters-why")];
-    const $$x30 = new $c_LdataStories_PageLinks(100, $as_sc_Seq($$x31.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$1))));
-    const $$x29 = $m_sc_Seq$();
-    const array$2 = [new $c_LdataStories_LinkSpecification("simulation-where", 0.05, 0.3, "beginning", "How does simulation work?", "https://blog.betterchoices.vote/simulation-how"), new $c_LdataStories_LinkSpecification("simulation-why", 0.95, 0.3, "end", "Why this matters", "https://blog.betterchoices.vote/simulation-why")];
-    const $$x28 = new $c_LdataStories_PageLinks(125, $as_sc_Seq($$x29.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$2))));
-    const $$x27 = $m_sc_Seq$();
-    const array$3 = [new $c_LdataStories_LinkSpecification("representation-where", 0.05, 0.3, "beginning", "How is representation calculated?", "https://blog.betterchoices.vote/representation-how"), new $c_LdataStories_LinkSpecification("representation-why", 0.95, 0.3, "end", "Why this matters", "https://blog.betterchoices.vote/representation-why")];
-    const $$x26 = new $c_LdataStories_PageLinks(150, $as_sc_Seq($$x27.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$3))));
-    const $$x25 = $m_sc_Seq$();
-    const array$4 = [new $c_LdataStories_LinkSpecification("actual-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/actual-representation-how"), new $c_LdataStories_LinkSpecification("actual-map-why", 0.95, 0.25, "end", "Why this matters", "https://blog.betterchoices.vote/actual-representation-why")];
-    const $$x24 = new $c_LdataStories_PageLinks(200, $as_sc_Seq($$x25.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$4))));
-    const $$x23 = $m_sc_Seq$();
-    const array$5 = [new $c_LdataStories_LinkSpecification("expected-map-how", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/expected-map-how"), new $c_LdataStories_LinkSpecification("expected-map-why", 0.95, 0.25, "end", "Why this matters", "https://blog.betterchoices.vote/expected-map-why")];
-    const $$x22 = new $c_LdataStories_PageLinks(201, $as_sc_Seq($$x23.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$5))));
-    const $$x21 = $m_sc_Seq$();
-    const array$6 = [new $c_LdataStories_LinkSpecification("primary-simulation-how", 0.05, 0.22, "beginning", "How does primary simulation work?", "https://blog.betterchoices.vote/primary-sim-how"), new $c_LdataStories_LinkSpecification("primary-simulation-why", 0.95, 0.22, "end", "Why this matters", "https://blog.betterchoices.vote/primary-sim-why")];
-    const $$x20 = new $c_LdataStories_PageLinks(700, $as_sc_Seq($$x21.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$6))));
-    const $$x19 = $m_sc_Seq$();
-    const array$7 = [new $c_LdataStories_LinkSpecification("primary-voters-how", 0.05, 0.22, "beginning", "Where do these numbers come from?", "https://blog.betterchoices.vote/primary-voters-how"), new $c_LdataStories_LinkSpecification("primary-voters-why", 0.95, 0.22, "end", "Why this matters", "https://blog.betterchoices.vote/primary-voters-why")];
-    const $$x18 = new $c_LdataStories_PageLinks(701, $as_sc_Seq($$x19.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$7))));
-    const $$x17 = $m_sc_Seq$();
-    const array$8 = [new $c_LdataStories_LinkSpecification("primaries-where", 0.05, 0.22, "beginning", "How do the voters make their choices?", "https://blog.betterchoices.vote/primaries-where"), new $c_LdataStories_LinkSpecification("primaries-why", 0.95, 0.22, "end", "Why this matters", "https://blog.betterchoices.vote/primaries-why")];
-    const $$x16 = new $c_LdataStories_PageLinks(800, $as_sc_Seq($$x17.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$8))));
-    const $$x15 = $m_sc_Seq$();
-    const array$9 = [new $c_LdataStories_LinkSpecification("general-where", 0.05, 0.22, "beginning", "Where to these numbers come from?", "https://blog.betterchoices.vote/general-where"), new $c_LdataStories_LinkSpecification("general-why", 0.95, 0.22, "end", "Why this matters", "https://blog.betterchoices.vote/general-why")];
-    const $$x14 = new $c_LdataStories_PageLinks(1000, $as_sc_Seq($$x15.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$9))));
-    const $$x13 = $m_sc_Seq$();
-    const array$10 = [new $c_LdataStories_LinkSpecification("general-election-how", 0.05, 0.22, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/general-election-how"), new $c_LdataStories_LinkSpecification("general-election-why", 0.95, 0.22, "end", "Why this matters", "https://blog.betterchoices.vote/general-election-why")];
-    const $$x12 = new $c_LdataStories_PageLinks(1100, $as_sc_Seq($$x13.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$10))));
-    const $$x11 = $m_sc_Seq$();
-    const array$11 = [new $c_LdataStories_LinkSpecification("head-to-head-intro", 0.05, 0.25, "beginning", "Introducing Head-to-Head", "https://blog.betterchoices.vote/head-to-head-intro")];
-    const $$x10 = new $c_LdataStories_PageLinks(1150, $as_sc_Seq($$x11.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$11))));
-    const $$x9 = $m_sc_Seq$();
-    const array$12 = [new $c_LdataStories_LinkSpecification("head-to-head-details", 0.05, 0.25, "beginning", "More about Head-to-Head", "https://blog.betterchoices.vote/head-to-head-details")];
-    const $$x8 = new $c_LdataStories_PageLinks(1175, $as_sc_Seq($$x9.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$12))));
-    const $$x7 = $m_sc_Seq$();
-    const array$13 = [new $c_LdataStories_LinkSpecification("h2h-result-numbers", 0.05, 0.25, "beginning", "How are these numbers calculated?", "https://blog.betterchoices.vote/h2h-result-numbers"), new $c_LdataStories_LinkSpecification("h2h-result-why", 0.95, 0.25, "end", "Why this matters", "https://blog.betterchoices.vote/h2h-result-why")];
-    const $$x6 = new $c_LdataStories_PageLinks(1200, $as_sc_Seq($$x7.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$13))));
-    const $$x5 = $m_sc_Seq$();
-    const array$14 = [new $c_LdataStories_LinkSpecification("h2h-map-mean", 0.05, 0.25, "beginning", "What does this map mean?", "https://blog.betterchoices.vote/h2h-map-mean"), new $c_LdataStories_LinkSpecification("h2h-tactical-voting", 0.95, 0.25, "end", "What is Tactical Voting?", "https://blog.betterchoices.vote/h2h-tactical-voting"), new $c_LdataStories_LinkSpecification("h2h-cycles", 0.95, 0.27, "end", "What are cycles?", "https://blog.betterchoices.vote/head-to-head-cycles"), new $c_LdataStories_LinkSpecification("implementation", 0.95, 0.29, "end", "Head-to-Head Implementation", "https://blog.betterchoices.vote/h2h-implementation")];
-    const $$x4 = new $c_LdataStories_PageLinks(1300, $as_sc_Seq($$x5.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$14))));
-    const $$x3 = $m_sc_Seq$();
-    const array$15 = [new $c_LdataStories_LinkSpecification("h2h-congress-about", 0.95, 0.25, "end", "More about polarization", "https://blog.betterchoices.vote/h2h-congress-about"), new $c_LdataStories_LinkSpecification("instant-runoff", 0.95, 0.27, "end", "What about Instant Runoff?", "https://blog.betterchoices.vote/instant-runoff"), new $c_LdataStories_LinkSpecification("gerrymandering", 0.95, 0.29, "end", "Head-to-Head and gerrymandering", "https://blog.betterchoices.vote/h2h-gerrymandering"), new $c_LdataStories_LinkSpecification("party-primaries", 0.95, 0.31, "end", "Why no party primaries?", "https://blog.betterchoices.vote/h2h-primaries")];
-    const $$x2 = new $c_LdataStories_PageLinks(1350, $as_sc_Seq($$x3.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$15))));
     const $$x1 = $m_sc_Seq$();
-    const array$16 = [new $c_LdataStories_LinkSpecification("final-why", 0.95, 0.25, "end", "Wrapping up", "https://blog.betterchoices.vote/final"), new $c_LdataStories_LinkSpecification("get-involved", 0.95, 0.27, "end", "Get Involved", "https://blog.betterchoices.vote/get-involved"), new $c_LdataStories_LinkSpecification("credits", 0.95, 0.29, "end", "Credits", "https://blog.betterchoices.vote/about")];
-    const array$17 = [$$x32, $$x30, $$x28, $$x26, $$x24, $$x22, $$x20, $$x18, $$x16, $$x14, $$x12, $$x10, $$x8, $$x6, $$x4, $$x2, new $c_LdataStories_PageLinks(1400, $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$16))))];
-    this.LdataStories_PDSLinks$__f_links = $as_sc_Seq($$x34.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$17)));
-    const $$x37 = $m_s_Predef$().s_Predef$__f_Map;
-    const $$x36 = this.LdataStories_PDSLinks$__f_links;
-    const $$x35 = new $c_sjsr_AnonFunction1(((this$37) => ((l$2) => {
-      const l = $as_LdataStories_PageLinks(l$2);
-      return $ct_T2__O__O__(new $c_T2(), l.LdataStories_PageLinks__f_section, l)
+    const array = [new $c_LdataStories_LinkLocation("house-where", 0, 0.05, 0.3, "beginning"), new $c_LdataStories_LinkLocation("house-why", 0, 0.95, 0.3, "end"), new $c_LdataStories_LinkLocation("voters-where", 100, 0.05, 0.3, "beginning"), new $c_LdataStories_LinkLocation("voters-why", 100, 0.95, 0.3, "end"), new $c_LdataStories_LinkLocation("simulation-where", 125, 0.05, 0.3, "beginning"), new $c_LdataStories_LinkLocation("simulation-why", 125, 0.95, 0.3, "end"), new $c_LdataStories_LinkLocation("representation-where", 150, 0.05, 0.3, "beginning"), new $c_LdataStories_LinkLocation("representation-why", 150, 0.95, 0.3, "end"), new $c_LdataStories_LinkLocation("actual-map-how", 200, 0.05, 0.25, "beginning"), new $c_LdataStories_LinkLocation("actual-map-why", 200, 0.95, 0.25, "end"), new $c_LdataStories_LinkLocation("expected-map-how", 201, 0.05, 0.25, "beginning"), new $c_LdataStories_LinkLocation("expected-map-why", 201, 0.95, 0.25, "end"), new $c_LdataStories_LinkLocation("primary-simulation-how", 700, 0.95, 0.22, "end"), new $c_LdataStories_LinkLocation("primary-simulation-why", 700, 0.95, 0.25, "end"), new $c_LdataStories_LinkLocation("primary-voters-how", 701, 0.95, 0.22, "end"), new $c_LdataStories_LinkLocation("primary-voters-why", 701, 0.95, 0.25, "end"), new $c_LdataStories_LinkLocation("primaries-where", 800, 0.95, 0.22, "end"), new $c_LdataStories_LinkLocation("primaries-why", 800, 0.95, 0.25, "end"), new $c_LdataStories_LinkLocation("general-where", 1000, 0.95, 0.22, "end"), new $c_LdataStories_LinkLocation("general-why", 1000, 0.95, 0.26, "end"), new $c_LdataStories_LinkLocation("general-election-how", 1100, 0.95, 0.22, "end"), new $c_LdataStories_LinkLocation("general-election-why", 1100, 0.95, 0.26, "end"), new $c_LdataStories_LinkLocation("head-to-head-intro", 1150, 0.95, 0.25, "end"), new $c_LdataStories_LinkLocation("head-to-head-details", 1175, 0.95, 0.25, "end"), new $c_LdataStories_LinkLocation("h2h-result-numbers", 1200, 0.05, 0.25, "beginning"), new $c_LdataStories_LinkLocation("h2h-result-why", 1200, 0.95, 0.25, "end"), new $c_LdataStories_LinkLocation("h2h-map-matters", 1300, 0.05, 0.25, "beginning"), new $c_LdataStories_LinkLocation("h2h-tactical-voting", 1300, 0.95, 0.25, "end"), new $c_LdataStories_LinkLocation("h2h-cycles", 1300, 0.95, 0.28, "end"), new $c_LdataStories_LinkLocation("implementation", 1300, 0.95, 0.31, "end"), new $c_LdataStories_LinkLocation("h2h-congress-about", 1350, 0.95, 0.25, "end"), new $c_LdataStories_LinkLocation("instant-runoff", 1350, 0.95, 0.28, "end"), new $c_LdataStories_LinkLocation("gerrymandering", 1350, 0.95, 0.31, "end"), new $c_LdataStories_LinkLocation("party-primaries", 1350, 0.95, 0.34, "end"), new $c_LdataStories_LinkLocation("final-why", 1400, 0.95, 0.25, "end"), new $c_LdataStories_LinkLocation("get-involved", 1400, 0.95, 0.28, "end"), new $c_LdataStories_LinkLocation("credits", 1400, 0.95, 0.31, "end")];
+    this.LdataStories_PDSLinks$__f_desktopLocations = $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array)));
+    const $$x2 = $m_sc_Seq$();
+    const array$1 = [new $c_LdataStories_LinkLocation("house-where", 0, 0.05, 0.05, "beginning"), new $c_LdataStories_LinkLocation("house-why", 0, 0.05, 0.08, "beginning"), new $c_LdataStories_LinkLocation("voters-where", 100, 0.05, 0.05, "beginning"), new $c_LdataStories_LinkLocation("voters-why", 100, 0.05, 0.08, "beginning"), new $c_LdataStories_LinkLocation("simulation-where", 125, 0.05, 0.0, "beginning"), new $c_LdataStories_LinkLocation("simulation-why", 125, 0.05, 0.03, "beginning"), new $c_LdataStories_LinkLocation("representation-where", 150, 0.05, 0.85, "beginning"), new $c_LdataStories_LinkLocation("representation-why", 150, 0.05, 0.88, "beginning"), new $c_LdataStories_LinkLocation("actual-map-how", 200, 0.05, 0.75, "beginning"), new $c_LdataStories_LinkLocation("actual-map-why", 200, 0.05, 0.8, "beginning"), new $c_LdataStories_LinkLocation("expected-map-how", 201, 0.05, 0.75, "beginning"), new $c_LdataStories_LinkLocation("expected-map-why", 201, 0.05, 0.8, "beginning"), new $c_LdataStories_LinkLocation("primary-simulation-how", 700, 0.05, 0.02, "beginning"), new $c_LdataStories_LinkLocation("primary-simulation-why", 700, 0.05, 0.05, "beginning"), new $c_LdataStories_LinkLocation("primary-voters-how", 701, 0.05, 0.02, "beginning"), new $c_LdataStories_LinkLocation("primary-voters-why", 701, 0.05, 0.05, "beginning"), new $c_LdataStories_LinkLocation("primaries-where", 800, 0.05, 0.02, "beginning"), new $c_LdataStories_LinkLocation("primaries-why", 800, 0.05, 0.05, "beginning"), new $c_LdataStories_LinkLocation("general-where", 1000, 0.05, 0.02, "beginning"), new $c_LdataStories_LinkLocation("general-why", 1000, 0.05, 0.05, "beginning"), new $c_LdataStories_LinkLocation("general-election-how", 1100, 0.05, 0.02, "beginning"), new $c_LdataStories_LinkLocation("general-election-why", 1100, 0.05, 0.05, "beginning"), new $c_LdataStories_LinkLocation("head-to-head-intro", 1150, 0.05, 0.25, "beginning"), new $c_LdataStories_LinkLocation("head-to-head-details", 1175, 0.05, 0.25, "beginning"), new $c_LdataStories_LinkLocation("h2h-result-numbers", 1200, 0.05, 0.05, "beginning"), new $c_LdataStories_LinkLocation("h2h-result-why", 1200, 0.05, 0.08, "beginning"), new $c_LdataStories_LinkLocation("h2h-map-matters", 1300, 0.05, 0.05, "beginning"), new $c_LdataStories_LinkLocation("h2h-tactical-voting", 1300, 0.05, 0.08, "beginning"), new $c_LdataStories_LinkLocation("h2h-cycles", 1300, 0.05, 0.11, "beginning"), new $c_LdataStories_LinkLocation("implementation", 1300, 0.05, 0.14, "beginning"), new $c_LdataStories_LinkLocation("h2h-congress-about", 1350, 0.9, 0.05, "end"), new $c_LdataStories_LinkLocation("instant-runoff", 1350, 0.9, 0.08, "end"), new $c_LdataStories_LinkLocation("gerrymandering", 1350, 0.9, 0.11, "end"), new $c_LdataStories_LinkLocation("party-primaries", 1350, 0.9, 0.14, "end"), new $c_LdataStories_LinkLocation("final-why", 1400, 0.9, 0.25, "end"), new $c_LdataStories_LinkLocation("get-involved", 1400, 0.9, 0.27, "end"), new $c_LdataStories_LinkLocation("credits", 1400, 0.9, 0.29, "end")];
+    this.LdataStories_PDSLinks$__f_phoneLocations = $as_sc_Seq($$x2.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$1)));
+    const $$x3 = $m_sc_Seq$();
+    const array$2 = [new $c_LdataStories_LinkContent("house-where", "Where do these numbers come from?", "https://blog.betterchoices.vote/polarization"), new $c_LdataStories_LinkContent("house-why", "Why this matters", "https://blog.betterchoices.vote/polarization-why"), new $c_LdataStories_LinkContent("voters-where", "Where do these numbers come from?", "https://blog.betterchoices.vote/voters-where"), new $c_LdataStories_LinkContent("voters-why", "Why this matters", "https://blog.betterchoices.vote/voters-why"), new $c_LdataStories_LinkContent("simulation-where", "How does simulation work?", "https://blog.betterchoices.vote/simulation-how"), new $c_LdataStories_LinkContent("simulation-why", "Why this matters", "https://blog.betterchoices.vote/simulation-why"), new $c_LdataStories_LinkContent("representation-where", "How is representation calculated?", "https://blog.betterchoices.vote/representation-how"), new $c_LdataStories_LinkContent("representation-why", "Why this matters", "https://blog.betterchoices.vote/representation-why"), new $c_LdataStories_LinkContent("actual-map-how", "How are these numbers calculated?", "https://blog.betterchoices.vote/actual-representation-how"), new $c_LdataStories_LinkContent("actual-map-why", "Why this matters", "https://blog.betterchoices.vote/actual-representation-why"), new $c_LdataStories_LinkContent("expected-map-how", "How are these numbers calculated?", "https://blog.betterchoices.vote/expected-map-how"), new $c_LdataStories_LinkContent("expected-map-why", "Why this matters", "https://blog.betterchoices.vote/expected-map-why"), new $c_LdataStories_LinkContent("primary-simulation-how", "How does primary simulation work?", "https://blog.betterchoices.vote/primary-sim-how"), new $c_LdataStories_LinkContent("primary-simulation-why", "Why this matters", "https://blog.betterchoices.vote/primary-sim-why"), new $c_LdataStories_LinkContent("primary-voters-how", "Where do these numbers come from?", "https://blog.betterchoices.vote/primary-voters-how"), new $c_LdataStories_LinkContent("primary-voters-why", "Why this matters", "https://blog.betterchoices.vote/primary-voters-why"), new $c_LdataStories_LinkContent("primaries-where", "How do the voters make their choices?", "https://blog.betterchoices.vote/primaries-where"), new $c_LdataStories_LinkContent("primaries-why", "Why this matters", "https://blog.betterchoices.vote/primaries-why"), new $c_LdataStories_LinkContent("general-where", "Where to these numbers come from?", "https://blog.betterchoices.vote/general-where"), new $c_LdataStories_LinkContent("general-why", "Why this matters", "https://blog.betterchoices.vote/general-why"), new $c_LdataStories_LinkContent("general-election-how", "How are these numbers calculated?", "https://blog.betterchoices.vote/general-election-how"), new $c_LdataStories_LinkContent("general-election-why", "Why this matters", "https://blog.betterchoices.vote/general-election-why"), new $c_LdataStories_LinkContent("head-to-head-intro", "Introducing Head-to-Head", "https://blog.betterchoices.vote/head-to-head-intro"), new $c_LdataStories_LinkContent("head-to-head-details", "More about Head-to-Head", "https://blog.betterchoices.vote/head-to-head-details"), new $c_LdataStories_LinkContent("h2h-result-numbers", "How are these numbers calculated?", "https://blog.betterchoices.vote/h2h-result-numbers"), new $c_LdataStories_LinkContent("h2h-result-why", "Why this matters", "https://blog.betterchoices.vote/h2h-result-why"), new $c_LdataStories_LinkContent("h2h-map-matters", "What does this map mean?", "https://blog.betterchoices.vote/h2h-map-matters"), new $c_LdataStories_LinkContent("h2h-tactical-voting", "What is Tactical Voting?", "https://blog.betterchoices.vote/h2h-tactical-voting"), new $c_LdataStories_LinkContent("h2h-cycles", "What are cycles?", "https://blog.betterchoices.vote/head-to-head-cycles"), new $c_LdataStories_LinkContent("implementation", "Head-to-Head Implementation", "https://blog.betterchoices.vote/h2h-implementation"), new $c_LdataStories_LinkContent("h2h-congress-about", "More about polarization", "https://blog.betterchoices.vote/h2h-congress-about"), new $c_LdataStories_LinkContent("instant-runoff", "What about Instant Runoff?", "https://blog.betterchoices.vote/instant-runoff"), new $c_LdataStories_LinkContent("gerrymandering", "Head-to-Head and gerrymandering", "https://blog.betterchoices.vote/h2h-gerrymandering"), new $c_LdataStories_LinkContent("party-primaries", "Why no party primaries?", "https://blog.betterchoices.vote/h2h-primaries"), new $c_LdataStories_LinkContent("final-why", "Wrapping up", "https://blog.betterchoices.vote/final"), new $c_LdataStories_LinkContent("get-involved", "Get Involved", "https://blog.betterchoices.vote/get-involved"), new $c_LdataStories_LinkContent("credits", "Credits", "https://blog.betterchoices.vote/about")];
+    this.LdataStories_PDSLinks$__f_links = $as_sc_Seq($$x3.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$2)));
+    const $$x6 = $m_s_Predef$().s_Predef$__f_Map;
+    const $$x5 = this.LdataStories_PDSLinks$__f_links;
+    const $$x4 = new $c_sjsr_AnonFunction1(((this$7) => ((l$2) => {
+      const l = $as_LdataStories_LinkContent(l$2);
+      return $ct_T2__O__O__(new $c_T2(), l.LdataStories_LinkContent__f_name, l)
     }))(this));
-    const this$38 = $m_sc_Seq$();
-    this.LdataStories_PDSLinks$__f_linkMap = $as_sci_Map($$x37.apply__sc_Seq__sc_GenMap($as_sc_Seq($$x36.map__F1__scg_CanBuildFrom__O($$x35, this$38.scg_GenTraversableFactory__f_ReusableCBFInstance))))
+    const this$8 = $m_sc_Seq$();
+    this.LdataStories_PDSLinks$__f_linkContentMap = $as_sci_Map($$x6.apply__sc_Seq__sc_GenMap($as_sc_Seq($$x5.map__F1__scg_CanBuildFrom__O($$x4, this$8.scg_GenTraversableFactory__f_ReusableCBFInstance))));
+    this.LdataStories_PDSLinks$__f_linkMap = $as_scm_Map($m_scm_Map$().apply__sc_Seq__sc_GenMap($m_sci_Nil$()))
+  };
+  setLinks__D__D__V(width, height) {
+    if ((width < 600.0)) {
+      this.setLinks__sc_Seq__V(this.LdataStories_PDSLinks$__f_phoneLocations)
+    } else {
+      this.setLinks__sc_Seq__V(this.LdataStories_PDSLinks$__f_desktopLocations)
+    }
+  };
+  setLinks__sc_Seq__V(locations) {
+    this.LdataStories_PDSLinks$__f_linkMap.clear__V();
+    locations.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$1) => ((l$2) => {
+      const l = $as_LdataStories_LinkLocation(l$2);
+      if ($m_LdataStories_PDSLinks$().LdataStories_PDSLinks$__f_linkMap.contains__O__Z(l.LdataStories_LinkLocation__f_section)) {
+        const $$x4 = $m_LdataStories_PDSLinks$().LdataStories_PDSLinks$__f_linkMap;
+        const $$x3 = l.LdataStories_LinkLocation__f_section;
+        const $$x2 = $as_sc_SeqLike($m_LdataStories_PDSLinks$().LdataStories_PDSLinks$__f_linkMap.apply__O__O(l.LdataStories_LinkLocation__f_section));
+        const $$x1 = $p_LdataStories_PDSLinks$__getLinkSpec__LdataStories_LinkLocation__LdataStories_LinkSpecification($m_LdataStories_PDSLinks$(), l);
+        const this$2 = $m_sc_Seq$();
+        $$x4.update__O__O__V($$x3, $$x2.$colon$plus__O__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance))
+      } else {
+        const $$x7 = $m_LdataStories_PDSLinks$().LdataStories_PDSLinks$__f_linkMap;
+        const $$x6 = l.LdataStories_LinkLocation__f_section;
+        const $$x5 = $m_sc_Seq$();
+        const array = [$p_LdataStories_PDSLinks$__getLinkSpec__LdataStories_LinkLocation__LdataStories_LinkSpecification($m_LdataStories_PDSLinks$(), l)];
+        $$x7.update__O__O__V($$x6, $$x5.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array)))
+      }
+    }))(this)))
   };
   displayLinks__I__sc_Seq(section) {
-    const xo = this.LdataStories_PDSLinks$__f_linkMap.get__O__s_Option(section);
-    const this$2 = xo.toList__sci_List();
-    const f = ((this$3) => ((pl$2) => {
-      const pl = $as_LdataStories_PageLinks(pl$2);
-      return pl.LdataStories_PageLinks__f_links
-    }))(this);
-    const this$4 = $m_sc_Seq$();
-    const bf = this$4.scg_GenTraversableFactory__f_ReusableCBFInstance;
+    const this$1 = this.LdataStories_PDSLinks$__f_linkMap;
+    const x1 = this$1.get__O__s_Option(section);
     let $$x1;
-    if ((bf === $m_sci_List$().scg_GenTraversableFactory__f_ReusableCBFInstance)) {
-      if ((this$2 === $m_sci_Nil$())) {
-        $$x1 = $m_sci_Nil$()
-      } else {
-        let rest = this$2;
-        const found = new $c_sr_BooleanRef(false);
-        const h = new $c_sr_ObjectRef(null);
-        const t = new $c_sr_ObjectRef(null);
-        while ((rest !== $m_sci_Nil$())) {
-          const arg1 = rest.head__O();
-          $as_sc_GenTraversableOnce(f(arg1)).seq__sc_TraversableOnce().foreach__F1__V(new $c_sjsr_AnonFunction1(((this$8, found$1, h$1, t$1) => ((b$2) => {
-            if ((!found$1.sr_BooleanRef__f_elem)) {
-              h$1.sr_ObjectRef__f_elem = new $c_sci_$colon$colon(b$2, $m_sci_Nil$());
-              t$1.sr_ObjectRef__f_elem = $as_sci_$colon$colon(h$1.sr_ObjectRef__f_elem);
-              found$1.sr_BooleanRef__f_elem = true
-            } else {
-              const nx = new $c_sci_$colon$colon(b$2, $m_sci_Nil$());
-              $as_sci_$colon$colon(t$1.sr_ObjectRef__f_elem).sci_$colon$colon__f_tl = nx;
-              t$1.sr_ObjectRef__f_elem = nx
-            }
-          }))(this$2, found, h, t)));
-          rest = $as_sci_List(rest.tail__O())
-        };
-        $$x1 = ((!found.sr_BooleanRef__f_elem) ? $m_sci_Nil$() : $as_sci_$colon$colon(h.sr_ObjectRef__f_elem))
-      }
+    if ((x1 instanceof $c_s_Some)) {
+      const x2 = $as_s_Some(x1);
+      const v = x2.s_Some__f_value;
+      $$x1 = v
     } else {
-      $m_sci_List$();
-      const b = new $c_scm_ListBuffer();
-      let these = this$2;
-      while ((!these.isEmpty__Z())) {
-        const arg1$1 = these.head__O();
-        const xs = $as_sc_GenTraversableOnce(f(arg1$1)).seq__sc_TraversableOnce();
-        b.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(xs);
-        these = $as_sci_List(these.tail__O())
+      const x = $m_s_None$();
+      if ((!(x === x1))) {
+        throw new $c_s_MatchError(x1)
       };
-      $$x1 = b.toList__sci_List()
+      $$x1 = $m_sci_Nil$()
     };
     return $as_sc_Seq($$x1)
   };
@@ -18012,10 +17967,10 @@ function $m_LdataStories_CandidateBubble$() {
   return $n_LdataStories_CandidateBubble$
 }
 const $p_LdataStories_ConfigurationData$__phoneConfigData__F1__LdataStories_ConfigurationData = (function($thiz, iFrameCallback) {
-  return new $c_LdataStories_ConfigurationData($thiz.LdataStories_ConfigurationData$__f_phoneGlobals, $thiz.LdataStories_ConfigurationData$__f_phoneVoters, new $c_LdataStories_HouseConfig(5.0, 4.0, 0.8, 0.9, 0.8, 0.6), new $c_LdataStories_CandidateConfig(15.0, 0.5, 0.4, 0.0, 0.5, 0.42), new $c_LdataStories_PrimaryConfig($thiz.LdataStories_ConfigurationData$__f_phoneGlobals, $thiz.LdataStories_ConfigurationData$__f_phoneVoters, 0.05, 0.02, 0.85), new $c_LdataStories_MapConfig(new $c_LscalajsUtils_PctRectangle(0.05, 0.6, 0.9, 0.55), new $c_LscalajsUtils_PctRectangle(0.0, 0.4, 0.5, 0.1), new $c_LscalajsUtils_PctRectangle(0.0, 0.55, 0.3, 0.25), new $c_LscalajsUtils_PctRectangle(0.0, 0.55, 0.3, 0.25)), new $c_LdataStories_VoterRepresentationLayout(0.25, 0.65, new $c_LscalajsUtils_PctRectangle(0.7, 0.03, 0.27, 0.3), new $c_Lio_whitemice_d3v5_route_Point(0.5, 0.45), new $c_LscalajsUtils_PctRectangle(0.3, 0.7, 0.4, 0.2), new $c_Lio_whitemice_d3v5_route_Point(0.75, 0.75), new $c_Lio_whitemice_d3v5_route_Point(0.75, 0.85), "50pt"), new $c_LdataStories_PopulationWidgetLayout(0.4, new $c_LscalajsUtils_PctRectangle(0.1, 0.5, 0.4, 0.4), 0.75, 0.6, 200.0, 20.0, 25.0), new $c_LdataStories_GeneralConfig($thiz.LdataStories_ConfigurationData$__f_phoneGlobals, $thiz.LdataStories_ConfigurationData$__f_phoneVoters, 0.14, 0.01, 0.85), new $c_LdataStories_Margins(10.0, 10.0, 10.0, 10.0, 400.0, 800.0), iFrameCallback)
+  return new $c_LdataStories_ConfigurationData($thiz.LdataStories_ConfigurationData$__f_phoneGlobals, $thiz.LdataStories_ConfigurationData$__f_phoneVoters, new $c_LdataStories_HouseConfig(5.0, 4.0, 0.5, 0.5, 0.8, 0.6), new $c_LdataStories_CandidateConfig(15.0, 0.2, 0.4, 0.0, 0.5, 0.42), new $c_LdataStories_PrimaryConfig($thiz.LdataStories_ConfigurationData$__f_phoneGlobals, $thiz.LdataStories_ConfigurationData$__f_phoneVoters, 0.05, 0.02, 0.85), new $c_LdataStories_MapConfig(new $c_LscalajsUtils_PctRectangle(0.0, 0.2, 1.1, 0.65), new $c_LscalajsUtils_PctRectangle(0.0, 0.3, 0.5, 0.25), new $c_LscalajsUtils_PctRectangle(0.0, 0.5, 0.4, 0.4), new $c_LscalajsUtils_PctRectangle(0.0, 0.55, 0.3, 0.25)), new $c_LdataStories_HouseAndVotersLayout(0.6, 0.45), new $c_LdataStories_SimAndActualHouseLayout(0.4, 0.7), new $c_LdataStories_ElectionLayout(0.2, 0.85, new $c_LscalajsUtils_PctRectangle(0.0, 0.3, 0.5, 0.25)), new $c_LdataStories_ElectionLayout(0.2, 0.8, new $c_LscalajsUtils_PctRectangle(0.0, 0.3, 0.5, 0.25)), new $c_LdataStories_VoterRepresentationLayout(0.72, 0.55, new $c_LscalajsUtils_PctRectangle(0.0, 0.0, 0.45, 0.25), new $c_Lio_whitemice_d3v5_route_Point(0.7, 0.76), new $c_LscalajsUtils_PctRectangle(0.5, (-0.73), 0.4, 0.15), new $c_Lio_whitemice_d3v5_route_Point(0.5, (-0.6)), new $c_Lio_whitemice_d3v5_route_Point(0.5, (-0.57)), new $c_Lio_whitemice_d3v5_route_Point(0.5, (-0.54)), "50pt", "12pt", "14pt"), new $c_LdataStories_PopulationWidgetLayout(0.4, new $c_LscalajsUtils_PctRectangle(0.1, 0.5, 0.4, 0.4), 0.75, 0.6, 200.0, 20.0, 25.0), new $c_LdataStories_GeneralConfig($thiz.LdataStories_ConfigurationData$__f_phoneGlobals, $thiz.LdataStories_ConfigurationData$__f_phoneVoters, 0.14, 0.01, 0.85), new $c_LdataStories_H2HCongressLayout(0.8, new $c_LscalajsUtils_PctRectangle(0.0, 0.15, 0.9, 0.45)), new $c_LdataStories_Margins(10.0, 10.0, 10.0, 10.0, 400.0, 800.0), iFrameCallback)
 });
 const $p_LdataStories_ConfigurationData$__desktopConfigData__F1__LdataStories_ConfigurationData = (function($thiz, iFrameCallback) {
-  return new $c_LdataStories_ConfigurationData($thiz.LdataStories_ConfigurationData$__f_desktopGlobals, $thiz.LdataStories_ConfigurationData$__f_desktopVoters, new $c_LdataStories_HouseConfig(8.0, 7.0, 0.7, 0.85, 0.72, 0.73), new $c_LdataStories_CandidateConfig(20.0, 0.54, 0.4, 0.0, 0.55, 0.25), new $c_LdataStories_PrimaryConfig($thiz.LdataStories_ConfigurationData$__f_desktopGlobals, $thiz.LdataStories_ConfigurationData$__f_desktopVoters, 0.05, 0.02, 0.85), new $c_LdataStories_MapConfig(new $c_LscalajsUtils_PctRectangle(0.05, 0.3, 0.9, 0.7), new $c_LscalajsUtils_PctRectangle(0.0, 0.25, 0.5, 0.2), new $c_LscalajsUtils_PctRectangle(0.05, 0.45, 0.3, 0.4), new $c_LscalajsUtils_PctRectangle(0.0, 0.25, 0.35, 0.2)), new $c_LdataStories_VoterRepresentationLayout(0.27, 0.55, new $c_LscalajsUtils_PctRectangle(0.05, 0.6, 0.25, 0.3), new $c_Lio_whitemice_d3v5_route_Point(0.5, 0.35), new $c_LscalajsUtils_PctRectangle(0.35, 0.4, 0.3, 0.2), new $c_Lio_whitemice_d3v5_route_Point(0.75, 0.75), new $c_Lio_whitemice_d3v5_route_Point(0.75, 0.85), "100pt"), new $c_LdataStories_PopulationWidgetLayout(0.4, new $c_LscalajsUtils_PctRectangle(0.1, 0.5, 0.4, 0.4), 0.75, 0.6, 200.0, 20.0, 25.0), new $c_LdataStories_GeneralConfig($thiz.LdataStories_ConfigurationData$__f_desktopGlobals, $thiz.LdataStories_ConfigurationData$__f_desktopVoters, 0.1, 0.02, 0.85), new $c_LdataStories_Margins(10.0, 10.0, 10.0, 10.0, 400.0, 800.0), iFrameCallback)
+  return new $c_LdataStories_ConfigurationData($thiz.LdataStories_ConfigurationData$__f_desktopGlobals, $thiz.LdataStories_ConfigurationData$__f_desktopVoters, new $c_LdataStories_HouseConfig(8.0, 7.0, 0.7, 0.85, 0.72, 0.73), new $c_LdataStories_CandidateConfig(20.0, 0.54, 0.4, 0.0, 0.55, 0.25), new $c_LdataStories_PrimaryConfig($thiz.LdataStories_ConfigurationData$__f_desktopGlobals, $thiz.LdataStories_ConfigurationData$__f_desktopVoters, 0.05, 0.02, 0.85), new $c_LdataStories_MapConfig(new $c_LscalajsUtils_PctRectangle(0.05, 0.3, 0.9, 0.7), new $c_LscalajsUtils_PctRectangle(0.0, 0.25, 0.5, 0.2), new $c_LscalajsUtils_PctRectangle(0.05, 0.45, 0.3, 0.4), new $c_LscalajsUtils_PctRectangle(0.0, 0.25, 0.35, 0.2)), new $c_LdataStories_HouseAndVotersLayout(0.8, 0.5), new $c_LdataStories_SimAndActualHouseLayout(0.6, 0.8), new $c_LdataStories_ElectionLayout(0.5, 0.85, new $c_LscalajsUtils_PctRectangle(0.0, 0.2, 0.5, 0.2)), new $c_LdataStories_ElectionLayout(0.2, 0.8, new $c_LscalajsUtils_PctRectangle(0.0, 0.25, 0.5, 0.2)), new $c_LdataStories_VoterRepresentationLayout(0.27, 0.55, new $c_LscalajsUtils_PctRectangle(0.05, 0.6, 0.25, 0.3), new $c_Lio_whitemice_d3v5_route_Point(0.5, 0.35), new $c_LscalajsUtils_PctRectangle(0.35, 0.4, 0.3, 0.2), new $c_Lio_whitemice_d3v5_route_Point(0.7, 0.4), new $c_Lio_whitemice_d3v5_route_Point(0.7, 0.43), new $c_Lio_whitemice_d3v5_route_Point(0.7, 0.45), "100pt", "12pt", "20pt"), new $c_LdataStories_PopulationWidgetLayout(0.4, new $c_LscalajsUtils_PctRectangle(0.1, 0.5, 0.4, 0.4), 0.75, 0.6, 200.0, 20.0, 25.0), new $c_LdataStories_GeneralConfig($thiz.LdataStories_ConfigurationData$__f_desktopGlobals, $thiz.LdataStories_ConfigurationData$__f_desktopVoters, 0.1, 0.02, 0.85), new $c_LdataStories_H2HCongressLayout(0.85, new $c_LscalajsUtils_PctRectangle(0.0, 0.25, 0.35, 0.2)), new $c_LdataStories_Margins(10.0, 10.0, 10.0, 10.0, 400.0, 800.0), iFrameCallback)
 });
 class $c_LdataStories_ConfigurationData$ extends $c_O {
   constructor() {
@@ -18025,9 +17980,9 @@ class $c_LdataStories_ConfigurationData$ extends $c_O {
     this.LdataStories_ConfigurationData$__f_desktopVoters = null;
     this.LdataStories_ConfigurationData$__f_desktopGlobals = null;
     $n_LdataStories_ConfigurationData$ = this;
-    this.LdataStories_ConfigurationData$__f_phoneVoters = new $c_LdataStories_VoterConfig(18000.0, 2.5, 2.0, 0.82, 0.82, 0.82);
+    this.LdataStories_ConfigurationData$__f_phoneVoters = new $c_LdataStories_VoterConfig(18000.0, 2.5, 2.0, 0.815, 0.825, 0.823);
     this.LdataStories_ConfigurationData$__f_phoneGlobals = new $c_LdataStories_ConfigGlobals("Ariel", "Ariel", "Ariel", "14pt", "12pt", "10pt", 400.0, 800.0);
-    this.LdataStories_ConfigurationData$__f_desktopVoters = new $c_LdataStories_VoterConfig(50000.0, 3.0, 2.5, 0.9, 0.6, 0.82);
+    this.LdataStories_ConfigurationData$__f_desktopVoters = new $c_LdataStories_VoterConfig(50000.0, 3.0, 2.5, 0.9, 0.6, 0.827);
     this.LdataStories_ConfigurationData$__f_desktopGlobals = new $c_LdataStories_ConfigGlobals("Ariel", "Ariel", "Ariel", "16pt", "14pt", "12pt", 1000.0, 1200.0)
   };
   apply__D__D__F1__LdataStories_ConfigurationData(width, height, iFrameCallback) {
@@ -26609,7 +26564,11 @@ class $c_LdataStories_BallotController$H2HResult extends $c_O {
   toTableRow__T() {
     const b1 = ((this.LdataStories_BallotController$H2HResult__f_vote === this.LdataStories_BallotController$H2HResult__f_candidate1) ? "<td id=voteBox>X</td>" : "<td id=voteBox></td>");
     const b2 = ((this.LdataStories_BallotController$H2HResult__f_vote === this.LdataStories_BallotController$H2HResult__f_candidate2) ? "<td id=voteBox>X</td>" : "<td id=voteBox></td>");
-    return (((((((("<tr>" + b1) + "<td>") + this.LdataStories_BallotController$H2HResult__f_candidate1) + "</td><td id=spacer>vs</td>") + b2) + "<td>") + this.LdataStories_BallotController$H2HResult__f_candidate2) + "</td></tr>")
+    const this$1 = this.LdataStories_BallotController$H2HResult__f_candidate1;
+    const c1 = $f_T__split__T__I__AT(this$1, " ", 0).get(1);
+    const this$2 = this.LdataStories_BallotController$H2HResult__f_candidate2;
+    const c2 = $f_T__split__T__I__AT(this$2, " ", 0).get(1);
+    return (((((((("<tr>" + b1) + "<td>") + c1) + "</td><td id=spacer>vs</td>") + b2) + "<td>") + c2) + "</td></tr>")
   };
   productPrefix__T() {
     return "H2HResult"
@@ -27349,7 +27308,7 @@ const $d_LdataStories_ConfigGlobals = new $TypeData().initClass({
 });
 $c_LdataStories_ConfigGlobals.prototype.$classData = $d_LdataStories_ConfigGlobals;
 class $c_LdataStories_ConfigurationData extends $c_O {
-  constructor(globals, voters, house, candidates, primary, map, representationLayout, populationWidgetLayout, general, margins, iFrameCallback) {
+  constructor(globals, voters, house, candidates, primary, map, houseAndVotersLayout, simAndActualHouseLayout, primaryLayout, generalLayout, representationLayout, populationWidgetLayout, generalResultsLayout, h2HCongressLayout, margins, iFrameCallback) {
     super();
     this.LdataStories_ConfigurationData__f_globals = null;
     this.LdataStories_ConfigurationData__f_voters = null;
@@ -27357,9 +27316,14 @@ class $c_LdataStories_ConfigurationData extends $c_O {
     this.LdataStories_ConfigurationData__f_candidates = null;
     this.LdataStories_ConfigurationData__f_primary = null;
     this.LdataStories_ConfigurationData__f_map = null;
+    this.LdataStories_ConfigurationData__f_houseAndVotersLayout = null;
+    this.LdataStories_ConfigurationData__f_simAndActualHouseLayout = null;
+    this.LdataStories_ConfigurationData__f_primaryLayout = null;
+    this.LdataStories_ConfigurationData__f_generalLayout = null;
     this.LdataStories_ConfigurationData__f_representationLayout = null;
     this.LdataStories_ConfigurationData__f_populationWidgetLayout = null;
-    this.LdataStories_ConfigurationData__f_general = null;
+    this.LdataStories_ConfigurationData__f_generalResultsLayout = null;
+    this.LdataStories_ConfigurationData__f_h2HCongressLayout = null;
     this.LdataStories_ConfigurationData__f_margins = null;
     this.LdataStories_ConfigurationData__f_iFrameCallback = null;
     this.LdataStories_ConfigurationData__f_voterRepresentationDomain = null;
@@ -27383,9 +27347,14 @@ class $c_LdataStories_ConfigurationData extends $c_O {
     this.LdataStories_ConfigurationData__f_candidates = candidates;
     this.LdataStories_ConfigurationData__f_primary = primary;
     this.LdataStories_ConfigurationData__f_map = map;
+    this.LdataStories_ConfigurationData__f_houseAndVotersLayout = houseAndVotersLayout;
+    this.LdataStories_ConfigurationData__f_simAndActualHouseLayout = simAndActualHouseLayout;
+    this.LdataStories_ConfigurationData__f_primaryLayout = primaryLayout;
+    this.LdataStories_ConfigurationData__f_generalLayout = generalLayout;
     this.LdataStories_ConfigurationData__f_representationLayout = representationLayout;
     this.LdataStories_ConfigurationData__f_populationWidgetLayout = populationWidgetLayout;
-    this.LdataStories_ConfigurationData__f_general = general;
+    this.LdataStories_ConfigurationData__f_generalResultsLayout = generalResultsLayout;
+    this.LdataStories_ConfigurationData__f_h2HCongressLayout = h2HCongressLayout;
     this.LdataStories_ConfigurationData__f_margins = margins;
     this.LdataStories_ConfigurationData__f_iFrameCallback = iFrameCallback;
     this.LdataStories_ConfigurationData__f_voterRepresentationDomain = new $c_LscalajsUtils_LegendDomain(200.0, 40.0);
@@ -27448,7 +27417,7 @@ class $c_LdataStories_ConfigurationData extends $c_O {
     return "ConfigurationData"
   };
   productArity__I() {
-    return 11
+    return 16
   };
   productElement__I__O(x$1) {
     switch (x$1) {
@@ -27477,22 +27446,42 @@ class $c_LdataStories_ConfigurationData extends $c_O {
         break
       }
       case 6: {
-        return this.LdataStories_ConfigurationData__f_representationLayout;
+        return this.LdataStories_ConfigurationData__f_houseAndVotersLayout;
         break
       }
       case 7: {
-        return this.LdataStories_ConfigurationData__f_populationWidgetLayout;
+        return this.LdataStories_ConfigurationData__f_simAndActualHouseLayout;
         break
       }
       case 8: {
-        return this.LdataStories_ConfigurationData__f_general;
+        return this.LdataStories_ConfigurationData__f_primaryLayout;
         break
       }
       case 9: {
-        return this.LdataStories_ConfigurationData__f_margins;
+        return this.LdataStories_ConfigurationData__f_generalLayout;
         break
       }
       case 10: {
+        return this.LdataStories_ConfigurationData__f_representationLayout;
+        break
+      }
+      case 11: {
+        return this.LdataStories_ConfigurationData__f_populationWidgetLayout;
+        break
+      }
+      case 12: {
+        return this.LdataStories_ConfigurationData__f_generalResultsLayout;
+        break
+      }
+      case 13: {
+        return this.LdataStories_ConfigurationData__f_h2HCongressLayout;
+        break
+      }
+      case 14: {
+        return this.LdataStories_ConfigurationData__f_margins;
+        break
+      }
+      case 15: {
         return this.LdataStories_ConfigurationData__f_iFrameCallback;
         break
       }
@@ -27518,82 +27507,122 @@ class $c_LdataStories_ConfigurationData extends $c_O {
       const ConfigurationData$1 = $as_LdataStories_ConfigurationData(x$1);
       const x = this.LdataStories_ConfigurationData__f_globals;
       const x$2 = ConfigurationData$1.LdataStories_ConfigurationData__f_globals;
-      let $$x9;
+      let $$x14;
       if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
         const x$3 = this.LdataStories_ConfigurationData__f_voters;
         const x$4 = ConfigurationData$1.LdataStories_ConfigurationData__f_voters;
-        $$x9 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+        $$x14 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        $$x14 = false
+      };
+      let $$x13;
+      if ($$x14) {
+        const x$5 = this.LdataStories_ConfigurationData__f_house;
+        const x$6 = ConfigurationData$1.LdataStories_ConfigurationData__f_house;
+        $$x13 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+      } else {
+        $$x13 = false
+      };
+      let $$x12;
+      if ($$x13) {
+        const x$7 = this.LdataStories_ConfigurationData__f_candidates;
+        const x$8 = ConfigurationData$1.LdataStories_ConfigurationData__f_candidates;
+        $$x12 = ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
+      } else {
+        $$x12 = false
+      };
+      let $$x11;
+      if ($$x12) {
+        const x$9 = this.LdataStories_ConfigurationData__f_primary;
+        const x$10 = ConfigurationData$1.LdataStories_ConfigurationData__f_primary;
+        $$x11 = ((x$9 === null) ? (x$10 === null) : x$9.equals__O__Z(x$10))
+      } else {
+        $$x11 = false
+      };
+      let $$x10;
+      if ($$x11) {
+        const x$11 = this.LdataStories_ConfigurationData__f_map;
+        const x$12 = ConfigurationData$1.LdataStories_ConfigurationData__f_map;
+        $$x10 = ((x$11 === null) ? (x$12 === null) : x$11.equals__O__Z(x$12))
+      } else {
+        $$x10 = false
+      };
+      let $$x9;
+      if ($$x10) {
+        const x$13 = this.LdataStories_ConfigurationData__f_houseAndVotersLayout;
+        const x$14 = ConfigurationData$1.LdataStories_ConfigurationData__f_houseAndVotersLayout;
+        $$x9 = ((x$13 === null) ? (x$14 === null) : x$13.equals__O__Z(x$14))
       } else {
         $$x9 = false
       };
       let $$x8;
       if ($$x9) {
-        const x$5 = this.LdataStories_ConfigurationData__f_house;
-        const x$6 = ConfigurationData$1.LdataStories_ConfigurationData__f_house;
-        $$x8 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+        const x$15 = this.LdataStories_ConfigurationData__f_simAndActualHouseLayout;
+        const x$16 = ConfigurationData$1.LdataStories_ConfigurationData__f_simAndActualHouseLayout;
+        $$x8 = ((x$15 === null) ? (x$16 === null) : x$15.equals__O__Z(x$16))
       } else {
         $$x8 = false
       };
       let $$x7;
       if ($$x8) {
-        const x$7 = this.LdataStories_ConfigurationData__f_candidates;
-        const x$8 = ConfigurationData$1.LdataStories_ConfigurationData__f_candidates;
-        $$x7 = ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
+        const x$17 = this.LdataStories_ConfigurationData__f_primaryLayout;
+        const x$18 = ConfigurationData$1.LdataStories_ConfigurationData__f_primaryLayout;
+        $$x7 = ((x$17 === null) ? (x$18 === null) : x$17.equals__O__Z(x$18))
       } else {
         $$x7 = false
       };
       let $$x6;
       if ($$x7) {
-        const x$9 = this.LdataStories_ConfigurationData__f_primary;
-        const x$10 = ConfigurationData$1.LdataStories_ConfigurationData__f_primary;
-        $$x6 = ((x$9 === null) ? (x$10 === null) : x$9.equals__O__Z(x$10))
+        const x$19 = this.LdataStories_ConfigurationData__f_generalLayout;
+        const x$20 = ConfigurationData$1.LdataStories_ConfigurationData__f_generalLayout;
+        $$x6 = ((x$19 === null) ? (x$20 === null) : x$19.equals__O__Z(x$20))
       } else {
         $$x6 = false
       };
       let $$x5;
       if ($$x6) {
-        const x$11 = this.LdataStories_ConfigurationData__f_map;
-        const x$12 = ConfigurationData$1.LdataStories_ConfigurationData__f_map;
-        $$x5 = ((x$11 === null) ? (x$12 === null) : x$11.equals__O__Z(x$12))
+        const x$21 = this.LdataStories_ConfigurationData__f_representationLayout;
+        const x$22 = ConfigurationData$1.LdataStories_ConfigurationData__f_representationLayout;
+        $$x5 = ((x$21 === null) ? (x$22 === null) : x$21.equals__O__Z(x$22))
       } else {
         $$x5 = false
       };
       let $$x4;
       if ($$x5) {
-        const x$13 = this.LdataStories_ConfigurationData__f_representationLayout;
-        const x$14 = ConfigurationData$1.LdataStories_ConfigurationData__f_representationLayout;
-        $$x4 = ((x$13 === null) ? (x$14 === null) : x$13.equals__O__Z(x$14))
+        const x$23 = this.LdataStories_ConfigurationData__f_populationWidgetLayout;
+        const x$24 = ConfigurationData$1.LdataStories_ConfigurationData__f_populationWidgetLayout;
+        $$x4 = ((x$23 === null) ? (x$24 === null) : x$23.equals__O__Z(x$24))
       } else {
         $$x4 = false
       };
       let $$x3;
       if ($$x4) {
-        const x$15 = this.LdataStories_ConfigurationData__f_populationWidgetLayout;
-        const x$16 = ConfigurationData$1.LdataStories_ConfigurationData__f_populationWidgetLayout;
-        $$x3 = ((x$15 === null) ? (x$16 === null) : x$15.equals__O__Z(x$16))
+        const x$25 = this.LdataStories_ConfigurationData__f_generalResultsLayout;
+        const x$26 = ConfigurationData$1.LdataStories_ConfigurationData__f_generalResultsLayout;
+        $$x3 = ((x$25 === null) ? (x$26 === null) : x$25.equals__O__Z(x$26))
       } else {
         $$x3 = false
       };
       let $$x2;
       if ($$x3) {
-        const x$17 = this.LdataStories_ConfigurationData__f_general;
-        const x$18 = ConfigurationData$1.LdataStories_ConfigurationData__f_general;
-        $$x2 = ((x$17 === null) ? (x$18 === null) : x$17.equals__O__Z(x$18))
+        const x$27 = this.LdataStories_ConfigurationData__f_h2HCongressLayout;
+        const x$28 = ConfigurationData$1.LdataStories_ConfigurationData__f_h2HCongressLayout;
+        $$x2 = ((x$27 === null) ? (x$28 === null) : x$27.equals__O__Z(x$28))
       } else {
         $$x2 = false
       };
       let $$x1;
       if ($$x2) {
-        const x$19 = this.LdataStories_ConfigurationData__f_margins;
-        const x$20 = ConfigurationData$1.LdataStories_ConfigurationData__f_margins;
-        $$x1 = ((x$19 === null) ? (x$20 === null) : x$19.equals__O__Z(x$20))
+        const x$29 = this.LdataStories_ConfigurationData__f_margins;
+        const x$30 = ConfigurationData$1.LdataStories_ConfigurationData__f_margins;
+        $$x1 = ((x$29 === null) ? (x$30 === null) : x$29.equals__O__Z(x$30))
       } else {
         $$x1 = false
       };
       if ($$x1) {
-        const x$21 = this.LdataStories_ConfigurationData__f_iFrameCallback;
-        const x$22 = ConfigurationData$1.LdataStories_ConfigurationData__f_iFrameCallback;
-        return ((x$21 === null) ? (x$22 === null) : x$21.equals__O__Z(x$22))
+        const x$31 = this.LdataStories_ConfigurationData__f_iFrameCallback;
+        const x$32 = ConfigurationData$1.LdataStories_ConfigurationData__f_iFrameCallback;
+        return ((x$31 === null) ? (x$32 === null) : x$31.equals__O__Z(x$32))
       } else {
         return false
       }
@@ -27720,6 +27749,101 @@ const $d_LdataStories_DistrictData = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_LdataStories_DistrictData.prototype.$classData = $d_LdataStories_DistrictData;
+class $c_LdataStories_ElectionLayout extends $c_O {
+  constructor(candidateY, voterY, mapLocation) {
+    super();
+    this.LdataStories_ElectionLayout__f_candidateY = 0.0;
+    this.LdataStories_ElectionLayout__f_voterY = 0.0;
+    this.LdataStories_ElectionLayout__f_mapLocation = null;
+    this.LdataStories_ElectionLayout__f_candidateY = candidateY;
+    this.LdataStories_ElectionLayout__f_voterY = voterY;
+    this.LdataStories_ElectionLayout__f_mapLocation = mapLocation
+  };
+  productPrefix__T() {
+    return "ElectionLayout"
+  };
+  productArity__I() {
+    return 3
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LdataStories_ElectionLayout__f_candidateY;
+        break
+      }
+      case 1: {
+        return this.LdataStories_ElectionLayout__f_voterY;
+        break
+      }
+      case 2: {
+        return this.LdataStories_ElectionLayout__f_mapLocation;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const dv = this.LdataStories_ElectionLayout__f_candidateY;
+    const data = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const dv$1 = this.LdataStories_ElectionLayout__f_voterY;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const x = this.LdataStories_ElectionLayout__f_mapLocation;
+    const data$2 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$3, 3)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_LdataStories_ElectionLayout)) {
+      const ElectionLayout$1 = $as_LdataStories_ElectionLayout(x$1);
+      if (((this.LdataStories_ElectionLayout__f_candidateY === ElectionLayout$1.LdataStories_ElectionLayout__f_candidateY) && (this.LdataStories_ElectionLayout__f_voterY === ElectionLayout$1.LdataStories_ElectionLayout__f_voterY))) {
+        const x = this.LdataStories_ElectionLayout__f_mapLocation;
+        const x$2 = ElectionLayout$1.LdataStories_ElectionLayout__f_mapLocation;
+        return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_LdataStories_ElectionLayout(obj) {
+  return (((obj instanceof $c_LdataStories_ElectionLayout) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.ElectionLayout"))
+}
+function $isArrayOf_LdataStories_ElectionLayout(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_ElectionLayout)))
+}
+function $asArrayOf_LdataStories_ElectionLayout(obj, depth) {
+  return (($isArrayOf_LdataStories_ElectionLayout(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.ElectionLayout;", depth))
+}
+const $d_LdataStories_ElectionLayout = new $TypeData().initClass({
+  LdataStories_ElectionLayout: 0
+}, false, "dataStories.ElectionLayout", {
+  LdataStories_ElectionLayout: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LdataStories_ElectionLayout.prototype.$classData = $d_LdataStories_ElectionLayout;
 class $c_LdataStories_ElementDimensions extends $c_O {
   constructor(xPct, yPct, wPct, hPct) {
     super();
@@ -27923,20 +28047,20 @@ const $d_LdataStories_ElementLocation = new $TypeData().initClass({
 });
 $c_LdataStories_ElementLocation.prototype.$classData = $d_LdataStories_ElementLocation;
 class $c_LdataStories_GeneralConfig extends $c_O {
-  constructor(globals, voterConfig, barWidthPct, barSpacingPct, yPct) {
+  constructor(globals, voterConfig, barWidthPct, barSpacingPct, resultYPct) {
     super();
     this.LdataStories_GeneralConfig__f_globals = null;
     this.LdataStories_GeneralConfig__f_voterConfig = null;
     this.LdataStories_GeneralConfig__f_barWidthPct = 0.0;
     this.LdataStories_GeneralConfig__f_barSpacingPct = 0.0;
-    this.LdataStories_GeneralConfig__f_yPct = 0.0;
+    this.LdataStories_GeneralConfig__f_resultYPct = 0.0;
     this.LdataStories_GeneralConfig__f_barWidth = 0;
     this.LdataStories_GeneralConfig__f_barSpacing = 0;
     this.LdataStories_GeneralConfig__f_globals = globals;
     this.LdataStories_GeneralConfig__f_voterConfig = voterConfig;
     this.LdataStories_GeneralConfig__f_barWidthPct = barWidthPct;
     this.LdataStories_GeneralConfig__f_barSpacingPct = barSpacingPct;
-    this.LdataStories_GeneralConfig__f_yPct = yPct;
+    this.LdataStories_GeneralConfig__f_resultYPct = resultYPct;
     const x = ((barWidthPct * globals.LdataStories_ConfigGlobals__f_desiredWidth) / voterConfig.LdataStories_VoterConfig__f_radius);
     const this$5 = $m_RTLong$();
     const value = $uD(Math.round(x));
@@ -27973,7 +28097,7 @@ class $c_LdataStories_GeneralConfig extends $c_O {
         break
       }
       case 4: {
-        return this.LdataStories_GeneralConfig__f_yPct;
+        return this.LdataStories_GeneralConfig__f_resultYPct;
         break
       }
       default: {
@@ -28003,7 +28127,7 @@ class $c_LdataStories_GeneralConfig extends $c_O {
     const data$3 = $m_sr_Statics$().doubleHash__D__I(dv$1);
     acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
     const hash$4 = acc;
-    const dv$2 = this.LdataStories_GeneralConfig__f_yPct;
+    const dv$2 = this.LdataStories_GeneralConfig__f_resultYPct;
     const data$4 = $m_sr_Statics$().doubleHash__D__I(dv$2);
     acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
     const hash$5 = acc;
@@ -28028,7 +28152,7 @@ class $c_LdataStories_GeneralConfig extends $c_O {
         $$x1 = false
       };
       if ((($$x1 && (this.LdataStories_GeneralConfig__f_barWidthPct === GeneralConfig$1.LdataStories_GeneralConfig__f_barWidthPct)) && (this.LdataStories_GeneralConfig__f_barSpacingPct === GeneralConfig$1.LdataStories_GeneralConfig__f_barSpacingPct))) {
-        return (this.LdataStories_GeneralConfig__f_yPct === GeneralConfig$1.LdataStories_GeneralConfig__f_yPct)
+        return (this.LdataStories_GeneralConfig__f_resultYPct === GeneralConfig$1.LdataStories_GeneralConfig__f_resultYPct)
       } else {
         return false
       }
@@ -28057,6 +28181,170 @@ const $d_LdataStories_GeneralConfig = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_LdataStories_GeneralConfig.prototype.$classData = $d_LdataStories_GeneralConfig;
+class $c_LdataStories_H2HCongressLayout extends $c_O {
+  constructor(houseY, mapLocation) {
+    super();
+    this.LdataStories_H2HCongressLayout__f_houseY = 0.0;
+    this.LdataStories_H2HCongressLayout__f_mapLocation = null;
+    this.LdataStories_H2HCongressLayout__f_houseY = houseY;
+    this.LdataStories_H2HCongressLayout__f_mapLocation = mapLocation
+  };
+  productPrefix__T() {
+    return "H2HCongressLayout"
+  };
+  productArity__I() {
+    return 2
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LdataStories_H2HCongressLayout__f_houseY;
+        break
+      }
+      case 1: {
+        return this.LdataStories_H2HCongressLayout__f_mapLocation;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const dv = this.LdataStories_H2HCongressLayout__f_houseY;
+    const data = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const x = this.LdataStories_H2HCongressLayout__f_mapLocation;
+    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$2, 2)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_LdataStories_H2HCongressLayout)) {
+      const H2HCongressLayout$1 = $as_LdataStories_H2HCongressLayout(x$1);
+      if ((this.LdataStories_H2HCongressLayout__f_houseY === H2HCongressLayout$1.LdataStories_H2HCongressLayout__f_houseY)) {
+        const x = this.LdataStories_H2HCongressLayout__f_mapLocation;
+        const x$2 = H2HCongressLayout$1.LdataStories_H2HCongressLayout__f_mapLocation;
+        return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_LdataStories_H2HCongressLayout(obj) {
+  return (((obj instanceof $c_LdataStories_H2HCongressLayout) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.H2HCongressLayout"))
+}
+function $isArrayOf_LdataStories_H2HCongressLayout(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_H2HCongressLayout)))
+}
+function $asArrayOf_LdataStories_H2HCongressLayout(obj, depth) {
+  return (($isArrayOf_LdataStories_H2HCongressLayout(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.H2HCongressLayout;", depth))
+}
+const $d_LdataStories_H2HCongressLayout = new $TypeData().initClass({
+  LdataStories_H2HCongressLayout: 0
+}, false, "dataStories.H2HCongressLayout", {
+  LdataStories_H2HCongressLayout: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LdataStories_H2HCongressLayout.prototype.$classData = $d_LdataStories_H2HCongressLayout;
+class $c_LdataStories_HouseAndVotersLayout extends $c_O {
+  constructor(houseY, votersY) {
+    super();
+    this.LdataStories_HouseAndVotersLayout__f_houseY = 0.0;
+    this.LdataStories_HouseAndVotersLayout__f_votersY = 0.0;
+    this.LdataStories_HouseAndVotersLayout__f_houseY = houseY;
+    this.LdataStories_HouseAndVotersLayout__f_votersY = votersY
+  };
+  productPrefix__T() {
+    return "HouseAndVotersLayout"
+  };
+  productArity__I() {
+    return 2
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LdataStories_HouseAndVotersLayout__f_houseY;
+        break
+      }
+      case 1: {
+        return this.LdataStories_HouseAndVotersLayout__f_votersY;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const dv = this.LdataStories_HouseAndVotersLayout__f_houseY;
+    const data = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const dv$1 = this.LdataStories_HouseAndVotersLayout__f_votersY;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$2, 2)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_LdataStories_HouseAndVotersLayout)) {
+      const HouseAndVotersLayout$1 = $as_LdataStories_HouseAndVotersLayout(x$1);
+      return ((this.LdataStories_HouseAndVotersLayout__f_houseY === HouseAndVotersLayout$1.LdataStories_HouseAndVotersLayout__f_houseY) && (this.LdataStories_HouseAndVotersLayout__f_votersY === HouseAndVotersLayout$1.LdataStories_HouseAndVotersLayout__f_votersY))
+    } else {
+      return false
+    }
+  };
+}
+function $as_LdataStories_HouseAndVotersLayout(obj) {
+  return (((obj instanceof $c_LdataStories_HouseAndVotersLayout) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.HouseAndVotersLayout"))
+}
+function $isArrayOf_LdataStories_HouseAndVotersLayout(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_HouseAndVotersLayout)))
+}
+function $asArrayOf_LdataStories_HouseAndVotersLayout(obj, depth) {
+  return (($isArrayOf_LdataStories_HouseAndVotersLayout(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.HouseAndVotersLayout;", depth))
+}
+const $d_LdataStories_HouseAndVotersLayout = new $TypeData().initClass({
+  LdataStories_HouseAndVotersLayout: 0
+}, false, "dataStories.HouseAndVotersLayout", {
+  LdataStories_HouseAndVotersLayout: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LdataStories_HouseAndVotersLayout.prototype.$classData = $d_LdataStories_HouseAndVotersLayout;
 class $c_LdataStories_HouseConfig extends $c_O {
   constructor(radius, layoutRadius, y1Pct, y2Pct, opacity1, opacity2) {
     super();
@@ -28790,6 +29078,190 @@ const $d_LdataStories_LayoutSpec = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_LdataStories_LayoutSpec.prototype.$classData = $d_LdataStories_LayoutSpec;
+class $c_LdataStories_LinkContent extends $c_O {
+  constructor(name, text, url) {
+    super();
+    this.LdataStories_LinkContent__f_name = null;
+    this.LdataStories_LinkContent__f_text = null;
+    this.LdataStories_LinkContent__f_url = null;
+    this.LdataStories_LinkContent__f_name = name;
+    this.LdataStories_LinkContent__f_text = text;
+    this.LdataStories_LinkContent__f_url = url
+  };
+  productPrefix__T() {
+    return "LinkContent"
+  };
+  productArity__I() {
+    return 3
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LdataStories_LinkContent__f_name;
+        break
+      }
+      case 1: {
+        return this.LdataStories_LinkContent__f_text;
+        break
+      }
+      case 2: {
+        return this.LdataStories_LinkContent__f_url;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__I(this, (-889275714))
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_LdataStories_LinkContent)) {
+      const LinkContent$1 = $as_LdataStories_LinkContent(x$1);
+      return (((this.LdataStories_LinkContent__f_name === LinkContent$1.LdataStories_LinkContent__f_name) && (this.LdataStories_LinkContent__f_text === LinkContent$1.LdataStories_LinkContent__f_text)) && (this.LdataStories_LinkContent__f_url === LinkContent$1.LdataStories_LinkContent__f_url))
+    } else {
+      return false
+    }
+  };
+}
+function $as_LdataStories_LinkContent(obj) {
+  return (((obj instanceof $c_LdataStories_LinkContent) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.LinkContent"))
+}
+function $isArrayOf_LdataStories_LinkContent(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_LinkContent)))
+}
+function $asArrayOf_LdataStories_LinkContent(obj, depth) {
+  return (($isArrayOf_LdataStories_LinkContent(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.LinkContent;", depth))
+}
+const $d_LdataStories_LinkContent = new $TypeData().initClass({
+  LdataStories_LinkContent: 0
+}, false, "dataStories.LinkContent", {
+  LdataStories_LinkContent: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LdataStories_LinkContent.prototype.$classData = $d_LdataStories_LinkContent;
+class $c_LdataStories_LinkLocation extends $c_O {
+  constructor(name, section, xPct, yPct, textAnchor) {
+    super();
+    this.LdataStories_LinkLocation__f_name = null;
+    this.LdataStories_LinkLocation__f_section = 0;
+    this.LdataStories_LinkLocation__f_xPct = 0.0;
+    this.LdataStories_LinkLocation__f_yPct = 0.0;
+    this.LdataStories_LinkLocation__f_textAnchor = null;
+    this.LdataStories_LinkLocation__f_name = name;
+    this.LdataStories_LinkLocation__f_section = section;
+    this.LdataStories_LinkLocation__f_xPct = xPct;
+    this.LdataStories_LinkLocation__f_yPct = yPct;
+    this.LdataStories_LinkLocation__f_textAnchor = textAnchor
+  };
+  productPrefix__T() {
+    return "LinkLocation"
+  };
+  productArity__I() {
+    return 5
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LdataStories_LinkLocation__f_name;
+        break
+      }
+      case 1: {
+        return this.LdataStories_LinkLocation__f_section;
+        break
+      }
+      case 2: {
+        return this.LdataStories_LinkLocation__f_xPct;
+        break
+      }
+      case 3: {
+        return this.LdataStories_LinkLocation__f_yPct;
+        break
+      }
+      case 4: {
+        return this.LdataStories_LinkLocation__f_textAnchor;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const x = this.LdataStories_LinkLocation__f_name;
+    const data = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const data$1 = this.LdataStories_LinkLocation__f_section;
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const dv = this.LdataStories_LinkLocation__f_xPct;
+    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const dv$1 = this.LdataStories_LinkLocation__f_yPct;
+    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const x$1 = this.LdataStories_LinkLocation__f_textAnchor;
+    const data$4 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$5, 5)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_LdataStories_LinkLocation)) {
+      const LinkLocation$1 = $as_LdataStories_LinkLocation(x$1);
+      return (((((this.LdataStories_LinkLocation__f_name === LinkLocation$1.LdataStories_LinkLocation__f_name) && (this.LdataStories_LinkLocation__f_section === LinkLocation$1.LdataStories_LinkLocation__f_section)) && (this.LdataStories_LinkLocation__f_xPct === LinkLocation$1.LdataStories_LinkLocation__f_xPct)) && (this.LdataStories_LinkLocation__f_yPct === LinkLocation$1.LdataStories_LinkLocation__f_yPct)) && (this.LdataStories_LinkLocation__f_textAnchor === LinkLocation$1.LdataStories_LinkLocation__f_textAnchor))
+    } else {
+      return false
+    }
+  };
+}
+function $as_LdataStories_LinkLocation(obj) {
+  return (((obj instanceof $c_LdataStories_LinkLocation) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.LinkLocation"))
+}
+function $isArrayOf_LdataStories_LinkLocation(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_LinkLocation)))
+}
+function $asArrayOf_LdataStories_LinkLocation(obj, depth) {
+  return (($isArrayOf_LdataStories_LinkLocation(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.LinkLocation;", depth))
+}
+const $d_LdataStories_LinkLocation = new $TypeData().initClass({
+  LdataStories_LinkLocation: 0
+}, false, "dataStories.LinkLocation", {
+  LdataStories_LinkLocation: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LdataStories_LinkLocation.prototype.$classData = $d_LdataStories_LinkLocation;
 class $c_LdataStories_LinkSpecification extends $c_O {
   constructor(id, xPct, yPct, textAnchor, text, url) {
     super();
@@ -29149,90 +29621,6 @@ const $d_LdataStories_Margins = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_LdataStories_Margins.prototype.$classData = $d_LdataStories_Margins;
-class $c_LdataStories_PageLinks extends $c_O {
-  constructor(section, links) {
-    super();
-    this.LdataStories_PageLinks__f_section = 0;
-    this.LdataStories_PageLinks__f_links = null;
-    this.LdataStories_PageLinks__f_section = section;
-    this.LdataStories_PageLinks__f_links = links
-  };
-  productPrefix__T() {
-    return "PageLinks"
-  };
-  productArity__I() {
-    return 2
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.LdataStories_PageLinks__f_section;
-        break
-      }
-      case 1: {
-        return this.LdataStories_PageLinks__f_links;
-        break
-      }
-      default: {
-        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    let acc = (-889275714);
-    const hash = acc;
-    const data = this.LdataStories_PageLinks__f_section;
-    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
-    const hash$1 = acc;
-    const x = this.LdataStories_PageLinks__f_links;
-    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
-    const hash$2 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$2, 2)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_LdataStories_PageLinks)) {
-      const PageLinks$1 = $as_LdataStories_PageLinks(x$1);
-      if ((this.LdataStories_PageLinks__f_section === PageLinks$1.LdataStories_PageLinks__f_section)) {
-        const x = this.LdataStories_PageLinks__f_links;
-        const x$2 = PageLinks$1.LdataStories_PageLinks__f_links;
-        return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-      } else {
-        return false
-      }
-    } else {
-      return false
-    }
-  };
-}
-function $as_LdataStories_PageLinks(obj) {
-  return (((obj instanceof $c_LdataStories_PageLinks) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.PageLinks"))
-}
-function $isArrayOf_LdataStories_PageLinks(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_PageLinks)))
-}
-function $asArrayOf_LdataStories_PageLinks(obj, depth) {
-  return (($isArrayOf_LdataStories_PageLinks(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.PageLinks;", depth))
-}
-const $d_LdataStories_PageLinks = new $TypeData().initClass({
-  LdataStories_PageLinks: 0
-}, false, "dataStories.PageLinks", {
-  LdataStories_PageLinks: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_LdataStories_PageLinks.prototype.$classData = $d_LdataStories_PageLinks;
 class $c_LdataStories_PolarizationDataStory$SizeAttrs extends $c_O {
   constructor(outer, width, height, scale, hShift) {
     super();
@@ -29436,6 +29824,7 @@ const $p_LdataStories_PolarizationDataStoryBuilder__construct__V = (function($th
             };
             these = $as_sci_List(these.tail__O())
           };
+          this$2$1.LdataStories_PolarizationDataStoryBuilder__f_todo.clear__V();
           break matchEnd6
         }
       };
@@ -29471,12 +29860,6 @@ class $c_LdataStories_PolarizationDataStoryBuilder extends $c_O {
       } else {
         throw new $c_s_MatchError(x1)
       }
-    };
-    const this$1 = this.LdataStories_PolarizationDataStoryBuilder__f_dsOpt;
-    if ((!this$1.isEmpty__Z())) {
-      const arg1 = this$1.get__O();
-      const x$1 = $as_LdataStories_PolarizationDataStory(arg1);
-      x$1.update__I__D__V(section, percentComplete)
     }
   };
   productPrefix__T() {
@@ -29888,7 +30271,7 @@ class $c_LdataStories_PrimaryElectionSection extends $c_O {
       const v$3 = $as_LdataStories_VoterBubble(v$3$2);
       return v$3.LdataStories_VoterBubble__f_primaryVoter
     }))(this));
-    const x$7 = new $c_sjsr_AnonFunction0(((this$4) => (() => this$4.LdataStories_PrimaryElectionSection__f_vc.constructHistogramLayout__D__LdataStories_HistogramLayout(0.9)))(this));
+    const x$7 = new $c_sjsr_AnonFunction0(((this$4) => (() => this$4.LdataStories_PrimaryElectionSection__f_vc.constructHistogramLayout__D__LdataStories_HistogramLayout(this$4.LdataStories_PrimaryElectionSection__f_configData.LdataStories_ConfigurationData__f_primaryLayout.LdataStories_ElectionLayout__f_voterY)))(this));
     const x$10 = $m_LdataStories_LayoutSpec$().apply$default$3__Lio_whitemice_d3v5_route_Trajectory();
     const array = [$$x1, new $c_LdataStories_LayoutSpec(x$6, x$7, x$10, transition, "primaryVoterHistogram")];
     $$x2.setCurrentLayout__sc_Seq__V($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))
@@ -29912,7 +30295,7 @@ class $c_LdataStories_PrimaryElectionSection extends $c_O {
     this.LdataStories_PrimaryElectionSection__f_cc.layoutByIdeology__D__V(0.3);
     this.LdataStories_PrimaryElectionSection__f_cc.renderCandidates__I__V(0);
     const dvr = this.LdataStories_PrimaryElectionSection__f_map.currentDD__LdataStories_DistrictData().LdataStories_DistrictData__f_d;
-    this.LdataStories_PrimaryElectionSection__f_vc.arrangeByIdeology__D__T__V(this.LdataStories_PrimaryElectionSection__f_configData.LdataStories_ConfigurationData__f_voters.LdataStories_VoterConfig__f_y1, ("Voters By Ideology for " + dvr.district__T()));
+    this.LdataStories_PrimaryElectionSection__f_vc.arrangeByIdeology__D__T__V(this.LdataStories_PrimaryElectionSection__f_configData.LdataStories_ConfigurationData__f_primaryLayout.LdataStories_ElectionLayout__f_voterY, ("Voters By Ideology for " + dvr.district__T()));
     this.LdataStories_PrimaryElectionSection__f_vc.colorByIdeology__D__V(0.9);
     this.LdataStories_PrimaryElectionSection__f_republicanState = $m_LdataStories_PrimaryElectionSection$NotVoted$();
     this.LdataStories_PrimaryElectionSection__f_democraticState = $m_LdataStories_PrimaryElectionSection$NotVoted$();
@@ -30944,20 +31327,13 @@ class $c_LdataStories_ScaledBox extends $c_O {
     while ((!these.isEmpty__Z())) {
       const arg1 = these.head__O();
       const o = $as_LdataStories_BoxObject(arg1);
-      this.clearObject__T__V(o.id__T());
+      this.clearObject__T__V(o.LdataStories_TextItem__f_id);
       these = $as_sci_List(these.tail__O())
     }
   };
   onResize__LdataStories_SvgDefinition__V(svgDef) {
     this.LdataStories_ScaledBox__f_svgDefinition = svgDef;
     this.updateElementLocation__V()
-  };
-  addRect__T__T__D__D__D__D__sc_Seq__V(id, shape, xPct, yPct, width, height, attrs) {
-    const this$3 = this.LdataStories_ScaledBox__f_boxObjects;
-    const array = [new $c_LdataStories_RectItem(id, shape, xPct, yPct, width, height, attrs)];
-    const elems = $ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array);
-    this$3.$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(elems);
-    $as_LdataStories_BoxObject(this.LdataStories_ScaledBox__f_boxObjects.last__O()).render__s_Option__LdataStories_SvgDefinition__V(this.LdataStories_ScaledBox__f_svgAreaOpt, this.LdataStories_ScaledBox__f_svgDefinition)
   };
   updateElementLocation__V() {
     if (((this.LdataStories_ScaledBox__f_elementDimensions !== null) && (this.LdataStories_ScaledBox__f_svgDefinition !== null))) {
@@ -31098,7 +31474,7 @@ class $c_LdataStories_ScaledBox extends $c_O {
     const this$2 = this.LdataStories_ScaledBox__f_boxObjects;
     const f = ((this$1, id$1) => ((x$5$2) => {
       const x$5 = $as_LdataStories_BoxObject(x$5$2);
-      return (x$5.id__T() === id$1)
+      return (x$5.LdataStories_TextItem__f_id === id$1)
     }))(this, id);
     let $$x1;
     if ((this$2 instanceof $c_sci_List)) {
@@ -31194,7 +31570,7 @@ class $c_LdataStories_ScaledBox extends $c_O {
     }
   };
   updateAxisLabel__T__T__V(label, fontSize) {
-    this.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V(label, "xLabel", "label", 0.5, (0.02 + this.LdataStories_ScaledBox__f_elementLocation.LdataStories_ElementLocation__f_height), fontSize, "middle", "black", $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$())), this.updateTextItem$default$10__F0())
+    this.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V(label, "xLabel", "label", 0.5, (0.03 + this.LdataStories_ScaledBox__f_elementLocation.LdataStories_ElementLocation__f_height), fontSize, "middle", "black", $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$())), this.updateTextItem$default$10__F0())
   };
   clearTextItems__V() {
     const this$2 = this.LdataStories_ScaledBox__f_boxObjects;
@@ -31289,7 +31665,7 @@ class $c_LdataStories_ScaledBox extends $c_O {
     while ((!these$1.isEmpty__Z())) {
       const arg1$1 = these$1.head__O();
       const o = $as_LdataStories_BoxObject(arg1$1);
-      this.clearObject__T__V(o.id__T());
+      this.clearObject__T__V(o.LdataStories_TextItem__f_id);
       these$1 = $as_sci_List(these$1.tail__O())
     }
   };
@@ -31474,6 +31850,85 @@ const $d_LdataStories_ScaledBox = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_LdataStories_ScaledBox.prototype.$classData = $d_LdataStories_ScaledBox;
+class $c_LdataStories_SimAndActualHouseLayout extends $c_O {
+  constructor(simY, actualY) {
+    super();
+    this.LdataStories_SimAndActualHouseLayout__f_simY = 0.0;
+    this.LdataStories_SimAndActualHouseLayout__f_actualY = 0.0;
+    this.LdataStories_SimAndActualHouseLayout__f_simY = simY;
+    this.LdataStories_SimAndActualHouseLayout__f_actualY = actualY
+  };
+  productPrefix__T() {
+    return "SimAndActualHouseLayout"
+  };
+  productArity__I() {
+    return 2
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.LdataStories_SimAndActualHouseLayout__f_simY;
+        break
+      }
+      case 1: {
+        return this.LdataStories_SimAndActualHouseLayout__f_actualY;
+        break
+      }
+      default: {
+        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const dv = this.LdataStories_SimAndActualHouseLayout__f_simY;
+    const data = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const dv$1 = this.LdataStories_SimAndActualHouseLayout__f_actualY;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$2, 2)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_LdataStories_SimAndActualHouseLayout)) {
+      const SimAndActualHouseLayout$1 = $as_LdataStories_SimAndActualHouseLayout(x$1);
+      return ((this.LdataStories_SimAndActualHouseLayout__f_simY === SimAndActualHouseLayout$1.LdataStories_SimAndActualHouseLayout__f_simY) && (this.LdataStories_SimAndActualHouseLayout__f_actualY === SimAndActualHouseLayout$1.LdataStories_SimAndActualHouseLayout__f_actualY))
+    } else {
+      return false
+    }
+  };
+}
+function $as_LdataStories_SimAndActualHouseLayout(obj) {
+  return (((obj instanceof $c_LdataStories_SimAndActualHouseLayout) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.SimAndActualHouseLayout"))
+}
+function $isArrayOf_LdataStories_SimAndActualHouseLayout(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_SimAndActualHouseLayout)))
+}
+function $asArrayOf_LdataStories_SimAndActualHouseLayout(obj, depth) {
+  return (($isArrayOf_LdataStories_SimAndActualHouseLayout(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.SimAndActualHouseLayout;", depth))
+}
+const $d_LdataStories_SimAndActualHouseLayout = new $TypeData().initClass({
+  LdataStories_SimAndActualHouseLayout: 0
+}, false, "dataStories.SimAndActualHouseLayout", {
+  LdataStories_SimAndActualHouseLayout: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_LdataStories_SimAndActualHouseLayout.prototype.$classData = $d_LdataStories_SimAndActualHouseLayout;
 class $c_LdataStories_SvgDefinition extends $c_O {
   constructor(width, height) {
     super();
@@ -31481,6 +31936,44 @@ class $c_LdataStories_SvgDefinition extends $c_O {
     this.LdataStories_SvgDefinition__f_height = 0.0;
     this.LdataStories_SvgDefinition__f_width = width;
     this.LdataStories_SvgDefinition__f_height = height
+  };
+  toString__T() {
+    const arg$macro$1 = this.LdataStories_SvgDefinition__f_width;
+    const arg$macro$2 = this.LdataStories_SvgDefinition__f_height;
+    const this$3 = new $c_sci_StringOps("%7.2f %7.2f");
+    const array = [arg$macro$1, arg$macro$2];
+    const this$ = this$3.sci_StringOps__f_repr;
+    $m_sc_Seq$();
+    $m_sjs_js_WrappedArray$();
+    const array$1 = [];
+    $uI(array.length);
+    let i = 0;
+    const len = $uI(array.length);
+    while ((i < len)) {
+      const index = i;
+      const arg1 = array[index];
+      const elem = $p_sci_StringLike__unwrapArg__O__O(this$3, arg1);
+      array$1.push(elem);
+      i = ((1 + i) | 0)
+    };
+    $m_s_reflect_ManifestFactory$ObjectManifest$();
+    const len$1 = $uI(array$1.length);
+    const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
+    const len$2 = result.u.length;
+    let i$1 = 0;
+    let j = 0;
+    const x = $uI(array$1.length);
+    const x$1 = ((x < len$2) ? x : len$2);
+    const that = result.u.length;
+    const end = ((x$1 < that) ? x$1 : that);
+    while ((i$1 < end)) {
+      const $$x1 = j;
+      const index$1 = i$1;
+      result.set($$x1, array$1[index$1]);
+      i$1 = ((1 + i$1) | 0);
+      j = ((1 + j) | 0)
+    };
+    return $m_jl_String$().format__T__AO__T(this$, result)
   };
   productPrefix__T() {
     return "SvgDefinition"
@@ -31518,9 +32011,6 @@ class $c_LdataStories_SvgDefinition extends $c_O {
     acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
     const hash$2 = acc;
     return $m_sr_Statics$().finalizeHash__I__I__I(hash$2, 2)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
   };
   equals__O__Z(x$1) {
     if ((this === x$1)) {
@@ -31675,30 +32165,36 @@ const $d_LdataStories_VoterConfig = new $TypeData().initClass({
 });
 $c_LdataStories_VoterConfig.prototype.$classData = $d_LdataStories_VoterConfig;
 class $c_LdataStories_VoterRepresentationLayout extends $c_O {
-  constructor(candidateYPct, voterYPct, mapLocation, representationLabel, representationScore, stat1, stat2, scoreFontSize) {
+  constructor(candidateYPct, voterYPct, mapLocation, representationLabel, representationScore, statLabel, stat1, stat2, scoreFontSize, statFontSize, labelFontSize) {
     super();
     this.LdataStories_VoterRepresentationLayout__f_candidateYPct = 0.0;
     this.LdataStories_VoterRepresentationLayout__f_voterYPct = 0.0;
     this.LdataStories_VoterRepresentationLayout__f_mapLocation = null;
     this.LdataStories_VoterRepresentationLayout__f_representationLabel = null;
     this.LdataStories_VoterRepresentationLayout__f_representationScore = null;
+    this.LdataStories_VoterRepresentationLayout__f_statLabel = null;
     this.LdataStories_VoterRepresentationLayout__f_stat1 = null;
     this.LdataStories_VoterRepresentationLayout__f_stat2 = null;
     this.LdataStories_VoterRepresentationLayout__f_scoreFontSize = null;
+    this.LdataStories_VoterRepresentationLayout__f_statFontSize = null;
+    this.LdataStories_VoterRepresentationLayout__f_labelFontSize = null;
     this.LdataStories_VoterRepresentationLayout__f_candidateYPct = candidateYPct;
     this.LdataStories_VoterRepresentationLayout__f_voterYPct = voterYPct;
     this.LdataStories_VoterRepresentationLayout__f_mapLocation = mapLocation;
     this.LdataStories_VoterRepresentationLayout__f_representationLabel = representationLabel;
     this.LdataStories_VoterRepresentationLayout__f_representationScore = representationScore;
+    this.LdataStories_VoterRepresentationLayout__f_statLabel = statLabel;
     this.LdataStories_VoterRepresentationLayout__f_stat1 = stat1;
     this.LdataStories_VoterRepresentationLayout__f_stat2 = stat2;
-    this.LdataStories_VoterRepresentationLayout__f_scoreFontSize = scoreFontSize
+    this.LdataStories_VoterRepresentationLayout__f_scoreFontSize = scoreFontSize;
+    this.LdataStories_VoterRepresentationLayout__f_statFontSize = statFontSize;
+    this.LdataStories_VoterRepresentationLayout__f_labelFontSize = labelFontSize
   };
   productPrefix__T() {
     return "VoterRepresentationLayout"
   };
   productArity__I() {
-    return 8
+    return 11
   };
   productElement__I__O(x$1) {
     switch (x$1) {
@@ -31723,15 +32219,27 @@ class $c_LdataStories_VoterRepresentationLayout extends $c_O {
         break
       }
       case 5: {
-        return this.LdataStories_VoterRepresentationLayout__f_stat1;
+        return this.LdataStories_VoterRepresentationLayout__f_statLabel;
         break
       }
       case 6: {
-        return this.LdataStories_VoterRepresentationLayout__f_stat2;
+        return this.LdataStories_VoterRepresentationLayout__f_stat1;
         break
       }
       case 7: {
+        return this.LdataStories_VoterRepresentationLayout__f_stat2;
+        break
+      }
+      case 8: {
         return this.LdataStories_VoterRepresentationLayout__f_scoreFontSize;
+        break
+      }
+      case 9: {
+        return this.LdataStories_VoterRepresentationLayout__f_statFontSize;
+        break
+      }
+      case 10: {
+        return this.LdataStories_VoterRepresentationLayout__f_labelFontSize;
         break
       }
       default: {
@@ -31765,19 +32273,31 @@ class $c_LdataStories_VoterRepresentationLayout extends $c_O {
     const data$4 = $m_sr_Statics$().anyHash__O__I(x$2);
     acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
     const hash$5 = acc;
-    const x$3 = this.LdataStories_VoterRepresentationLayout__f_stat1;
+    const x$3 = this.LdataStories_VoterRepresentationLayout__f_statLabel;
     const data$5 = $m_sr_Statics$().anyHash__O__I(x$3);
     acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
     const hash$6 = acc;
-    const x$4 = this.LdataStories_VoterRepresentationLayout__f_stat2;
+    const x$4 = this.LdataStories_VoterRepresentationLayout__f_stat1;
     const data$6 = $m_sr_Statics$().anyHash__O__I(x$4);
     acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
     const hash$7 = acc;
-    const x$5 = this.LdataStories_VoterRepresentationLayout__f_scoreFontSize;
+    const x$5 = this.LdataStories_VoterRepresentationLayout__f_stat2;
     const data$7 = $m_sr_Statics$().anyHash__O__I(x$5);
     acc = $m_sr_Statics$().mix__I__I__I(hash$7, data$7);
     const hash$8 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$8, 8)
+    const x$6 = this.LdataStories_VoterRepresentationLayout__f_scoreFontSize;
+    const data$8 = $m_sr_Statics$().anyHash__O__I(x$6);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$8, data$8);
+    const hash$9 = acc;
+    const x$7 = this.LdataStories_VoterRepresentationLayout__f_statFontSize;
+    const data$9 = $m_sr_Statics$().anyHash__O__I(x$7);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$9, data$9);
+    const hash$10 = acc;
+    const x$8 = this.LdataStories_VoterRepresentationLayout__f_labelFontSize;
+    const data$10 = $m_sr_Statics$().anyHash__O__I(x$8);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$10, data$10);
+    const hash$11 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$11, 11)
   };
   toString__T() {
     return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
@@ -31787,48 +32307,56 @@ class $c_LdataStories_VoterRepresentationLayout extends $c_O {
       return true
     } else if ((x$1 instanceof $c_LdataStories_VoterRepresentationLayout)) {
       const VoterRepresentationLayout$1 = $as_LdataStories_VoterRepresentationLayout(x$1);
-      let $$x5;
+      let $$x6;
       if (((this.LdataStories_VoterRepresentationLayout__f_candidateYPct === VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_candidateYPct) && (this.LdataStories_VoterRepresentationLayout__f_voterYPct === VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_voterYPct))) {
         const x = this.LdataStories_VoterRepresentationLayout__f_mapLocation;
         const x$2 = VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_mapLocation;
-        $$x5 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+        $$x6 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x6 = false
+      };
+      let $$x5;
+      if ($$x6) {
+        const x$3 = this.LdataStories_VoterRepresentationLayout__f_representationLabel;
+        const x$4 = VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_representationLabel;
+        $$x5 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
       } else {
         $$x5 = false
       };
       let $$x4;
       if ($$x5) {
-        const x$3 = this.LdataStories_VoterRepresentationLayout__f_representationLabel;
-        const x$4 = VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_representationLabel;
-        $$x4 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+        const x$5 = this.LdataStories_VoterRepresentationLayout__f_representationScore;
+        const x$6 = VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_representationScore;
+        $$x4 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
       } else {
         $$x4 = false
       };
       let $$x3;
       if ($$x4) {
-        const x$5 = this.LdataStories_VoterRepresentationLayout__f_representationScore;
-        const x$6 = VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_representationScore;
-        $$x3 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+        const x$7 = this.LdataStories_VoterRepresentationLayout__f_statLabel;
+        const x$8 = VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_statLabel;
+        $$x3 = ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
       } else {
         $$x3 = false
       };
       let $$x2;
       if ($$x3) {
-        const x$7 = this.LdataStories_VoterRepresentationLayout__f_stat1;
-        const x$8 = VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_stat1;
-        $$x2 = ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
+        const x$9 = this.LdataStories_VoterRepresentationLayout__f_stat1;
+        const x$10 = VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_stat1;
+        $$x2 = ((x$9 === null) ? (x$10 === null) : x$9.equals__O__Z(x$10))
       } else {
         $$x2 = false
       };
       let $$x1;
       if ($$x2) {
-        const x$9 = this.LdataStories_VoterRepresentationLayout__f_stat2;
-        const x$10 = VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_stat2;
-        $$x1 = ((x$9 === null) ? (x$10 === null) : x$9.equals__O__Z(x$10))
+        const x$11 = this.LdataStories_VoterRepresentationLayout__f_stat2;
+        const x$12 = VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_stat2;
+        $$x1 = ((x$11 === null) ? (x$12 === null) : x$11.equals__O__Z(x$12))
       } else {
         $$x1 = false
       };
-      if ($$x1) {
-        return (this.LdataStories_VoterRepresentationLayout__f_scoreFontSize === VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_scoreFontSize)
+      if ((($$x1 && (this.LdataStories_VoterRepresentationLayout__f_scoreFontSize === VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_scoreFontSize)) && (this.LdataStories_VoterRepresentationLayout__f_statFontSize === VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_statFontSize))) {
+        return (this.LdataStories_VoterRepresentationLayout__f_labelFontSize === VoterRepresentationLayout$1.LdataStories_VoterRepresentationLayout__f_labelFontSize)
       } else {
         return false
       }
@@ -42253,7 +42781,7 @@ class $c_LdataStories_BallotController extends $c_O {
   layoutBallot__V() {
     this.clear__V();
     this.LdataStories_BallotController__f_currentState = this.BallotActive__LdataStories_BallotController$BallotActive$();
-    const body = $i_d3.select("body");
+    const body = $i_d3.select("#visualization-overlay");
     const boundingRect = this.LdataStories_BallotController__f_vizDiv.node().getBoundingClientRect();
     const pageWidth = $uD(boundingRect.width);
     const pageHeight = $uD(boundingRect.height);
@@ -42262,14 +42790,14 @@ class $c_LdataStories_BallotController extends $c_O {
     const y = (0.4 * pageWidth);
     const listWidth = $uD(Math.min(400.0, y));
     const top = (0.3 * pageHeight);
-    const listHeight = (0.5 * pageHeight);
+    const listHeight = (0.4 * pageHeight);
     $i_d3.select("#ballotDiv").remove();
     const sel = body.append("div");
     const $$x7 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel);
     const this$6 = $m_Lio_whitemice_d3v5_all_package$();
     const $$x6 = $$x7.attrId__sjs_js_$bar__Lio_whitemice_d3v5_selection_Selection($f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$6, "ballotDiv"));
     const this$7 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x5 = $$x6.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$7, "fixed"));
+    const $$x5 = $$x6.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$7, "absolute"));
     const this$8 = $m_Lio_whitemice_d3v5_all_package$();
     const s = (margin + "px");
     const $$x4 = $$x5.style("left", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$8, s));
@@ -42442,25 +42970,25 @@ class $c_LdataStories_BallotController extends $c_O {
     }
   };
   layoutInterpretation__V() {
-    const body = $i_d3.select("body");
+    const body = $i_d3.select("#visualization-overlay");
     this.LdataStories_BallotController__f_currentState = this.BallotInterpretation__LdataStories_BallotController$BallotInterpretation$();
     this.createRandomBallot__V();
     const boundingRect = this.LdataStories_BallotController__f_vizDiv.node().getBoundingClientRect();
     const pageWidth = $uD(boundingRect.width);
     const pageHeight = $uD(boundingRect.height);
-    const margin = (0.05 * pageWidth);
+    const margin = ((pageWidth > 600.0) ? (0.05 * pageWidth) : (0.01 * pageWidth));
     const ballotWidth = (pageWidth - (2.0 * margin));
-    const y = (0.4 * pageWidth);
+    const y = (0.3 * pageWidth);
     const listWidth = $uD(Math.min(400.0, y));
     const top = (0.3 * pageHeight);
-    const listHeight = (0.5 * pageHeight);
+    const listHeight = (0.4 * pageHeight);
     $i_d3.select("#ballotDiv").remove();
     const sel = body.append("div");
     const $$x7 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel);
     const this$6 = $m_Lio_whitemice_d3v5_all_package$();
     const $$x6 = $$x7.attrId__sjs_js_$bar__Lio_whitemice_d3v5_selection_Selection($f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$6, "ballotDiv"));
     const this$7 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x5 = $$x6.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$7, "fixed"));
+    const $$x5 = $$x6.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$7, "absolute"));
     const this$8 = $m_Lio_whitemice_d3v5_all_package$();
     const s = (margin + "px");
     const $$x4 = $$x5.style("left", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$8, s));
@@ -44950,7 +45478,7 @@ const $p_LdataStories_PolarizationDataStory__displayHeadToHeadHouse__V = (functi
   $thiz.LdataStories_PolarizationDataStory__f_primarySection.clear__V();
   $thiz.LdataStories_PolarizationDataStory__f_ballot.clear__V();
   $thiz.LdataStories_PolarizationDataStory__f_voters.moveVotersOffScreen__V();
-  $thiz.LdataStories_PolarizationDataStory__f_map.activate__LscalajsUtils_PctRectangle__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_map.LdataStories_MapConfig__f_thumbnail);
+  $thiz.LdataStories_PolarizationDataStory__f_map.activate__LscalajsUtils_PctRectangle__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_h2HCongressLayout.LdataStories_H2HCongressLayout__f_mapLocation);
   $thiz.LdataStories_PolarizationDataStory__f_map.setColorBySatisfaction__F1__V(new $c_sjsr_AnonFunction1(((this$4) => ((r$2) => {
     const r = $as_Lrcvcore_SimulationResult(r$2);
     return this$4.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
@@ -44958,7 +45486,7 @@ const $p_LdataStories_PolarizationDataStory__displayHeadToHeadHouse__V = (functi
   $thiz.LdataStories_PolarizationDataStory__f_map.zoomOut__V();
   $thiz.LdataStories_PolarizationDataStory__f_house.clearButtons__V();
   $thiz.LdataStories_PolarizationDataStory__f_house.clearTimeAxis__V();
-  $thiz.LdataStories_PolarizationDataStory__f_house.layoutHeadToHead__D__D__V(4.0, 0.9);
+  $thiz.LdataStories_PolarizationDataStory__f_house.layoutHeadToHead__D__D__D__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_h2HCongressLayout.LdataStories_H2HCongressLayout__f_houseY, 4.0, 0.9);
   const buttons = $as_scm_ListBuffer($m_scm_ListBuffer$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$()));
   const this$5 = $thiz.LdataStories_PolarizationDataStory__f_configData;
   const buttonX = (0.6 * this$5.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_desiredWidth);
@@ -44998,7 +45526,7 @@ const $p_LdataStories_PolarizationDataStory__displayFinalScreen__V = (function($
   }))($thiz)));
   $thiz.LdataStories_PolarizationDataStory__f_map.zoomOut__V();
   $thiz.LdataStories_PolarizationDataStory__f_house.clearButtons__V();
-  $thiz.LdataStories_PolarizationDataStory__f_house.layoutHeadToHead__D__D__V(2.0, 0.9);
+  $thiz.LdataStories_PolarizationDataStory__f_house.layoutHeadToHead__D__D__D__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_h2HCongressLayout.LdataStories_H2HCongressLayout__f_houseY, 4.0, 0.9);
   $thiz.LdataStories_PolarizationDataStory__f_voters.setNewPopulation__Lrcvcore_CombinedPopulation__V($m_Lrcvcore_NokkenPopulation$().apply__D__D__D__D__D__Lrcvcore_CombinedPopulation(0.5, 0.5, 30.0, 30.0, 0.5));
   $thiz.LdataStories_PolarizationDataStory__f_voters.arrangeByIdeology__D__T__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_voters.LdataStories_VoterConfig__f_y2, "Voter Ideology");
   $thiz.LdataStories_PolarizationDataStory__f_voters.colorByIdeology__D__V(0.9);
@@ -45134,19 +45662,19 @@ const $p_LdataStories_PolarizationDataStory__displayPrimaryVoters__V = (function
   $thiz.LdataStories_PolarizationDataStory__f_voters.colorByIdeology__D__V(0.9);
   const this$4 = $thiz.LdataStories_PolarizationDataStory__f_voters;
   this$4.LdataStories_VoterController__f_box.showAxis__V();
-  $thiz.LdataStories_PolarizationDataStory__f_voters.arrangeByIdeology__D__T__V(0.9, ("Primary Voters By Ideology for " + $thiz.LdataStories_PolarizationDataStory__f_map.currentDD__LdataStories_DistrictData().LdataStories_DistrictData__f_d.district__T()));
+  $thiz.LdataStories_PolarizationDataStory__f_voters.arrangeByIdeology__D__T__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_primaryLayout.LdataStories_ElectionLayout__f_voterY, ("Primary Voters By Ideology for " + $thiz.LdataStories_PolarizationDataStory__f_map.currentDD__LdataStories_DistrictData().LdataStories_DistrictData__f_d.district__T()));
   const transition = (($thiz.LdataStories_PolarizationDataStory__f_lastSection === 700) ? 5 : 1);
   $thiz.LdataStories_PolarizationDataStory__f_primarySection.showPrimaryVoters__D__V(transition);
   $thiz.LdataStories_PolarizationDataStory__f_candidates.clearVoterSatisfaction__V();
   $thiz.LdataStories_PolarizationDataStory__f_candidates.colorByIdeology__V();
-  $thiz.LdataStories_PolarizationDataStory__f_candidates.selectCandidates__D__Z__F1__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_candidates.LdataStories_CandidateConfig__f_areaYPct, true, new $c_sjsr_AnonFunction1(((this$5) => ((x$5$2) => {
+  $thiz.LdataStories_PolarizationDataStory__f_candidates.selectCandidates__D__Z__F1__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_primaryLayout.LdataStories_ElectionLayout__f_candidateY, true, new $c_sjsr_AnonFunction1(((this$5) => ((x$5$2) => {
     $as_LdataStories_CandidateBubble(x$5$2)
   }))($thiz)));
   $thiz.LdataStories_PolarizationDataStory__f_map.setDistrictColors__F1__LscalajsUtils_AxisSpecification__V(new $c_sjsr_AnonFunction1(((this$2$1) => ((d$2) => {
     const d = $as_T(d$2);
     return this$2$1.colorDistrictWhite__T__LscalajsUtils_RGBA(d)
   }))($thiz)), $thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_representationAxis);
-  $thiz.LdataStories_PolarizationDataStory__f_map.activate__LscalajsUtils_PctRectangle__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_map.LdataStories_MapConfig__f_candidateSelect);
+  $thiz.LdataStories_PolarizationDataStory__f_map.activate__LscalajsUtils_PctRectangle__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_primaryLayout.LdataStories_ElectionLayout__f_mapLocation);
   $thiz.LdataStories_PolarizationDataStory__f_map.zoomToDistrict__I__V($thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_currentDistrictGeoId)
 });
 const $p_LdataStories_PolarizationDataStory__displayPrimaryCandidates__V = (function($thiz) {
@@ -45158,20 +45686,24 @@ const $p_LdataStories_PolarizationDataStory__displayPrimaryCandidates__V = (func
   $thiz.LdataStories_PolarizationDataStory__f_headToHead.clear__V();
   $thiz.LdataStories_PolarizationDataStory__f_ballot.clear__V();
   $thiz.LdataStories_PolarizationDataStory__f_voters.clearLeanAxis__V();
-  $thiz.LdataStories_PolarizationDataStory__f_voters.arrangeByIdeology__D__T__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_voters.LdataStories_VoterConfig__f_y1, ("Voters By Ideology for " + $thiz.LdataStories_PolarizationDataStory__f_map.currentDD__LdataStories_DistrictData().LdataStories_DistrictData__f_d.district__T()));
-  const this$4 = $thiz.LdataStories_PolarizationDataStory__f_voters;
-  this$4.LdataStories_VoterController__f_box.showAxis__V();
+  $thiz.LdataStories_PolarizationDataStory__f_voters.arrangeByIdeology__D__T__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_primaryLayout.LdataStories_ElectionLayout__f_voterY, ("Voters By Ideology for " + $thiz.LdataStories_PolarizationDataStory__f_map.currentDD__LdataStories_DistrictData().LdataStories_DistrictData__f_d.district__T()));
+  const x = (("voters at " + $thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_primaryLayout.LdataStories_ElectionLayout__f_voterY) + "%.2f");
+  const this$5 = $m_s_Console$();
+  const this$6 = $as_Ljava_io_PrintStream(this$5.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+  this$6.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
+  const this$7 = $thiz.LdataStories_PolarizationDataStory__f_voters;
+  this$7.LdataStories_VoterController__f_box.showAxis__V();
   $thiz.LdataStories_PolarizationDataStory__f_primarySection.showPrimaryCandidates__V();
   $thiz.LdataStories_PolarizationDataStory__f_candidates.colorByIdeology__V();
   $thiz.LdataStories_PolarizationDataStory__f_candidates.clearVoterSatisfaction__V();
-  $thiz.LdataStories_PolarizationDataStory__f_candidates.selectCandidates__D__Z__F1__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_candidates.LdataStories_CandidateConfig__f_areaYPct, true, new $c_sjsr_AnonFunction1(((this$5) => ((x$6$2) => {
+  $thiz.LdataStories_PolarizationDataStory__f_candidates.selectCandidates__D__Z__F1__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_primaryLayout.LdataStories_ElectionLayout__f_candidateY, true, new $c_sjsr_AnonFunction1(((this$8) => ((x$6$2) => {
     $as_LdataStories_CandidateBubble(x$6$2)
   }))($thiz)));
   $thiz.LdataStories_PolarizationDataStory__f_map.setDistrictColors__F1__LscalajsUtils_AxisSpecification__V(new $c_sjsr_AnonFunction1(((this$2$1) => ((d$2) => {
     const d = $as_T(d$2);
     return this$2$1.colorDistrictWhite__T__LscalajsUtils_RGBA(d)
   }))($thiz)), $thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_representationAxis);
-  $thiz.LdataStories_PolarizationDataStory__f_map.activate__LscalajsUtils_PctRectangle__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_map.LdataStories_MapConfig__f_candidateSelect);
+  $thiz.LdataStories_PolarizationDataStory__f_map.activate__LscalajsUtils_PctRectangle__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_primaryLayout.LdataStories_ElectionLayout__f_mapLocation);
   $thiz.LdataStories_PolarizationDataStory__f_map.zoomToDistrict__I__V($thiz.LdataStories_PolarizationDataStory__f_map.LdataStories_MapController__f_currentDistrictGeoId);
   $thiz.LdataStories_PolarizationDataStory__f_map.applyDistrictColor__V()
 });
@@ -45304,7 +45836,7 @@ const $p_LdataStories_PolarizationDataStory__layoutPartyPrimaries$1__scm_ListBuf
     return this$1.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r.actualVoterSatisfaction__D(), 1.0)
   }))($thiz)));
   $thiz.LdataStories_PolarizationDataStory__f_map.render__V();
-  $thiz.LdataStories_PolarizationDataStory__f_house.layoutNomHistogram__D__D__D__Z__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y2Pct, 2.0, 0.9, false);
+  $thiz.LdataStories_PolarizationDataStory__f_house.layoutNomHistogram__D__D__D__Z__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_h2HCongressLayout.LdataStories_H2HCongressLayout__f_houseY, 2.0, 0.9, false);
   $thiz.LdataStories_PolarizationDataStory__f_house.setColor__F1__V(new $c_sjsr_AnonFunction1(((this$2) => ((m$2) => {
     const m = $as_LdataStories_MemberBubble(m$2);
     const ideology = m.LdataStories_MemberBubble__f__memberData.ideology__D();
@@ -45319,7 +45851,7 @@ const $p_LdataStories_PolarizationDataStory__layoutHeadToHead$1__scm_ListBuffer_
     return this$1.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(r.headToHeadResult__Lrcvcore_ProcessResult().Lrcvcore_ProcessResult__f_voterSatisfaction, 1.0)
   }))($thiz)));
   $thiz.LdataStories_PolarizationDataStory__f_map.render__V();
-  $thiz.LdataStories_PolarizationDataStory__f_house.layoutHeadToHead__D__D__V(2.0, 0.9);
+  $thiz.LdataStories_PolarizationDataStory__f_house.layoutHeadToHead__D__D__D__V($thiz.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_h2HCongressLayout.LdataStories_H2HCongressLayout__f_houseY, 2.0, 0.9);
   $thiz.LdataStories_PolarizationDataStory__f_house.setColor__F1__V(new $c_sjsr_AnonFunction1(((this$2) => ((m$2) => {
     const m = $as_LdataStories_MemberBubble(m$2);
     const this$3 = m.LdataStories_MemberBubble__f_dd.LdataStories_DistrictData__f_s;
@@ -45416,13 +45948,13 @@ const $p_LdataStories_PolarizationDataStory__onUpdate$2__LdataStories_CandidateB
   const this$3 = $thiz.LdataStories_PolarizationDataStory__f_voters;
   const candidate = $thiz.LdataStories_PolarizationDataStory__f_candidates.idealCandidate__LdataStories_CandidateBubble();
   const leftSide = this$3.computeBalance__D__D($as_Lrcvcore_Candidate(candidate.LdataStories_CandidateBubble__f_candidateOpt.get__O()).Lrcvcore_Candidate__f_ideology);
-  const $$x4 = $thiz.LdataStories_PolarizationDataStory__f_candidates;
-  const $$x3 = layout$1.LdataStories_VoterRepresentationLayout__f_representationLabel.Lio_whitemice_d3v5_route_Point__f_x;
-  const $$x2 = layout$1.LdataStories_VoterRepresentationLayout__f_representationLabel.Lio_whitemice_d3v5_route_Point__f_y;
+  const $$x5 = $thiz.LdataStories_PolarizationDataStory__f_candidates;
+  const $$x4 = layout$1.LdataStories_VoterRepresentationLayout__f_representationLabel.Lio_whitemice_d3v5_route_Point__f_x;
+  const $$x3 = layout$1.LdataStories_VoterRepresentationLayout__f_representationLabel.Lio_whitemice_d3v5_route_Point__f_y;
+  const $$x2 = layout$1.LdataStories_VoterRepresentationLayout__f_labelFontSize;
   const $$x1 = $m_sc_Seq$();
   const array = [new $c_LdataStories_AttrModifier("font-weight", "600")];
-  $$x4.addText__T__T__D__D__T__T__T__sc_Seq__V("Voter Representation Score", "representation-label", $$x3, $$x2, "18pt", "middle", "black", $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))));
-  $thiz.LdataStories_PolarizationDataStory__f_candidates.drawRectangle__T__D__D__D__D__T__V("score-rect", layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_x, layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_y, layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_width, layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_height, "black");
+  $$x5.addText__T__T__D__D__T__T__T__sc_Seq__V("Voter Representation Score", "representation-label", $$x4, $$x3, $$x2, "middle", "black", $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))));
   const this$8 = new $c_sci_StringOps("%2.0f");
   const array$1 = [satisfaction];
   const this$ = this$8.sci_StringOps__f_repr;
@@ -45450,34 +45982,35 @@ const $p_LdataStories_PolarizationDataStory__onUpdate$2__LdataStories_CandidateB
   const that = result.u.length;
   const end = ((x$1 < that) ? x$1 : that);
   while ((i$1 < end)) {
-    const $$x5 = j;
+    const $$x6 = j;
     const index$1 = i$1;
-    result.set($$x5, array$2[index$1]);
+    result.set($$x6, array$2[index$1]);
     i$1 = ((1 + i$1) | 0);
     j = ((1 + j) | 0)
   };
   const x$1$1 = $m_jl_String$().format__T__AO__T(this$, result);
+  const x$3 = (layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_x + (layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_width / 2.0));
   const x$4 = (layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_y + (layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_height / 2.0));
   const x$5 = layout$1.LdataStories_VoterRepresentationLayout__f_scoreFontSize;
-  const $$x7 = $m_sc_Seq$();
-  const $$x6 = new $c_LdataStories_AttrModifier("dy", ".4em");
-  const this$22 = $thiz.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(satisfaction, 1.0);
-  const array$3 = [$$x6, new $c_LdataStories_StyleModifier("fill", this$22.LscalajsUtils_RGBA__f_s), new $c_LdataStories_StyleModifier("font-family", "IBM Plex Sans"), new $c_LdataStories_AttrModifier("font-weight", "700")];
-  const x$7 = $as_sc_Seq($$x7.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$3)));
-  $thiz.LdataStories_PolarizationDataStory__f_candidates.addText__T__T__D__D__T__T__T__sc_Seq__V(x$1$1, "representationScore", 0.5, x$4, x$5, "middle", "black", x$7);
-  $thiz.LdataStories_PolarizationDataStory__f_candidates.addText__T__T__D__D__T__T__T__sc_Seq__V("/100", "per100", (layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_x + (0.88 * layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_width)), (layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_y + (0.88 * layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_height)), "18pt", "middle", "black", $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$())));
-  const rightSide = (1.0 - leftSide);
-  const x$11 = (0.05 + (layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_x + layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_width));
-  const x$12 = (layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_y + (0.1 * layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_height));
   const $$x8 = $m_sc_Seq$();
+  const $$x7 = new $c_LdataStories_AttrModifier("dy", ".4em");
+  const this$22 = $thiz.LdataStories_PolarizationDataStory__f_configData.electorateRepresentation__D__D__LscalajsUtils_RGBA(satisfaction, 1.0);
+  const array$3 = [$$x7, new $c_LdataStories_StyleModifier("fill", this$22.LscalajsUtils_RGBA__f_s), new $c_LdataStories_StyleModifier("font-family", "IBM Plex Sans"), new $c_LdataStories_AttrModifier("font-weight", "700")];
+  const x$7 = $as_sc_Seq($$x8.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$3)));
+  $thiz.LdataStories_PolarizationDataStory__f_candidates.addText__T__T__D__D__T__T__T__sc_Seq__V(x$1$1, "representationScore", x$3, x$4, x$5, "middle", "black", x$7);
+  const rightSide = (1.0 - leftSide);
+  const x$11 = layout$1.LdataStories_VoterRepresentationLayout__f_statLabel.Lio_whitemice_d3v5_route_Point__f_x;
+  const x$12 = layout$1.LdataStories_VoterRepresentationLayout__f_statLabel.Lio_whitemice_d3v5_route_Point__f_y;
+  const x$13 = layout$1.LdataStories_VoterRepresentationLayout__f_statFontSize;
+  const $$x9 = $m_sc_Seq$();
   const array$4 = [new $c_LdataStories_AttrModifier("font-weight", "600")];
-  const x$15 = $as_sc_Seq($$x8.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$4)));
-  $thiz.LdataStories_PolarizationDataStory__f_candidates.addText__T__T__D__D__T__T__T__sc_Seq__V("Voter Balance:", "voterBalance", x$11, x$12, "16pt", "left", "black", x$15);
-  const $$x10 = $thiz.LdataStories_PolarizationDataStory__f_candidates;
+  const x$15 = $as_sc_Seq($$x9.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$4)));
+  $thiz.LdataStories_PolarizationDataStory__f_candidates.addText__T__T__D__D__T__T__T__sc_Seq__V("Voter Balance:", "voterBalance", x$11, x$12, x$13, "left", "black", x$15);
+  const $$x11 = $thiz.LdataStories_PolarizationDataStory__f_candidates;
   const arg$macro$2 = (100.0 * leftSide);
-  const this$30 = new $c_sci_StringOps("%.0f%% are more liberal.");
+  const this$29 = new $c_sci_StringOps("%.0f%% are more liberal.");
   const array$5 = [arg$macro$2];
-  const this$$1 = this$30.sci_StringOps__f_repr;
+  const this$$1 = this$29.sci_StringOps__f_repr;
   $m_sc_Seq$();
   $m_sjs_js_WrappedArray$();
   const array$6 = [];
@@ -45487,7 +46020,7 @@ const $p_LdataStories_PolarizationDataStory__onUpdate$2__LdataStories_CandidateB
   while ((i$2 < len$3)) {
     const index$2 = i$2;
     const arg1$1 = array$5[index$2];
-    const elem$1 = $p_sci_StringLike__unwrapArg__O__O(this$30, arg1$1);
+    const elem$1 = $p_sci_StringLike__unwrapArg__O__O(this$29, arg1$1);
     array$6.push(elem$1);
     i$2 = ((1 + i$2) | 0)
   };
@@ -45498,22 +46031,22 @@ const $p_LdataStories_PolarizationDataStory__onUpdate$2__LdataStories_CandidateB
   let i$3 = 0;
   let j$1 = 0;
   const x$2 = $uI(array$6.length);
-  const x$3 = ((x$2 < len$5) ? x$2 : len$5);
+  const x$6 = ((x$2 < len$5) ? x$2 : len$5);
   const that$1 = result$1.u.length;
-  const end$1 = ((x$3 < that$1) ? x$3 : that$1);
+  const end$1 = ((x$6 < that$1) ? x$6 : that$1);
   while ((i$3 < end$1)) {
-    const $$x9 = j$1;
+    const $$x10 = j$1;
     const index$3 = i$3;
-    result$1.set($$x9, array$6[index$3]);
+    result$1.set($$x10, array$6[index$3]);
     i$3 = ((1 + i$3) | 0);
     j$1 = ((1 + j$1) | 0)
   };
-  $$x10.addText__T__T__D__D__T__T__T__sc_Seq__V($m_jl_String$().format__T__AO__T(this$$1, result$1), "leftSide", (0.05 + (layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_x + layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_width)), (layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_y + (0.3 * layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_height)), "16pt", "left", "black", $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$())));
-  const $$x12 = $thiz.LdataStories_PolarizationDataStory__f_candidates;
+  $$x11.addText__T__T__D__D__T__T__T__sc_Seq__V($m_jl_String$().format__T__AO__T(this$$1, result$1), "leftSide", layout$1.LdataStories_VoterRepresentationLayout__f_stat1.Lio_whitemice_d3v5_route_Point__f_x, layout$1.LdataStories_VoterRepresentationLayout__f_stat1.Lio_whitemice_d3v5_route_Point__f_y, layout$1.LdataStories_VoterRepresentationLayout__f_statFontSize, "left", "black", $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$())));
+  const $$x13 = $thiz.LdataStories_PolarizationDataStory__f_candidates;
   const arg$macro$3 = (100.0 * rightSide);
-  const this$47 = new $c_sci_StringOps("%.0f%% are more conservative.");
+  const this$46 = new $c_sci_StringOps("%.0f%% are more conservative.");
   const array$7 = [arg$macro$3];
-  const this$$2 = this$47.sci_StringOps__f_repr;
+  const this$$2 = this$46.sci_StringOps__f_repr;
   $m_sc_Seq$();
   $m_sjs_js_WrappedArray$();
   const array$8 = [];
@@ -45523,7 +46056,7 @@ const $p_LdataStories_PolarizationDataStory__onUpdate$2__LdataStories_CandidateB
   while ((i$4 < len$6)) {
     const index$4 = i$4;
     const arg1$2 = array$7[index$4];
-    const elem$2 = $p_sci_StringLike__unwrapArg__O__O(this$47, arg1$2);
+    const elem$2 = $p_sci_StringLike__unwrapArg__O__O(this$46, arg1$2);
     array$8.push(elem$2);
     i$4 = ((1 + i$4) | 0)
   };
@@ -45533,18 +46066,18 @@ const $p_LdataStories_PolarizationDataStory__onUpdate$2__LdataStories_CandidateB
   const len$8 = result$2.u.length;
   let i$5 = 0;
   let j$2 = 0;
-  const x$6 = $uI(array$8.length);
-  const x$8 = ((x$6 < len$8) ? x$6 : len$8);
+  const x$8 = $uI(array$8.length);
+  const x$9 = ((x$8 < len$8) ? x$8 : len$8);
   const that$2 = result$2.u.length;
-  const end$2 = ((x$8 < that$2) ? x$8 : that$2);
+  const end$2 = ((x$9 < that$2) ? x$9 : that$2);
   while ((i$5 < end$2)) {
-    const $$x11 = j$2;
+    const $$x12 = j$2;
     const index$5 = i$5;
-    result$2.set($$x11, array$8[index$5]);
+    result$2.set($$x12, array$8[index$5]);
     i$5 = ((1 + i$5) | 0);
     j$2 = ((1 + j$2) | 0)
   };
-  $$x12.addText__T__T__D__D__T__T__T__sc_Seq__V($m_jl_String$().format__T__AO__T(this$$2, result$2), "rightSide", (0.05 + (layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_x + layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_width)), (layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_y + (0.5 * layout$1.LdataStories_VoterRepresentationLayout__f_representationScore.LscalajsUtils_PctRectangle__f_height)), "16pt", "left", "black", $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$())))
+  $$x13.addText__T__T__D__D__T__T__T__sc_Seq__V($m_jl_String$().format__T__AO__T(this$$2, result$2), "rightSide", layout$1.LdataStories_VoterRepresentationLayout__f_stat2.Lio_whitemice_d3v5_route_Point__f_x, layout$1.LdataStories_VoterRepresentationLayout__f_stat2.Lio_whitemice_d3v5_route_Point__f_y, layout$1.LdataStories_VoterRepresentationLayout__f_statFontSize, "left", "black", $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$())))
 });
 class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDrivenContent {
   constructor(vizDiv, htmlId, dvrList, nokkenData, usTopo, simResults, sampleCongress, configData) {
@@ -45603,57 +46136,63 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     }))(this));
     const this$2 = $m_sc_Seq$();
     this.LdataStories_PolarizationDataStory__f_districtData = new $c_LdataStories_CombinedDistrictData(nokkenData, dvrList, $$x3, $as_sci_Map($$x2.apply__sc_Seq__sc_GenMap($as_sc_Seq(sampleCongress.map__F1__scg_CanBuildFrom__O($$x1, this$2.scg_GenTraversableFactory__f_ReusableCBFInstance)))));
+    const x = ("vizDiv is " + vizDiv);
+    const this$4 = $m_s_Console$();
+    const this$5 = $as_Ljava_io_PrintStream(this$4.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+    this$5.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
     this.LdataStories_PolarizationDataStory__f_vizArea = $i_d3.select(("#" + vizDiv));
     this.LdataStories_PolarizationDataStory__f_vizRect = this.LdataStories_PolarizationDataStory__f_vizArea.node().getBoundingClientRect();
     this.LdataStories_PolarizationDataStory__f_dpr = $uD($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().devicePixelRatio);
     const sel = this.LdataStories_PolarizationDataStory__f_vizArea.append("canvas");
     const $$x12 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel);
-    const this$5 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x11 = $$x12.attrId__sjs_js_$bar__Lio_whitemice_d3v5_selection_Selection($f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$5, "voterCanvas"));
-    const this$6 = $m_Lio_whitemice_d3v5_all_package$();
-    const d = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.width) * this.LdataStories_PolarizationDataStory__f_dpr);
-    const $$x10 = $$x11.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$6, d));
-    const this$7 = $m_Lio_whitemice_d3v5_all_package$();
-    const d$1 = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.height) * this.LdataStories_PolarizationDataStory__f_dpr);
-    const $$x9 = $$x10.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$7, d$1));
     const this$8 = $m_Lio_whitemice_d3v5_all_package$();
-    const s = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.width) + "px");
-    const $$x8 = $$x9.style("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$8, s));
+    const $$x11 = $$x12.attrId__sjs_js_$bar__Lio_whitemice_d3v5_selection_Selection($f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$8, "voterCanvas"));
     const this$9 = $m_Lio_whitemice_d3v5_all_package$();
-    const s$1 = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.height) + "px");
-    const $$x7 = $$x8.style("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$9, s$1));
+    const d = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.width) * this.LdataStories_PolarizationDataStory__f_dpr);
+    const $$x10 = $$x11.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$9, d));
     const this$10 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x6 = $$x7.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$10, "fixed"));
+    const d$1 = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.height) * this.LdataStories_PolarizationDataStory__f_dpr);
+    const $$x9 = $$x10.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$10, d$1));
     const this$11 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x5 = $$x6.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$11, 0));
+    const s = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.width) + "px");
+    const $$x8 = $$x9.style("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$11, s));
     const this$12 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x4 = $$x5.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$12, 0));
+    const s$1 = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.height) + "px");
+    const $$x7 = $$x8.style("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$12, s$1));
+    const this$13 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x6 = $$x7.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$13, "absolute"));
+    const this$14 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x5 = $$x6.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$14, 0));
+    const this$15 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x4 = $$x5.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$15, 0));
     this.LdataStories_PolarizationDataStory__f_voterCanvas = $$x4;
     this.LdataStories_PolarizationDataStory__f_voterCanvasNode = this.LdataStories_PolarizationDataStory__f_voterCanvas.node();
     this.LdataStories_PolarizationDataStory__f_voterContext = this.LdataStories_PolarizationDataStory__f_voterCanvasNode.getContext("2d");
     this.LdataStories_PolarizationDataStory__f_voterContext.scale(this.LdataStories_PolarizationDataStory__f_dpr, this.LdataStories_PolarizationDataStory__f_dpr);
     const sel$1 = this.LdataStories_PolarizationDataStory__f_vizArea.append("svg");
     const $$x19 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel$1);
-    const this$14 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x18 = $$x19.attrId__sjs_js_$bar__Lio_whitemice_d3v5_selection_Selection($f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$14, "vizSvg"));
-    const this$15 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x17 = $$x18.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$15, "100%"));
-    const this$16 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x16 = $$x17.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$16, "100%"));
     const this$17 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x15 = $$x16.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$17, "relative"));
+    const $$x18 = $$x19.attrId__sjs_js_$bar__Lio_whitemice_d3v5_selection_Selection($f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$17, "vizSvg"));
     const this$18 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x14 = $$x15.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$18, 0));
+    const d$2 = $uD(this.LdataStories_PolarizationDataStory__f_vizRect.width);
+    const $$x17 = $$x18.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$18, d$2));
     const this$19 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x13 = $$x14.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$19, 0));
+    const d$3 = $uD(this.LdataStories_PolarizationDataStory__f_vizRect.height);
+    const $$x16 = $$x17.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$19, d$3));
+    const this$20 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x15 = $$x16.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$20, "absolute"));
+    const this$21 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x14 = $$x15.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$21, 0));
+    const this$22 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x13 = $$x14.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$22, 0));
     this.LdataStories_PolarizationDataStory__f_svgArea = $$x13;
     const sel$2 = this.LdataStories_PolarizationDataStory__f_svgArea.append("g");
     const $$x20 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel$2);
-    const this$21 = $m_Lio_whitemice_d3v5_all_package$();
-    this.LdataStories_PolarizationDataStory__f_graphicArea = $$x20.attrId__sjs_js_$bar__Lio_whitemice_d3v5_selection_Selection($f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$21, "vizSvg-g"));
+    const this$24 = $m_Lio_whitemice_d3v5_all_package$();
+    this.LdataStories_PolarizationDataStory__f_graphicArea = $$x20.attrId__sjs_js_$bar__Lio_whitemice_d3v5_selection_Selection($f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$24, "vizSvg-g"));
     const $$x22 = $i_d3.select(("#" + htmlId));
-    const this$23 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x21 = $$x22.attr("opacity", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$23, 0));
+    const this$26 = $m_Lio_whitemice_d3v5_all_package$();
+    const $$x21 = $$x22.attr("opacity", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$26, 0));
     this.LdataStories_PolarizationDataStory__f_htmlArea = $$x21;
     this.LdataStories_PolarizationDataStory__f_house = new $c_LdataStories_MemberController(this.LdataStories_PolarizationDataStory__f_graphicArea, this.LdataStories_PolarizationDataStory__f_htmlArea, this.LdataStories_PolarizationDataStory__f_districtData, configData);
     this.LdataStories_PolarizationDataStory__f_voters = new $c_LdataStories_VoterController(this.LdataStories_PolarizationDataStory__f_graphicArea, this.LdataStories_PolarizationDataStory__f_voterCanvasNode, $m_Lrcvcore_NokkenPopulation$().apply__D__D__D__D__D__Lrcvcore_CombinedPopulation(0.5, 0.5, 30.0, 30.0, 0.5), configData);
@@ -45674,11 +46213,11 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     this.LdataStories_PolarizationDataStory__f_simConfig = $m_Lrcvcore_CongressionalSimulationConfig$().defaultConfig__I__Lrcvcore_CongressionalSimulationConfig(4);
     this.LdataStories_PolarizationDataStory__f_textItems = $as_scm_ListBuffer($m_scm_ListBuffer$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$()));
     const $$x23 = $i_d3.select($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window());
-    const this$25 = $m_Lio_whitemice_d3v5_all_package$();
+    const this$28 = $m_Lio_whitemice_d3v5_all_package$();
     const fun = new $c_sjsr_AnonFunction0(((this$4$1) => (() => {
       this$4$1.onSizeChange__V()
     }))(this));
-    $$x23.on("resize", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$25, fun));
+    $$x23.on("resize", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__f0ToCallback__F0__sjs_js_$bar(this$28, fun));
     this.onSizeChange__V();
     this.LdataStories_PolarizationDataStory__f_white = $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(255, 255, 255, 1.0);
     this.LdataStories_PolarizationDataStory__f_lightGray = $m_LscalajsUtils_RGBA$().apply__I__I__I__D__LscalajsUtils_RGBA(200, 200, 200, 1.0)
@@ -45836,7 +46375,7 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     this.LdataStories_PolarizationDataStory__f_house.LdataStories_MemberController__f_box.clearTextItems__V();
     this.LdataStories_PolarizationDataStory__f_house.clearTimeAxis__V();
     this.LdataStories_PolarizationDataStory__f_house.clearButtons__V();
-    this.LdataStories_PolarizationDataStory__f_house.layoutSimVsActual__D__D__V(this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y2Pct, this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y1Pct);
+    this.LdataStories_PolarizationDataStory__f_house.layoutSimVsActual__D__D__V(this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_simAndActualHouseLayout.LdataStories_SimAndActualHouseLayout__f_actualY, this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_simAndActualHouseLayout.LdataStories_SimAndActualHouseLayout__f_simY);
     this.LdataStories_PolarizationDataStory__f_voters.moveVotersOffScreen__V();
     this.LdataStories_PolarizationDataStory__f_candidates.clear__V();
     this.LdataStories_PolarizationDataStory__f_primarySection.clear__V();
@@ -45856,9 +46395,9 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     this.LdataStories_PolarizationDataStory__f_voters.setNewPopulation__Lrcvcore_CombinedPopulation__V($m_Lrcvcore_NokkenPopulation$().apply__D__D__D__D__D__Lrcvcore_CombinedPopulation(0.5, 0.5, 30.0, 30.0, 0.5));
     this.LdataStories_PolarizationDataStory__f_voters.clearLeanAxis__V();
     this.LdataStories_PolarizationDataStory__f_house.clearButtons__V();
-    this.LdataStories_PolarizationDataStory__f_house.layoutNomHistogram__D__D__D__Z__V(this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y2Pct, 1.0, this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_opacity2, false);
+    this.LdataStories_PolarizationDataStory__f_house.layoutNomHistogram__D__D__D__Z__V(this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_houseAndVotersLayout.LdataStories_HouseAndVotersLayout__f_houseY, 3.0, this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_opacity2, false);
     this.LdataStories_PolarizationDataStory__f_house.clearTimeAxis__V();
-    this.LdataStories_PolarizationDataStory__f_voters.arrangeByIdeology__D__T__V(this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_voters.LdataStories_VoterConfig__f_y2, "Voter Ideology");
+    this.LdataStories_PolarizationDataStory__f_voters.arrangeByIdeology__D__T__V(this.LdataStories_PolarizationDataStory__f_configData.LdataStories_ConfigurationData__f_houseAndVotersLayout.LdataStories_HouseAndVotersLayout__f_votersY, "Voter Ideology");
     const this$4 = this.LdataStories_PolarizationDataStory__f_voters;
     this$4.LdataStories_VoterController__f_box.showAxis__V();
     this.LdataStories_PolarizationDataStory__f_candidates.clear__V();
@@ -46111,25 +46650,19 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     const this$1 = $m_Lio_whitemice_d3v5_all_package$();
     $$x1.attr("transform", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$1, transformString));
     this.LdataStories_PolarizationDataStory__f_vizRect = this.LdataStories_PolarizationDataStory__f_vizArea.node().getBoundingClientRect();
-    const $$x8 = this.LdataStories_PolarizationDataStory__f_voterCanvas;
+    const $$x6 = this.LdataStories_PolarizationDataStory__f_voterCanvas;
     const this$2 = $m_Lio_whitemice_d3v5_all_package$();
     const d = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.width) * this.LdataStories_PolarizationDataStory__f_dpr);
-    const $$x7 = $$x8.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$2, d));
+    const $$x5 = $$x6.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$2, d));
     const this$3 = $m_Lio_whitemice_d3v5_all_package$();
     const d$1 = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.height) * this.LdataStories_PolarizationDataStory__f_dpr);
-    const $$x6 = $$x7.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$3, d$1));
+    const $$x4 = $$x5.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$3, d$1));
     const this$4 = $m_Lio_whitemice_d3v5_all_package$();
-    const s = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.width) + "px");
-    const $$x5 = $$x6.style("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$4, s));
+    const $$x3 = $$x4.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$4, "absolute"));
     const this$5 = $m_Lio_whitemice_d3v5_all_package$();
-    const s$1 = ($uD(this.LdataStories_PolarizationDataStory__f_vizRect.height) + "px");
-    const $$x4 = $$x5.style("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$5, s$1));
+    const $$x2 = $$x3.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$5, 0));
     const this$6 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x3 = $$x4.style("position", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$6, "fixed"));
-    const this$7 = $m_Lio_whitemice_d3v5_all_package$();
-    const $$x2 = $$x3.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$7, 0));
-    const this$8 = $m_Lio_whitemice_d3v5_all_package$();
-    $$x2.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$8, 0));
+    $$x2.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$6, 0));
     this.LdataStories_PolarizationDataStory__f_voterContext.scale(this.LdataStories_PolarizationDataStory__f_dpr, this.LdataStories_PolarizationDataStory__f_dpr);
     this.LdataStories_PolarizationDataStory__f_voterContext.translate(sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_hShift, 0.0);
     this.LdataStories_PolarizationDataStory__f_house.onResize__D__D__V(sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_width, sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_height);
@@ -46137,8 +46670,9 @@ class $c_LdataStories_PolarizationDataStory extends $c_LdataStories_ScrollDriven
     this.LdataStories_PolarizationDataStory__f_map.onResize__D__D__V(sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_width, sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_height);
     this.LdataStories_PolarizationDataStory__f_candidates.onResize__D__D__V(sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_width, sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_height);
     this.LdataStories_PolarizationDataStory__f_ballot.onResize__D__D__V(sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_width, sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_height);
-    const this$9 = this.LdataStories_PolarizationDataStory__f_sizeChangeCallback;
-    this$9.apply__O();
+    const this$7 = this.LdataStories_PolarizationDataStory__f_sizeChangeCallback;
+    this$7.apply__O();
+    $m_LdataStories_PDSLinks$().setLinks__D__D__V(sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_width, sizeAttrs.LdataStories_PolarizationDataStory$SizeAttrs__f_height);
     this.renderTextItems__V()
   };
   displayVoterSatisfaction__V() {
@@ -46396,189 +46930,6 @@ function $m_LdataStories_PrimaryElectionSection$Voted$() {
   };
   return $n_LdataStories_PrimaryElectionSection$Voted$
 }
-class $c_LdataStories_RectItem extends $c_O {
-  constructor(id, shape, x, y, width, height, attrs) {
-    super();
-    this.LdataStories_RectItem__f_id = null;
-    this.LdataStories_RectItem__f_shape = null;
-    this.LdataStories_RectItem__f_x = 0.0;
-    this.LdataStories_RectItem__f_y = 0.0;
-    this.LdataStories_RectItem__f_width = 0.0;
-    this.LdataStories_RectItem__f_height = 0.0;
-    this.LdataStories_RectItem__f_attrs = null;
-    this.LdataStories_RectItem__f_id = id;
-    this.LdataStories_RectItem__f_shape = shape;
-    this.LdataStories_RectItem__f_x = x;
-    this.LdataStories_RectItem__f_y = y;
-    this.LdataStories_RectItem__f_width = width;
-    this.LdataStories_RectItem__f_height = height;
-    this.LdataStories_RectItem__f_attrs = attrs
-  };
-  id__T() {
-    return this.LdataStories_RectItem__f_id
-  };
-  render__s_Option__LdataStories_SvgDefinition__V(svgAreaOpt, svgDefinition) {
-    if ((!svgAreaOpt.isEmpty__Z())) {
-      const arg1 = svgAreaOpt.get__O();
-      this.render__Lio_whitemice_d3v5_selection_Selection__LdataStories_SvgDefinition__V(arg1, svgDefinition)
-    }
-  };
-  render__Lio_whitemice_d3v5_selection_Selection__LdataStories_SvgDefinition__V(svgArea, svgDefinition) {
-    $f_LdataStories_BoxObject__clear__Lio_whitemice_d3v5_selection_Selection__V(this, svgArea);
-    const sel = svgArea.append(this.LdataStories_RectItem__f_shape);
-    const $$x5 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel);
-    const this$2 = $m_Lio_whitemice_d3v5_all_package$();
-    const s = this.LdataStories_RectItem__f_id;
-    const $$x4 = $$x5.attrId__sjs_js_$bar__Lio_whitemice_d3v5_selection_Selection($f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$2, s));
-    const this$3 = $m_Lio_whitemice_d3v5_all_package$();
-    const d = (this.LdataStories_RectItem__f_y * svgDefinition.LdataStories_SvgDefinition__f_height);
-    const $$x3 = $$x4.attr("y", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$3, d));
-    const this$4 = $m_Lio_whitemice_d3v5_all_package$();
-    const d$1 = (this.LdataStories_RectItem__f_x * svgDefinition.LdataStories_SvgDefinition__f_width);
-    const $$x2 = $$x3.attr("x", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$4, d$1));
-    const this$5 = $m_Lio_whitemice_d3v5_all_package$();
-    const d$2 = (this.LdataStories_RectItem__f_width * svgDefinition.LdataStories_SvgDefinition__f_width);
-    const $$x1 = $$x2.attr("width", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$5, d$2));
-    const this$6 = $m_Lio_whitemice_d3v5_all_package$();
-    const d$3 = (this.LdataStories_RectItem__f_height * svgDefinition.LdataStories_SvgDefinition__f_height);
-    const obj = $$x1.attr("height", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$6, d$3));
-    this.LdataStories_RectItem__f_attrs.foreach__F1__V(new $c_sjsr_AnonFunction1(((this$7, obj$1) => ((x0$1$2) => {
-      const x0$1 = $as_LdataStories_HtmlModifier(x0$1$2);
-      if ((x0$1 instanceof $c_LdataStories_StyleModifier)) {
-        const x2 = $as_LdataStories_StyleModifier(x0$1);
-        const $$x6 = x2.LdataStories_StyleModifier__f_attr;
-        const this$8 = $m_Lio_whitemice_d3v5_all_package$();
-        const s$1 = x2.LdataStories_StyleModifier__f_value;
-        return obj$1.style($$x6, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$8, s$1))
-      } else if ((x0$1 instanceof $c_LdataStories_AttrModifier)) {
-        const x3 = $as_LdataStories_AttrModifier(x0$1);
-        const $$x7 = x3.LdataStories_AttrModifier__f_attr;
-        const this$9 = $m_Lio_whitemice_d3v5_all_package$();
-        const s$2 = x3.LdataStories_AttrModifier__f_value;
-        return obj$1.attr($$x7, $f_Lio_whitemice_d3v5_selection_SelectionImplicits__stringToCallback__T__sjs_js_$bar(this$9, s$2))
-      } else {
-        throw new $c_s_MatchError(x0$1)
-      }
-    }))(this, obj)))
-  };
-  productPrefix__T() {
-    return "RectItem"
-  };
-  productArity__I() {
-    return 7
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.LdataStories_RectItem__f_id;
-        break
-      }
-      case 1: {
-        return this.LdataStories_RectItem__f_shape;
-        break
-      }
-      case 2: {
-        return this.LdataStories_RectItem__f_x;
-        break
-      }
-      case 3: {
-        return this.LdataStories_RectItem__f_y;
-        break
-      }
-      case 4: {
-        return this.LdataStories_RectItem__f_width;
-        break
-      }
-      case 5: {
-        return this.LdataStories_RectItem__f_height;
-        break
-      }
-      case 6: {
-        return this.LdataStories_RectItem__f_attrs;
-        break
-      }
-      default: {
-        throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + x$1))
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    let acc = (-889275714);
-    const hash = acc;
-    const x = this.LdataStories_RectItem__f_id;
-    const data = $m_sr_Statics$().anyHash__O__I(x);
-    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
-    const hash$1 = acc;
-    const x$1 = this.LdataStories_RectItem__f_shape;
-    const data$1 = $m_sr_Statics$().anyHash__O__I(x$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
-    const hash$2 = acc;
-    const dv = this.LdataStories_RectItem__f_x;
-    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
-    const hash$3 = acc;
-    const dv$1 = this.LdataStories_RectItem__f_y;
-    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
-    const hash$4 = acc;
-    const dv$2 = this.LdataStories_RectItem__f_width;
-    const data$4 = $m_sr_Statics$().doubleHash__D__I(dv$2);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
-    const hash$5 = acc;
-    const dv$3 = this.LdataStories_RectItem__f_height;
-    const data$5 = $m_sr_Statics$().doubleHash__D__I(dv$3);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
-    const hash$6 = acc;
-    const x$2 = this.LdataStories_RectItem__f_attrs;
-    const data$6 = $m_sr_Statics$().anyHash__O__I(x$2);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
-    const hash$7 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$7, 7)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_LdataStories_RectItem)) {
-      const RectItem$1 = $as_LdataStories_RectItem(x$1);
-      if (((((((this.LdataStories_RectItem__f_id === RectItem$1.LdataStories_RectItem__f_id) && (this.LdataStories_RectItem__f_shape === RectItem$1.LdataStories_RectItem__f_shape)) && (this.LdataStories_RectItem__f_x === RectItem$1.LdataStories_RectItem__f_x)) && (this.LdataStories_RectItem__f_y === RectItem$1.LdataStories_RectItem__f_y)) && (this.LdataStories_RectItem__f_width === RectItem$1.LdataStories_RectItem__f_width)) && (this.LdataStories_RectItem__f_height === RectItem$1.LdataStories_RectItem__f_height))) {
-        const x = this.LdataStories_RectItem__f_attrs;
-        const x$2 = RectItem$1.LdataStories_RectItem__f_attrs;
-        return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-      } else {
-        return false
-      }
-    } else {
-      return false
-    }
-  };
-}
-function $as_LdataStories_RectItem(obj) {
-  return (((obj instanceof $c_LdataStories_RectItem) || (obj === null)) ? obj : $throwClassCastException(obj, "dataStories.RectItem"))
-}
-function $isArrayOf_LdataStories_RectItem(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.LdataStories_RectItem)))
-}
-function $asArrayOf_LdataStories_RectItem(obj, depth) {
-  return (($isArrayOf_LdataStories_RectItem(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "LdataStories.RectItem;", depth))
-}
-const $d_LdataStories_RectItem = new $TypeData().initClass({
-  LdataStories_RectItem: 0
-}, false, "dataStories.RectItem", {
-  LdataStories_RectItem: 1,
-  O: 1,
-  LdataStories_BoxObject: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_LdataStories_RectItem.prototype.$classData = $d_LdataStories_RectItem;
 class $c_LdataStories_ScaledBox$BoxStyleLine$ extends $c_O {
   productPrefix__T() {
     return "BoxStyleLine"
@@ -46945,9 +47296,6 @@ class $c_LdataStories_TextItem extends $c_O {
     this.LdataStories_TextItem__f_fill = fill;
     this.LdataStories_TextItem__f_attrs = attrs;
     this.LdataStories_TextItem__f_onClick = onClick
-  };
-  id__T() {
-    return this.LdataStories_TextItem__f_id
   };
   render__Lio_whitemice_d3v5_selection_Selection__LdataStories_SvgDefinition__V(svgArea, svgDefinition) {
     svgArea.selectAll(("#" + this.LdataStories_TextItem__f_id)).remove();
@@ -54245,12 +54593,6 @@ class $c_LdataStories_CandidateController extends $c_LdataStories_RouteControlle
     this.LdataStories_CandidateController__f_box.clearObject__T__V("drag-text");
     this.LdataStories_RouteController__f_needsRender = true
   };
-  drawRectangle__T__D__D__D__D__T__V(id, x, y, width, height, stroke) {
-    const $$x2 = this.LdataStories_CandidateController__f_box;
-    const $$x1 = $m_sc_Seq$();
-    const array = [new $c_LdataStories_StyleModifier("stroke", stroke), new $c_LdataStories_StyleModifier("stroke-width", "2"), new $c_LdataStories_StyleModifier("stroke-opacity", "1"), new $c_LdataStories_StyleModifier("fill-opacity", "0")];
-    $$x2.addRect__T__T__D__D__D__D__sc_Seq__V(id, "rect", x, y, width, height, $as_sc_Seq($$x1.apply__sc_Seq__sc_GenTraversable($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))))
-  };
   render__V() {
     _return: {
       if ((!this.LdataStories_RouteController__f_needsRender)) {
@@ -54654,12 +54996,43 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
       };
       this.applyCurrentLayout__V();
       this.LdataStories_RouteController__f_dirty = true;
-      const $$x3 = this.LdataStories_MemberController__f_box;
-      const this$37 = this.LdataStories_MemberController__f_configData;
-      $$x3.updateAxisLabel__T__T__V("House of Representatives by Ideology", this$37.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_fontSize2);
-      const $$x4 = this.LdataStories_MemberController__f_box;
-      const this$39 = this.LdataStories_MemberController__f_box;
-      $$x4.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V(("" + yearIn), "year-text", "year", 0.5, (0.04 + this$39.LdataStories_ScaledBox__f_elementLocation.LdataStories_ElementLocation__f_height), "18pt", "middle", "black", $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$())), this.LdataStories_MemberController__f_box.updateTextItem$default$10__F0())
+      const $$x5 = this.LdataStories_MemberController__f_box;
+      const this$39 = new $c_sci_StringOps("%d House of Representatives by Ideology");
+      const array = [year];
+      const this$ = this$39.sci_StringOps__f_repr;
+      $m_sc_Seq$();
+      $m_sjs_js_WrappedArray$();
+      const array$1 = [];
+      $uI(array.length);
+      let i$2 = 0;
+      const len = $uI(array.length);
+      while ((i$2 < len)) {
+        const index = i$2;
+        const arg1$2 = array[index];
+        const elem = $p_sci_StringLike__unwrapArg__O__O(this$39, arg1$2);
+        array$1.push(elem);
+        i$2 = ((1 + i$2) | 0)
+      };
+      $m_s_reflect_ManifestFactory$ObjectManifest$();
+      const len$1 = $uI(array$1.length);
+      const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
+      const len$2 = result.u.length;
+      let i$3 = 0;
+      let j = 0;
+      const x$9 = $uI(array$1.length);
+      const x$10 = ((x$9 < len$2) ? x$9 : len$2);
+      const that$1 = result.u.length;
+      const end$1 = ((x$10 < that$1) ? x$10 : that$1);
+      while ((i$3 < end$1)) {
+        const $$x3 = j;
+        const index$1 = i$3;
+        result.set($$x3, array$1[index$1]);
+        i$3 = ((1 + i$3) | 0);
+        j = ((1 + j) | 0)
+      };
+      const $$x4 = $m_jl_String$().format__T__AO__T(this$, result);
+      const this$53 = this.LdataStories_MemberController__f_configData;
+      $$x5.updateAxisLabel__T__T__V($$x4, this$53.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_fontSize2)
     }
   };
   setLayoutFast__D__V(duration) {
@@ -54813,7 +55186,7 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     this.LdataStories_MemberController__f_memberColorFcn = fcn;
     this.LdataStories_RouteController__f_needsRender = true
   };
-  layoutHeadToHead__D__D__V(transition, opacity) {
+  layoutHeadToHead__D__D__D__V(yPct, transition, opacity) {
     const $$x1 = this.LdataStories_MemberController__f_houseArea;
     const this$1 = $m_Lio_whitemice_d3v5_all_package$();
     $$x1.style("z-index", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$1, 10));
@@ -54839,7 +55212,6 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     const $$x3 = this.LdataStories_MemberController__f_houseArea.transition().duration(1000);
     const this$8 = $m_Lio_whitemice_d3v5_all_package$();
     $$x3.attr("opacity", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__doubleToCallback__D__sjs_js_$bar(this$8, opacity));
-    const yPct = this.LdataStories_MemberController__f_configData.LdataStories_ConfigurationData__f_house.LdataStories_HouseConfig__f_y2Pct;
     this.LdataStories_MemberController__f_box.update__LdataStories_ElementDimensions__V(new $c_LdataStories_ElementDimensions(0.0, yPct, 1.0, 0.0));
     const $$x4 = this.LdataStories_MemberController__f_box;
     const this$9 = this.LdataStories_MemberController__f_configData;
@@ -54882,33 +55254,64 @@ class $c_LdataStories_MemberController extends $c_LdataStories_RouteController {
     const this$3 = $m_Lio_whitemice_d3v5_all_package$();
     $$x2.attr("opacity", $f_Lio_whitemice_d3v5_selection_SelectionImplicits__intToCallback__I__sjs_js_$bar(this$3, 1));
     const year = ((1787 + (this.LdataStories_MemberController__f_congress << 1)) | 0);
-    const $$x3 = this.LdataStories_MemberController__f_box;
-    const this$4 = this.LdataStories_MemberController__f_configData;
-    $$x3.updateAxisLabel__T__T__V("House of Representatives by Ideology", this$4.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_fontSize2);
-    const $$x4 = this.LdataStories_MemberController__f_box;
-    const this$6 = this.LdataStories_MemberController__f_box;
-    $$x4.updateTextItem__T__T__T__D__D__T__T__T__sc_Seq__F0__V(("" + year), "year-text", "label", 0.5, (0.04 + this$6.LdataStories_ScaledBox__f_elementLocation.LdataStories_ElementLocation__f_height), "18pt", "middle", "black", $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable($m_sci_Nil$())), this.LdataStories_MemberController__f_box.updateTextItem$default$10__F0());
+    const $$x5 = this.LdataStories_MemberController__f_box;
+    const this$6 = new $c_sci_StringOps("%d House of Representatives by Ideology");
+    const array = [year];
+    const this$ = this$6.sci_StringOps__f_repr;
+    $m_sc_Seq$();
+    $m_sjs_js_WrappedArray$();
+    const array$1 = [];
+    $uI(array.length);
+    let i = 0;
+    const len = $uI(array.length);
+    while ((i < len)) {
+      const index = i;
+      const arg1 = array[index];
+      const elem = $p_sci_StringLike__unwrapArg__O__O(this$6, arg1);
+      array$1.push(elem);
+      i = ((1 + i) | 0)
+    };
+    $m_s_reflect_ManifestFactory$ObjectManifest$();
+    const len$1 = $uI(array$1.length);
+    const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
+    const len$2 = result.u.length;
+    let i$1 = 0;
+    let j = 0;
+    const x = $uI(array$1.length);
+    const x$1 = ((x < len$2) ? x : len$2);
+    const that = result.u.length;
+    const end = ((x$1 < that) ? x$1 : that);
+    while ((i$1 < end)) {
+      const $$x3 = j;
+      const index$1 = i$1;
+      result.set($$x3, array$1[index$1]);
+      i$1 = ((1 + i$1) | 0);
+      j = ((1 + j) | 0)
+    };
+    const $$x4 = $m_jl_String$().format__T__AO__T(this$, result);
+    const this$20 = this.LdataStories_MemberController__f_configData;
+    $$x5.updateAxisLabel__T__T__V($$x4, this$20.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_fontSize2);
     const trajectory = new $c_Lio_whitemice_d3v5_route_Sequencer(new $c_LdataStories_SemiSigmoidSequencer(new $c_Lio_whitemice_d3v5_route_Direct()), 0.4, 0.4);
-    const array = [new $c_LdataStories_LayoutSpec(new $c_sjsr_AnonFunction1(((this$2$1) => ((m$3$2) => {
+    const array$2 = [new $c_LdataStories_LayoutSpec(new $c_sjsr_AnonFunction1(((this$2$1) => ((m$3$2) => {
       const m$3 = $as_LdataStories_MemberBubble(m$3$2);
       if (m$3.LdataStories_MemberBubble__f_active) {
-        const x = m$3.LdataStories_MemberBubble__f_memberType;
-        const x$2 = $m_LdataStories_MemberBubble$ActualMember$();
-        return ((x !== null) && (x === x$2))
+        const x$2 = m$3.LdataStories_MemberBubble__f_memberType;
+        const x$2$1 = $m_LdataStories_MemberBubble$ActualMember$();
+        return ((x$2 !== null) && (x$2 === x$2$1))
       } else {
         return false
       }
-    }))(this)), new $c_sjsr_AnonFunction0(((this$3$1, yPct$1) => (() => $p_LdataStories_MemberController__createHistogram$4__D__LdataStories_LayoutManager(this$3$1, yPct$1)))(this, yPct)), trajectory, 2.0, "Actual Histogram"), new $c_LdataStories_LayoutSpec(new $c_sjsr_AnonFunction1(((this$4$1) => ((m$4$2) => {
+    }))(this)), new $c_sjsr_AnonFunction0(((this$3$1, yPct$1) => (() => $p_LdataStories_MemberController__createHistogram$4__D__LdataStories_LayoutManager(this$3$1, yPct$1)))(this, yPct)), trajectory, transition, "Actual Histogram"), new $c_LdataStories_LayoutSpec(new $c_sjsr_AnonFunction1(((this$4$1) => ((m$4$2) => {
       const m$4 = $as_LdataStories_MemberBubble(m$4$2);
       if ((!m$4.LdataStories_MemberBubble__f_active)) {
         return true
       } else {
-        const x$1 = m$4.LdataStories_MemberBubble__f_memberType;
-        const x$2$1 = $m_LdataStories_MemberBubble$SimulationMember$();
-        return ((x$1 !== null) && (x$1 === x$2$1))
+        const x$3 = m$4.LdataStories_MemberBubble__f_memberType;
+        const x$2$2 = $m_LdataStories_MemberBubble$SimulationMember$();
+        return ((x$3 !== null) && (x$3 === x$2$2))
       }
-    }))(this)), new $c_sjsr_AnonFunction0(((this$5$1) => (() => new $c_LdataStories_OffscreenLayout(0.0, this$5$1.LdataStories_RouteController__f_scaledWidth, (-200.0), (-100.0))))(this)), trajectory, 2.0, "Simulation Histogram")];
-    this.setCurrentLayout__sc_Seq__V($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array))
+    }))(this)), new $c_sjsr_AnonFunction0(((this$5$1) => (() => new $c_LdataStories_OffscreenLayout(0.0, this$5$1.LdataStories_RouteController__f_scaledWidth, (-200.0), (-100.0))))(this)), trajectory, transition, "Simulation Histogram")];
+    this.setCurrentLayout__sc_Seq__V($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array$2))
   };
   displayToolTip__LdataStories_MemberBubble__V(m) {
     const $$x5 = $m_sc_Seq$();
@@ -55366,6 +55769,7 @@ class $c_LdataStories_VoterController extends $c_LdataStories_RouteController {
     this.LdataStories_VoterController__f_nVoters = 0;
     this.LdataStories_VoterController__f_electionDef = null;
     this.LdataStories_VoterController__f_layoutRadius = 0.0;
+    this.LdataStories_VoterController__f_dpr = 0.0;
     this.LdataStories_VoterController__f_voterArea = null;
     this.LdataStories_VoterController__f_voters = null;
     this.LdataStories_VoterController__f_currentPopulation = null;
@@ -55384,6 +55788,7 @@ class $c_LdataStories_VoterController extends $c_LdataStories_RouteController {
     this.LdataStories_VoterController__f_nVoters = configData.LdataStories_ConfigurationData__f_voters.LdataStories_VoterConfig__f_nVoters;
     this.LdataStories_VoterController__f_electionDef = $m_Lrcvcore_DefaultElectionConfig$().apply__Lrcvcore_ElectionDefinition();
     this.LdataStories_VoterController__f_layoutRadius = configData.LdataStories_ConfigurationData__f_voters.LdataStories_VoterConfig__f_layoutRadius;
+    this.LdataStories_VoterController__f_dpr = $uD($m_Lorg_scalajs_dom_package$().window__Lorg_scalajs_dom_raw_Window().devicePixelRatio);
     const sel = graphicArea.append("g");
     const $$x1 = new $c_Lio_whitemice_d3v5_selection_RichSelection(sel);
     const this$2 = $m_Lio_whitemice_d3v5_all_package$();
@@ -55450,7 +55855,7 @@ class $c_LdataStories_VoterController extends $c_LdataStories_RouteController {
     const this$4 = this.LdataStories_VoterController__f_configData;
     const boxScale = ($$x1 / this$4.LdataStories_ConfigurationData__f_globals.LdataStories_ConfigGlobals__f_desiredWidth);
     voterContext.save();
-    voterContext.clearRect((-300.0), 0.0, $uI(this.LdataStories_VoterController__f_voterCanvas.width), $uI(this.LdataStories_VoterController__f_voterCanvas.height));
+    voterContext.clearRect((-300.0), 0.0, $imul(300, ($uI(this.LdataStories_VoterController__f_voterCanvas.width) << 1)), $uI(this.LdataStories_VoterController__f_voterCanvas.height));
     const this$6 = this.LdataStories_VoterController__f_bubbles;
     const p = new $c_sjsr_AnonFunction1(((this$5) => ((b$2) => {
       const b = $as_LdataStories_VoterBubble(b$2);
@@ -55501,6 +55906,43 @@ class $c_LdataStories_VoterController extends $c_LdataStories_RouteController {
     const x$4 = $m_LdataStories_LayoutSpec$().apply$default$3__Lio_whitemice_d3v5_route_Trajectory();
     const array = [new $c_LdataStories_LayoutSpec(x$1, x$2, x$4, 5.0, "no description")];
     this.setCurrentLayout__sc_Seq__V($ct_sjs_js_WrappedArray__sjs_js_Array__(new $c_sjs_js_WrappedArray(), array));
+    const this$7 = new $c_sci_StringOps("layout out voters at %.4f");
+    const array$1 = [yPercent];
+    const this$ = this$7.sci_StringOps__f_repr;
+    $m_sc_Seq$();
+    $m_sjs_js_WrappedArray$();
+    const array$2 = [];
+    $uI(array$1.length);
+    let i = 0;
+    const len = $uI(array$1.length);
+    while ((i < len)) {
+      const index = i;
+      const arg1 = array$1[index];
+      const elem = $p_sci_StringLike__unwrapArg__O__O(this$7, arg1);
+      array$2.push(elem);
+      i = ((1 + i) | 0)
+    };
+    $m_s_reflect_ManifestFactory$ObjectManifest$();
+    const len$1 = $uI(array$2.length);
+    const result = $newArrayObject($d_O.getArrayOf(), [len$1]);
+    const len$2 = result.u.length;
+    let i$1 = 0;
+    let j = 0;
+    const x = $uI(array$2.length);
+    const x$5 = ((x < len$2) ? x : len$2);
+    const that = result.u.length;
+    const end = ((x$5 < that) ? x$5 : that);
+    while ((i$1 < end)) {
+      const $$x1 = j;
+      const index$1 = i$1;
+      result.set($$x1, array$2[index$1]);
+      i$1 = ((1 + i$1) | 0);
+      j = ((1 + j) | 0)
+    };
+    const x$6 = $m_jl_String$().format__T__AO__T(this$, result);
+    const this$22 = $m_s_Console$();
+    const this$23 = $as_Ljava_io_PrintStream(this$22.s_Console$__f_outVar.s_util_DynamicVariable__f_v);
+    this$23.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$6 + "\n"));
     this.LdataStories_VoterController__f_arrangement = new $c_sjsr_AnonFunction0(((this$3$1, yPercent$2, xLabel$1) => (() => {
       this$3$1.arrangeByIdeology__D__T__V(yPercent$2, xLabel$1)
     }))(this, yPercent, xLabel))
@@ -64065,11 +64507,11 @@ class $c_Lakka_routing_RoutedActorCell extends $c_Lakka_actor_ActorCell {
   mailboxCallMeDirectly_$eq__Lakka_dispatch_Mailbox__(x$1) {
     this.Lakka_actor_ActorCell__f_mailboxCallMeDirectly = x$1
   };
-  childrenRefsCallMeDirectly_$eq__Lakka_actor_dungeon_ChildrenContainer__(x$1) {
-    this.Lakka_actor_ActorCell__f_childrenRefsCallMeDirectly = x$1
-  };
   functionRefsCallMeDirectly__() {
     return this.Lakka_actor_ActorCell__f_functionRefsCallMeDirectly
+  };
+  childrenRefsCallMeDirectly_$eq__Lakka_actor_dungeon_ChildrenContainer__(x$1) {
+    this.Lakka_actor_ActorCell__f_childrenRefsCallMeDirectly = x$1
   };
   childrenRefsCallMeDirectly__() {
     return this.Lakka_actor_ActorCell__f_childrenRefsCallMeDirectly
