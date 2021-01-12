@@ -43,11 +43,12 @@
         function doNothing(s) {
             console.log(s)
         }
-        const queryString = window.location.search;
-        console.log(queryString);
-        const urlParams = new URLSearchParams(queryString);
-        const section = urlParams.get('section')
-        console.log(section);
+        // const queryString = window.location.search;
+        // console.log(queryString);
+        // const urlParams = new URLSearchParams(queryString);
+        // const section = urlParams.get('section')
+        // console.log("section is", $section)
+        // console.log(section);
 
         var pds = PolarizationDataStory("visDiv", "overlayDiv", doNothing)
         pds.update(2100, 0)
